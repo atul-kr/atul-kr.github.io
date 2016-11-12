@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>India's Nuclear Journey</title>
+
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="velocity.js"></script>
+
+
+	<script type="text/javascript">
+
+		$.get('indianuclear.svg', function(data) {
+// get the svg file and append to body
+
+$(document.body).append(data.documentElement);
+
+//define global array and booleanSwitches
+
+//switches are to turn the filter glow on or off for first graph
+var yellowSwitch = 0;
+var redSwitch = 0;
+var purpleSwitch = 0;
+var greenSwitch = 0;
+var greySwitch = 0;
+var diamondSwitch = 0;
+var ntSwitch = 0;
+var gcSwitch = 0;
+var coreSwitch = 0;
+var encoSwitch = 0;
+var deteSwitch = 0;
+var minus3Switch = 0;
+var plus3Switch = 0;
+var plus1Switch = 0;
+
+//switches are to turn the filter glow on or off for second world timeline graph
+
+var firstNTSwitch = 0;
+var smWarSwitch = 0;
+var majorGRSwitch = 0;
+var otherNESwitch = 0;
+var tpWorldSwitch = 0;
+var peaceNSSwitch = 0;
+var indiaSpSwitch = 0;
+
+
+
+//arrays are for storing all the event types in respective buckets to have control over the opacity and hover behaviour
+var yellowA = ["N1945", "N1948", "N1954", "N1956", "N1960", "N1978", "N1983", "N1983b", 
+				"N1988", "N1989", "N1991", "N1994", "N1996", "N2004", "N2012a", "N2012b",  "N2013"];
+
+var redA = ["N1962", "N1965", "N1971", "N1999"];
+
+var purpleA = ["N1968", "N1974", "N1974a", "N1975", "N1983",  "N1983a",  "N1995"];
+
+var greenA = ["N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2014", "N2015", "N2016"];
+
+var greyA = ["N1947", "N1964", "N1967", "N1974", "N1974b", "N1998"];
+
+var diamondA = ["N1956", "N1960", "N1974", "N1978", "N1988", "N1989", "N1991", "N1994", "N1996", "N1998", "N2004", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2012a", "N2012b", "N2013", "N2014", "N2015", "N2016"];
+
+var ntA = ["N1964", "N1967", "N1974", "N1974b", "N1998"];
+
+var gcA = ["N1962", "N1964", "N1965", "N1967", "N1968", "N1971", "N1974", "N1975", "N1983", "N1991", "N1995", "N1998", "N1999", "N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2012a", "N2012b", "N2014", "N2015", "N2016"];
+
+var coreA = ["N1962", "N1964", "N1965", "N1967", "N1968", "N1971", "N1999", "N2001"];
+
+var encoA = ["N1945", "N1948", "N1954", "N1956", "N1960", "N1983", "N1988", "N1989", "N1994", "N1996", "N2001", "N2004", 
+			"N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2012a", "N2012b", "N2013", "N2014", "N2015", "N2016"];
+
+var deteA = ["N1965", "N1968", "N1974", "N1974a", "N1975", "N1983", "N1983a", "N1995"];
+
+var plus3A = ["N1960","N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2012b", "N2014", "N2015", "N2016"];
+
+var plus1A = ["N1945", "N1948", "N1954", "N1956", "N1983", "N1988", "N1989", "N1994", "N1996", "N2004", "N2011b", "N2012a", "N2013"];
+
+var MainArray = [];  //main array which keeps all the highlighted events from India Graph in the buffer
+
+
+//arrays are for storing all the event types in respective buckets to have control over the opacity and hover behaviour for world timeline
+
+var firstNTA = ["wnt1945", "w1949", "w1952", "w1960", "w1964", "w1974", "w1979", "wnt1998", "w2006"];
+
+var smWarA = ["wwr1945", "wwra1962", "wwrb1962", "w1965", "w1971", "w1989", "w1999", "w2003"];
+
+var majorGrA = ["wgr1945", "w1947", "w1957", "w1958", "w1959", "w1963", "w1968", "w1975", "w1982", "w1985", "wgra1991", "wgrb1991", "w1995", 
+				"wgra1996", "wgrb1996", "wgrc1996", "w2001", "w2007", "wgra2008", "wgrb2008", "w2010", "w2011", "wgra2014", 
+				"wgrb2014", "w2015", "wgr2016"];
+
+var otherNEA = ["w1939", "wot1998", "wota2016", "wotb2016"];
+
+var tpWorldA = ["w1939", "wnt1945", "wwr1945", "wgr1945", "w1949", "w1952", "w1960", "wwra1962", "w1964", "w1968", "w1974", "w1975", "w1979", 
+				"w1989", "wgra1991", "wgrb1996", "wot1998", "wnt1998", "w2001", "w2003", "w2006", "wgra2008", "wgr2016", "wota2016", "wotb2016"];
+
+var peaceNSA = ["w1957", "w1958", "w1959", "w1963", "w1982", "w1985", "w1995", "wgra1996", "wgrb1996", "wgrc1996", "w2001", "w2007", "wgra2014"];
+
+var indiaSpA = ["w1947", "wwrb1962", "w1965", "w1968", "w1971", "w1974", "w1975", "wgrb1991", "wot1998", "w1999", "w2001", "wgra2008", "wgrb2008", 
+				"w2010", "w2011", "wgra2014", "wgrb2014", "w2015", "wgr2016", "wota2016", "wotb2016"];
+
+
+var MainWorldArray = []; // array which keeps all the highlighted events from World Timeline in the buffer
+
+////////////---------ALL CLICK EVENTS------------/////////////
+
+//------Clear All India Map Filters-------
+$('#mainClear').click(function (){
+	$('#N1945').velocity({'opacity': '0.4'});
+	$('#N1947').velocity({'opacity': '0.4'});
+	$('#N1948').velocity({'opacity': '0.4'});
+	$('#N1954').velocity({'opacity': '0.4'});
+	$('#N1956').velocity({'opacity': '0.4'});
+	$('#N1960').velocity({'opacity': '0.4'});
+	$('#N1962').velocity({'opacity': '0.4'});
+	$('#N1964').velocity({'opacity': '0.4'});
+	$('#N1965').velocity({'opacity': '0.4'});
+	$('#N1967').velocity({'opacity': '0.4'});
+	$('#N1968').velocity({'opacity': '0.4'});
+	$('#N1971').velocity({'opacity': '0.4'});
+	$('#N1974').velocity({'opacity': '0.4'});
+	$('#N1974a').velocity({'opacity': '0.4'});
+	$('#N1974b').velocity({'opacity': '0.4'});  
+	$('#N1975').velocity({'opacity': '0.4'});
+	$('#N1978').velocity({'opacity': '0.4'});
+	$('#N1983').velocity({'opacity': '0.4'});
+	$('#N1983a').velocity({'opacity': '0.4'}); 
+	$('#N1983b').velocity({'opacity': '0.4'}); 
+	$('#N1988').velocity({'opacity': '0.4'});
+	$('#N1989').velocity({'opacity': '0.4'});
+	$('#N1991').velocity({'opacity': '0.4'});
+	$('#N1994').velocity({'opacity': '0.4'});
+	$('#N1995').velocity({'opacity': '0.4'});
+	$('#N1996').velocity({'opacity': '0.4'});
+	$('#N1998').velocity({'opacity': '0.4'});
+	$('#N1999').velocity({'opacity': '0.4'});
+	$('#N2001').velocity({'opacity': '0.4'});
+	$('#N2004').velocity({'opacity': '0.4'});
+	$('#N2005').velocity({'opacity': '0.4'});
+	$('#N2006').velocity({'opacity': '0.4'});
+	$('#N2007').velocity({'opacity': '0.4'});
+	$('#N2008').velocity({'opacity': '0.4'});
+	$('#N2009').velocity({'opacity': '0.4'});
+	$('#N2010').velocity({'opacity': '0.4'});
+	$('#N2011a').velocity({'opacity': '0.4'});
+	$('#N2011b').velocity({'opacity': '0.4'});
+	$('#N2012a').velocity({'opacity': '0.4'});
+	$('#N2012b').velocity({'opacity': '0.4'});
+	$('#N2013').velocity({'opacity': '0.4'});
+	$('#N2014').velocity({'opacity': '0.4'});
+	$('#N2015').velocity({'opacity': '0.4'});
+	$('#N2016').velocity({'opacity': '0.4'});
+	$('#atom').velocity({'opacity': '0.6'});
+	$('#mainYellow').velocity({'opacity': '0.6'});
+	$('#mainRed').velocity({'opacity': '0.6'});
+	$('#mainPurple').velocity({'opacity': '0.6'});
+	$('#mainGreen').velocity({'opacity': '0.6'});
+	$('#mainGrey').velocity({'opacity': '0.6'});
+	$('#mainAc').velocity({'opacity': '0.6'});
+	$('#mainNT').velocity({'opacity': '0.6'});
+	$('#mainGC').velocity({'opacity': '0.6'});
+	$('#coreEvent').velocity({'opacity': '0.6'});
+	$('#encoEvent').velocity({'opacity': '0.6'});
+	$('#deteEvent').velocity({'opacity': '0.6'});
+	$('#minus3').velocity({'opacity': '0.6'});
+	$('#plus3').velocity({'opacity': '0.6'});
+	$('#plus1').velocity({'opacity': '0.6'});
+	$('#mainClear').velocity({'opacity': '0.1'});
+
+  MainArray.length = 0;  //clear the main array consisting of all elements.
+  
+  yellowSwitch = 0;
+  redSwitch = 0;
+  purpleSwitch = 0;
+  greenSwitch = 0;
+  greySwitch = 0;
+  diamondSwitch = 0;
+  ntSwitch = 0;
+  gcSwitch = 0;
+  coreSwitch = 0;
+  encrgSwitch = 0;
+  deterSwitch = 0;
+  minus3Switch = 0;
+  plus3Switch = 0;
+  plus1Switch = 0;
+
+});
+
+
+//------Clear All World Timeline Filters-------
+$('#mainClearW').click(function (){
+
+	$('#wnt1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+	$('#w1949').velocity({'opacity': '0.4'});	$('#p1949').velocity({'opacity': '0.4'});
+	$('#w1952').velocity({'opacity': '0.4'});	$('#p1952').velocity({'opacity': '0.4'});
+	$('#w1960').velocity({'opacity': '0.4'});	$('#p1960').velocity({'opacity': '0.4'});
+	$('#w1964').velocity({'opacity': '0.4'});	$('#p1964').velocity({'opacity': '0.4'});
+	$('#w1974').velocity({'opacity': '0.4'});	$('#p1974').velocity({'opacity': '0.4'});
+	$('#w1979').velocity({'opacity': '0.4'});	$('#p1979').velocity({'opacity': '0.4'});
+	$('#wnt1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+	$('#w2006').velocity({'opacity': '0.4'});	$('#p2006').velocity({'opacity': '0.4'});
+		
+	$('#wwr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+	$('#wwra1962').velocity({'opacity': '0.4'});	$('#p1962').velocity({'opacity': '0.4'});
+	$('#wwrb1962').velocity({'opacity': '0.4'});	$('#p1962').velocity({'opacity': '0.4'});
+	$('#w1965').velocity({'opacity': '0.4'});	$('#p1965').velocity({'opacity': '0.4'});
+	$('#w1971').velocity({'opacity': '0.4'});	$('#p1971').velocity({'opacity': '0.4'});
+	$('#w1989').velocity({'opacity': '0.4'});	$('#p1989').velocity({'opacity': '0.4'});
+	$('#w1999').velocity({'opacity': '0.4'});	$('#p1999').velocity({'opacity': '0.4'});
+	$('#w2003').velocity({'opacity': '0.4'});	$('#p2003').velocity({'opacity': '0.4'});
+		
+	$('#wgr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+	$('#w1947').velocity({'opacity': '0.4'});	$('#p1947').velocity({'opacity': '0.4'});
+	$('#w1957').velocity({'opacity': '0.4'});	$('#p1957').velocity({'opacity': '0.4'});
+	$('#w1958').velocity({'opacity': '0.4'});	$('#p1958').velocity({'opacity': '0.4'});
+	$('#w1959').velocity({'opacity': '0.4'});	$('#p1959').velocity({'opacity': '0.4'});
+	$('#w1963').velocity({'opacity': '0.4'});	$('#p1963').velocity({'opacity': '0.4'});
+	$('#w1968').velocity({'opacity': '0.4'});	$('#p1968').velocity({'opacity': '0.4'});
+	$('#w1975').velocity({'opacity': '0.4'});	$('#p1975').velocity({'opacity': '0.4'});
+	$('#w1982').velocity({'opacity': '0.4'});	$('#p1982').velocity({'opacity': '0.4'});
+	$('#w1985').velocity({'opacity': '0.4'});	$('#p1985').velocity({'opacity': '0.4'});
+	$('#wgra1991').velocity({'opacity': '0.4'});	$('#p1991').velocity({'opacity': '0.4'});
+	$('#wgrb1991').velocity({'opacity': '0.4'});	$('#p1991').velocity({'opacity': '0.4'});
+	$('#w1995').velocity({'opacity': '0.4'});	$('#p1995').velocity({'opacity': '0.4'});
+	$('#wgra1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+	$('#wgrb1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+	$('#wgrc1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+	$('#w2001').velocity({'opacity': '0.4'});	$('#p2001').velocity({'opacity': '0.4'});
+	$('#w2007').velocity({'opacity': '0.4'});	$('#p2007').velocity({'opacity': '0.4'});
+	$('#wgra2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+	$('#wgrb2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+	$('#w2010').velocity({'opacity': '0.4'});	$('#p2010').velocity({'opacity': '0.4'});
+	$('#w2011').velocity({'opacity': '0.4'});	$('#p2011').velocity({'opacity': '0.4'});
+	$('#wgra2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+	$('#wgrb2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+	$('#w2015').velocity({'opacity': '0.4'});	$('#p2015').velocity({'opacity': '0.4'});
+	$('#wgr2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+		
+	$('#w1939').velocity({'opacity': '0.4'});	$('#p1939').velocity({'opacity': '0.4'});
+	$('#wot1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+	$('#wota2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+	$('#wotb2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+		
+	$('#w1939').velocity({'opacity': '0.4'});	$('#p1939').velocity({'opacity': '0.4'});
+	$('#wnt1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+	$('#wwr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+	$('#wgr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+	$('#w1949').velocity({'opacity': '0.4'});	$('#p1949').velocity({'opacity': '0.4'});
+	$('#w1952').velocity({'opacity': '0.4'});	$('#p1952').velocity({'opacity': '0.4'});
+	$('#w1960').velocity({'opacity': '0.4'});	$('#p1960').velocity({'opacity': '0.4'});
+	$('#wwra1962').velocity({'opacity': '0.4'});	$('#p1962').velocity({'opacity': '0.4'});
+	$('#w1964').velocity({'opacity': '0.4'});	$('#p1964').velocity({'opacity': '0.4'});
+	$('#w1968').velocity({'opacity': '0.4'});	$('#p1968').velocity({'opacity': '0.4'});
+	$('#w1974').velocity({'opacity': '0.4'});	$('#p1974').velocity({'opacity': '0.4'});
+	$('#w1975').velocity({'opacity': '0.4'});	$('#p1975').velocity({'opacity': '0.4'});
+	$('#w1979').velocity({'opacity': '0.4'});	$('#p1979').velocity({'opacity': '0.4'});
+	$('#w1989').velocity({'opacity': '0.4'});	$('#p1989').velocity({'opacity': '0.4'});
+	$('#wgra1991').velocity({'opacity': '0.4'});	$('#p1991').velocity({'opacity': '0.4'});
+	$('#wgrb1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+	$('#wot1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+	$('#wnt1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+	$('#w2001').velocity({'opacity': '0.4'});	$('#p2001').velocity({'opacity': '0.4'});
+	$('#w2003').velocity({'opacity': '0.4'});	$('#p2003').velocity({'opacity': '0.4'});
+	$('#w2006').velocity({'opacity': '0.4'});	$('#p2006').velocity({'opacity': '0.4'});
+	$('#wgra2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+	$('#wgr2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+	$('#wota2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+	$('#wotb2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+		
+	$('#w1957').velocity({'opacity': '0.4'});	$('#p1957').velocity({'opacity': '0.4'});
+	$('#w1958').velocity({'opacity': '0.4'});	$('#p1958').velocity({'opacity': '0.4'});
+	$('#w1959').velocity({'opacity': '0.4'});	$('#p1959').velocity({'opacity': '0.4'});
+	$('#w1963').velocity({'opacity': '0.4'});	$('#p1963').velocity({'opacity': '0.4'});
+	$('#w1982').velocity({'opacity': '0.4'});	$('#p1982').velocity({'opacity': '0.4'});
+	$('#w1985').velocity({'opacity': '0.4'});	$('#p1985').velocity({'opacity': '0.4'});
+	$('#w1995').velocity({'opacity': '0.4'});	$('#p1995').velocity({'opacity': '0.4'});
+	$('#wgra1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+	$('#wgrb1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+	$('#wgrc1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+	$('#w2001').velocity({'opacity': '0.4'});	$('#p2001').velocity({'opacity': '0.4'});
+	$('#w2007').velocity({'opacity': '0.4'});	$('#p2007').velocity({'opacity': '0.4'});
+	$('#wgra2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+		
+	$('#w1947').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wwrb1962').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w1965').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w1968').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w1971').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w1974').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w1975').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wgrb1991').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wot1998').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w1999').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w2001').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wgra2008').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wgrb2008').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w2010').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w2011').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wgra2014').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wgrb2014').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w2015').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wgr2016').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wota2016').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#wotb2016').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+
+	$('#peaceNS').velocity({'opacity': '0.6'});
+	$('#tpWorld').velocity({'opacity': '0.6'});
+	$('#indiaSp').velocity({'opacity': '0.6'});
+	$('#firstNT').velocity({'opacity': '0.6'});
+	$('#smWar').velocity({'opacity': '0.6'});
+	$('#majorGr').velocity({'opacity': '0.6'});
+	$('#otherNE').velocity({'opacity': '0.6'});
+	$('#mainClearW').velocity({'opacity': '0.1'});
+
+	MainWorldArray.length = 0;
+
+	 firstNTSwitch = 0;
+	 smWarSwitch = 0;
+	 majorGRSwitch = 0;
+	 otherNESwitch = 0;
+	 tpWorldSwitch = 0;
+	 peaceNSSwitch = 0;
+	 indiaSpSwitch = 0;
+
+
+});
+
+
+//------All Core Events--------
+$('#atom').click(function() {
+	$('#N1962').velocity({'opacity': '1'});
+	$('#N1964').velocity({'opacity': '1'});
+	$('#N1965').velocity({'opacity': '1'});
+	$('#N1967').velocity({'opacity': '1'});
+	$('#N1968').velocity({'opacity': '1'});
+	$('#N1971').velocity({'opacity': '1'});
+	$('#N1999').velocity({'opacity': '1'});
+	$('#N2001').velocity({'opacity': '1'});
+	$('#atom').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#coreEvent').velocity({'opacity': '1'});
+
+	coreSwitch = 1;
+
+	//Populate MainArray with MainArray previous values and new Core Array Values
+  	MainArray = $.merge( $.merge( [], MainArray ), coreA );
+  	//Remove Duplicate Values from the MainArray
+  	MainArray = $.unique(MainArray);
+  	console.log(MainArray);
+});
+
+$('#coreEvent').click(function() {
+	$('#N1962').velocity({'opacity': '1'});
+	$('#N1964').velocity({'opacity': '1'});
+	$('#N1965').velocity({'opacity': '1'});
+	$('#N1967').velocity({'opacity': '1'});
+	$('#N1968').velocity({'opacity': '1'});
+	$('#N1971').velocity({'opacity': '1'});
+	$('#N1999').velocity({'opacity': '1'});
+	$('#N2001').velocity({'opacity': '1'});
+	$('#atom').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#coreEvent').velocity({'opacity': '1'});
+
+	coreSwitch = 1;
+
+	//Populate MainArray with MainArray previous values and new Core Array Values
+  	MainArray = $.merge( $.merge( [], MainArray ), coreA );
+  	//Remove Duplicate Values from the MainArray
+  	MainArray = $.unique(MainArray);
+  	console.log(MainArray);
+});
+
+
+//------All War Events--------
+$('#mainRed').click(function() {
+	$('#N1962').velocity({'opacity': '1'});
+	$('#N1965').velocity({'opacity': '1'});
+	$('#N1971').velocity({'opacity': '1'});
+	$('#N1999').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainRed').velocity({'opacity': '1'});
+
+	redSwitch = 1;
+
+  //Populate MainArray with MainArray previous values and new Red Array Values
+  MainArray = $.merge( $.merge( [], MainArray ), redA );
+  //Remove Duplicate Values from the MainArray
+  MainArray = $.unique(MainArray);
+  //console.log(MainArray);
+
+});
+
+//------All Establishments Events--------
+$('#mainYellow').click(function() {
+	$('#N1945').velocity({'opacity': '1'});
+	$('#N1948').velocity({'opacity': '1'});
+	$('#N1954').velocity({'opacity': '1'});
+	$('#N1956').velocity({'opacity': '1'});
+	$('#N1960').velocity({'opacity': '1'});
+	$('#N1978').velocity({'opacity': '1'});
+	$('#N1983').velocity({'opacity': '1'});
+	$('#N1983b').velocity({'opacity': '1'});
+	$('#N1988').velocity({'opacity': '1'});
+	$('#N1989').velocity({'opacity': '1'});
+	$('#N1991').velocity({'opacity': '1'});
+	$('#N1994').velocity({'opacity': '1'});
+	$('#N1996').velocity({'opacity': '1'});
+	$('#N2004').velocity({'opacity': '1'});
+	$('#N2012a').velocity({'opacity': '1'});
+	$('#N2012b').velocity({'opacity': '1'});
+	$('#N2013').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainYellow').velocity({'opacity': '1'});
+
+	yellowSwitch = 1;
+
+	//Populate MainArray with MainArray previous values and new Yellow Array Values
+  	MainArray = $.merge( $.merge( [], MainArray ), yellowA );
+  	//Remove Duplicate Values from the MainArray
+  	MainArray = $.unique(MainArray);
+  	//console.log(MainArray);
+
+});
+
+
+//------All Agreements Events--------
+$('#mainGreen').click(function() {
+	$('#N2001').velocity({'opacity': '1'});
+	$('#N2005').velocity({'opacity': '1'});
+	$('#N2006').velocity({'opacity': '1'});
+	$('#N2007').velocity({'opacity': '1'});
+	$('#N2008').velocity({'opacity': '1'});
+	$('#N2009').velocity({'opacity': '1'});
+	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011a').velocity({'opacity': '1'});
+	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2014').velocity({'opacity': '1'});
+	$('#N2015').velocity({'opacity': '1'});
+	$('#N2016').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainGreen').velocity({'opacity': '1'});
+
+	greenSwitch = 1;
+
+  //Populate MainArray with MainArray previous values and new Green Array Values
+  MainArray = $.merge( $.merge( [], MainArray ), greenA );
+  //Remove Duplicate Values from the MainArray
+  MainArray = $.unique(MainArray);
+  //console.log(MainArray);
+});
+
+
+//------All Conflicts Events--------
+
+$('#mainPurple').click(function(){
+	$('#N1968').velocity({'opacity': '1'});
+	$('#N1974').velocity({'opacity': '1'});
+	$('#N1974a').velocity({'opacity': '1'});
+	$('#N1975').velocity({'opacity': '1'});
+	$('#N1983').velocity({'opacity': '1'});
+	$('#N1983a').velocity({'opacity': '1'});
+	$('#N1995').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainPurple').velocity({'opacity': '1'});
+
+	purpleSwitch = 1;
+
+  //Populate MainArray with MainArray previous values and new Purple Array Values
+  MainArray = $.merge( $.merge( [], MainArray ), purpleA );
+  //Remove Duplicate Values from the MainArray
+  MainArray = $.unique(MainArray);
+  //console.log(MainArray);
+});
+
+//------All Others Events--------
+$('#mainGrey').click(function(){
+	$('#N1947').velocity({'opacity': '1'});
+	$('#N1964').velocity({'opacity': '1'});
+	$('#N1967').velocity({'opacity': '1'});
+	$('#N1974').velocity({'opacity': '1'});
+	$('#N1974b').velocity({'opacity': '1'});
+	$('#N1998').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainGrey').velocity({'opacity': '1'});
+
+	greySwitch = 1;
+
+  //Populate MainArray with MainArray previous values and new Grey Array Values
+  MainArray = $.merge( $.merge( [], MainArray ), greyA );
+  //Remove Duplicate Values from the MainArray
+  MainArray = $.unique(MainArray);
+  //console.log(MainArray);
+});
+
+
+//------All Achievements Events--------
+
+$('#mainAc').click(function(){
+	$('#N1947').velocity({'opacity': '1'});
+	$('#N1956').velocity({'opacity': '1'});
+	$('#N1960').velocity({'opacity': '1'});
+	$('#N1974').velocity({'opacity': '1'});
+	$('#N1978').velocity({'opacity': '1'});
+	$('#N1988').velocity({'opacity': '1'});
+	$('#N1989').velocity({'opacity': '1'});
+	$('#N1991').velocity({'opacity': '1'});
+	$('#N1994').velocity({'opacity': '1'});
+	$('#N1996').velocity({'opacity': '1'});
+	$('#N1998').velocity({'opacity': '1'});
+	$('#N2004').velocity({'opacity': '1'});
+	$('#N2005').velocity({'opacity': '1'});
+	$('#N2006').velocity({'opacity': '1'});
+	$('#N2007').velocity({'opacity': '1'});
+	$('#N2008').velocity({'opacity': '1'});
+	$('#N2009').velocity({'opacity': '1'});
+	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011a').velocity({'opacity': '1'});
+	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012a').velocity({'opacity': '1'});
+	$('#N2012b').velocity({'opacity': '1'});
+	$('#N2013').velocity({'opacity': '1'});
+	$('#N2014').velocity({'opacity': '1'});
+	$('#N2015').velocity({'opacity': '1'});
+	$('#N2016').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainAc').velocity({'opacity': '1'});
+
+	diamondSwitch = 1;
+	//Populate MainArray with MainArray previous values and new Diamond Achievement Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), diamondA );
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+
+});
+
+//------All Nuclear Test Events--------
+$('#mainNT').click(function(){
+	$('#N1964').velocity({'opacity': '1'});
+	$('#N1967').velocity({'opacity': '1'});
+	$('#N1974').velocity({'opacity': '1'});
+	$('#N1974b').velocity({'opacity': '1'});
+	$('#N1998').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainNT').velocity({'opacity': '1'});
+
+	ntSwitch = 1;
+	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), ntA );
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+});
+
+
+//------All Global Coverage Events--------
+$('#mainGC').click(function(){
+	$('#N1960').velocity({'opacity': '1'});
+	$('#N1962').velocity({'opacity': '1'});
+	$('#N1964').velocity({'opacity': '1'}); 
+	$('#N1965').velocity({'opacity': '1'});
+	$('#N1967').velocity({'opacity': '1'});
+	$('#N1968').velocity({'opacity': '1'});
+	$('#N1971').velocity({'opacity': '1'});
+	$('#N1974').velocity({'opacity': '1'});
+	$('#N1975').velocity({'opacity': '1'});
+	$('#N1983').velocity({'opacity': '1'});
+	$('#N1991').velocity({'opacity': '1'});
+	$('#N1995').velocity({'opacity': '1'});
+	$('#N1998').velocity({'opacity': '1'});
+	$('#N1999').velocity({'opacity': '1'});
+	$('#N2001').velocity({'opacity': '1'});
+	$('#N2005').velocity({'opacity': '1'});
+	$('#N2006').velocity({'opacity': '1'});
+	$('#N2007').velocity({'opacity': '1'});
+	$('#N2008').velocity({'opacity': '1'});
+	$('#N2009').velocity({'opacity': '1'});
+	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011a').velocity({'opacity': '1'});
+	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012a').velocity({'opacity': '1'});
+	$('#N2012b').velocity({'opacity': '1'});
+	$('#N2014').velocity({'opacity': '1'});
+	$('#N2015').velocity({'opacity': '1'});
+	$('#N2016').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#mainGC').velocity({'opacity': '1'});
+
+	gcSwitch = 1;
+
+	//Populate MainArray with MainArray previous values and new Global Coverage Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), gcA );
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+});
+
+
+
+
+//---------All Minus3 Events------------
+	$('#minus3').click(function(){
+	$('#N1965').velocity({'opacity': '1'});
+	$('#N1968').velocity({'opacity': '1'});
+	$('#N1974').velocity({'opacity': '1'});
+	$('#N1974a').velocity({'opacity': '1'});
+	$('#N1975').velocity({'opacity': '1'});
+	$('#N1983').velocity({'opacity': '1'});
+	$('#N1983a').velocity({'opacity': '1'});
+	$('#N1995').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#minus3').velocity({'opacity': '1'});
+
+	minus3Switch = 1;
+	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), deteA);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+});
+
+
+//---------All Deterring Events------------
+	$('#deteEvent').click(function(){
+	$('#N1965').velocity({'opacity': '1'});
+	$('#N1968').velocity({'opacity': '1'});
+	$('#N1974').velocity({'opacity': '1'});
+	$('#N1974a').velocity({'opacity': '1'});
+	$('#N1975').velocity({'opacity': '1'});
+	$('#N1983').velocity({'opacity': '1'});
+	$('#N1983a').velocity({'opacity': '1'});
+	$('#N1995').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#deteEvent').velocity({'opacity': '1'});
+
+	deteSwitch = 1;
+	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), deteA);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+});
+
+
+
+//---------All Encouraging Events------------
+	$('#encoEvent').click(function(){
+	$('#N1945').velocity({'opacity': '1'});
+	$('#N1948').velocity({'opacity': '1'});
+	$('#N1954').velocity({'opacity': '1'});
+	$('#N1956').velocity({'opacity': '1'});
+	$('#N1960').velocity({'opacity': '1'});
+	$('#N1983').velocity({'opacity': '1'});
+	$('#N1988').velocity({'opacity': '1'});
+	$('#N1989').velocity({'opacity': '1'});
+	$('#N1994').velocity({'opacity': '1'});
+	$('#N1996').velocity({'opacity': '1'});
+	$('#N2001').velocity({'opacity': '1'});
+	$('#N2004').velocity({'opacity': '1'});
+	$('#N2005').velocity({'opacity': '1'});
+	$('#N2006').velocity({'opacity': '1'});
+	$('#N2007').velocity({'opacity': '1'});
+	$('#N2008').velocity({'opacity': '1'});
+	$('#N2009').velocity({'opacity': '1'});
+	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011a').velocity({'opacity': '1'});
+	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012a').velocity({'opacity': '1'});
+	$('#N2012b').velocity({'opacity': '1'});
+	$('#N2013').velocity({'opacity': '1'});
+	$('#N2014').velocity({'opacity': '1'});
+	$('#N2015').velocity({'opacity': '1'});
+	$('#N2016').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#encoEvent').velocity({'opacity': '1'});
+
+	encoSwitch = 1;
+	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), encoA);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+});
+
+
+//---------All Plus 3 Events------------
+	$('#plus3').click(function(){
+	$('#N1960').velocity({'opacity': '1'});
+	$('#N2001').velocity({'opacity': '1'});
+	$('#N2005').velocity({'opacity': '1'});
+	$('#N2006').velocity({'opacity': '1'});
+	$('#N2007').velocity({'opacity': '1'});
+	$('#N2008').velocity({'opacity': '1'});
+	$('#N2009').velocity({'opacity': '1'});
+	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011a').velocity({'opacity': '1'});
+	$('#N2012b').velocity({'opacity': '1'});
+	$('#N2014').velocity({'opacity': '1'});
+	$('#N2015').velocity({'opacity': '1'});
+	$('#N2016').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#plus3').velocity({'opacity': '1'});
+
+	plus3Switch = 1;
+	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), plus3A);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+});
+
+//---------All Plus 1 Events------------
+	$('#plus1').click(function(){
+	$('#N1945').velocity({'opacity': '1'});
+	$('#N1948').velocity({'opacity': '1'});
+	$('#N1954').velocity({'opacity': '1'});
+	$('#N1956').velocity({'opacity': '1'});
+	$('#N1983').velocity({'opacity': '1'});
+	$('#N1988').velocity({'opacity': '1'});
+	$('#N1989').velocity({'opacity': '1'});
+	$('#N1994').velocity({'opacity': '1'});
+	$('#N1996').velocity({'opacity': '1'});
+	$('#N2004').velocity({'opacity': '1'});
+	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012a').velocity({'opacity': '1'});
+	$('#N2013').velocity({'opacity': '1'});
+	$('#mainClear').velocity({'opacity': '1'});
+	$('#plus1').velocity({'opacity': '1'});
+
+	plus1Switch = 1;
+	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), plus1A);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+});
+
+
+
+
+////-------Click events for World Timeline
+
+
+
+//---------All First Nuclear Test Events----------
+	$('#firstNT').click(function(){
+
+		$('#wnt1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+		$('#w1949').velocity({'opacity': '1'});	$('#p1949').velocity({'opacity': '1'});
+		$('#w1952').velocity({'opacity': '1'});	$('#p1952').velocity({'opacity': '1'});
+		$('#w1960').velocity({'opacity': '1'});	$('#p1960').velocity({'opacity': '1'});
+		$('#w1964').velocity({'opacity': '1'});	$('#p1964').velocity({'opacity': '1'});
+		$('#w1974').velocity({'opacity': '1'});	$('#p1974').velocity({'opacity': '1'});
+		$('#w1979').velocity({'opacity': '1'});	$('#p1979').velocity({'opacity': '1'});
+		$('#wnt1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+		$('#w2006').velocity({'opacity': '1'});	$('#p2006').velocity({'opacity': '1'});
+
+		$('#mainClearW').velocity({'opacity': '1'});
+		$('#firstNT').velocity({'opacity': '1'});
+
+
+		firstNTSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), firstNTA);
+		//Remove Duplicate Values from the MainArray
+		MainWorldArray = $.unique(MainWorldArray);
+
+	});
+
+
+//---------All War Related Events----------
+	$('#smWar').click(function(){
+
+		$('#wwr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+		$('#wwra1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
+		$('#wwrb1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
+		$('#w1965').velocity({'opacity': '1'});	$('#p1965').velocity({'opacity': '1'});
+		$('#w1971').velocity({'opacity': '1'});	$('#p1971').velocity({'opacity': '1'});
+		$('#w1989').velocity({'opacity': '1'});	$('#p1989').velocity({'opacity': '1'});
+		$('#w1999').velocity({'opacity': '1'});	$('#p1999').velocity({'opacity': '1'});
+		$('#w2003').velocity({'opacity': '1'});	$('#p2003').velocity({'opacity': '1'});
+
+		$('#mainClearW').velocity({'opacity': '1'});
+		$('#smWar').velocity({'opacity': '1'});
+
+
+		smWarSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), smWarA);
+		//Remove Duplicate Values from the MainArray
+		MainWorldArray = $.unique(MainWorldArray);
+
+	});
+
+
+//---------All Major Group Estbl Events----------
+	$('#majorGr').click(function(){
+
+		$('#wgr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+		$('#w1947').velocity({'opacity': '1'});	$('#p1947').velocity({'opacity': '1'});
+		$('#w1957').velocity({'opacity': '1'});	$('#p1957').velocity({'opacity': '1'});
+		$('#w1958').velocity({'opacity': '1'});	$('#p1958').velocity({'opacity': '1'});
+		$('#w1959').velocity({'opacity': '1'});	$('#p1959').velocity({'opacity': '1'});
+		$('#w1963').velocity({'opacity': '1'});	$('#p1963').velocity({'opacity': '1'});
+		$('#w1968').velocity({'opacity': '1'});	$('#p1968').velocity({'opacity': '1'});
+		$('#w1975').velocity({'opacity': '1'});	$('#p1975').velocity({'opacity': '1'});
+		$('#w1982').velocity({'opacity': '1'});	$('#p1982').velocity({'opacity': '1'});
+		$('#w1985').velocity({'opacity': '1'});	$('#p1985').velocity({'opacity': '1'});
+		$('#wgra1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
+		$('#wgrb1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
+		$('#w1995').velocity({'opacity': '1'});	$('#p1995').velocity({'opacity': '1'});
+		$('#wgra1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+		$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+		$('#wgrc1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+		$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
+		$('#w2007').velocity({'opacity': '1'});	$('#p2007').velocity({'opacity': '1'});
+		$('#wgra2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+		$('#wgrb2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+		$('#w2010').velocity({'opacity': '1'});	$('#p2010').velocity({'opacity': '1'});
+		$('#w2011').velocity({'opacity': '1'});	$('#p2011').velocity({'opacity': '1'});
+		$('#wgra2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+		$('#wgrb2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+		$('#w2015').velocity({'opacity': '1'});	$('#p2015').velocity({'opacity': '1'});
+		$('#wgr2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+
+		$('#mainClearW').velocity({'opacity': '1'});
+		$('#majorGr').velocity({'opacity': '1'});
+
+
+		majorGRSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), majorGrA);
+		//Remove Duplicate Values from the MainArray
+		MainWorldArray = $.unique(MainWorldArray);
+
+	});
+
+
+//---------All Other Major Events----------
+	$('#otherNE').click(function(){
+
+		$('#w1939').velocity({'opacity': '1'});	$('#p1939').velocity({'opacity': '1'});
+		$('#wot1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+		$('#wota2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+		$('#wotb2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+
+		$('#mainClearW').velocity({'opacity': '1'});
+		$('#otherNE').velocity({'opacity': '1'});
+
+		otherNESwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), otherNEA);
+		//Remove Duplicate Values from the MainArray
+		MainWorldArray = $.unique(MainWorldArray);
+
+	});
+
+
+
+//---------All World Tipping Point Events----------
+	$('#tpWorld').click(function(){
+
+		$('#w1939').velocity({'opacity': '1'});	$('#p1939').velocity({'opacity': '1'});
+		$('#wnt1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+		$('#wwr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+		$('#wgr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+		$('#w1949').velocity({'opacity': '1'});	$('#p1949').velocity({'opacity': '1'});
+		$('#w1952').velocity({'opacity': '1'});	$('#p1952').velocity({'opacity': '1'});
+		$('#w1960').velocity({'opacity': '1'});	$('#p1960').velocity({'opacity': '1'});
+		$('#wwra1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
+		$('#w1964').velocity({'opacity': '1'});	$('#p1964').velocity({'opacity': '1'});
+		$('#w1968').velocity({'opacity': '1'});	$('#p1968').velocity({'opacity': '1'});
+		$('#w1974').velocity({'opacity': '1'});	$('#p1974').velocity({'opacity': '1'});
+		$('#w1975').velocity({'opacity': '1'});	$('#p1975').velocity({'opacity': '1'});
+		$('#w1979').velocity({'opacity': '1'});	$('#p1979').velocity({'opacity': '1'});
+		$('#w1989').velocity({'opacity': '1'});	$('#p1989').velocity({'opacity': '1'});
+		$('#wgra1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
+		$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+		$('#wot1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+		$('#wnt1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+		$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
+		$('#w2003').velocity({'opacity': '1'});	$('#p2003').velocity({'opacity': '1'});
+		$('#w2006').velocity({'opacity': '1'});	$('#p2006').velocity({'opacity': '1'});
+		$('#wgra2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+		$('#wgr2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+		$('#wota2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+		$('#wotb2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+
+		$('#mainClearW').velocity({'opacity': '1'});
+		$('#tpWorld').velocity({'opacity': '1'});
+
+
+		tpWorldSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), tpWorldA);
+		//Remove Duplicate Values from the MainArray
+		MainWorldArray = $.unique(MainWorldArray);
+
+	});
+
+
+//---------All Peaceful Events----------
+	$('#peaceNS').click(function(){
+
+		$('#w1957').velocity({'opacity': '1'});	$('#p1957').velocity({'opacity': '1'});
+		$('#w1958').velocity({'opacity': '1'});	$('#p1958').velocity({'opacity': '1'});
+		$('#w1959').velocity({'opacity': '1'});	$('#p1959').velocity({'opacity': '1'});
+		$('#w1963').velocity({'opacity': '1'});	$('#p1963').velocity({'opacity': '1'});
+		$('#w1982').velocity({'opacity': '1'});	$('#p1982').velocity({'opacity': '1'});
+		$('#w1985').velocity({'opacity': '1'});	$('#p1985').velocity({'opacity': '1'});
+		$('#w1995').velocity({'opacity': '1'});	$('#p1995').velocity({'opacity': '1'});
+		$('#wgra1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+		$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+		$('#wgrc1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+		$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
+		$('#w2007').velocity({'opacity': '1'});	$('#p2007').velocity({'opacity': '1'});
+		$('#wgra2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+
+		$('#mainClearW').velocity({'opacity': '1'});
+		$('#peaceNS').velocity({'opacity': '1'});
+
+
+		peaceNSSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), peaceNSA);
+		//Remove Duplicate Values from the MainArray
+		MainWorldArray = $.unique(MainWorldArray);
+
+	});
+
+
+//---------All India Specific Events----------
+	$('#indiaSp').click(function(){
+
+		$('#w1947').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wwrb1962').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w1965').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w1968').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w1971').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w1974').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w1975').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wgrb1991').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wot1998').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w1999').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w2001').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wgra2008').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wgrb2008').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w2010').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w2011').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wgra2014').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wgrb2014').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#w2015').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wgr2016').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wota2016').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		$('#wotb2016').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+
+		$('#mainClearW').velocity({'opacity': '1'});
+		$('#indiaSp').velocity({'opacity': '1'});
+
+
+		indiaSpSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), indiaSpA);
+		//Remove Duplicate Values from the MainArray
+		MainWorldArray = $.unique(MainWorldArray);
+
+	});
+
+
+
+
+////////////////--------END OF CLICK EVENTS---------------///////////
+////////////////----------!---HOVER TOOL-TIP---!----------///////////
+
+
+
+////////////------!KEY LOGIC OF EVENT HOVER!-----------//////////
+
+$(function() {
+
+	var moveLeft = 10;
+	var moveDown = 10;
+	var hoverElement = '';
+	var divElement = '';
+	var yearElement = '';
+	var modelElement = '';
+	var year = '';
+	var bufferchar = ''; //a char buffer is used to switch between india map and world map logic inside the mouseleave() function. thisId or firstChar which are defined below cannot be used because they either lose scope or they are too dynamic
+
+	$('g').hover(
+
+		function mouseover(e) {
+
+			var thisId = $(this).attr('id');
+       
+       var firstChar = thisId.charAt(0);
+
+       
+
+      //Character N indicates hover over the India Timline Event
+      if(firstChar == 'N'){
+          hoverElement = thisId;  //unique name of the hovered over element
+          //console.log(hoverElement);
+          divElement = 'nd'+thisId.substr(1,thisId.length-1);  //the div for hovered over element with description 
+          //console.log(divElement);
+          //console.log(firstChar);
+          bufferchar = firstChar; //set charbuffer inside if statement becasue firstChar keeps changing with hovers.
+      }
+
+      //Character w indicates hover over the India Timline Event
+      if(firstChar == 'w'){
+      	hoverElement = thisId; 
+      	//console.log(hoverElement);
+      	divElement = 'd'+thisId;
+      	//console.log(divElement);
+      	//console.log(firstChar);
+
+      	bufferchar = firstChar; //set charbuffer inside if statement becasue firstChar keeps changing with hovers.
+
+      	year = thisId.slice(-4); //get the last 4 characters to find the year of the event in world timeline
+      	yearElement = 'p'+ year;
+      	$('#'+ yearElement).stop(true,false).velocity({'opacity': '1'});
+
+      	
+      	if(year != '2016'){
+      		$('#md2016').stop(true,false).velocity({'opacity': '0'});
+
+      		//$('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+
+      		switch(year){
+
+      			case '1939':
+      			break;
+
+				case '1945': modelElement = 'md1945';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1947':
+				case '1949': modelElement = 'md1950';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1952': 
+				case '1957': modelElement = 'md1955';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1958':
+				case '1959':
+				case '1960': modelElement = 'md1960';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1962':
+				case '1963':
+				case '1964':
+				case '1965': modelElement = 'md1965';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1968': 
+				case '1971': modelElement = 'md1970';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1974':
+				case '1975': modelElement = 'md1975';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1979':
+				case '1982': modelElement = 'md1980';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1985':
+				case '1986': modelElement = 'md1985';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1987':
+				case '1989':
+				case '1991': modelElement = 'md1990';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1995': modelElement = 'md1995';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1996': modelElement = 'md1996';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '1998':
+				case '1999':
+				case '2001':
+				case '2003': modelElement = 'md2000';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '2006': modelElement = 'md2005';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '2007':
+				case '2008':
+				case '2010': modelElement = 'md2010';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				case '2011':
+				case '2014':
+				case '2015': modelElement = 'md2016';
+							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+							 break;
+
+				default: break;
+
+      		}
+
+      		//console.log(modelElement);
+      	}
+      	else if (year == '2016'){
+      		modelElement = 'md2016';
+			$('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
+      		}
+		      
+      }
+
+      //read the .stop(true,false) documentation at https://css-tricks.com/examples/jQueryStop/ for better control over mouse hover
+
+      $('#'+ hoverElement).stop(true,false).velocity({'opacity': '1'});  //increase opacity to 100% for all hovered elements
+      $('#'+ divElement).show();  //show the div element with the description
+  },
+
+  function mouseleave() {
+
+  	if(bufferchar == 'N') {
+
+      	if(jQuery.inArray(hoverElement, MainArray) == -1) //check to maintain 100% opacity for turned on events which are in the Main Array
+      	{
+		      $('#'+ hoverElement).stop(true,false).velocity({'opacity': '0.4'}); //reduce opactiy to 40% for non-selected events
+		      //console.log(hoverElement + 'is not is array!');
+
+		      //console.log(bufferchar); 
+
+		  }
+	}
+
+
+	if(bufferchar == 'w') {
+		
+		if(jQuery.inArray(hoverElement, MainWorldArray) == -1) //check to maintain 100% opacity for turned on events which are in the Main Array
+      	{
+		      $('#'+ hoverElement).stop(true,false).velocity({'opacity': '0.4'}); //reduce opactiy to 40% for non-selected events
+
+		      $('#'+ yearElement).stop(true,false).velocity({'opacity': '0.4'}); 
+
+		      //console.log(bufferchar);
+		         
+		  }
+	}
+		
+	  	$('#'+ divElement).hide(); //hide the div element with event description
+	  	$('#'+ modelElement).stop(true,false).velocity({'opacity': '0'});
+
+	  	//reset local variables
+	  	hoverElement='';
+	  	divElement='';
+	  	firstChar='';
+	  	yearElement='';
+	  	firstChar='';
+
+	 }
+
+	 );
+//logic for the distance between cursor and the description within div
+	$('g').mousemove(function(e) {
+		$('#'+ divElement).css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+	});
+
+});
+
+
+//////////=======HOVER STATE FOR FILTERS==========////////////
+
+$('#atom').hover(
+
+	function mouseover() {
+		$('#atom').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(coreSwitch != 1) {
+			$('#atom').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainYellow').hover(
+
+	function mouseover() {
+		$('#mainYellow').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(yellowSwitch != 1) {
+			$('#mainYellow').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainRed').hover(
+
+	function mouseover() {
+		$('#mainRed').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(redSwitch != 1) {
+			$('#mainRed').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainGreen').hover(
+
+	function mouseover() {
+		$('#mainGreen').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(greenSwitch != 1) {
+			$('#mainGreen').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainGrey').hover(
+
+	function mouseover() {
+		$('#mainGrey').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(greySwitch != 1) {
+			$('#mainGrey').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainPurple').hover(
+
+	function mouseover() {
+		$('#mainPurple').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(purpleSwitch != 1) {
+			$('#mainPurple').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainGC').hover(
+
+	function mouseover() {
+		$('#mainGC').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(gcSwitch != 1) {
+			$('#mainGC').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainNT').hover(
+
+	function mouseover() {
+		$('#mainNT').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(ntSwitch != 1) {
+			$('#mainNT').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#mainAc').hover(
+
+	function mouseover() {
+		$('#mainAc').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(diamondSwitch != 1){
+			$('#mainAc').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#coreEvent').hover(
+
+	function mouseover() {
+		$('#coreEvent').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(coreSwitch != 1) {
+			$('#coreEvent').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#encoEvent').hover(
+
+	function mouseover() {
+		$('#encoEvent').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(encoSwitch != 1) {
+			$('#encoEvent').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#deteEvent').hover(
+
+	function mouseover() {
+		$('#deteEvent').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(deteSwitch != 1) {
+			$('#deteEvent').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#minus3').hover(
+
+	function mouseover() {
+		$('#minus3').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(minus3Switch != 1) {
+			$('#minus3').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#plus3').hover(
+
+	function mouseover() {
+		$('#plus3').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(plus3Switch != 1) {
+			$('#plus3').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#plus1').hover(
+
+	function mouseover() {
+		$('#plus1').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(plus1Switch != 1) {
+			$('#plus1').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#firstNT').hover(
+
+	function mouseover() {
+		$('#firstNT').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(firstNTSwitch != 1) {
+			$('#firstNT').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#smWar').hover(
+
+	function mouseover() {
+		$('#smWar').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(smWarSwitch != 1) {
+			$('#smWar').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#majorGr').hover(
+
+	function mouseover() {
+		$('#majorGr').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(majorGRSwitch != 1) {
+			$('#majorGr').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#otherNE').hover(
+
+	function mouseover() {
+		$('#otherNE').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(otherNESwitch != 1) {
+			$('#otherNE').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#tpWorld').hover(
+
+	function mouseover() {
+		$('#tpWorld').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(tpWorldSwitch != 1) {
+			$('#tpWorld').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#peaceNS').hover(
+
+	function mouseover() {
+		$('#peaceNS').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(peaceNSSwitch != 1) {
+			$('#peaceNS').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+/////////////////////////////////////////
+$('#indiaSp').hover(
+
+	function mouseover() {
+		$('#indiaSp').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(indiaSpSwitch != 1) {
+			$('#indiaSp').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+	);
+});
+
+
+</script>
+
+
+
+
+<!--//////////////////     All CSS Styles    ///////////////-->
+
+<style type="text/css">
+
+#body{
+	width: 100%;
+	background: #000;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* all styles for the first graph */
+#N1945, #N1947, #N1948, #N1954, #N1956, #N1960, #N1962, #N1964, #N1965, 
+#N1967, #N1968, #N1971, #N1974, #N1974a, #N1974b, #N1975, #N1978, #N1983, #N1983a, #N1983b, #N1988, #N1989, 
+#N1991, #N1994, #N1995, #N1996, #N1998, #N1999, #N2001, #N2004, #N2005, 
+#N2006, #N2007, #N2008, #N2009, #N2010, #N2011a, #N2011b, #N2012a, #N2012b, #N2013, #N2014,
+#N2015, #N2016
+{
+	cursor: pointer;
+	opacity:0.4;
+}
+
+
+#N1945:hover, #N1947:hover, #N1948:hover, #N1954:hover, #N1956:hover, #N1960:hover, #N1962:hover, #N1964:hover, #N1965:hover, 
+#N1967:hover, #N1968:hover, #N1971:hover, #N1974:hover, #N1974a:hover, #N1974b:hover, #N1975:hover, #N1978:hover, 
+#N1983:hover, #N1983a:hover, #N1983b:hover, #N1988:hover, #N1989:hover, 
+#N1991:hover, #N1994:hover, #N1995:hover, #N1996:hover, #N1998:hover, #N1999:hover, #N2001:hover, #N2004:hover, #N2005:hover, 
+#N2006:hover, #N2007:hover, #N2008:hover, #N2009:hover, #N2010:hover, #N2011a:hover, #N2011b:hover, #N2012a:hover, #N2012b:hover, 
+#N2013:hover, #N2014:hover, #N2015:hover, #N2016:hover, #atom:hover, #mainYellow:hover, #mainRed:hover, 
+#mainPurple:hover, #mainGreen:hover, #mainGrey:hover, #mainAc:hover, #mainNT:hover, #mainGC:hover,
+#coreEvent:hover, #encoEvent:hover, #deteEvent:hover, #minus3:hover, #plus3:hover, #plus1:hover
+{
+	opacity:1;
+}
+
+/* all styles for the filters in both graphs */
+#atom, #mainYellow, #mainRed, #mainPurple, #mainGreen, #mainGrey, #mainAc, #mainNT, #mainGC,
+#coreEvent, #encoEvent, #deteEvent, #minus3, #plus3, #plus1, #peaceNS, #tpWorld, #indiaSp, #firstNT,
+#smWar, #majorGr, #otherNE
+{
+	cursor: pointer;
+	opacity:0.6;
+}
+
+
+/* all styles for the second graph */
+#p1939, 	#p1945, 	#p1947, 	#p1949, 	#p1952, 
+#p1957, 	#p1958, 	#p1959, 	#p1960, 	#p1962,  	#p1963, 
+#p1964, 	#p1965, 	#p1968, 	#p1971, 	#p1974, 	#p1975, 	#p1979, 
+#p1982, 	#p1985, 	#p1986, 	#p1987, 	#p1989, 	#p1991, 
+#p1995, 	#p1996, 	#p1998, 	#p1999, 
+#p2001, 	#p2003, 	#p2006, 	#p2007, 	#p2008, 	#p2010, 
+#p2011, 	#p2014, 	#p2015,  	#p2016
+{
+	opacity:0.4;
+}	
+
+
+#w1939, 	#wnt1945, 	#wwr1945, 	#wgr1945, 	#w1947, 	#w1949, 	#w1952, 
+#w1957, 	#w1958, 	#w1959, 	#w1960, 	#wwra1962, 	#wwrb1962, 	#w1963, 
+#w1964, 	#w1965, 	#w1968, 	#w1971, 	#w1974, 	#w1975, 	#w1979, 
+#w1982, 	#w1985, 	#w1986, 	#w1987, 	#w1989, 	#wgra1991, 	#wgrb1991, 
+#w1995, 	#wgra1996, 	#wgrb1996, 	#wgrc1996, 	#wot1998, 	#wnt1998, 	#w1999, 
+#w2001, 	#w2003, 	#w2006, 	#w2007, 	#wgra2008, 	#wgrb2008, 	#w2010, 
+#w2011, 	#wgra2014, 	#wgrb2014, 	#w2015, 	#wgr2016, 	#wota2016, 	#wotb2016 
+{
+	cursor: pointer;
+	opacity:0.4;
+}
+
+
+
+#w1939:hover, 	#wnt1945:hover, 	#wwr1945:hover, 	#wgr1945:hover, 	#w1947:hover, 	#w1949:hover, 	
+#w1952:hover, 	#w1957:hover, 	#w1958:hover, 	#w1959:hover, 	#w1960:hover, 	#wwra1962:hover, 	#wwrb1962:hover, 	
+#w1963:hover, 	#w1964:hover, 	#w1965:hover, 	#w1968:hover, 	#w1971:hover, 	#w1974:hover, 	#w1975:hover, 	#w1979:hover, 	
+#w1982:hover, 	#w1985:hover, 	#w1986:hover, 	#w1987:hover, 	#w1989:hover, 	#wgra1991:hover, 	#wgrb1991:hover, 	
+#w1995:hover, 	#wgra1996:hover, 	#wgrb1996:hover, 	#wgrc1996:hover, 	#wot1998:hover, 	#wnt1998:hover, 	
+#w1999:hover, 	#w2001:hover, 	#w2003:hover, 	#w2006:hover, 	#w2007:hover, 	#wgra2008:hover, 	#wgrb2008:hover, 	
+#w2010:hover, 	#w2011:hover, 	#wgra2014:hover, 	#wgrb2014:hover, 	#w2015:hover, 	#wgr2016:hover, 	
+#wota2016:hover, 	#wotb2016:hover,
+#peaceNS:hover, #tpWorld:hover, #indiaSp:hover, #firstNT:hover,
+#smWar:hover, #majorGr:hover, #otherNE:hover
+{
+	opacity:1;
+}
+
+/* all styles for the clearing filters */
+#mainClear, #mainClearW{
+	cursor: pointer;
+	opacity: 0.1;
+}
+
+
+#md1945, 	#md1950, 	#md1955, 	#md1960, 	#md1965, 	#md1970, 
+#md1975, 	#md1980, 	#md1985, 	#md1990, 	#md1995, 	#md1996, 
+#md2000, 	#md2005, 	#md2010
+{
+	opacity: 0;
+}
+
+
+/* all styles for div description elements in both graphs */
+#nd1945,  #nd1947,  #nd1948,  #nd1954,  #nd1956,  #nd1960,  #nd1962,  #nd1964,  #nd1965,  #nd1967,  
+#nd1968,  #nd1971,  #nd1974,  #nd1974a,   #nd1974b,   #nd1975,  #nd1978,  #nd1983,  #nd1983a,   #nd1983b,
+#nd1988,  #nd1989,  #nd1991,  #nd1994,  #nd1995,  #nd1996,  #nd1998,  #nd1999,  #nd2001,  #nd2004,  
+#nd2005,  #nd2006,  #nd2007,  #nd2008,  #nd2009,  #nd2010,  #nd2011a, #nd2011b,  #nd2012a, #nd2012b,  #nd2013,  #nd2014, #nd2015, #nd2016,
+
+#dw1939, #dwnt1945, #dwwr1945, #dwgr1945, #dw1947, #dw1949, #dw1952, #dw1957, #dw1958, #dw1959, #dw1960, 	#dwwra1962, 
+#dwwrb1962, 	#dw1963, 	#dw1964, 	#dw1965, 	#dw1968, 	#dw1971, 	#dw1974, 	#dw1975, 	#dw1979, 	#dw1982, 
+#dw1985, 	#dw1986, 	#dw1987, 	#dw1989, 	#dwgra1991, 	#dwgrb1991, 	#dw1995, 	#dwgra1996, 	#dwgrb1996, 
+#dwgrc1996, 	#dwot1998, 	#dwnt1998, 	#dw1999, 	#dw2001, 	#dw2003, 	#dw2006, 	#dw2007, 	#dwgra2008, 
+#dwgrb2008, 	#dw2010, 	#dw2011, 	#dwgra2014, 	#dwgrb2014, 	#dw2015, 	#dwgr2016, 	#dwota2016, 
+#dwotb2016 {
+	display: none;
+	position: absolute;
+	font-family: 'GillSans-Light';
+	font-size: 12px;
+	width: 280px;
+	padding: 10px;
+	color: #BDCCD4;
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.7);
+	z-index: 100;
+}
+
+
+</style>
+<!--//////////////////     END CSS Styles    ///////////////-->
+
+</head>
+
+
+
+<body>
+<!-- HIDDEN / POP-UP DIV -->
+
+
+<!--//////// ALL DESCRIPTIONS FOR THE FIRST TIMELINE ///////  -->
+
+<div id="nd1945">
+	<p>
+		Tata Institute of Fundamental Research established through the efforts of HJ Bhabha and JRD Tata. </p>
+	</p>
+</div>
+
+<div id="nd1947">
+	<p>
+		India Independence. </p>
+	</p>
+</div>
+
+<div id="nd1948">
+	<p>
+		Atomic Energy Commission Founded. </p>
+	</p>
+</div>
+
+<div id="nd1954">
+	<p>
+		Atomic Energy Establishment, Trombay later known as Bhabha Atomic Research Centre and Department of Atomic energy founded. </p>
+	</p>
+</div>
+
+<div id="nd1956">
+	<p>
+		Apsara (first asian research reactor) goes critical. </p>
+	</p>
+</div>
+
+<div id="nd1960">
+	<p>
+		CIRUS (Canadian-Indian Reactor Uranium System) established with the support of US and Canada goes critical. </p>
+	</p>
+</div>
+
+<div id="nd1962">
+	<p>
+		Sino-India War where India loses territory to China. USSR, which India considered an ally, couldn't provide any support as it was involved in the Cuban missile conflict with the US. India resolves not to be military independent. </p>
+	</p>
+</div>
+
+<div id="nd1964">
+	<p>
+		China first nuclear test. Pushing India towards its own goal of nuclear armament. </p>
+	</p>
+</div>
+
+<div id="nd1965">
+	<p>
+		Indo-Pak War. Pak gets support from China and US becasue of its trategic position for both China and US during the Cold War era. India realises nuclear and military independence is of the utmost requirement. </p>
+	</p>
+</div>
+
+<div id="nd1967">
+	<p>
+		China tests another nuclear bomb - a hydrogen bomb. China's aggression pushes India towards its own goal. </p>
+	</p>
+</div>
+
+<div id="nd1968">
+<p>
+NPT (Non-Proliferation Treaty) formed. India refuses to sign as it is seen unfair for developing countries and limits the power in control of few nations. </p>
+</div>
+
+<div id="nd1971">
+<p>
+Indo-Pak war. Pakistan divided into Pakistan and Bangladesh. India gets and edge over it's arch rival and a boost in confidence to eagerly move towards the nuclear goal. </p>
+</div>
+
+<div id="nd1974">
+<p>
+Pokharan Test. Code named Smiling Buddha. India called it a peaceful nuclear test. It was performed in ultimate secrecy and the world for the first time witnessed a nation succesfully testing  nuclear weapon without much internation help. </p>
+<p>
+However, Canada cuts of all ties with India in order to critisize India for the nuclear test. </p>
+</div>
+
+<div id="nd1974a">
+<p>
+Pokharan Test. Code named Smiling Buddha. India called it a peaceful nuclear test. It was performed in ultimate secrecy and the world for the first time witnessed a nation succesfully testing  nuclear weapon without much internation help. </p>
+</div>
+
+<div id="nd1974b">
+<p>
+Canada cuts of all ties with India in order to critisize India for the nuclear test. </p>
+</div>
+
+<div id="nd1975">
+<p>
+NSG (Nuclear Suppliers Group) formed. This was a direct reaction to India's test. India was outcast and deemed a rogue nuclear nation, subject to international condemnation. </p>
+</div>
+
+<div id="nd1978">
+<p>
+Purchase of 4 squadrons of Jaguar aircrafts. First aircraft acquired by india to deliver nuclear weapons. </p>
+</div>
+
+<div id="nd1983">
+<p>
+India doesn't test under US pressure. </p>
+<p>
+Ballistic Missile Program launched: India's indigenious missile program. </p>
+</div>
+
+<div id="nd1983a">
+<p>
+India doesn't test under US pressure. </p>
+</div>
+
+<div id="nd1983b">
+<p>
+Ballistic Missile Program launched: India's indigenious missile program. </p>
+</div>
+
+<div id="nd1988">
+<p>
+Dhruva, India's largest reactor goes critical. </p>
+</div>
+
+<div id="nd1989">
+<p>
+Agni-I successfully launched, India's first medium range nuclear capable ballistic missile. </p>
+</div>
+
+<div id="nd1991">
+<p>
+USSR falls, end of Cold War. An incident which makes India's position favourable in the years to come. India also opens its market with the landmark economic reform which allows India's growth in the international arena. </p>
+</div>
+
+<div id="nd1994">
+<p>
+Prithvi, short range nuclear capable ballistic missile, inducted in Indian Army. </p>
+</div>
+
+<div id="nd1995">
+<p>
+India doesn't test under US pressure. </p>
+</div>
+
+<div id="nd1996">
+<p>
+Prithvi II test fired. </p>
+</div>
+
+<div id="nd1998">
+<p>
+Pokharan II: Operation Shakti. India's second successful nuclear test. This came as a shock to the world as India performed this test with ultimate secrecy away from the keen eyes with all the indigenous wit and resources. This confirmed India on the world map as a nuclear nation. </p>
+</div>
+
+<div id="nd1999">
+<p>
+Kargil War: Prithvi and Agni Deployed. India shows its might. </p>
+</div>
+
+<div id="nd2001">
+<p>
+World awakens to fight against terrosism, of which India becomes a major keyholder because of it's vicinity to Pakistan and Afghanistan, two countries torn with terrorism and US finds India as a way to restore balance both with respect to terrorism, as well as Chinese emerging power. US negotiations embark.</p>
+</div>
+
+<div id="nd2004">
+<p>
+Prithvi III full operational testing </p>
+</div>
+
+<div id="nd2005">
+<p>
+Civil Nuclear breakthrough India-US deal. First time in the world history after formation of NSG, a non-member country, India, without signing NPT, or CTBT is allowed to have such a unique deal with any NSG member country. India is no more considered a rogue nuclear nation becasue of its adherance to the world nuclear laws even though India was not part of any of the major groups or signatory of important nuclear agreements.</p>
+</div>
+
+<div id="nd2006">
+<p>
+Henry J Hyde United States-India Peaceful Atomic Energy Cooperation Act of 2006,' which stipulates that Washington will cooperate with New Delhi on nuclear issues and exempt it from signing the Nonproliferation Treaty. </p>
+</div>
+
+<div id="nd2007">
+<p>
+The US Senate passes the 'United States-India Peaceful Atomic Energy Cooperation and US Additional Protocol Implementation Act' to "exempt from certain requirements of the Atomic Energy Act of 1954 United States exports of nuclear materials, equipment, and technology to India. </p>
+<p>
+The text of the 'Agreement for Cooperation between the Government of the United States of America and the Government of India concerning peaceful uses of nuclear energy' (123 Agreement) is released by both governments. </p>
+</div>
+
+<div id="nd2008">
+<p>
+India-US civil nuclear agreement established. India gains NSG waiver. A huge gain for India to establish ties with other NSG member countries. </p>
+</div>
+
+<div id="nd2008">
+<p>
+Nuclear deals with France and Russia. </p>
+</div>
+
+<div id="nd2009">
+<p>
+Nuclear deals with Mongolia, Kazakastan, Namibia, Argentina.</p>
+</div>
+
+<div id="nd2010">
+<p>
+Nuclear deal Canada.</p>
+</div>
+
+<div id="nd2011a">
+<p>Nuclear deals with South Koria and Australia. India recognised as civil nuclear state. </p>
+</div>
+
+<div id="nd2011b">
+<p>Agni IV tested successfully. Received international support. </p>
+</div>
+
+<div id="nd2012a">
+<p>
+Successful Agni II launch. </p>
+</div>
+
+<div id="nd2012b">
+<p> Successful Agni V launch: only the fifth country with ICBM capabilities. Receives international support. </p>
+</div>
+
+<div id="nd2013">
+<p>
+Test fire underwater ballistic missile. </p>
+</div>
+
+<div id="nd2014">
+<p>
+Indian-Russian cooperation in the peaceful use of nuclear power. </p>
+</div>
+
+<div id="nd2015">
+<p>
+India-UK civil nuclear agreement.</p><p>
+India and Japan sign a memorandum on cooperating in civil nuclear energy. </p>
+</div>
+
+<div id="nd2016">
+<p>																																					India becomes part of MTCR (Missile TechnoloControl Regime, a group of 35 countries)even ahead of China.
+</p>
+<p>	Arihant, nuclear powered missile submarine operations for nuclear triad. Only US and Russia are fully capable nuclear triad, whereas China and India are emerging nuclear triad countries with the capability to nuclear strike from land, air and sea, thus giving the ability of second strike.
+</p>
+<p>
+US advocates India's inclusion in the NSG group.
+</p>
+</div>
+
+
+<!--//////// ALL DESCRIPTIONS FOR THE SECOND TIMELINE ///////  -->
+
+
+<div id="dw1939"><p>Major Discovery of Fission Evidence</p></div>
+
+<div id="dwnt1945"><p>US first nuclear test</p></div>
+
+<div id="dwwr1945"><p>US detonates atom bomb over Hiroshima and Nagasaki</p></div>
+
+<div id="dwgr1945"><p>United Nations Security Council (UNSC) establishes</p></div>
+
+<div id="dw1947"><p>India Independence from British Rule</p></div>
+
+<div id="dw1949"><p>USSR first nuclear test</p></div>
+
+<div id="dw1952"><p>UK first nuclear test</p></div>
+
+<div id="dw1957"><p>International Atomic Energy Agency (IAEA) established</p></div>
+
+<div id="dw1958"><p>UK disarmament peace campaign conceives</p></div>
+
+<div id="dw1959"><p>Nuclear tests banned in Antarctica</p></div>
+
+<div id="dw1960"><p>France first nuclear test</p></div>
+
+<div id="dwwra1962"><p>Cuban missile crisis - US and USSR military stand-off</p></div>
+
+<div id="dwwrb1962"><p>Sino-India War</p></div>
+
+<div id="dw1963"><p>Partial Test Ban Treaty</p></div>
+
+<div id="dw1964"><p>China first nuclear test</p></div>
+
+<div id="dw1965"><p>Indo-Pak War. Pakistan gets support from China and US</p></div>
+
+<div id="dw1968"><p>Non-Proliferation Treaty (NPT) formulated. India refuses, as it was unfair that nations already having nuclear stockpile had no 
+obligation to give them up, while others were not allowed to have them</p></div>
+
+<div id="dw1971"><p>Indo-Pak War. Pakistan divided</p></div>
+
+<div id="dw1974"><p>Indias first nuclear test</p></div>
+
+<div id="dw1975"><p>Nuclear Supplier Group (NSG) formed. India outcast!</p></div>
+
+<div id="dw1979"><p>South Africa and Israel test covertly together</p></div>
+
+<div id="dw1982"><p>Nuclear Disarmament Rally at New York for a nuclear weapon free world</p></div>
+
+<div id="dw1985"><p>South Pacific becomes nuclear free</p></div>
+
+<div id="dw1986"><p>Israel Nuclear program revealed</p></div>
+
+<div id="dw1987"><p>US and USSR ban intermediate range missile</p></div>
+
+<div id="dw1989"><p>Soviet withdrawl from Afghanistan</p></div>
+
+<div id="dwgra1991"><p>India Economic Reform</p></div>
+
+<div id="dwgrb1991"><p>Fall of USSR</p></div>
+
+<div id="dw1995"><p>Southeast asia becomes nuclear free</p></div>
+
+<div id="dwgra1996"><p>Africa becomes nuclear free zone. Ukraine and Belarus also become nuclear free.</p></div>
+
+<div id="dwgrb1996"><p>World court says nuclear weapon illegal</p></div>
+
+<div id="dwgrc1996"><p>Comprehensive Test Ban Treaty formulated</p></div>
+
+<div id="dwot1998"><p>India's Pokharan II test</p></div>
+
+<div id="dwnt1998"><p>Pakistan's first nuclear test</p></div>
+
+<div id="dw1999"><p>Indo-Pak Kargil War</p></div>
+
+<div id="dw2001"><p>Fight against terrorism - Global War on Terror (GWOT) picks up movement</p></div>
+
+<div id="dw2003"><p>Iraq invasion by US. Stops Iran's nuclear prog which had started pre-1991</p></div>
+
+<div id="dw2006"><p>North Korea first nuclear test</p></div>
+
+<div id="dw2007"><p>Global civil society - International Campaign to Abolish Nuclear Weapons (ICAN) - established</p></div>
+
+<div id="dwgra2008"><p>India-US civil nuclear agreement established. India gains NSG waiver</p></div>
+
+<div id="dwgrb2008"><p>Nuclear deals with France and Russia</p></div>
+
+<div id="dw2010"><p>Nuclear deal with Canada</p></div>
+
+<div id="dw2011"><p>Nuclear deals with South Koria and Australia. India Recognised as civil nuclear state</p></div>
+
+<div id="dwgra2014"><p>Indian-Russian cooperation in the peaceful use of nuclear power</p></div>
+
+<div id="dwgrb2014"><p>Mexico and Austria call for ban</p></div>
+
+<div id="dw2015"><p>India-UK civil nuclear agreement</p></div>
+
+<div id="dwgr2016"><p>India becomes part of MTCR</p></div>
+
+<div id="dwota2016"><p>India steps closer to nuclear triad with nuclear capable submarine Arihant in operation</p></div>
+
+<div id="dwotb2016"><p>US advocates India's inclusion in the NSG group</p></div>
+
+
+
+</body>
+
+</html>
