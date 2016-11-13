@@ -48,32 +48,33 @@ var indiaSpSwitch = 0;
 
 //arrays are for storing all the event types in respective buckets to have control over the opacity and hover behaviour
 var yellowA = ["N1945", "N1948", "N1954", "N1956", "N1960", "N1978", "N1983", "N1983b", 
-				"N1988", "N1989", "N1991", "N1994", "N1996", "N2004", "N2012a", "N2012b",  "N2013"];
+				"N1988", "N1989", "N1991", "N1994", "N1996", "N2004", "N2012", "N2012a", "N2012b",  "N2013"];
 
 var redA = ["N1962", "N1965", "N1971", "N1999"];
 
 var purpleA = ["N1968", "N1974", "N1974a", "N1975", "N1983",  "N1983a",  "N1995"];
 
-var greenA = ["N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2014", "N2015", "N2016"];
+var greenA = ["N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011", "N2011a", "N2011b", "N2014", "N2015", "N2016"];
 
 var greyA = ["N1947", "N1964", "N1967", "N1974", "N1974b", "N1998"];
 
-var diamondA = ["N1956", "N1960", "N1974", "N1978", "N1988", "N1989", "N1991", "N1994", "N1996", "N1998", "N2004", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2012a", "N2012b", "N2013", "N2014", "N2015", "N2016"];
+var diamondA = ["N1956", "N1960", "N1974", "N1978", "N1988", "N1989", "N1991", "N1994", "N1996", "N1998", "N2004", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011", "N2011a", "N2011b", "N2012", "N2012a", "N2012b", "N2013", "N2014", "N2015", "N2016"];
 
 var ntA = ["N1964", "N1967", "N1974", "N1974b", "N1998"];
 
-var gcA = ["N1962", "N1964", "N1965", "N1967", "N1968", "N1971", "N1974", "N1975", "N1983", "N1991", "N1995", "N1998", "N1999", "N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2012a", "N2012b", "N2014", "N2015", "N2016"];
+var gcA = ["N1962", "N1964", "N1965", "N1967", "N1968", "N1971", "N1974", "N1975", "N1983", "N1991", "N1995", "N1998", "N1999", "N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011", "N2011a", "N2011b", "N2012", "N2012a", "N2012b", "N2014", "N2015", "N2016"];
 
 var coreA = ["N1962", "N1964", "N1965", "N1967", "N1968", "N1971", "N1999", "N2001"];
 
 var encoA = ["N1945", "N1948", "N1954", "N1956", "N1960", "N1983", "N1988", "N1989", "N1994", "N1996", "N2001", "N2004", 
-			"N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2011b", "N2012a", "N2012b", "N2013", "N2014", "N2015", "N2016"];
+			"N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011", "N2011a", "N2011b", "N2012", "N2012a", "N2012b", 
+			 "N2013", "N2014", "N2015", "N2016"];
 
 var deteA = ["N1965", "N1968", "N1974", "N1974a", "N1975", "N1983", "N1983a", "N1995"];
 
-var plus3A = ["N1960","N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011a", "N2012b", "N2014", "N2015", "N2016"];
+var plus3A = ["N1960","N2001", "N2005", "N2006", "N2007", "N2008", "N2009", "N2010", "N2011", "N2011a", "N2012", "N2012b", "N2014", "N2015", "N2016"];
 
-var plus1A = ["N1945", "N1948", "N1954", "N1956", "N1983", "N1988", "N1989", "N1994", "N1996", "N2004", "N2011b", "N2012a", "N2013"];
+var plus1A = ["N1945", "N1948", "N1954", "N1956", "N1983", "N1988", "N1989", "N1994", "N1996", "N2004", "N2011", "N2011b", "N2012", "N2012a", "N2013"];
 
 var MainArray = [];  //main array which keeps all the highlighted events from India Graph in the buffer
 
@@ -141,8 +142,10 @@ $('#mainClear').click(function (){
 	$('#N2008').velocity({'opacity': '0.4'});
 	$('#N2009').velocity({'opacity': '0.4'});
 	$('#N2010').velocity({'opacity': '0.4'});
+	$('#N2011').velocity({'opacity': '0.4'});
 	$('#N2011a').velocity({'opacity': '0.4'});
 	$('#N2011b').velocity({'opacity': '0.4'});
+	$('#N2012').velocity({'opacity': '0.4'});
 	$('#N2012a').velocity({'opacity': '0.4'});
 	$('#N2012b').velocity({'opacity': '0.4'});
 	$('#N2013').velocity({'opacity': '0.4'});
@@ -406,6 +409,7 @@ $('#mainYellow').click(function() {
 	$('#N1994').velocity({'opacity': '1'});
 	$('#N1996').velocity({'opacity': '1'});
 	$('#N2004').velocity({'opacity': '1'});
+	$('#N2012').velocity({'opacity': '1'});
 	$('#N2012a').velocity({'opacity': '1'});
 	$('#N2012b').velocity({'opacity': '1'});
 	$('#N2013').velocity({'opacity': '1'});
@@ -432,6 +436,7 @@ $('#mainGreen').click(function() {
 	$('#N2008').velocity({'opacity': '1'});
 	$('#N2009').velocity({'opacity': '1'});
 	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011').velocity({'opacity': '1'});
 	$('#N2011a').velocity({'opacity': '1'});
 	$('#N2011b').velocity({'opacity': '1'});
 	$('#N2014').velocity({'opacity': '1'});
@@ -514,8 +519,10 @@ $('#mainAc').click(function(){
 	$('#N2008').velocity({'opacity': '1'});
 	$('#N2009').velocity({'opacity': '1'});
 	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011').velocity({'opacity': '1'});
 	$('#N2011a').velocity({'opacity': '1'});
 	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012').velocity({'opacity': '1'});
 	$('#N2012a').velocity({'opacity': '1'});
 	$('#N2012b').velocity({'opacity': '1'});
 	$('#N2013').velocity({'opacity': '1'});
@@ -576,8 +583,10 @@ $('#mainGC').click(function(){
 	$('#N2008').velocity({'opacity': '1'});
 	$('#N2009').velocity({'opacity': '1'});
 	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011').velocity({'opacity': '1'});
 	$('#N2011a').velocity({'opacity': '1'});
 	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012').velocity({'opacity': '1'});
 	$('#N2012a').velocity({'opacity': '1'});
 	$('#N2012b').velocity({'opacity': '1'});
 	$('#N2014').velocity({'opacity': '1'});
@@ -663,8 +672,10 @@ $('#mainGC').click(function(){
 	$('#N2008').velocity({'opacity': '1'});
 	$('#N2009').velocity({'opacity': '1'});
 	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011').velocity({'opacity': '1'});
 	$('#N2011a').velocity({'opacity': '1'});
 	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012').velocity({'opacity': '1'});
 	$('#N2012a').velocity({'opacity': '1'});
 	$('#N2012b').velocity({'opacity': '1'});
 	$('#N2013').velocity({'opacity': '1'});
@@ -693,7 +704,9 @@ $('#mainGC').click(function(){
 	$('#N2008').velocity({'opacity': '1'});
 	$('#N2009').velocity({'opacity': '1'});
 	$('#N2010').velocity({'opacity': '1'});
+	$('#N2011').velocity({'opacity': '1'});
 	$('#N2011a').velocity({'opacity': '1'});
+	$('#N2012').velocity({'opacity': '1'});
 	$('#N2012b').velocity({'opacity': '1'});
 	$('#N2014').velocity({'opacity': '1'});
 	$('#N2015').velocity({'opacity': '1'});
@@ -721,7 +734,9 @@ $('#mainGC').click(function(){
 	$('#N1994').velocity({'opacity': '1'});
 	$('#N1996').velocity({'opacity': '1'});
 	$('#N2004').velocity({'opacity': '1'});
+	$('#N2011').velocity({'opacity': '1'});
 	$('#N2011b').velocity({'opacity': '1'});
+	$('#N2012').velocity({'opacity': '1'});
 	$('#N2012a').velocity({'opacity': '1'});
 	$('#N2013').velocity({'opacity': '1'});
 	$('#mainClear').velocity({'opacity': '1'});
@@ -1734,12 +1749,25 @@ Nuclear deals with Mongolia, Kazakastan, Namibia, Argentina.</p>
 Nuclear deal Canada.</p>
 </div>
 
+<div id="nd2011">
+<p>Nuclear deals with South Koria and Australia. India recognised as civil nuclear state. </p>
+
+<p>Agni IV tested successfully. Received international support. </p>
+</div>
+
 <div id="nd2011a">
 <p>Nuclear deals with South Koria and Australia. India recognised as civil nuclear state. </p>
 </div>
 
 <div id="nd2011b">
 <p>Agni IV tested successfully. Received international support. </p>
+</div>
+
+<div id="nd2012">
+<p>
+Successful Agni II launch. </p>
+
+<p> Successful Agni V launch: only the fifth country with ICBM capabilities. Receives international support. </p>
 </div>
 
 <div id="nd2012a">

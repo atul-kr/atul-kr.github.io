@@ -1,16 +1,16 @@
 @font-face{
-	font-family: 'GillSans-Light' ;
+	font-family: 'GillSans-Light';
 	src:url(GillSans-Light.ttf);
 }
 
 @font-face{
-	font-family: 'UniSansHeavyCAPS' ;
-	src:url(Uni_Sans_Heavy.otf);
+	font-family: 'UniSansHeavy';
+	src:url(Uni-Sans-Heavy.ttf);
 }
 
 @font-face{
-	font-family: 'UniSansThinCAPS' ;
-	src:url(Uni_Sans_Thin.otf);
+	font-family: 'UniSansBook';
+	src:url(Uni-Sans-Book.ttf);
 }
 
 
@@ -19,7 +19,7 @@
 	background: #000;
 	margin: 0;
 	padding: 0;
-	font-family: 'GillSans-Light', 'UniSansThinCAPS', 'UniSansHeavyCAPS';
+	font-family: 'GillSans-Light', 'UniSansBook', 'UniSansHeavy';
 }
 
 
@@ -27,7 +27,7 @@
 #N1945, #N1947, #N1948, #N1954, #N1956, #N1960, #N1962, #N1964, #N1965, 
 #N1967, #N1968, #N1971, #N1974, #N1974a, #N1974b, #N1975, #N1978, #N1983, #N1983a, #N1983b, #N1988, #N1989, 
 #N1991, #N1994, #N1995, #N1996, #N1998, #N1999, #N2001, #N2004, #N2005, 
-#N2006, #N2007, #N2008, #N2009, #N2010, #N2011a, #N2011b, #N2012a, #N2012b, #N2013, #N2014,
+#N2006, #N2007, #N2008, #N2009, #N2010, #N2011, #N2011a, #N2011b, #N2012, #N2012a, #N2012b, #N2013, #N2014,
 #N2015, #N2016
 {
 	cursor: pointer;
@@ -39,8 +39,8 @@
 #N1967:hover, #N1968:hover, #N1971:hover, #N1974:hover, #N1974a:hover, #N1974b:hover, #N1975:hover, #N1978:hover, 
 #N1983:hover, #N1983a:hover, #N1983b:hover, #N1988:hover, #N1989:hover, 
 #N1991:hover, #N1994:hover, #N1995:hover, #N1996:hover, #N1998:hover, #N1999:hover, #N2001:hover, #N2004:hover, #N2005:hover, 
-#N2006:hover, #N2007:hover, #N2008:hover, #N2009:hover, #N2010:hover, #N2011a:hover, #N2011b:hover, #N2012a:hover, #N2012b:hover, 
-#N2013:hover, #N2014:hover, #N2015:hover, #N2016:hover, #atom:hover, #mainYellow:hover, #mainRed:hover, 
+#N2006:hover, #N2007:hover, #N2008:hover, #N2009:hover, #N2010:hover, #N2011:hover, #N2011a:hover, #N2011b:hover, #N2012a:hover, #N2012b:hover, 
+#N2012:hover, #N2013:hover, #N2014:hover, #N2015:hover, #N2016:hover, #atom:hover, #mainYellow:hover, #mainRed:hover, 
 #mainPurple:hover, #mainGreen:hover, #mainGrey:hover, #mainAc:hover, #mainNT:hover, #mainGC:hover,
 #coreEvent:hover, #encoEvent:hover, #deteEvent:hover, #minus3:hover, #plus3:hover, #plus1:hover
 {
@@ -117,7 +117,7 @@
 #nd1945,  #nd1947,  #nd1948,  #nd1954,  #nd1956,  #nd1960,  #nd1962,  #nd1964,  #nd1965,  #nd1967,  
 #nd1968,  #nd1971,  #nd1974,  #nd1974a,   #nd1974b,   #nd1975,  #nd1978,  #nd1983,  #nd1983a,   #nd1983b,
 #nd1988,  #nd1989,  #nd1991,  #nd1994,  #nd1995,  #nd1996,  #nd1998,  #nd1999,  #nd2001,  #nd2004,  
-#nd2005,  #nd2006,  #nd2007,  #nd2008,  #nd2009,  #nd2010,  #nd2011a, #nd2011b,  #nd2012a, #nd2012b,  #nd2013,  #nd2014, #nd2015, #nd2016,
+#nd2005,  #nd2006,  #nd2007,  #nd2008,  #nd2009,  #nd2010, #nd2011,  #nd2011a, #nd2011b, #nd2012,  #nd2012a, #nd2012b,  #nd2013,  #nd2014, #nd2015, #nd2016,
 
 #dw1939, #dwnt1945, #dwwr1945, #dwgr1945, #dw1947, #dw1949, #dw1952, #dw1957, #dw1958, #dw1959, #dw1960, 	#dwwra1962, 
 #dwwrb1962, 	#dw1963, 	#dw1964, 	#dw1965, 	#dw1968, 	#dw1971, 	#dw1974, 	#dw1975, 	#dw1979, 	#dw1982, 
