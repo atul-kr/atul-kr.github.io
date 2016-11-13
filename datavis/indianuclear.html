@@ -44,6 +44,10 @@ var tpWorldSwitch = 0;
 var peaceNSSwitch = 0;
 var indiaSpSwitch = 0;
 
+//switches to control the first hover and first filter click so that on page load everything is opacity 1, but with hover or filter it goes dark.
+var firstHoverMain = 0;
+var firstHoverWorld = 0;
+
 
 
 //arrays are for storing all the event types in respective buckets to have control over the opacity and hover behaviour
@@ -102,10 +106,9 @@ var indiaSpA = ["w1947", "wwrb1962", "w1965", "w1968", "w1971", "w1974", "w1975"
 
 var MainWorldArray = []; // array which keeps all the highlighted events from World Timeline in the buffer
 
-////////////---------ALL CLICK EVENTS------------/////////////
 
-//------Clear All India Map Filters-------
-$('#mainClear').click(function (){
+//////----------USER DEFINED FUNCTION TO CLEAR ALL EVENTS IN INDIA MAIN----------/////////
+function clearMain(){
 	$('#N1945').velocity({'opacity': '0.4'});
 	$('#N1947').velocity({'opacity': '0.4'});
 	$('#N1948').velocity({'opacity': '0.4'});
@@ -153,45 +156,10 @@ $('#mainClear').click(function (){
 	$('#N2015').velocity({'opacity': '0.4'});
 	$('#N2016').velocity({'opacity': '0.4'});
 	$('#atom').velocity({'opacity': '0.6'});
-	$('#mainYellow').velocity({'opacity': '0.6'});
-	$('#mainRed').velocity({'opacity': '0.6'});
-	$('#mainPurple').velocity({'opacity': '0.6'});
-	$('#mainGreen').velocity({'opacity': '0.6'});
-	$('#mainGrey').velocity({'opacity': '0.6'});
-	$('#mainAc').velocity({'opacity': '0.6'});
-	$('#mainNT').velocity({'opacity': '0.6'});
-	$('#mainGC').velocity({'opacity': '0.6'});
-	$('#coreEvent').velocity({'opacity': '0.6'});
-	$('#encoEvent').velocity({'opacity': '0.6'});
-	$('#deteEvent').velocity({'opacity': '0.6'});
-	$('#minus3').velocity({'opacity': '0.6'});
-	$('#plus3').velocity({'opacity': '0.6'});
-	$('#plus1').velocity({'opacity': '0.6'});
-	$('#mainClear').velocity({'opacity': '0.1'});
+}
 
-  MainArray.length = 0;  //clear the main array consisting of all elements.
-  
-  yellowSwitch = 0;
-  redSwitch = 0;
-  purpleSwitch = 0;
-  greenSwitch = 0;
-  greySwitch = 0;
-  diamondSwitch = 0;
-  ntSwitch = 0;
-  gcSwitch = 0;
-  coreSwitch = 0;
-  encrgSwitch = 0;
-  deterSwitch = 0;
-  minus3Switch = 0;
-  plus3Switch = 0;
-  plus1Switch = 0;
-
-});
-
-
-//------Clear All World Timeline Filters-------
-$('#mainClearW').click(function (){
-
+//////----------USER DEFINED FUNCTION TO CLEAR ALL EVENTS IN WORLD GRAPH----------/////////
+function clearGlobal(){
 	$('#wnt1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
 	$('#w1949').velocity({'opacity': '0.4'});	$('#p1949').velocity({'opacity': '0.4'});
 	$('#w1952').velocity({'opacity': '0.4'});	$('#p1952').velocity({'opacity': '0.4'});
@@ -283,27 +251,78 @@ $('#mainClearW').click(function (){
 	$('#w2007').velocity({'opacity': '0.4'});	$('#p2007').velocity({'opacity': '0.4'});
 	$('#wgra2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
 		
-	$('#w1947').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wwrb1962').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w1965').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w1968').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w1971').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w1974').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w1975').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wgrb1991').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wot1998').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w1999').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w2001').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wgra2008').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wgrb2008').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w2010').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w2011').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wgra2014').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wgrb2014').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#w2015').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wgr2016').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wota2016').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
-	$('#wotb2016').velocity({'opacity': '0.4'});	$('#p').velocity({'opacity': '0.4'});
+	$('#w1947').velocity({'opacity': '0.4'});	
+	$('#wwrb1962').velocity({'opacity': '0.4'});	
+	$('#w1965').velocity({'opacity': '0.4'});	
+	$('#w1968').velocity({'opacity': '0.4'});	
+	$('#w1971').velocity({'opacity': '0.4'});	
+	$('#w1974').velocity({'opacity': '0.4'});	
+	$('#w1975').velocity({'opacity': '0.4'});	
+	$('#wgrb1991').velocity({'opacity': '0.4'});	
+	$('#wot1998').velocity({'opacity': '0.4'});	
+	$('#w1999').velocity({'opacity': '0.4'});	
+	$('#w2001').velocity({'opacity': '0.4'});	
+	$('#wgra2008').velocity({'opacity': '0.4'});
+	$('#wgrb2008').velocity({'opacity': '0.4'});
+	$('#w2010').velocity({'opacity': '0.4'});	
+	$('#w2011').velocity({'opacity': '0.4'});
+	$('#wgra2014').velocity({'opacity': '0.4'});
+	$('#wgrb2014').velocity({'opacity': '0.4'});
+	$('#w2015').velocity({'opacity': '0.4'});	
+	$('#wgr2016').velocity({'opacity': '0.4'});	
+	$('#wota2016').velocity({'opacity': '0.4'});
+	$('#wotb2016').velocity({'opacity': '0.4'});
+}
+
+
+
+////////////---------ALL CLICK EVENTS------------/////////////
+
+//------Clear All India Map Filters-------
+$('#mainClear').click(function (){
+
+	clearMain(); //call clearmain() to clear events in india main
+	
+	$('#mainYellow').velocity({'opacity': '0.6'});
+	$('#mainRed').velocity({'opacity': '0.6'});
+	$('#mainPurple').velocity({'opacity': '0.6'});
+	$('#mainGreen').velocity({'opacity': '0.6'});
+	$('#mainGrey').velocity({'opacity': '0.6'});
+	$('#mainAc').velocity({'opacity': '0.6'});
+	$('#mainNT').velocity({'opacity': '0.6'});
+	$('#mainGC').velocity({'opacity': '0.6'});
+	$('#coreEvent').velocity({'opacity': '0.6'});
+	$('#encoEvent').velocity({'opacity': '0.6'});
+	$('#deteEvent').velocity({'opacity': '0.6'});
+	$('#minus3').velocity({'opacity': '0.6'});
+	$('#plus3').velocity({'opacity': '0.6'});
+	$('#plus1').velocity({'opacity': '0.6'});
+	$('#mainClear').velocity({'opacity': '0.1'});
+
+  MainArray.length = 0;  //clear the main array consisting of all elements.
+  
+  yellowSwitch = 0;
+  redSwitch = 0;
+  purpleSwitch = 0;
+  greenSwitch = 0;
+  greySwitch = 0;
+  diamondSwitch = 0;
+  ntSwitch = 0;
+  gcSwitch = 0;
+  coreSwitch = 0;
+  encrgSwitch = 0;
+  deterSwitch = 0;
+  minus3Switch = 0;
+  plus3Switch = 0;
+  plus1Switch = 0;
+
+});
+
+
+//------Clear All World Timeline Filters-------
+$('#mainClearW').click(function (){
+
+	clearGlobal(); //clear all events from world main
 
 	$('#peaceNS').velocity({'opacity': '0.6'});
 	$('#tpWorld').velocity({'opacity': '0.6'});
@@ -330,278 +349,694 @@ $('#mainClearW').click(function (){
 
 //------All Core Events--------
 $('#atom').click(function() {
-	$('#N1962').velocity({'opacity': '1'});
-	$('#N1964').velocity({'opacity': '1'});
-	$('#N1965').velocity({'opacity': '1'});
-	$('#N1967').velocity({'opacity': '1'});
-	$('#N1968').velocity({'opacity': '1'});
-	$('#N1971').velocity({'opacity': '1'});
-	$('#N1999').velocity({'opacity': '1'});
-	$('#N2001').velocity({'opacity': '1'});
-	$('#atom').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#coreEvent').velocity({'opacity': '1'});
 
-	coreSwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-	//Populate MainArray with MainArray previous values and new Core Array Values
-  	MainArray = $.merge( $.merge( [], MainArray ), coreA );
-  	//Remove Duplicate Values from the MainArray
-  	MainArray = $.unique(MainArray);
-  	console.log(MainArray);
+	if(coreSwitch == 0) {
+
+		$('#N1962').velocity({'opacity': '1'});
+		$('#N1964').velocity({'opacity': '1'});
+		$('#N1965').velocity({'opacity': '1'});
+		$('#N1967').velocity({'opacity': '1'});
+		$('#N1968').velocity({'opacity': '1'});
+		$('#N1971').velocity({'opacity': '1'});
+		$('#N1999').velocity({'opacity': '1'});
+		$('#N2001').velocity({'opacity': '1'});
+		$('#atom').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#coreEvent').velocity({'opacity': '1'});
+
+		coreSwitch = 1;
+
+		//Populate MainArray with MainArray previous values and new Core Array Values
+	  	MainArray = $.merge( $.merge( [], MainArray ), coreA );
+	  	//Remove Duplicate Values from the MainArray
+	  	MainArray = $.unique(MainArray);
+	  	//console.log(MainArray);
+  	}
+
+  	else if(coreSwitch == 1) {
+
+  		$('#N1962').velocity({'opacity': '0.4'});
+		$('#N1964').velocity({'opacity': '0.4'});
+		$('#N1965').velocity({'opacity': '0.4'});
+		$('#N1967').velocity({'opacity': '0.4'});
+		$('#N1968').velocity({'opacity': '0.4'});
+		$('#N1971').velocity({'opacity': '0.4'});
+		$('#N1999').velocity({'opacity': '0.4'});
+		$('#N2001').velocity({'opacity': '0.4'});
+		$('#atom').velocity({'opacity': '0.4'});
+		$('#mainClear').velocity({'opacity': '0.4'});
+		$('#coreEvent').velocity({'opacity': '0.4'});
+
+		coreSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return coreA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 });
 
 $('#coreEvent').click(function() {
-	$('#N1962').velocity({'opacity': '1'});
-	$('#N1964').velocity({'opacity': '1'});
-	$('#N1965').velocity({'opacity': '1'});
-	$('#N1967').velocity({'opacity': '1'});
-	$('#N1968').velocity({'opacity': '1'});
-	$('#N1971').velocity({'opacity': '1'});
-	$('#N1999').velocity({'opacity': '1'});
-	$('#N2001').velocity({'opacity': '1'});
-	$('#atom').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#coreEvent').velocity({'opacity': '1'});
 
-	coreSwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-	//Populate MainArray with MainArray previous values and new Core Array Values
-  	MainArray = $.merge( $.merge( [], MainArray ), coreA );
-  	//Remove Duplicate Values from the MainArray
-  	MainArray = $.unique(MainArray);
-  	console.log(MainArray);
+	if(coreSwitch == 0) {
+
+		$('#N1962').velocity({'opacity': '1'});
+		$('#N1964').velocity({'opacity': '1'});
+		$('#N1965').velocity({'opacity': '1'});
+		$('#N1967').velocity({'opacity': '1'});
+		$('#N1968').velocity({'opacity': '1'});
+		$('#N1971').velocity({'opacity': '1'});
+		$('#N1999').velocity({'opacity': '1'});
+		$('#N2001').velocity({'opacity': '1'});
+		$('#atom').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#coreEvent').velocity({'opacity': '1'});
+
+		coreSwitch = 1;
+
+		//Populate MainArray with MainArray previous values and new Core Array Values
+	  	MainArray = $.merge( $.merge( [], MainArray ), coreA );
+	  	//Remove Duplicate Values from the MainArray
+	  	MainArray = $.unique(MainArray);
+	  	//console.log(MainArray);
+  	}
+
+  	else if(coreSwitch == 1) {
+
+  		$('#N1962').velocity({'opacity': '0.4'});
+		$('#N1964').velocity({'opacity': '0.4'});
+		$('#N1965').velocity({'opacity': '0.4'});
+		$('#N1967').velocity({'opacity': '0.4'});
+		$('#N1968').velocity({'opacity': '0.4'});
+		$('#N1971').velocity({'opacity': '0.4'});
+		$('#N1999').velocity({'opacity': '0.4'});
+		$('#N2001').velocity({'opacity': '0.4'});
+		$('#atom').velocity({'opacity': '0.4'});
+		$('#mainClear').velocity({'opacity': '0.4'});
+		$('#coreEvent').velocity({'opacity': '0.4'});
+
+		coreSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return coreA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 });
 
 
 //------All War Events--------
 $('#mainRed').click(function() {
-	$('#N1962').velocity({'opacity': '1'});
-	$('#N1965').velocity({'opacity': '1'});
-	$('#N1971').velocity({'opacity': '1'});
-	$('#N1999').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainRed').velocity({'opacity': '1'});
 
-	redSwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-  //Populate MainArray with MainArray previous values and new Red Array Values
-  MainArray = $.merge( $.merge( [], MainArray ), redA );
-  //Remove Duplicate Values from the MainArray
-  MainArray = $.unique(MainArray);
-  //console.log(MainArray);
+	if(redSwitch == 0){
+
+		$('#N1962').velocity({'opacity': '1'});
+		$('#N1965').velocity({'opacity': '1'});
+		$('#N1971').velocity({'opacity': '1'});
+		$('#N1999').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainRed').velocity({'opacity': '1'});
+
+		redSwitch = 1;
+
+	  //Populate MainArray with MainArray previous values and new Red Array Values
+	  MainArray = $.merge( $.merge( [], MainArray ), redA );
+	  //Remove Duplicate Values from the MainArray
+	  MainArray = $.unique(MainArray);
+	  //console.log(MainArray);
+	}
+
+	else if(redSwitch == 1) {
+
+		$('#N1962').velocity({'opacity': '0.4'});
+		$('#N1965').velocity({'opacity': '0.4'});
+		$('#N1971').velocity({'opacity': '0.4'});
+		$('#N1999').velocity({'opacity': '0.4'});
+		$('#mainClear').velocity({'opacity': '0.4'});
+		$('#mainRed').velocity({'opacity': '0.4'});
+
+		redSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return redA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 
 });
 
 //------All Establishments Events--------
 $('#mainYellow').click(function() {
-	$('#N1945').velocity({'opacity': '1'});
-	$('#N1948').velocity({'opacity': '1'});
-	$('#N1954').velocity({'opacity': '1'});
-	$('#N1956').velocity({'opacity': '1'});
-	$('#N1960').velocity({'opacity': '1'});
-	$('#N1978').velocity({'opacity': '1'});
-	$('#N1983').velocity({'opacity': '1'});
-	$('#N1983b').velocity({'opacity': '1'});
-	$('#N1988').velocity({'opacity': '1'});
-	$('#N1989').velocity({'opacity': '1'});
-	$('#N1991').velocity({'opacity': '1'});
-	$('#N1994').velocity({'opacity': '1'});
-	$('#N1996').velocity({'opacity': '1'});
-	$('#N2004').velocity({'opacity': '1'});
-	$('#N2012').velocity({'opacity': '1'});
-	$('#N2012a').velocity({'opacity': '1'});
-	$('#N2012b').velocity({'opacity': '1'});
-	$('#N2013').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainYellow').velocity({'opacity': '1'});
 
-	yellowSwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-	//Populate MainArray with MainArray previous values and new Yellow Array Values
-  	MainArray = $.merge( $.merge( [], MainArray ), yellowA );
-  	//Remove Duplicate Values from the MainArray
-  	MainArray = $.unique(MainArray);
-  	//console.log(MainArray);
+	if(yellowSwitch == 0) {
+		$('#N1945').velocity({'opacity': '1'});
+		$('#N1948').velocity({'opacity': '1'});
+		$('#N1954').velocity({'opacity': '1'});
+		$('#N1956').velocity({'opacity': '1'});
+		$('#N1960').velocity({'opacity': '1'});
+		$('#N1978').velocity({'opacity': '1'});
+		$('#N1983').velocity({'opacity': '1'});
+		$('#N1983b').velocity({'opacity': '1'});
+		$('#N1988').velocity({'opacity': '1'});
+		$('#N1989').velocity({'opacity': '1'});
+		$('#N1991').velocity({'opacity': '1'});
+		$('#N1994').velocity({'opacity': '1'});
+		$('#N1996').velocity({'opacity': '1'});
+		$('#N2004').velocity({'opacity': '1'});
+		$('#N2012').velocity({'opacity': '1'});
+		$('#N2012a').velocity({'opacity': '1'});
+		$('#N2012b').velocity({'opacity': '1'});
+		$('#N2013').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainYellow').velocity({'opacity': '1'});
+
+		yellowSwitch = 1;
+
+		//Populate MainArray with MainArray previous values and new Yellow Array Values
+	  	MainArray = $.merge( $.merge( [], MainArray ), yellowA );
+	  	//Remove Duplicate Values from the MainArray
+	  	MainArray = $.unique(MainArray);
+	  	//console.log(MainArray);
+  	}
+
+  	else if(yellowSwitch == 1) {
+		$('#N1945').velocity({'opacity': '0.4'});
+		$('#N1948').velocity({'opacity': '0.4'});
+		$('#N1954').velocity({'opacity': '0.4'});
+		$('#N1956').velocity({'opacity': '0.4'});
+		$('#N1960').velocity({'opacity': '0.4'});
+		$('#N1978').velocity({'opacity': '0.4'});
+		$('#N1983').velocity({'opacity': '0.4'});
+		$('#N1983b').velocity({'opacity': '0.4'});
+		$('#N1988').velocity({'opacity': '0.4'});
+		$('#N1989').velocity({'opacity': '0.4'});
+		$('#N1991').velocity({'opacity': '0.4'});
+		$('#N1994').velocity({'opacity': '0.4'});
+		$('#N1996').velocity({'opacity': '0.4'});
+		$('#N2004').velocity({'opacity': '0.4'});
+		$('#N2012').velocity({'opacity': '0.4'});
+		$('#N2012a').velocity({'opacity': '0.4'});
+		$('#N2012b').velocity({'opacity': '0.4'});
+		$('#N2013').velocity({'opacity': '0.4'});
+		$('#mainYellow').velocity({'opacity': '0.6'});
+
+		yellowSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return yellowA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 
 });
 
 
 //------All Agreements Events--------
 $('#mainGreen').click(function() {
-	$('#N2001').velocity({'opacity': '1'});
-	$('#N2005').velocity({'opacity': '1'});
-	$('#N2006').velocity({'opacity': '1'});
-	$('#N2007').velocity({'opacity': '1'});
-	$('#N2008').velocity({'opacity': '1'});
-	$('#N2009').velocity({'opacity': '1'});
-	$('#N2010').velocity({'opacity': '1'});
-	$('#N2011').velocity({'opacity': '1'});
-	$('#N2011a').velocity({'opacity': '1'});
-	$('#N2011b').velocity({'opacity': '1'});
-	$('#N2014').velocity({'opacity': '1'});
-	$('#N2015').velocity({'opacity': '1'});
-	$('#N2016').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainGreen').velocity({'opacity': '1'});
 
-	greenSwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-  //Populate MainArray with MainArray previous values and new Green Array Values
-  MainArray = $.merge( $.merge( [], MainArray ), greenA );
-  //Remove Duplicate Values from the MainArray
-  MainArray = $.unique(MainArray);
-  //console.log(MainArray);
+	if(greenSwitch == 0){
+		$('#N2001').velocity({'opacity': '1'});
+		$('#N2005').velocity({'opacity': '1'});
+		$('#N2006').velocity({'opacity': '1'});
+		$('#N2007').velocity({'opacity': '1'});
+		$('#N2008').velocity({'opacity': '1'});
+		$('#N2009').velocity({'opacity': '1'});
+		$('#N2010').velocity({'opacity': '1'});
+		$('#N2011').velocity({'opacity': '1'});
+		$('#N2011a').velocity({'opacity': '1'});
+		$('#N2011b').velocity({'opacity': '1'});
+		$('#N2014').velocity({'opacity': '1'});
+		$('#N2015').velocity({'opacity': '1'});
+		$('#N2016').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainGreen').velocity({'opacity': '1'});
+
+		greenSwitch = 1;
+
+	  //Populate MainArray with MainArray previous values and new Green Array Values
+	  MainArray = $.merge( $.merge( [], MainArray ), greenA );
+	  //Remove Duplicate Values from the MainArray
+	  MainArray = $.unique(MainArray);
+	  //console.log(MainArray);
+	}
+
+	else if(greenSwitch == 1) {
+
+		$('#N2001').velocity({'opacity': '0.4'});
+		$('#N2005').velocity({'opacity': '0.4'});
+		$('#N2006').velocity({'opacity': '0.4'});
+		$('#N2007').velocity({'opacity': '0.4'});
+		$('#N2008').velocity({'opacity': '0.4'});
+		$('#N2009').velocity({'opacity': '0.4'});
+		$('#N2010').velocity({'opacity': '0.4'});
+		$('#N2011').velocity({'opacity': '0.4'});
+		$('#N2011a').velocity({'opacity': '0.4'});
+		$('#N2011b').velocity({'opacity': '0.4'});
+		$('#N2014').velocity({'opacity': '0.4'});
+		$('#N2015').velocity({'opacity': '0.4'});
+		$('#N2016').velocity({'opacity': '0.4'});
+		$('#mainGreen').velocity({'opacity': '0.6'});
+
+		greenSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return greenA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 });
 
 
 //------All Conflicts Events--------
 
 $('#mainPurple').click(function(){
-	$('#N1968').velocity({'opacity': '1'});
-	$('#N1974').velocity({'opacity': '1'});
-	$('#N1974a').velocity({'opacity': '1'});
-	$('#N1975').velocity({'opacity': '1'});
-	$('#N1983').velocity({'opacity': '1'});
-	$('#N1983a').velocity({'opacity': '1'});
-	$('#N1995').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainPurple').velocity({'opacity': '1'});
 
-	purpleSwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-  //Populate MainArray with MainArray previous values and new Purple Array Values
-  MainArray = $.merge( $.merge( [], MainArray ), purpleA );
-  //Remove Duplicate Values from the MainArray
-  MainArray = $.unique(MainArray);
-  //console.log(MainArray);
+	if(purpleSwitch == 0) {
+
+		$('#N1968').velocity({'opacity': '1'});
+		$('#N1974').velocity({'opacity': '1'});
+		$('#N1974a').velocity({'opacity': '1'});
+		$('#N1975').velocity({'opacity': '1'});
+		$('#N1983').velocity({'opacity': '1'});
+		$('#N1983a').velocity({'opacity': '1'});
+		$('#N1995').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainPurple').velocity({'opacity': '1'});
+
+		purpleSwitch = 1;
+
+	  //Populate MainArray with MainArray previous values and new Purple Array Values
+	  MainArray = $.merge( $.merge( [], MainArray ), purpleA );
+	  //Remove Duplicate Values from the MainArray
+	  MainArray = $.unique(MainArray);
+	  //console.log(MainArray);
+	}
+
+	else if(purpleSwitch == 1) {
+
+		$('#N1968').velocity({'opacity': '0.4'});
+		$('#N1974').velocity({'opacity': '0.4'});
+		$('#N1974a').velocity({'opacity': '0.4'});
+		$('#N1975').velocity({'opacity': '0.4'});
+		$('#N1983').velocity({'opacity': '0.4'});
+		$('#N1983a').velocity({'opacity': '0.4'});
+		$('#N1995').velocity({'opacity': '0.4'});
+		$('#mainPurple').velocity({'opacity': '0.6'});
+
+		purpleSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return purpleA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 });
 
 //------All Others Events--------
 $('#mainGrey').click(function(){
-	$('#N1947').velocity({'opacity': '1'});
-	$('#N1964').velocity({'opacity': '1'});
-	$('#N1967').velocity({'opacity': '1'});
-	$('#N1974').velocity({'opacity': '1'});
-	$('#N1974b').velocity({'opacity': '1'});
-	$('#N1998').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainGrey').velocity({'opacity': '1'});
 
-	greySwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-  //Populate MainArray with MainArray previous values and new Grey Array Values
-  MainArray = $.merge( $.merge( [], MainArray ), greyA );
-  //Remove Duplicate Values from the MainArray
-  MainArray = $.unique(MainArray);
-  //console.log(MainArray);
+	if(greySwitch == 0){
+
+		$('#N1947').velocity({'opacity': '1'});
+		$('#N1964').velocity({'opacity': '1'});
+		$('#N1967').velocity({'opacity': '1'});
+		$('#N1974').velocity({'opacity': '1'});
+		$('#N1974b').velocity({'opacity': '1'});
+		$('#N1998').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainGrey').velocity({'opacity': '1'});
+
+		greySwitch = 1;
+
+	  //Populate MainArray with MainArray previous values and new Grey Array Values
+	  MainArray = $.merge( $.merge( [], MainArray ), greyA );
+	  //Remove Duplicate Values from the MainArray
+	  MainArray = $.unique(MainArray);
+	  //console.log(MainArray);
+	}
+
+	else if(greySwitch == 1) {
+
+		$('#N1947').velocity({'opacity': '0.4'});
+		$('#N1964').velocity({'opacity': '0.4'});
+		$('#N1967').velocity({'opacity': '0.4'});
+		$('#N1974').velocity({'opacity': '0.4'});
+		$('#N1974b').velocity({'opacity': '0.4'});
+		$('#N1998').velocity({'opacity': '0.4'});
+		$('#mainGrey').velocity({'opacity': '0.6'});
+
+		greySwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return greyA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 });
 
 
 //------All Achievements Events--------
 
 $('#mainAc').click(function(){
-	$('#N1947').velocity({'opacity': '1'});
-	$('#N1956').velocity({'opacity': '1'});
-	$('#N1960').velocity({'opacity': '1'});
-	$('#N1974').velocity({'opacity': '1'});
-	$('#N1978').velocity({'opacity': '1'});
-	$('#N1988').velocity({'opacity': '1'});
-	$('#N1989').velocity({'opacity': '1'});
-	$('#N1991').velocity({'opacity': '1'});
-	$('#N1994').velocity({'opacity': '1'});
-	$('#N1996').velocity({'opacity': '1'});
-	$('#N1998').velocity({'opacity': '1'});
-	$('#N2004').velocity({'opacity': '1'});
-	$('#N2005').velocity({'opacity': '1'});
-	$('#N2006').velocity({'opacity': '1'});
-	$('#N2007').velocity({'opacity': '1'});
-	$('#N2008').velocity({'opacity': '1'});
-	$('#N2009').velocity({'opacity': '1'});
-	$('#N2010').velocity({'opacity': '1'});
-	$('#N2011').velocity({'opacity': '1'});
-	$('#N2011a').velocity({'opacity': '1'});
-	$('#N2011b').velocity({'opacity': '1'});
-	$('#N2012').velocity({'opacity': '1'});
-	$('#N2012a').velocity({'opacity': '1'});
-	$('#N2012b').velocity({'opacity': '1'});
-	$('#N2013').velocity({'opacity': '1'});
-	$('#N2014').velocity({'opacity': '1'});
-	$('#N2015').velocity({'opacity': '1'});
-	$('#N2016').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainAc').velocity({'opacity': '1'});
 
-	diamondSwitch = 1;
-	//Populate MainArray with MainArray previous values and new Diamond Achievement Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), diamondA );
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
+
+	if(diamondSwitch == 0){
+		$('#N1947').velocity({'opacity': '1'});
+		$('#N1956').velocity({'opacity': '1'});
+		$('#N1960').velocity({'opacity': '1'});
+		$('#N1974').velocity({'opacity': '1'});
+		$('#N1978').velocity({'opacity': '1'});
+		$('#N1988').velocity({'opacity': '1'});
+		$('#N1989').velocity({'opacity': '1'});
+		$('#N1991').velocity({'opacity': '1'});
+		$('#N1994').velocity({'opacity': '1'});
+		$('#N1996').velocity({'opacity': '1'});
+		$('#N1998').velocity({'opacity': '1'});
+		$('#N2004').velocity({'opacity': '1'});
+		$('#N2005').velocity({'opacity': '1'});
+		$('#N2006').velocity({'opacity': '1'});
+		$('#N2007').velocity({'opacity': '1'});
+		$('#N2008').velocity({'opacity': '1'});
+		$('#N2009').velocity({'opacity': '1'});
+		$('#N2010').velocity({'opacity': '1'});
+		$('#N2011').velocity({'opacity': '1'});
+		$('#N2011a').velocity({'opacity': '1'});
+		$('#N2011b').velocity({'opacity': '1'});
+		$('#N2012').velocity({'opacity': '1'});
+		$('#N2012a').velocity({'opacity': '1'});
+		$('#N2012b').velocity({'opacity': '1'});
+		$('#N2013').velocity({'opacity': '1'});
+		$('#N2014').velocity({'opacity': '1'});
+		$('#N2015').velocity({'opacity': '1'});
+		$('#N2016').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainAc').velocity({'opacity': '1'});
+
+		diamondSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Diamond Achievement Array Values
+		MainArray = $.merge( $.merge( [], MainArray ), diamondA );
+		//Remove Duplicate Values from the MainArray
+		MainArray = $.unique(MainArray);
+		//console.log(MainArray);
+	}
+
+	else if(diamondSwitch == 1) {
+
+		$('#N1947').velocity({'opacity': '0.4'});
+		$('#N1956').velocity({'opacity': '0.4'});
+		$('#N1960').velocity({'opacity': '0.4'});
+		$('#N1974').velocity({'opacity': '0.4'});
+		$('#N1978').velocity({'opacity': '0.4'});
+		$('#N1988').velocity({'opacity': '0.4'});
+		$('#N1989').velocity({'opacity': '0.4'});
+		$('#N1991').velocity({'opacity': '0.4'});
+		$('#N1994').velocity({'opacity': '0.4'});
+		$('#N1996').velocity({'opacity': '0.4'});
+		$('#N1998').velocity({'opacity': '0.4'});
+		$('#N2004').velocity({'opacity': '0.4'});
+		$('#N2005').velocity({'opacity': '0.4'});
+		$('#N2006').velocity({'opacity': '0.4'});
+		$('#N2007').velocity({'opacity': '0.4'});
+		$('#N2008').velocity({'opacity': '0.4'});
+		$('#N2009').velocity({'opacity': '0.4'});
+		$('#N2010').velocity({'opacity': '0.4'});
+		$('#N2011').velocity({'opacity': '0.4'});
+		$('#N2011a').velocity({'opacity': '0.4'});
+		$('#N2011b').velocity({'opacity': '0.4'});
+		$('#N2012').velocity({'opacity': '0.4'});
+		$('#N2012a').velocity({'opacity': '0.4'});
+		$('#N2012b').velocity({'opacity': '0.4'});
+		$('#N2013').velocity({'opacity': '0.4'});
+		$('#N2014').velocity({'opacity': '0.4'});
+		$('#N2015').velocity({'opacity': '0.4'});
+		$('#N2016').velocity({'opacity': '0.4'});
+		$('#mainAc').velocity({'opacity': '0.6'});
+
+		diamondSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return diamondA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 
 });
 
 //------All Nuclear Test Events--------
 $('#mainNT').click(function(){
-	$('#N1964').velocity({'opacity': '1'});
-	$('#N1967').velocity({'opacity': '1'});
-	$('#N1974').velocity({'opacity': '1'});
-	$('#N1974b').velocity({'opacity': '1'});
-	$('#N1998').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainNT').velocity({'opacity': '1'});
 
-	ntSwitch = 1;
-	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), ntA );
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
+
+	if(ntSwitch == 0){
+		$('#N1964').velocity({'opacity': '1'});
+		$('#N1967').velocity({'opacity': '1'});
+		$('#N1974').velocity({'opacity': '1'});
+		$('#N1974b').velocity({'opacity': '1'});
+		$('#N1998').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainNT').velocity({'opacity': '1'});
+
+		ntSwitch = 1;
+		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+		MainArray = $.merge( $.merge( [], MainArray ), ntA );
+		//Remove Duplicate Values from the MainArray
+		MainArray = $.unique(MainArray);
+		//console.log(MainArray);
+	}
+
+	else if(ntSwitch == 1) {
+
+		$('#N1964').velocity({'opacity': '0.4'});
+		$('#N1967').velocity({'opacity': '0.4'});
+		$('#N1974').velocity({'opacity': '0.4'});
+		$('#N1974b').velocity({'opacity': '0.4'});
+		$('#N1998').velocity({'opacity': '0.4'});
+		$('#mainNT').velocity({'opacity': '0.6'});
+
+		ntSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return ntA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 });
 
 
 //------All Global Coverage Events--------
 $('#mainGC').click(function(){
-	$('#N1960').velocity({'opacity': '1'});
-	$('#N1962').velocity({'opacity': '1'});
-	$('#N1964').velocity({'opacity': '1'}); 
-	$('#N1965').velocity({'opacity': '1'});
-	$('#N1967').velocity({'opacity': '1'});
-	$('#N1968').velocity({'opacity': '1'});
-	$('#N1971').velocity({'opacity': '1'});
-	$('#N1974').velocity({'opacity': '1'});
-	$('#N1975').velocity({'opacity': '1'});
-	$('#N1983').velocity({'opacity': '1'});
-	$('#N1991').velocity({'opacity': '1'});
-	$('#N1995').velocity({'opacity': '1'});
-	$('#N1998').velocity({'opacity': '1'});
-	$('#N1999').velocity({'opacity': '1'});
-	$('#N2001').velocity({'opacity': '1'});
-	$('#N2005').velocity({'opacity': '1'});
-	$('#N2006').velocity({'opacity': '1'});
-	$('#N2007').velocity({'opacity': '1'});
-	$('#N2008').velocity({'opacity': '1'});
-	$('#N2009').velocity({'opacity': '1'});
-	$('#N2010').velocity({'opacity': '1'});
-	$('#N2011').velocity({'opacity': '1'});
-	$('#N2011a').velocity({'opacity': '1'});
-	$('#N2011b').velocity({'opacity': '1'});
-	$('#N2012').velocity({'opacity': '1'});
-	$('#N2012a').velocity({'opacity': '1'});
-	$('#N2012b').velocity({'opacity': '1'});
-	$('#N2014').velocity({'opacity': '1'});
-	$('#N2015').velocity({'opacity': '1'});
-	$('#N2016').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#mainGC').velocity({'opacity': '1'});
 
-	gcSwitch = 1;
+	if(firstHoverMain == 0){
+		clearMain();
+		firstHoverMain = 1;
+	}
 
-	//Populate MainArray with MainArray previous values and new Global Coverage Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), gcA );
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+	if(gcSwitch == 0){
+		$('#N1960').velocity({'opacity': '1'});
+		$('#N1962').velocity({'opacity': '1'});
+		$('#N1964').velocity({'opacity': '1'}); 
+		$('#N1965').velocity({'opacity': '1'});
+		$('#N1967').velocity({'opacity': '1'});
+		$('#N1968').velocity({'opacity': '1'});
+		$('#N1971').velocity({'opacity': '1'});
+		$('#N1974').velocity({'opacity': '1'});
+		$('#N1975').velocity({'opacity': '1'});
+		$('#N1983').velocity({'opacity': '1'});
+		$('#N1991').velocity({'opacity': '1'});
+		$('#N1995').velocity({'opacity': '1'});
+		$('#N1998').velocity({'opacity': '1'});
+		$('#N1999').velocity({'opacity': '1'});
+		$('#N2001').velocity({'opacity': '1'});
+		$('#N2005').velocity({'opacity': '1'});
+		$('#N2006').velocity({'opacity': '1'});
+		$('#N2007').velocity({'opacity': '1'});
+		$('#N2008').velocity({'opacity': '1'});
+		$('#N2009').velocity({'opacity': '1'});
+		$('#N2010').velocity({'opacity': '1'});
+		$('#N2011').velocity({'opacity': '1'});
+		$('#N2011a').velocity({'opacity': '1'});
+		$('#N2011b').velocity({'opacity': '1'});
+		$('#N2012').velocity({'opacity': '1'});
+		$('#N2012a').velocity({'opacity': '1'});
+		$('#N2012b').velocity({'opacity': '1'});
+		$('#N2014').velocity({'opacity': '1'});
+		$('#N2015').velocity({'opacity': '1'});
+		$('#N2016').velocity({'opacity': '1'});
+		$('#mainClear').velocity({'opacity': '1'});
+		$('#mainGC').velocity({'opacity': '1'});
+
+		gcSwitch = 1;
+
+		//Populate MainArray with MainArray previous values and new Global Coverage Array Values
+		MainArray = $.merge( $.merge( [], MainArray ), gcA );
+		//Remove Duplicate Values from the MainArray
+		MainArray = $.unique(MainArray);
+		//console.log(MainArray);
+		}
+
+	else if(gcSwitch == 1) {
+
+		$('#N1960').velocity({'opacity': '0.4'});
+		$('#N1962').velocity({'opacity': '0.4'});
+		$('#N1964').velocity({'opacity': '0.4'}); 
+		$('#N1965').velocity({'opacity': '0.4'});
+		$('#N1967').velocity({'opacity': '0.4'});
+		$('#N1968').velocity({'opacity': '0.4'});
+		$('#N1971').velocity({'opacity': '0.4'});
+		$('#N1974').velocity({'opacity': '0.4'});
+		$('#N1975').velocity({'opacity': '0.4'});
+		$('#N1983').velocity({'opacity': '0.4'});
+		$('#N1991').velocity({'opacity': '0.4'});
+		$('#N1995').velocity({'opacity': '0.4'});
+		$('#N1998').velocity({'opacity': '0.4'});
+		$('#N1999').velocity({'opacity': '0.4'});
+		$('#N2001').velocity({'opacity': '0.4'});
+		$('#N2005').velocity({'opacity': '0.4'});
+		$('#N2006').velocity({'opacity': '0.4'});
+		$('#N2007').velocity({'opacity': '0.4'});
+		$('#N2008').velocity({'opacity': '0.4'});
+		$('#N2009').velocity({'opacity': '0.4'});
+		$('#N2010').velocity({'opacity': '0.4'});
+		$('#N2011').velocity({'opacity': '0.4'});
+		$('#N2011a').velocity({'opacity': '0.4'});
+		$('#N2011b').velocity({'opacity': '0.4'});
+		$('#N2012').velocity({'opacity': '0.4'});
+		$('#N2012a').velocity({'opacity': '0.4'});
+		$('#N2012b').velocity({'opacity': '0.4'});
+		$('#N2014').velocity({'opacity': '0.4'});
+		$('#N2015').velocity({'opacity': '0.4'});
+		$('#N2016').velocity({'opacity': '0.4'});
+		$('#mainGC').velocity({'opacity': '0.6'});
+
+		gcSwitch = 0;
+
+		MainArray = MainArray.filter( function ( elem ) {
+    		return gcA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainArray
+		MainArray = $.unique(MainArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainArray.length == 0){ //if no other value in the list
+			$('#mainClear').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainArray.length = 0; 
+		}
+  	}
 });
 
 
@@ -609,145 +1044,400 @@ $('#mainGC').click(function(){
 
 //---------All Minus3 Events------------
 	$('#minus3').click(function(){
-	$('#N1965').velocity({'opacity': '1'});
-	$('#N1968').velocity({'opacity': '1'});
-	$('#N1974').velocity({'opacity': '1'});
-	$('#N1974a').velocity({'opacity': '1'});
-	$('#N1975').velocity({'opacity': '1'});
-	$('#N1983').velocity({'opacity': '1'});
-	$('#N1983a').velocity({'opacity': '1'});
-	$('#N1995').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#minus3').velocity({'opacity': '1'});
 
-	minus3Switch = 1;
-	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), deteA);
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+		if(firstHoverMain == 0){
+			clearMain();
+			firstHoverMain = 1;
+		}
+
+		if(minus3Switch == 0){
+
+			$('#N1965').velocity({'opacity': '1'});
+			$('#N1968').velocity({'opacity': '1'});
+			$('#N1974').velocity({'opacity': '1'});
+			$('#N1974a').velocity({'opacity': '1'});
+			$('#N1975').velocity({'opacity': '1'});
+			$('#N1983').velocity({'opacity': '1'});
+			$('#N1983a').velocity({'opacity': '1'});
+			$('#N1995').velocity({'opacity': '1'});
+			$('#mainClear').velocity({'opacity': '1'});
+			$('#minus3').velocity({'opacity': '1'}); //inter-dependency of deterring and minus 3 events
+			$('#deteEvent').velocity({'opacity': '1'});
+
+			deteSwitch = 1;
+			minus3Switch = 1; //inter-dependency of deterring and minus 3 events
+
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainArray = $.merge( $.merge( [], MainArray ), deteA);
+			//Remove Duplicate Values from the MainArray
+			MainArray = $.unique(MainArray);
+			//console.log(MainArray);
+		}
+
+		else if(minus3Switch == 1) {
+
+			$('#N1965').velocity({'opacity': '0.4'});
+			$('#N1968').velocity({'opacity': '0.4'});
+			$('#N1974').velocity({'opacity': '0.4'});
+			$('#N1974a').velocity({'opacity': '0.4'});
+			$('#N1975').velocity({'opacity': '0.4'});
+			$('#N1983').velocity({'opacity': '0.4'});
+			$('#N1983a').velocity({'opacity': '0.4'});
+			$('#N1995').velocity({'opacity': '0.4'});
+			$('#minus3').velocity({'opacity': '0.6'}); //inter-dependency of deterring and minus 3 events
+			$('#deteEvent').velocity({'opacity': '0.6'});
+
+			deteSwitch = 0;
+			minus3Switch = 0; //inter-dependency of deterring and minus 3 events
+
+			MainArray = MainArray.filter( function ( elem ) {
+	    		return deteA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainArray
+			MainArray = $.unique(MainArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainArray.length == 0){ //if no other value in the list
+				$('#mainClear').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainArray.length = 0; 
+		}
+  	}
 });
 
 
 //---------All Deterring Events------------
 	$('#deteEvent').click(function(){
-	$('#N1965').velocity({'opacity': '1'});
-	$('#N1968').velocity({'opacity': '1'});
-	$('#N1974').velocity({'opacity': '1'});
-	$('#N1974a').velocity({'opacity': '1'});
-	$('#N1975').velocity({'opacity': '1'});
-	$('#N1983').velocity({'opacity': '1'});
-	$('#N1983a').velocity({'opacity': '1'});
-	$('#N1995').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#deteEvent').velocity({'opacity': '1'});
 
-	deteSwitch = 1;
-	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), deteA);
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+		if(firstHoverMain == 0){
+			clearMain();
+			firstHoverMain = 1;
+		}
+
+		if(deteSwitch == 0){
+			$('#N1965').velocity({'opacity': '1'});
+			$('#N1968').velocity({'opacity': '1'});
+			$('#N1974').velocity({'opacity': '1'});
+			$('#N1974a').velocity({'opacity': '1'});
+			$('#N1975').velocity({'opacity': '1'});
+			$('#N1983').velocity({'opacity': '1'});
+			$('#N1983a').velocity({'opacity': '1'});
+			$('#N1995').velocity({'opacity': '1'});
+			$('#mainClear').velocity({'opacity': '1'});
+			$('#deteEvent').velocity({'opacity': '1'}); //inter-dependency of deterring and minus 3 events
+			$('#minus3').velocity({'opacity': '1'});
+
+			deteSwitch = 1;
+			minus3Switch = 1; //inter-dependency of deterring and minus 3 events
+
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainArray = $.merge( $.merge( [], MainArray ), deteA);
+			//Remove Duplicate Values from the MainArray
+			MainArray = $.unique(MainArray);
+			//console.log(MainArray);
+		}
+
+		else if(deteSwitch == 1) {
+
+
+  			$('#N1965').velocity({'opacity': '0.4'});
+			$('#N1968').velocity({'opacity': '0.4'});
+			$('#N1974').velocity({'opacity': '0.4'});
+			$('#N1974a').velocity({'opacity': '0.4'});
+			$('#N1975').velocity({'opacity': '0.4'});
+			$('#N1983').velocity({'opacity': '0.4'});
+			$('#N1983a').velocity({'opacity': '0.4'});
+			$('#N1995').velocity({'opacity': '0.4'});
+			$('#deteEvent').velocity({'opacity': '0.6'}); //inter-dependency of deterring and minus 3 events
+			$('#minus3').velocity({'opacity': '0.6'});
+
+			deteSwitch = 0;
+			minus3Switch = 0; //inter-dependency of deterring and minus 3 events
+
+			MainArray = MainArray.filter( function ( elem ) {
+	    		return deteA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainArray
+			MainArray = $.unique(MainArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainArray.length == 0){ //if no other value in the list
+				$('#mainClear').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainArray.length = 0; 
+		}
+  	}
 });
 
 
 
 //---------All Encouraging Events------------
 	$('#encoEvent').click(function(){
-	$('#N1945').velocity({'opacity': '1'});
-	$('#N1948').velocity({'opacity': '1'});
-	$('#N1954').velocity({'opacity': '1'});
-	$('#N1956').velocity({'opacity': '1'});
-	$('#N1960').velocity({'opacity': '1'});
-	$('#N1983').velocity({'opacity': '1'});
-	$('#N1988').velocity({'opacity': '1'});
-	$('#N1989').velocity({'opacity': '1'});
-	$('#N1994').velocity({'opacity': '1'});
-	$('#N1996').velocity({'opacity': '1'});
-	$('#N2001').velocity({'opacity': '1'});
-	$('#N2004').velocity({'opacity': '1'});
-	$('#N2005').velocity({'opacity': '1'});
-	$('#N2006').velocity({'opacity': '1'});
-	$('#N2007').velocity({'opacity': '1'});
-	$('#N2008').velocity({'opacity': '1'});
-	$('#N2009').velocity({'opacity': '1'});
-	$('#N2010').velocity({'opacity': '1'});
-	$('#N2011').velocity({'opacity': '1'});
-	$('#N2011a').velocity({'opacity': '1'});
-	$('#N2011b').velocity({'opacity': '1'});
-	$('#N2012').velocity({'opacity': '1'});
-	$('#N2012a').velocity({'opacity': '1'});
-	$('#N2012b').velocity({'opacity': '1'});
-	$('#N2013').velocity({'opacity': '1'});
-	$('#N2014').velocity({'opacity': '1'});
-	$('#N2015').velocity({'opacity': '1'});
-	$('#N2016').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#encoEvent').velocity({'opacity': '1'});
 
-	encoSwitch = 1;
-	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), encoA);
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+		if(firstHoverMain == 0){
+			clearMain();
+			firstHoverMain = 1;
+		}
+
+		if(encoSwitch == 0){
+			$('#N1945').velocity({'opacity': '1'});
+			$('#N1948').velocity({'opacity': '1'});
+			$('#N1954').velocity({'opacity': '1'});
+			$('#N1956').velocity({'opacity': '1'});
+			$('#N1960').velocity({'opacity': '1'});
+			$('#N1983').velocity({'opacity': '1'});
+			$('#N1988').velocity({'opacity': '1'});
+			$('#N1989').velocity({'opacity': '1'});
+			$('#N1994').velocity({'opacity': '1'});
+			$('#N1996').velocity({'opacity': '1'});
+			$('#N2001').velocity({'opacity': '1'});
+			$('#N2004').velocity({'opacity': '1'});
+			$('#N2005').velocity({'opacity': '1'});
+			$('#N2006').velocity({'opacity': '1'});
+			$('#N2007').velocity({'opacity': '1'});
+			$('#N2008').velocity({'opacity': '1'});
+			$('#N2009').velocity({'opacity': '1'});
+			$('#N2010').velocity({'opacity': '1'});
+			$('#N2011').velocity({'opacity': '1'});
+			$('#N2011a').velocity({'opacity': '1'});
+			$('#N2011b').velocity({'opacity': '1'});
+			$('#N2012').velocity({'opacity': '1'});
+			$('#N2012a').velocity({'opacity': '1'});
+			$('#N2012b').velocity({'opacity': '1'});
+			$('#N2013').velocity({'opacity': '1'});
+			$('#N2014').velocity({'opacity': '1'});
+			$('#N2015').velocity({'opacity': '1'});
+			$('#N2016').velocity({'opacity': '1'});
+			$('#mainClear').velocity({'opacity': '1'});
+			$('#encoEvent').velocity({'opacity': '1'});
+			$('#plus3').velocity({'opacity': '1'});  //inter-dependency of encouraging, plus 1 and plus 3 events
+			$('#plus1').velocity({'opacity': '1'});
+
+			plus3Switch = 1;
+			plus1Switch = 1;
+			encoSwitch = 1;  //inter-dependency of encouraging, plus 1 and plus 3 events
+
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainArray = $.merge( $.merge( [], MainArray ), encoA);
+			//Remove Duplicate Values from the MainArray
+			MainArray = $.unique(MainArray);
+			//console.log(MainArray);
+		}
+
+		else if(encoSwitch == 1) {
+
+			$('#N1945').velocity({'opacity': '0.4'});
+			$('#N1948').velocity({'opacity': '0.4'});
+			$('#N1954').velocity({'opacity': '0.4'});
+			$('#N1956').velocity({'opacity': '0.4'});
+			$('#N1960').velocity({'opacity': '0.4'});
+			$('#N1983').velocity({'opacity': '0.4'});
+			$('#N1988').velocity({'opacity': '0.4'});
+			$('#N1989').velocity({'opacity': '0.4'});
+			$('#N1994').velocity({'opacity': '0.4'});
+			$('#N1996').velocity({'opacity': '0.4'});
+			$('#N2001').velocity({'opacity': '0.4'});
+			$('#N2004').velocity({'opacity': '0.4'});
+			$('#N2005').velocity({'opacity': '0.4'});
+			$('#N2006').velocity({'opacity': '0.4'});
+			$('#N2007').velocity({'opacity': '0.4'});
+			$('#N2008').velocity({'opacity': '0.4'});
+			$('#N2009').velocity({'opacity': '0.4'});
+			$('#N2010').velocity({'opacity': '0.4'});
+			$('#N2011').velocity({'opacity': '0.4'});
+			$('#N2011a').velocity({'opacity': '0.4'});
+			$('#N2011b').velocity({'opacity': '0.4'});
+			$('#N2012').velocity({'opacity': '0.4'});
+			$('#N2012a').velocity({'opacity': '0.4'});
+			$('#N2012b').velocity({'opacity': '0.4'});
+			$('#N2013').velocity({'opacity': '0.4'});
+			$('#N2014').velocity({'opacity': '0.4'});
+			$('#N2015').velocity({'opacity': '0.4'});
+			$('#N2016').velocity({'opacity': '0.4'});
+			$('#encoEvent').velocity({'opacity': '0.6'}); //inter-dependency of encouraging, plus 1 and plus 3 events
+			$('#plus3').velocity({'opacity': '0.6'});
+			$('#plus1').velocity({'opacity': '0.6'});
+
+			plus3Switch = 0;
+			plus1Switch = 0;
+			encoSwitch = 0;  //inter-dependency of encouraging, plus 1 and plus 3 events
+
+			MainArray = MainArray.filter( function ( elem ) {
+	    		return encoA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainArray
+			MainArray = $.unique(MainArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainArray.length == 0){ //if no other value in the list
+				$('#mainClear').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainArray.length = 0; 
+		}
+  	}
 });
 
 
 //---------All Plus 3 Events------------
 	$('#plus3').click(function(){
-	$('#N1960').velocity({'opacity': '1'});
-	$('#N2001').velocity({'opacity': '1'});
-	$('#N2005').velocity({'opacity': '1'});
-	$('#N2006').velocity({'opacity': '1'});
-	$('#N2007').velocity({'opacity': '1'});
-	$('#N2008').velocity({'opacity': '1'});
-	$('#N2009').velocity({'opacity': '1'});
-	$('#N2010').velocity({'opacity': '1'});
-	$('#N2011').velocity({'opacity': '1'});
-	$('#N2011a').velocity({'opacity': '1'});
-	$('#N2012').velocity({'opacity': '1'});
-	$('#N2012b').velocity({'opacity': '1'});
-	$('#N2014').velocity({'opacity': '1'});
-	$('#N2015').velocity({'opacity': '1'});
-	$('#N2016').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#plus3').velocity({'opacity': '1'});
 
-	plus3Switch = 1;
-	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), plus3A);
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+		if(firstHoverMain == 0){
+			clearMain();
+			firstHoverMain = 1;
+		}
+
+		if(plus3Switch == 0){
+
+			$('#N1960').velocity({'opacity': '1'});
+			$('#N2001').velocity({'opacity': '1'});
+			$('#N2005').velocity({'opacity': '1'});
+			$('#N2006').velocity({'opacity': '1'});
+			$('#N2007').velocity({'opacity': '1'});
+			$('#N2008').velocity({'opacity': '1'});
+			$('#N2009').velocity({'opacity': '1'});
+			$('#N2010').velocity({'opacity': '1'});
+			$('#N2011').velocity({'opacity': '1'});
+			$('#N2011a').velocity({'opacity': '1'});
+			$('#N2012').velocity({'opacity': '1'});
+			$('#N2012b').velocity({'opacity': '1'});
+			$('#N2014').velocity({'opacity': '1'});
+			$('#N2015').velocity({'opacity': '1'});
+			$('#N2016').velocity({'opacity': '1'});
+			$('#mainClear').velocity({'opacity': '1'});
+			$('#plus3').velocity({'opacity': '1'});
+
+			if(plus1Switch == 1){
+				encoSwitch = 1;
+				$('#encoEvent').velocity({'opacity': '1'});  //inter-dependency of encouraging, plus 1 and plus 3 events
+			}
+
+			plus3Switch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainArray = $.merge( $.merge( [], MainArray ), plus3A);
+			//Remove Duplicate Values from the MainArray
+			MainArray = $.unique(MainArray);
+			//console.log(MainArray);
+		}
+
+		else if(plus3Switch == 1) {
+
+			$('#N1960').velocity({'opacity': '0.4'});
+			$('#N2001').velocity({'opacity': '0.4'});
+			$('#N2005').velocity({'opacity': '0.4'});
+			$('#N2006').velocity({'opacity': '0.4'});
+			$('#N2007').velocity({'opacity': '0.4'});
+			$('#N2008').velocity({'opacity': '0.4'});
+			$('#N2009').velocity({'opacity': '0.4'});
+			$('#N2010').velocity({'opacity': '0.4'});
+			$('#N2011').velocity({'opacity': '0.4'});
+			$('#N2011a').velocity({'opacity': '0.4'});
+			$('#N2012').velocity({'opacity': '0.4'});
+			$('#N2012b').velocity({'opacity': '0.4'});
+			$('#N2014').velocity({'opacity': '0.4'});
+			$('#N2015').velocity({'opacity': '0.4'});
+			$('#N2016').velocity({'opacity': '0.4'});
+			$('#plus3').velocity({'opacity': '0.6'});
+
+			if(plus1Switch == 0){
+				encoSwitch = 0;
+				$('#encoEvent').velocity({'opacity': '0.6'});  //inter-dependency of encouraging, plus 1 and plus 3 events
+			}
+
+			plus3Switch = 0;
+
+			MainArray = MainArray.filter( function ( elem ) {
+	    		return plus3A.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainArray
+			MainArray = $.unique(MainArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainArray.length == 0){ //if no other value in the list
+				$('#mainClear').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainArray.length = 0; 
+		}
+  	}
 });
 
 //---------All Plus 1 Events------------
 	$('#plus1').click(function(){
-	$('#N1945').velocity({'opacity': '1'});
-	$('#N1948').velocity({'opacity': '1'});
-	$('#N1954').velocity({'opacity': '1'});
-	$('#N1956').velocity({'opacity': '1'});
-	$('#N1983').velocity({'opacity': '1'});
-	$('#N1988').velocity({'opacity': '1'});
-	$('#N1989').velocity({'opacity': '1'});
-	$('#N1994').velocity({'opacity': '1'});
-	$('#N1996').velocity({'opacity': '1'});
-	$('#N2004').velocity({'opacity': '1'});
-	$('#N2011').velocity({'opacity': '1'});
-	$('#N2011b').velocity({'opacity': '1'});
-	$('#N2012').velocity({'opacity': '1'});
-	$('#N2012a').velocity({'opacity': '1'});
-	$('#N2013').velocity({'opacity': '1'});
-	$('#mainClear').velocity({'opacity': '1'});
-	$('#plus1').velocity({'opacity': '1'});
 
-	plus1Switch = 1;
-	//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-	MainArray = $.merge( $.merge( [], MainArray ), plus1A);
-	//Remove Duplicate Values from the MainArray
-	MainArray = $.unique(MainArray);
-	//console.log(MainArray);
+		if(firstHoverMain == 0){
+			clearMain();
+			firstHoverMain = 1;
+		}
+
+		if(plus1Switch == 0){
+			$('#N1945').velocity({'opacity': '1'});
+			$('#N1948').velocity({'opacity': '1'});
+			$('#N1954').velocity({'opacity': '1'});
+			$('#N1956').velocity({'opacity': '1'});
+			$('#N1983').velocity({'opacity': '1'});
+			$('#N1988').velocity({'opacity': '1'});
+			$('#N1989').velocity({'opacity': '1'});
+			$('#N1994').velocity({'opacity': '1'});
+			$('#N1996').velocity({'opacity': '1'});
+			$('#N2004').velocity({'opacity': '1'});
+			$('#N2011').velocity({'opacity': '1'});
+			$('#N2011b').velocity({'opacity': '1'});
+			$('#N2012').velocity({'opacity': '1'});
+			$('#N2012a').velocity({'opacity': '1'});
+			$('#N2013').velocity({'opacity': '1'});
+			$('#mainClear').velocity({'opacity': '1'});
+			$('#plus1').velocity({'opacity': '1'});
+
+			if(plus3Switch == 1){
+				encoSwitch = 1;
+				$('#encoEvent').velocity({'opacity': '1'});  //inter-dependency of encouraging, plus 1 and plus 3 events
+			}
+
+			plus1Switch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainArray = $.merge( $.merge( [], MainArray ), plus1A);
+			//Remove Duplicate Values from the MainArray
+			MainArray = $.unique(MainArray);
+			//console.log(MainArray);
+		}
+		else if(plus1Switch == 1) {
+
+			$('#N1945').velocity({'opacity': '0.4'});
+			$('#N1948').velocity({'opacity': '0.4'});
+			$('#N1954').velocity({'opacity': '0.4'});
+			$('#N1956').velocity({'opacity': '0.4'});
+			$('#N1983').velocity({'opacity': '0.4'});
+			$('#N1988').velocity({'opacity': '0.4'});
+			$('#N1989').velocity({'opacity': '0.4'});
+			$('#N1994').velocity({'opacity': '0.4'});
+			$('#N1996').velocity({'opacity': '0.4'});
+			$('#N2004').velocity({'opacity': '0.4'});
+			$('#N2011').velocity({'opacity': '0.4'});
+			$('#N2011b').velocity({'opacity': '0.4'});
+			$('#N2012').velocity({'opacity': '0.4'});
+			$('#N2012a').velocity({'opacity': '0.4'});
+			$('#N2013').velocity({'opacity': '0.4'});
+			$('#plus1').velocity({'opacity': '0.6'});
+
+			if(plus3Switch == 0){
+				encoSwitch = 0;
+				$('#encoEvent').velocity({'opacity': '0.6'});  //inter-dependency of encouraging, plus 1 and plus 3 events
+			}
+
+			plus1Switch = 0;
+
+			MainArray = MainArray.filter( function ( elem ) {
+	    		return plus1A.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainArray
+			MainArray = $.unique(MainArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainArray.length == 0){ //if no other value in the list
+				$('#mainClear').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainArray.length = 0; 
+		}
+  	}
 });
 
 
@@ -760,25 +1450,64 @@ $('#mainGC').click(function(){
 //---------All First Nuclear Test Events----------
 	$('#firstNT').click(function(){
 
-		$('#wnt1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
-		$('#w1949').velocity({'opacity': '1'});	$('#p1949').velocity({'opacity': '1'});
-		$('#w1952').velocity({'opacity': '1'});	$('#p1952').velocity({'opacity': '1'});
-		$('#w1960').velocity({'opacity': '1'});	$('#p1960').velocity({'opacity': '1'});
-		$('#w1964').velocity({'opacity': '1'});	$('#p1964').velocity({'opacity': '1'});
-		$('#w1974').velocity({'opacity': '1'});	$('#p1974').velocity({'opacity': '1'});
-		$('#w1979').velocity({'opacity': '1'});	$('#p1979').velocity({'opacity': '1'});
-		$('#wnt1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
-		$('#w2006').velocity({'opacity': '1'});	$('#p2006').velocity({'opacity': '1'});
+		if(firstHoverWorld == 0){
+		clearGlobal();
+		firstHoverWorld = 1;
+		}
 
-		$('#mainClearW').velocity({'opacity': '1'});
-		$('#firstNT').velocity({'opacity': '1'});
+		if(firstNTSwitch ==0){
+
+			$('#wnt1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+			$('#w1949').velocity({'opacity': '1'});	$('#p1949').velocity({'opacity': '1'});
+			$('#w1952').velocity({'opacity': '1'});	$('#p1952').velocity({'opacity': '1'});
+			$('#w1960').velocity({'opacity': '1'});	$('#p1960').velocity({'opacity': '1'});
+			$('#w1964').velocity({'opacity': '1'});	$('#p1964').velocity({'opacity': '1'});
+			$('#w1974').velocity({'opacity': '1'});	$('#p1974').velocity({'opacity': '1'});
+			$('#w1979').velocity({'opacity': '1'});	$('#p1979').velocity({'opacity': '1'});
+			$('#wnt1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+			$('#w2006').velocity({'opacity': '1'});	$('#p2006').velocity({'opacity': '1'});
+
+			$('#mainClearW').velocity({'opacity': '1'});
+			$('#firstNT').velocity({'opacity': '1'});
 
 
-		firstNTSwitch = 1;
-		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), firstNTA);
-		//Remove Duplicate Values from the MainArray
-		MainWorldArray = $.unique(MainWorldArray);
+			firstNTSwitch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainWorldArray = $.merge( $.merge( [], MainWorldArray ), firstNTA);
+			//Remove Duplicate Values from the MainArray
+			MainWorldArray = $.unique(MainWorldArray);
+		}
+
+		else if(firstNTSwitch == 1) {
+
+			$('#wnt1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+			$('#w1949').velocity({'opacity': '0.4'});	$('#p1949').velocity({'opacity': '0.4'});
+			$('#w1952').velocity({'opacity': '0.4'});	$('#p1952').velocity({'opacity': '0.4'});
+			$('#w1960').velocity({'opacity': '0.4'});	$('#p1960').velocity({'opacity': '0.4'});
+			$('#w1964').velocity({'opacity': '0.4'});	$('#p1964').velocity({'opacity': '0.4'});
+			$('#w1974').velocity({'opacity': '0.4'});	$('#p1974').velocity({'opacity': '0.4'});
+			$('#w1979').velocity({'opacity': '0.4'});	$('#p1979').velocity({'opacity': '0.4'});
+			$('#wnt1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+			$('#w2006').velocity({'opacity': '0.4'});	$('#p2006').velocity({'opacity': '0.4'});
+
+			$('#firstNT').velocity({'opacity': '0.6'});
+
+			firstNTSwitch = 0;
+
+			MainWorldArray = MainWorldArray.filter( function ( elem ) {
+	    		return firstNTA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainWorldArray
+			MainWorldArray = $.unique(MainWorldArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainWorldArray.length == 0){ //if no other value in the list
+				$('#mainClearW').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainWorldArray.length = 0; 
+			}
+  		}
+
 
 	});
 
@@ -786,24 +1515,60 @@ $('#mainGC').click(function(){
 //---------All War Related Events----------
 	$('#smWar').click(function(){
 
-		$('#wwr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
-		$('#wwra1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
-		$('#wwrb1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
-		$('#w1965').velocity({'opacity': '1'});	$('#p1965').velocity({'opacity': '1'});
-		$('#w1971').velocity({'opacity': '1'});	$('#p1971').velocity({'opacity': '1'});
-		$('#w1989').velocity({'opacity': '1'});	$('#p1989').velocity({'opacity': '1'});
-		$('#w1999').velocity({'opacity': '1'});	$('#p1999').velocity({'opacity': '1'});
-		$('#w2003').velocity({'opacity': '1'});	$('#p2003').velocity({'opacity': '1'});
+		if(firstHoverWorld == 0){
+		clearGlobal();
+		firstHoverWorld = 1;
+		}
 
-		$('#mainClearW').velocity({'opacity': '1'});
-		$('#smWar').velocity({'opacity': '1'});
+		if (smWarSwitch == 0){
+			$('#wwr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+			$('#wwra1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
+			$('#wwrb1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
+			$('#w1965').velocity({'opacity': '1'});	$('#p1965').velocity({'opacity': '1'});
+			$('#w1971').velocity({'opacity': '1'});	$('#p1971').velocity({'opacity': '1'});
+			$('#w1989').velocity({'opacity': '1'});	$('#p1989').velocity({'opacity': '1'});
+			$('#w1999').velocity({'opacity': '1'});	$('#p1999').velocity({'opacity': '1'});
+			$('#w2003').velocity({'opacity': '1'});	$('#p2003').velocity({'opacity': '1'});
+
+			$('#mainClearW').velocity({'opacity': '1'});
+			$('#smWar').velocity({'opacity': '1'});
 
 
-		smWarSwitch = 1;
-		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), smWarA);
-		//Remove Duplicate Values from the MainArray
-		MainWorldArray = $.unique(MainWorldArray);
+			smWarSwitch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainWorldArray = $.merge( $.merge( [], MainWorldArray ), smWarA);
+			//Remove Duplicate Values from the MainArray
+			MainWorldArray = $.unique(MainWorldArray);
+		}
+
+		else if(smWarSwitch == 1) {
+
+			$('#wwr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+			$('#wwra1962').velocity({'opacity': '0.4'});	$('#p1962').velocity({'opacity': '0.4'});
+			$('#wwrb1962').velocity({'opacity': '0.4'});	$('#p1962').velocity({'opacity': '0.4'});
+			$('#w1965').velocity({'opacity': '0.4'});	$('#p1965').velocity({'opacity': '0.4'});
+			$('#w1971').velocity({'opacity': '0.4'});	$('#p1971').velocity({'opacity': '0.4'});
+			$('#w1989').velocity({'opacity': '0.4'});	$('#p1989').velocity({'opacity': '0.4'});
+			$('#w1999').velocity({'opacity': '0.4'});	$('#p1999').velocity({'opacity': '0.4'});
+			$('#w2003').velocity({'opacity': '0.4'});	$('#p2003').velocity({'opacity': '0.4'});
+
+			$('#smWar').velocity({'opacity': '0.6'});
+
+			smWarSwitch = 0;
+
+			MainWorldArray = MainWorldArray.filter( function ( elem ) {
+	    		return smWarA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainWorldArray
+			MainWorldArray = $.unique(MainWorldArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainWorldArray.length == 0){ //if no other value in the list
+				$('#mainClearW').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainWorldArray.length = 0; 
+			}
+  		}
 
 	});
 
@@ -811,62 +1576,149 @@ $('#mainGC').click(function(){
 //---------All Major Group Estbl Events----------
 	$('#majorGr').click(function(){
 
-		$('#wgr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
-		$('#w1947').velocity({'opacity': '1'});	$('#p1947').velocity({'opacity': '1'});
-		$('#w1957').velocity({'opacity': '1'});	$('#p1957').velocity({'opacity': '1'});
-		$('#w1958').velocity({'opacity': '1'});	$('#p1958').velocity({'opacity': '1'});
-		$('#w1959').velocity({'opacity': '1'});	$('#p1959').velocity({'opacity': '1'});
-		$('#w1963').velocity({'opacity': '1'});	$('#p1963').velocity({'opacity': '1'});
-		$('#w1968').velocity({'opacity': '1'});	$('#p1968').velocity({'opacity': '1'});
-		$('#w1975').velocity({'opacity': '1'});	$('#p1975').velocity({'opacity': '1'});
-		$('#w1982').velocity({'opacity': '1'});	$('#p1982').velocity({'opacity': '1'});
-		$('#w1985').velocity({'opacity': '1'});	$('#p1985').velocity({'opacity': '1'});
-		$('#wgra1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
-		$('#wgrb1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
-		$('#w1995').velocity({'opacity': '1'});	$('#p1995').velocity({'opacity': '1'});
-		$('#wgra1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
-		$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
-		$('#wgrc1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
-		$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
-		$('#w2007').velocity({'opacity': '1'});	$('#p2007').velocity({'opacity': '1'});
-		$('#wgra2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
-		$('#wgrb2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
-		$('#w2010').velocity({'opacity': '1'});	$('#p2010').velocity({'opacity': '1'});
-		$('#w2011').velocity({'opacity': '1'});	$('#p2011').velocity({'opacity': '1'});
-		$('#wgra2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
-		$('#wgrb2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
-		$('#w2015').velocity({'opacity': '1'});	$('#p2015').velocity({'opacity': '1'});
-		$('#wgr2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+		if(firstHoverWorld == 0){
+		clearGlobal();
+		firstHoverWorld = 1;
+		}
 
-		$('#mainClearW').velocity({'opacity': '1'});
-		$('#majorGr').velocity({'opacity': '1'});
+		if(majorGRSwitch == 0){
+
+			$('#wgr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+			$('#w1947').velocity({'opacity': '1'});	$('#p1947').velocity({'opacity': '1'});
+			$('#w1957').velocity({'opacity': '1'});	$('#p1957').velocity({'opacity': '1'});
+			$('#w1958').velocity({'opacity': '1'});	$('#p1958').velocity({'opacity': '1'});
+			$('#w1959').velocity({'opacity': '1'});	$('#p1959').velocity({'opacity': '1'});
+			$('#w1963').velocity({'opacity': '1'});	$('#p1963').velocity({'opacity': '1'});
+			$('#w1968').velocity({'opacity': '1'});	$('#p1968').velocity({'opacity': '1'});
+			$('#w1975').velocity({'opacity': '1'});	$('#p1975').velocity({'opacity': '1'});
+			$('#w1982').velocity({'opacity': '1'});	$('#p1982').velocity({'opacity': '1'});
+			$('#w1985').velocity({'opacity': '1'});	$('#p1985').velocity({'opacity': '1'});
+			$('#wgra1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
+			$('#wgrb1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
+			$('#w1995').velocity({'opacity': '1'});	$('#p1995').velocity({'opacity': '1'});
+			$('#wgra1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+			$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+			$('#wgrc1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+			$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
+			$('#w2007').velocity({'opacity': '1'});	$('#p2007').velocity({'opacity': '1'});
+			$('#wgra2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+			$('#wgrb2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+			$('#w2010').velocity({'opacity': '1'});	$('#p2010').velocity({'opacity': '1'});
+			$('#w2011').velocity({'opacity': '1'});	$('#p2011').velocity({'opacity': '1'});
+			$('#wgra2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+			$('#wgrb2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+			$('#w2015').velocity({'opacity': '1'});	$('#p2015').velocity({'opacity': '1'});
+			$('#wgr2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+
+			$('#mainClearW').velocity({'opacity': '1'});
+			$('#majorGr').velocity({'opacity': '1'});
 
 
-		majorGRSwitch = 1;
-		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), majorGrA);
-		//Remove Duplicate Values from the MainArray
-		MainWorldArray = $.unique(MainWorldArray);
+			majorGRSwitch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainWorldArray = $.merge( $.merge( [], MainWorldArray ), majorGrA);
+			//Remove Duplicate Values from the MainArray
+			MainWorldArray = $.unique(MainWorldArray);
+		}
 
+		else if(majorGRSwitch == 1) {
+
+			$('#wgr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+			$('#w1947').velocity({'opacity': '0.4'});	$('#p1947').velocity({'opacity': '0.4'});
+			$('#w1957').velocity({'opacity': '0.4'});	$('#p1957').velocity({'opacity': '0.4'});
+			$('#w1958').velocity({'opacity': '0.4'});	$('#p1958').velocity({'opacity': '0.4'});
+			$('#w1959').velocity({'opacity': '0.4'});	$('#p1959').velocity({'opacity': '0.4'});
+			$('#w1963').velocity({'opacity': '0.4'});	$('#p1963').velocity({'opacity': '0.4'});
+			$('#w1968').velocity({'opacity': '0.4'});	$('#p1968').velocity({'opacity': '0.4'});
+			$('#w1975').velocity({'opacity': '0.4'});	$('#p1975').velocity({'opacity': '0.4'});
+			$('#w1982').velocity({'opacity': '0.4'});	$('#p1982').velocity({'opacity': '0.4'});
+			$('#w1985').velocity({'opacity': '0.4'});	$('#p1985').velocity({'opacity': '0.4'});
+			$('#wgra1991').velocity({'opacity': '0.4'});	$('#p1991').velocity({'opacity': '0.4'});
+			$('#wgrb1991').velocity({'opacity': '0.4'});	$('#p1991').velocity({'opacity': '0.4'});
+			$('#w1995').velocity({'opacity': '0.4'});	$('#p1995').velocity({'opacity': '0.4'});
+			$('#wgra1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+			$('#wgrb1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+			$('#wgrc1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+			$('#w2001').velocity({'opacity': '0.4'});	$('#p2001').velocity({'opacity': '0.4'});
+			$('#w2007').velocity({'opacity': '0.4'});	$('#p2007').velocity({'opacity': '0.4'});
+			$('#wgra2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+			$('#wgrb2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+			$('#w2010').velocity({'opacity': '0.4'});	$('#p2010').velocity({'opacity': '0.4'});
+			$('#w2011').velocity({'opacity': '0.4'});	$('#p2011').velocity({'opacity': '0.4'});
+			$('#wgra2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+			$('#wgrb2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+			$('#w2015').velocity({'opacity': '0.4'});	$('#p2015').velocity({'opacity': '0.4'});
+			$('#wgr2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+
+			$('#majorGr').velocity({'opacity': '0.6'});
+
+
+			majorGRSwitch = 0;
+
+			MainWorldArray = MainWorldArray.filter( function ( elem ) {
+	    		return majorGrA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainWorldArray
+			MainWorldArray = $.unique(MainWorldArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainWorldArray.length == 0){ //if no other value in the list
+				$('#mainClearW').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainWorldArray.length = 0; 
+		}
+  	}
 	});
 
 
 //---------All Other Major Events----------
 	$('#otherNE').click(function(){
 
-		$('#w1939').velocity({'opacity': '1'});	$('#p1939').velocity({'opacity': '1'});
-		$('#wot1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
-		$('#wota2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
-		$('#wotb2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+		if(firstHoverWorld == 0){
+			clearGlobal();
+			firstHoverWorld = 1;
+			}
 
-		$('#mainClearW').velocity({'opacity': '1'});
-		$('#otherNE').velocity({'opacity': '1'});
+			if(otherNESwitch == 0){
+			$('#w1939').velocity({'opacity': '1'});	$('#p1939').velocity({'opacity': '1'});
+			$('#wot1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+			$('#wota2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+			$('#wotb2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
 
-		otherNESwitch = 1;
-		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), otherNEA);
-		//Remove Duplicate Values from the MainArray
+			$('#mainClearW').velocity({'opacity': '1'});
+			$('#otherNE').velocity({'opacity': '1'});
+
+			otherNESwitch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainWorldArray = $.merge( $.merge( [], MainWorldArray ), otherNEA);
+			//Remove Duplicate Values from the MainArray
+			MainWorldArray = $.unique(MainWorldArray);
+		}
+
+		else if(otherNESwitch == 1) {
+
+			$('#w1939').velocity({'opacity': '0.4'});	$('#p1939').velocity({'opacity': '0.4'});
+			$('#wot1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+			$('#wota2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+			$('#wotb2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+
+			$('#otherNE').velocity({'opacity': '0.6'});
+
+		otherNESwitch = 0;
+
+		MainWorldArray = MainWorldArray.filter( function ( elem ) {
+    		return otherNEA.indexOf( elem ) === -1;
+		});
+		//Remove Duplicate Values and Arrange in Order from the MainWorldArray
 		MainWorldArray = $.unique(MainWorldArray);
+
+		//check to clear the xCLEAR clearMain if this was the only filter on
+		if (MainWorldArray.length == 0){ //if no other value in the list
+			$('#mainClearW').velocity({'opacity': '0.1'});
+			//make sure the array is re-initialised
+			MainWorldArray.length = 0; 
+		}
+  	}
 
 	});
 
@@ -875,41 +1727,95 @@ $('#mainGC').click(function(){
 //---------All World Tipping Point Events----------
 	$('#tpWorld').click(function(){
 
-		$('#w1939').velocity({'opacity': '1'});	$('#p1939').velocity({'opacity': '1'});
-		$('#wnt1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
-		$('#wwr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
-		$('#wgr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
-		$('#w1949').velocity({'opacity': '1'});	$('#p1949').velocity({'opacity': '1'});
-		$('#w1952').velocity({'opacity': '1'});	$('#p1952').velocity({'opacity': '1'});
-		$('#w1960').velocity({'opacity': '1'});	$('#p1960').velocity({'opacity': '1'});
-		$('#wwra1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
-		$('#w1964').velocity({'opacity': '1'});	$('#p1964').velocity({'opacity': '1'});
-		$('#w1968').velocity({'opacity': '1'});	$('#p1968').velocity({'opacity': '1'});
-		$('#w1974').velocity({'opacity': '1'});	$('#p1974').velocity({'opacity': '1'});
-		$('#w1975').velocity({'opacity': '1'});	$('#p1975').velocity({'opacity': '1'});
-		$('#w1979').velocity({'opacity': '1'});	$('#p1979').velocity({'opacity': '1'});
-		$('#w1989').velocity({'opacity': '1'});	$('#p1989').velocity({'opacity': '1'});
-		$('#wgra1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
-		$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
-		$('#wot1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
-		$('#wnt1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
-		$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
-		$('#w2003').velocity({'opacity': '1'});	$('#p2003').velocity({'opacity': '1'});
-		$('#w2006').velocity({'opacity': '1'});	$('#p2006').velocity({'opacity': '1'});
-		$('#wgra2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
-		$('#wgr2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
-		$('#wota2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
-		$('#wotb2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+		if(firstHoverWorld == 0){
+		clearGlobal();
+		firstHoverWorld = 1;
+		}
 
-		$('#mainClearW').velocity({'opacity': '1'});
-		$('#tpWorld').velocity({'opacity': '1'});
+		if(tpWorldSwitch ==0){
+			$('#w1939').velocity({'opacity': '1'});	$('#p1939').velocity({'opacity': '1'});
+			$('#wnt1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+			$('#wwr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+			$('#wgr1945').velocity({'opacity': '1'});	$('#p1945').velocity({'opacity': '1'});
+			$('#w1949').velocity({'opacity': '1'});	$('#p1949').velocity({'opacity': '1'});
+			$('#w1952').velocity({'opacity': '1'});	$('#p1952').velocity({'opacity': '1'});
+			$('#w1960').velocity({'opacity': '1'});	$('#p1960').velocity({'opacity': '1'});
+			$('#wwra1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
+			$('#w1964').velocity({'opacity': '1'});	$('#p1964').velocity({'opacity': '1'});
+			$('#w1968').velocity({'opacity': '1'});	$('#p1968').velocity({'opacity': '1'});
+			$('#w1974').velocity({'opacity': '1'});	$('#p1974').velocity({'opacity': '1'});
+			$('#w1975').velocity({'opacity': '1'});	$('#p1975').velocity({'opacity': '1'});
+			$('#w1979').velocity({'opacity': '1'});	$('#p1979').velocity({'opacity': '1'});
+			$('#w1989').velocity({'opacity': '1'});	$('#p1989').velocity({'opacity': '1'});
+			$('#wgra1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
+			$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+			$('#wot1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+			$('#wnt1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+			$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
+			$('#w2003').velocity({'opacity': '1'});	$('#p2003').velocity({'opacity': '1'});
+			$('#w2006').velocity({'opacity': '1'});	$('#p2006').velocity({'opacity': '1'});
+			$('#wgra2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+			$('#wgr2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+			$('#wota2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+			$('#wotb2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+
+			$('#mainClearW').velocity({'opacity': '1'});
+			$('#tpWorld').velocity({'opacity': '1'});
 
 
-		tpWorldSwitch = 1;
-		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), tpWorldA);
-		//Remove Duplicate Values from the MainArray
-		MainWorldArray = $.unique(MainWorldArray);
+			tpWorldSwitch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainWorldArray = $.merge( $.merge( [], MainWorldArray ), tpWorldA);
+			//Remove Duplicate Values from the MainArray
+			MainWorldArray = $.unique(MainWorldArray);
+		}
+
+		else if(tpWorldSwitch == 1) {
+
+			$('#w1939').velocity({'opacity': '0.4'});	$('#p1939').velocity({'opacity': '0.4'});
+			$('#wnt1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+			$('#wwr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+			$('#wgr1945').velocity({'opacity': '0.4'});	$('#p1945').velocity({'opacity': '0.4'});
+			$('#w1949').velocity({'opacity': '0.4'});	$('#p1949').velocity({'opacity': '0.4'});
+			$('#w1952').velocity({'opacity': '0.4'});	$('#p1952').velocity({'opacity': '0.4'});
+			$('#w1960').velocity({'opacity': '0.4'});	$('#p1960').velocity({'opacity': '0.4'});
+			$('#wwra1962').velocity({'opacity': '0.4'});	$('#p1962').velocity({'opacity': '0.4'});
+			$('#w1964').velocity({'opacity': '0.4'});	$('#p1964').velocity({'opacity': '0.4'});
+			$('#w1968').velocity({'opacity': '0.4'});	$('#p1968').velocity({'opacity': '0.4'});
+			$('#w1974').velocity({'opacity': '0.4'});	$('#p1974').velocity({'opacity': '0.4'});
+			$('#w1975').velocity({'opacity': '0.4'});	$('#p1975').velocity({'opacity': '0.4'});
+			$('#w1979').velocity({'opacity': '0.4'});	$('#p1979').velocity({'opacity': '0.4'});
+			$('#w1989').velocity({'opacity': '0.4'});	$('#p1989').velocity({'opacity': '0.4'});
+			$('#wgra1991').velocity({'opacity': '0.4'});	$('#p1991').velocity({'opacity': '0.4'});
+			$('#wgrb1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+			$('#wot1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+			$('#wnt1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+			$('#w2001').velocity({'opacity': '0.4'});	$('#p2001').velocity({'opacity': '0.4'});
+			$('#w2003').velocity({'opacity': '0.4'});	$('#p2003').velocity({'opacity': '0.4'});
+			$('#w2006').velocity({'opacity': '0.4'});	$('#p2006').velocity({'opacity': '0.4'});
+			$('#wgra2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+			$('#wgr2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+			$('#wota2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+			$('#wotb2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+
+			$('#tpWorld').velocity({'opacity': '0.6'});
+
+
+			tpWorldSwitch = 0;
+
+			MainWorldArray = MainWorldArray.filter( function ( elem ) {
+	    		return tpWorldA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainWorldArray
+			MainWorldArray = $.unique(MainWorldArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainWorldArray.length == 0){ //if no other value in the list
+				$('#mainClearW').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainWorldArray.length = 0; 
+		}
+  	}
 
 	});
 
@@ -917,29 +1823,71 @@ $('#mainGC').click(function(){
 //---------All Peaceful Events----------
 	$('#peaceNS').click(function(){
 
-		$('#w1957').velocity({'opacity': '1'});	$('#p1957').velocity({'opacity': '1'});
-		$('#w1958').velocity({'opacity': '1'});	$('#p1958').velocity({'opacity': '1'});
-		$('#w1959').velocity({'opacity': '1'});	$('#p1959').velocity({'opacity': '1'});
-		$('#w1963').velocity({'opacity': '1'});	$('#p1963').velocity({'opacity': '1'});
-		$('#w1982').velocity({'opacity': '1'});	$('#p1982').velocity({'opacity': '1'});
-		$('#w1985').velocity({'opacity': '1'});	$('#p1985').velocity({'opacity': '1'});
-		$('#w1995').velocity({'opacity': '1'});	$('#p1995').velocity({'opacity': '1'});
-		$('#wgra1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
-		$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
-		$('#wgrc1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
-		$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
-		$('#w2007').velocity({'opacity': '1'});	$('#p2007').velocity({'opacity': '1'});
-		$('#wgra2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+		if(firstHoverWorld == 0){
+		clearGlobal();
+		firstHoverWorld = 1;
+		}
 
-		$('#mainClearW').velocity({'opacity': '1'});
-		$('#peaceNS').velocity({'opacity': '1'});
+		if(peaceNSSwitch == 0){
+			$('#w1957').velocity({'opacity': '1'});	$('#p1957').velocity({'opacity': '1'});
+			$('#w1958').velocity({'opacity': '1'});	$('#p1958').velocity({'opacity': '1'});
+			$('#w1959').velocity({'opacity': '1'});	$('#p1959').velocity({'opacity': '1'});
+			$('#w1963').velocity({'opacity': '1'});	$('#p1963').velocity({'opacity': '1'});
+			$('#w1982').velocity({'opacity': '1'});	$('#p1982').velocity({'opacity': '1'});
+			$('#w1985').velocity({'opacity': '1'});	$('#p1985').velocity({'opacity': '1'});
+			$('#w1995').velocity({'opacity': '1'});	$('#p1995').velocity({'opacity': '1'});
+			$('#wgra1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+			$('#wgrb1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+			$('#wgrc1996').velocity({'opacity': '1'});	$('#p1996').velocity({'opacity': '1'});
+			$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
+			$('#w2007').velocity({'opacity': '1'});	$('#p2007').velocity({'opacity': '1'});
+			$('#wgra2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+
+			$('#mainClearW').velocity({'opacity': '1'});
+			$('#peaceNS').velocity({'opacity': '1'});
 
 
-		peaceNSSwitch = 1;
-		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), peaceNSA);
-		//Remove Duplicate Values from the MainArray
-		MainWorldArray = $.unique(MainWorldArray);
+			peaceNSSwitch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainWorldArray = $.merge( $.merge( [], MainWorldArray ), peaceNSA);
+			//Remove Duplicate Values from the MainArray
+			MainWorldArray = $.unique(MainWorldArray);
+		}
+
+		else if(peaceNSSwitch == 1) {
+
+			$('#w1957').velocity({'opacity': '0.4'});	$('#p1957').velocity({'opacity': '0.4'});
+			$('#w1958').velocity({'opacity': '0.4'});	$('#p1958').velocity({'opacity': '0.4'});
+			$('#w1959').velocity({'opacity': '0.4'});	$('#p1959').velocity({'opacity': '0.4'});
+			$('#w1963').velocity({'opacity': '0.4'});	$('#p1963').velocity({'opacity': '0.4'});
+			$('#w1982').velocity({'opacity': '0.4'});	$('#p1982').velocity({'opacity': '0.4'});
+			$('#w1985').velocity({'opacity': '0.4'});	$('#p1985').velocity({'opacity': '0.4'});
+			$('#w1995').velocity({'opacity': '0.4'});	$('#p1995').velocity({'opacity': '0.4'});
+			$('#wgra1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+			$('#wgrb1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+			$('#wgrc1996').velocity({'opacity': '0.4'});	$('#p1996').velocity({'opacity': '0.4'});
+			$('#w2001').velocity({'opacity': '0.4'});	$('#p2001').velocity({'opacity': '0.4'});
+			$('#w2007').velocity({'opacity': '0.4'});	$('#p2007').velocity({'opacity': '0.4'});
+			$('#wgra2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+
+			$('#peaceNS').velocity({'opacity': '0.6'});
+
+
+			peaceNSSwitch = 0;
+
+			MainWorldArray = MainWorldArray.filter( function ( elem ) {
+	    		return peaceNSA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainWorldArray
+			MainWorldArray = $.unique(MainWorldArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainWorldArray.length == 0){ //if no other value in the list
+				$('#mainClearW').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainWorldArray.length = 0; 
+			}
+  		}
 
 	});
 
@@ -947,37 +1895,88 @@ $('#mainGC').click(function(){
 //---------All India Specific Events----------
 	$('#indiaSp').click(function(){
 
-		$('#w1947').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wwrb1962').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w1965').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w1968').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w1971').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w1974').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w1975').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wgrb1991').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wot1998').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w1999').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w2001').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wgra2008').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wgrb2008').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w2010').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w2011').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wgra2014').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wgrb2014').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#w2015').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wgr2016').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wota2016').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
-		$('#wotb2016').velocity({'opacity': '1'});	$('#p').velocity({'opacity': '1'});
+		if(firstHoverWorld == 0){
+		clearGlobal();
+		firstHoverWorld = 1;
+		}
 
-		$('#mainClearW').velocity({'opacity': '1'});
-		$('#indiaSp').velocity({'opacity': '1'});
+		if(indiaSpSwitch == 0) {
+
+			$('#w1947').velocity({'opacity': '1'});	$('#p1947').velocity({'opacity': '1'});
+			$('#wwrb1962').velocity({'opacity': '1'});	$('#p1962').velocity({'opacity': '1'});
+			$('#w1965').velocity({'opacity': '1'});	$('#p1965').velocity({'opacity': '1'});
+			$('#w1968').velocity({'opacity': '1'});	$('#p1968').velocity({'opacity': '1'});
+			$('#w1971').velocity({'opacity': '1'});	$('#p1971').velocity({'opacity': '1'});
+			$('#w1974').velocity({'opacity': '1'});	$('#p1974').velocity({'opacity': '1'});
+			$('#w1975').velocity({'opacity': '1'});	$('#p1975').velocity({'opacity': '1'});
+			$('#wgrb1991').velocity({'opacity': '1'});	$('#p1991').velocity({'opacity': '1'});
+			$('#wot1998').velocity({'opacity': '1'});	$('#p1998').velocity({'opacity': '1'});
+			$('#w1999').velocity({'opacity': '1'});	$('#p1999').velocity({'opacity': '1'});
+			$('#w2001').velocity({'opacity': '1'});	$('#p2001').velocity({'opacity': '1'});
+			$('#wgra2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+			$('#wgrb2008').velocity({'opacity': '1'});	$('#p2008').velocity({'opacity': '1'});
+			$('#w2010').velocity({'opacity': '1'});	$('#p2010').velocity({'opacity': '1'});
+			$('#w2011').velocity({'opacity': '1'});	$('#p2011').velocity({'opacity': '1'});
+			$('#wgra2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+			$('#wgrb2014').velocity({'opacity': '1'});	$('#p2014').velocity({'opacity': '1'});
+			$('#w2015').velocity({'opacity': '1'});	$('#p2015').velocity({'opacity': '1'});
+			$('#wgr2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+			$('#wota2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+			$('#wotb2016').velocity({'opacity': '1'});	$('#p2016').velocity({'opacity': '1'});
+
+			$('#mainClearW').velocity({'opacity': '1'});
+			$('#indiaSp').velocity({'opacity': '1'});
 
 
-		indiaSpSwitch = 1;
-		//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
-		MainWorldArray = $.merge( $.merge( [], MainWorldArray ), indiaSpA);
-		//Remove Duplicate Values from the MainArray
-		MainWorldArray = $.unique(MainWorldArray);
+			indiaSpSwitch = 1;
+			//Populate MainArray with MainArray previous values and new Nuclear Test Array Values
+			MainWorldArray = $.merge( $.merge( [], MainWorldArray ), indiaSpA);
+			//Remove Duplicate Values from the MainArray
+			MainWorldArray = $.unique(MainWorldArray);
+		}
+
+		else if(indiaSpSwitch == 1) {
+
+			$('#w1947').velocity({'opacity': '0.4'});	$('#p1947').velocity({'opacity': '0.4'});
+			$('#wwrb1962').velocity({'opacity': '0.4'});	$('#p1962').velocity({'opacity': '0.4'});
+			$('#w1965').velocity({'opacity': '0.4'});	$('#p1965').velocity({'opacity': '0.4'});
+			$('#w1968').velocity({'opacity': '0.4'});	$('#p1968').velocity({'opacity': '0.4'});
+			$('#w1971').velocity({'opacity': '0.4'});	$('#p1971').velocity({'opacity': '0.4'});
+			$('#w1974').velocity({'opacity': '0.4'});	$('#p1974').velocity({'opacity': '0.4'});
+			$('#w1975').velocity({'opacity': '0.4'});	$('#p1975').velocity({'opacity': '0.4'});
+			$('#wgrb1991').velocity({'opacity': '0.4'});	$('#p1991').velocity({'opacity': '0.4'});
+			$('#wot1998').velocity({'opacity': '0.4'});	$('#p1998').velocity({'opacity': '0.4'});
+			$('#w1999').velocity({'opacity': '0.4'});	$('#p1999').velocity({'opacity': '0.4'});
+			$('#w2001').velocity({'opacity': '0.4'});	$('#p2001').velocity({'opacity': '0.4'});
+			$('#wgra2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+			$('#wgrb2008').velocity({'opacity': '0.4'});	$('#p2008').velocity({'opacity': '0.4'});
+			$('#w2010').velocity({'opacity': '0.4'});	$('#p2010').velocity({'opacity': '0.4'});
+			$('#w2011').velocity({'opacity': '0.4'});	$('#p2011').velocity({'opacity': '0.4'});
+			$('#wgra2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+			$('#wgrb2014').velocity({'opacity': '0.4'});	$('#p2014').velocity({'opacity': '0.4'});
+			$('#w2015').velocity({'opacity': '0.4'});	$('#p2015').velocity({'opacity': '0.4'});
+			$('#wgr2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+			$('#wota2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+			$('#wotb2016').velocity({'opacity': '0.4'});	$('#p2016').velocity({'opacity': '0.4'});
+
+			$('#indiaSp').velocity({'opacity': '0.6'});
+
+			indiaSpSwitch = 0;
+
+			MainWorldArray = MainWorldArray.filter( function ( elem ) {
+	    		return indiaSpA.indexOf( elem ) === -1;
+			});
+			//Remove Duplicate Values and Arrange in Order from the MainWorldArray
+			MainWorldArray = $.unique(MainWorldArray);
+
+			//check to clear the xCLEAR clearMain if this was the only filter on
+			if (MainWorldArray.length == 0){ //if no other value in the list
+				$('#mainClearW').velocity({'opacity': '0.1'});
+				//make sure the array is re-initialised
+				MainWorldArray.length = 0; 
+		}
+  	}
+
 
 	});
 
@@ -1020,6 +2019,12 @@ $(function() {
           //console.log(divElement);
           //console.log(firstChar);
           bufferchar = firstChar; //set charbuffer inside if statement becasue firstChar keeps changing with hovers.
+
+          if(firstHoverMain == 0){
+          	clearMain();
+			firstHoverMain = 1;
+          }
+
       }
 
       //Character w indicates hover over the India Timline Event
@@ -1035,6 +2040,13 @@ $(function() {
       	year = thisId.slice(-4); //get the last 4 characters to find the year of the event in world timeline
       	yearElement = 'p'+ year;
       	$('#'+ yearElement).stop(true,false).velocity({'opacity': '1'});
+
+
+      	if(firstHoverWorld == 0){
+      		clearGlobal();
+			firstHoverWorld = 1;
+
+      	}
 
       	
       	if(year != '2016'){
@@ -1131,8 +2143,7 @@ $(function() {
 							 $('#'+ modelElement).stop(true,false).velocity({'opacity': '1'});
 							 break;
 
-				default: break;
-
+				default: break;				
       		}
 
       		//console.log(modelElement);
@@ -1542,7 +2553,7 @@ $('#indiaSp').hover(
 
 
 
-<body>
+<body style="margin:0;" "padding:0";>
 <!-- HIDDEN / POP-UP DIV -->
 
 

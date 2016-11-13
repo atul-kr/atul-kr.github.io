@@ -28,10 +28,10 @@
 #N1967, #N1968, #N1971, #N1974, #N1974a, #N1974b, #N1975, #N1978, #N1983, #N1983a, #N1983b, #N1988, #N1989, 
 #N1991, #N1994, #N1995, #N1996, #N1998, #N1999, #N2001, #N2004, #N2005, 
 #N2006, #N2007, #N2008, #N2009, #N2010, #N2011, #N2011a, #N2011b, #N2012, #N2012a, #N2012b, #N2013, #N2014,
-#N2015, #N2016
+#N2015, #N2016, #atom
 {
 	cursor: pointer;
-	opacity:0.4;
+	opacity:1;
 }
 
 
@@ -48,7 +48,7 @@
 }
 
 /* all styles for the filters in both graphs */
-#atom, #mainYellow, #mainRed, #mainPurple, #mainGreen, #mainGrey, #mainAc, #mainNT, #mainGC,
+#mainYellow, #mainRed, #mainPurple, #mainGreen, #mainGrey, #mainAc, #mainNT, #mainGC,
 #coreEvent, #encoEvent, #deteEvent, #minus3, #plus3, #plus1, #peaceNS, #tpWorld, #indiaSp, #firstNT,
 #smWar, #majorGr, #otherNE
 {
@@ -66,7 +66,7 @@
 #p2001, 	#p2003, 	#p2006, 	#p2007, 	#p2008, 	#p2010, 
 #p2011, 	#p2014, 	#p2015,  	#p2016
 {
-	opacity:0.4;
+	opacity:1;
 }	
 
 
@@ -79,7 +79,7 @@
 #w2011, 	#wgra2014, 	#wgrb2014, 	#w2015, 	#wgr2016, 	#wota2016, 	#wotb2016 
 {
 	cursor: pointer;
-	opacity:0.4;
+	opacity:1;
 }
 
 
@@ -129,9 +129,21 @@
 	position: absolute;
 	font-family: 'GillSans-Light';
 	font-size: 12px;
-	width: 280px;
-	padding: 10px;
+
+	max-width: 240px; /*to make div width dynamic with respected to the text area inside it */
+	min-width: 100px;
+
+	padding: 2px;
 	color: #BDCCD4;
+
+	float:  left; /*to make div width dynamic with respected to the text area inside it */
+   	clear: left;  /*to make div width dynamic with respected to the text area inside it */
+
 	text-shadow: 0px 0px 3px rgba(0,0,0,0.7);
 	z-index: 100;
+	background: rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+	box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+ 
 }
