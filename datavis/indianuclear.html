@@ -2159,6 +2159,25 @@ $(function() {
 
       $('#'+ hoverElement).stop(true,false).velocity({'opacity': '1'});  //increase opacity to 100% for all hovered elements
       $('#'+ divElement).show();  //show the div element with the description
+
+      switch(hoverElement){
+      	case 'N1974': $('#N1974a').stop(true,false).velocity({'opacity': '1'});
+      				  $('#N1974b').stop(true,false).velocity({'opacity': '1'});
+      				  break;
+
+      	case 'N1983': $('#N1983a').stop(true,false).velocity({'opacity': '1'});
+      				  $('#N1983b').stop(true,false).velocity({'opacity': '1'});
+      				  break;
+
+      	case 'N2011': $('#N2011a').stop(true,false).velocity({'opacity': '1'});
+      				  $('#N2011b').stop(true,false).velocity({'opacity': '1'});
+      				  break;
+
+      	case 'N2012': $('#N2012a').stop(true,false).velocity({'opacity': '1'});
+      				  $('#N2012b').stop(true,false).velocity({'opacity': '1'});
+      				  break;
+
+      }
   },
 
   function mouseleave() {
@@ -2171,6 +2190,24 @@ $(function() {
 		      //console.log(hoverElement + 'is not is array!');
 
 		      //console.log(bufferchar); 
+
+		      switch(hoverElement){
+		      	case 'N1974': $('#N1974a').stop(true,false).velocity({'opacity': '0.4'});
+		      				  $('#N1974b').stop(true,false).velocity({'opacity': '0.4'});
+		      				  break;
+
+		      	case 'N1983': $('#N1983a').stop(true,false).velocity({'opacity': '0.4'});
+		      				  $('#N1983b').stop(true,false).velocity({'opacity': '0.4'});
+		      				  break;
+
+		      	case 'N2011': $('#N2011a').stop(true,false).velocity({'opacity': '0.4'});
+		      				  $('#N2011b').stop(true,false).velocity({'opacity': '0.4'});
+		      				  break;
+
+		      	case 'N2012': $('#N2012a').stop(true,false).velocity({'opacity': '0.4'});
+		      				  $('#N2012b').stop(true,false).velocity({'opacity': '0.4'});
+		      				  break;
+		      }
 
 		  }
 	}
