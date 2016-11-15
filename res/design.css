@@ -1,0 +1,29 @@
+@font-face{
+	font-family: 'ProximaNovaA-Bold';
+	src:url(ProximaNA-Bold.otf);
+}
+
+
+@font-face{
+	font-family: 'ProximaNovaA-Extrabld';
+	src:url(ProximaNA-Extrabold.otf);
+}
+
+#body{
+	width: 100%;
+	background: #FFEA00;
+	margin: 0;
+	padding: 0;
+	font-family: 'ProximaNovaA-Bold', 'ProximaNovaA-Extrabld';
+	overflow: hidden;
+}
+
+#latBtn, #poBtn, #reBtn, #nidEmail, #perEmail, #behance{
+
+	cursor:pointer;
+}
+
+#nidEmail:hover, #perEmail:hover, #behance:hover{
+	fill: #2979FF;
+}
+
