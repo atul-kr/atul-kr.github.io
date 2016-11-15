@@ -18,7 +18,7 @@
 
 			$('#latBtn').click(function (){
 
-				window.open("http://www.atulkr.com/projects/datavis/indianuclear.html");
+				window.open("http://www.atulkr.com/projects/datavis/indianuclear");
 				
 				$('#lpRect').stop(true,false).velocity({'stroke': '#2979FF'});
 				$('#lpText').stop(true,false).velocity({'fill': '#2979FF'});
@@ -115,7 +115,16 @@
 				}			
 			);
 
-////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////	
+			var FF = !(window.mozInnerScreenX == null); //ff stores whether browser is firefox
+			if(FF) { //do nothing if firefox
+			}
+
+			//if(/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())) //determine whether chrome?
+
+			//execute else for all other browsers
+			else
+			{
 
 			var flag = 0; //check for area when mouse in between two eyes in belowEye_1_ element and mouth element
 
@@ -162,6 +171,8 @@
 			        img.css('-o-transform', 'rotate('+degree+'deg)');
 			        img.css('-ms-transform', 'rotate('+degree+'deg)');
 			        img.css({'transform-origin': '50% 50%'});
+			        img2.css({'-webkit-transform-origin': '50% 50%'});
+			        img2.css({'-moz-transform-origin': '50% 50%'});
 			    }
 			    $(document).mousemove(mouse);
 			}
@@ -182,9 +193,12 @@
 			        img2.css('-o-transform', 'rotate(' + degree_2 + 'deg)');
 			        img2.css('-ms-transform', 'rotate(' + degree_2 + 'deg)');
 			        img2.css({'transform-origin': '50% 50%'});
+			        img2.css({'-webkit-transform-origin': '50% 50%'});
+			        img2.css({'-moz-transform-origin': '50% 50%'});
 			    }
 			    $(document).mousemove(mouse2);
-			}		
+			}
+			}//if mozilla		
 
 
 ////////////////////////////////////////////////////////////////////////
