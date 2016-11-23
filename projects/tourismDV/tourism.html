@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>World Tourism</title>
+
+	<link type="text/css" rel="stylesheet" href="design.css">
+	
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="velocity.js"></script>
+
+	<script type="text/javascript">
+
+	$.get('tourism.svg', function(data) {
+// get the svg file and append to body
+
+$(document.body).append(data.documentElement);
+
+///////_____________VARIABLES AND FUNCTIONS___________________////////
+//country specific arrays
+var arrayFr = ["Tfr", "Tfr2", "Tfr3", "Tfr4", "TfrSq_1_", "TfrTr_1_", "TfrCi_1_", "TfrCr_1_"];
+var arrayUs = ["Tus", "Tus2", "Tus3", "Tus4", "TusSq_1_", "TusTr_1_", "TusCi_1_", "TusCr_1_"];
+var arraySp = ["Tsp", "Tsp2", "Tsp3", "Tsp4", "TspSq_1_", "TspTr_1_", "TspCi_1_", "TspCr_1_"];
+var arrayCh = ["Tch", "Tch2", "Tch3", "Tch4", "TchSq_1_", "TchTr_1_", "TchCi_1_", "TchCr_1_"];
+var arrayIt = ["Tit", "Tit2", "Tit3", "Tit4", "TitSq_1_", "TitTr_1_", "TitCi_1_", "TitCr_1_"];
+var arrayTu = ["Ttu", "Ttu2", "Ttu3", "Ttu4", "TtuSq_1_", "TtuTr_1_", "TtuCi_1_", "TtuCr_1_"];
+var arrayGe = ["Tge", "Tge2", "Tge3", "Tge4", "TgeSq_1_", "TgeTr_1_", "TgeCi_1_", "TgeCr_1_"];
+var arrayUk = ["Tuk", "Tuk2", "Tuk3", "Tuk4", "TukSq_1_", "TukTr_1_", "TukCi_1_", "TukCr_1_"];
+var arrayMe = ["Tme", "Tme2", "Tme3", "Tme4", "TmeSq_1_", "TmeTr_1_", "TmeCi_1_", "TmeCr_1_"];
+var arrayRu = ["Tru", "Tru2", "Tru3", "Tru4", "TruSq_1_", "TruTr_1_", "TruCi_1_", "TruCr_1_"];
+
+//radar graph specific arrays
+var arraySq = ["TfrSq_1_",	"TusSq_1_",	"TspSq_1_",	"TchSq_1_",	"TitSq_1_",	"TtuSq_1_",	"TgeSq_1_",	"TukSq_1_",	"TmeSq_1_",	"TruSq_1_"];
+var arrayTr = ["TfrTr_1_",	"TusTr_1_",	"TspTr_1_",	"TchTr_1_",	"TitTr_1_",	"TtuTr_1_",	"TgeTr_1_",	"TukTr_1_",	"TmeTr_1_",	"TruTr_1_"];
+var arrayCi = ["TfrCi_1_",	"TusCi_1_",	"TspCi_1_",	"TchCi_1_",	"TitCi_1_",	"TtuCi_1_",	"TgeCi_1_",	"TukCi_1_",	"TmeCi_1_",	"TruCi_1_"];
+var arrayCr = ["TfrCr_1_",	"TusCr_1_",	"TspCr_1_",	"TchCr_1_",	"TitCr_1_",	"TtuCr_1_",	"TgeCr_1_",	"TukCr_1_",	"TmeCr_1_",	"TruCr_1_"];
+
+var MainArray = [];
+
+var firstHover = 0;
+var squareSwitch = 0;
+var triangleSwitch = 0;
+var circleSwitch = 0;
+var crossSwitch = 0;
+
+$('#okBtn').click(function (){
+	//$('#onLoadSign').velocity({'opacity': '0'});
+	$('#onLoadSign').hide();
+});
+
+//global function for all rotate
+function myRotate(img, degree){
+	img.css('-moz-transform', 'rotate('+degree+'deg)');
+	img.css('-webkit-transform', 'rotate('+degree+'deg)');
+	img.css('-o-transform', 'rotate('+degree+'deg)');
+	img.css('-ms-transform', 'rotate('+degree+'deg)');
+}
+
+//function to clear all explanation divs
+function clearDisplay(){
+	$('.france').hide();
+	$('.usa').hide();
+	$('.spain').hide();
+	$('.china').hide();
+	$('.italy').hide();
+	$('.turkey').hide();
+	$('.germany').hide();
+	$('.uk').hide();
+	$('.mexico').hide();
+	$('.russia').hide();
+}
+
+//function to clear all
+function clearAll(){
+	clearDisplay();
+	$('#Tfr').css({'opacity': '0.5'});
+	$('#Tfr2').css({'opacity': '0.5'});
+	$('#Tfr3').css({'opacity': '0.5'});
+	$('#Tfr4').css({'opacity': '0.5'});
+	$('#Tus').css({'opacity': '0.5'});
+	$('#Tus2').css({'opacity': '0.5'});
+	$('#Tus3').css({'opacity': '0.5'});
+	$('#Tus4').css({'opacity': '0.5'});
+	$('#Tsp').css({'opacity': '0.5'});
+	$('#Tsp2').css({'opacity': '0.5'});
+	$('#Tsp3').css({'opacity': '0.5'});
+	$('#Tsp4').css({'opacity': '0.5'});
+	$('#Tch').css({'opacity': '0.5'});
+	$('#Tch2').css({'opacity': '0.5'});
+	$('#Tch3').css({'opacity': '0.5'});
+	$('#Tch4').css({'opacity': '0.5'});
+	$('#Tit').css({'opacity': '0.5'});
+	$('#Tit2').css({'opacity': '0.5'});
+	$('#Tit3').css({'opacity': '0.5'});
+	$('#Tit4').css({'opacity': '0.5'});
+	$('#Ttu').css({'opacity': '0.5'});
+	$('#Ttu2').css({'opacity': '0.5'});
+	$('#Ttu3').css({'opacity': '0.5'});
+	$('#Ttu4').css({'opacity': '0.5'});
+	$('#Tge').css({'opacity': '0.5'});
+	$('#Tge2').css({'opacity': '0.5'});
+	$('#Tge3').css({'opacity': '0.5'});
+	$('#Tge4').css({'opacity': '0.5'});
+	$('#Tuk').css({'opacity': '0.5'});
+	$('#Tuk2').css({'opacity': '0.5'});
+	$('#Tuk3').css({'opacity': '0.5'});
+	$('#Tuk4').css({'opacity': '0.5'});
+	$('#Tme').css({'opacity': '0.5'});
+	$('#Tme2').css({'opacity': '0.5'});
+	$('#Tme3').css({'opacity': '0.5'});
+	$('#Tme4').css({'opacity': '0.5'});
+	$('#Tru').css({'opacity': '0.5'});
+	$('#Tru2').css({'opacity': '0.5'});
+	$('#Tru3').css({'opacity': '0.5'});
+	$('#Tru4').css({'opacity': '0.5'});
+
+	$('#TfrSq_1_').css({'opacity': '0.5'});
+	$('#TusSq_1_').css({'opacity': '0.5'});
+	$('#TspSq_1_').css({'opacity': '0.5'});
+	$('#TchSq_1_').css({'opacity': '0.5'});
+	$('#TitSq_1_').css({'opacity': '0.5'});
+	$('#TtuSq_1_').css({'opacity': '0.5'});
+	$('#TgeSq_1_').css({'opacity': '0.5'});
+	$('#TukSq_1_').css({'opacity': '0.5'});
+	$('#TmeSq_1_').css({'opacity': '0.5'});
+	$('#TruSq_1_').css({'opacity': '0.5'});
+	$('#TfrTr_1_').css({'opacity': '0.5'});
+	$('#TusTr_1_').css({'opacity': '0.5'});
+	$('#TspTr_1_').css({'opacity': '0.5'});
+	$('#TchTr_1_').css({'opacity': '0.5'});
+	$('#TitTr_1_').css({'opacity': '0.5'});
+	$('#TtuTr_1_').css({'opacity': '0.5'});
+	$('#TgeTr_1_').css({'opacity': '0.5'});
+	$('#TukTr_1_').css({'opacity': '0.5'});
+	$('#TmeTr_1_').css({'opacity': '0.5'});
+	$('#TruTr_1_').css({'opacity': '0.5'});
+	$('#TfrCi_1_').css({'opacity': '0.5'});
+	$('#TusCi_1_').css({'opacity': '0.5'});
+	$('#TspCi_1_').css({'opacity': '0.5'});
+	$('#TchCi_1_').css({'opacity': '0.5'});
+	$('#TitCi_1_').css({'opacity': '0.5'});
+	$('#TtuCi_1_').css({'opacity': '0.5'});
+	$('#TgeCi_1_').css({'opacity': '0.5'});
+	$('#TukCi_1_').css({'opacity': '0.5'});
+	$('#TmeCi_1_').css({'opacity': '0.5'});
+	$('#TruCi_1_').css({'opacity': '0.5'});
+	$('#TfrCr_1_').css({'opacity': '0.5'});
+	$('#TusCr_1_').css({'opacity': '0.5'});
+	$('#TspCr_1_').css({'opacity': '0.5'});
+	$('#TchCr_1_').css({'opacity': '0.5'});
+	$('#TitCr_1_').css({'opacity': '0.5'});
+	$('#TtuCr_1_').css({'opacity': '0.5'});
+	$('#TgeCr_1_').css({'opacity': '0.5'});
+	$('#TukCr_1_').css({'opacity': '0.5'});
+	$('#TmeCr_1_').css({'opacity': '0.5'});
+	$('#TruCr_1_').css({'opacity': '0.5'});
+
+	$('#radChartRed').css({'opacity': '0.4'});
+	$('#radChartYellow').css({'opacity': '0.4'});
+	$('#radChartGreen').css({'opacity': '0.4'});
+	$('#radChartGrey').css({'opacity': '0.4'});
+
+	MainArray.length = 0;
+}
+
+function showSq(){
+	$('#TfrSq_1_').velocity({'opacity': '1'});
+	$('#TusSq_1_').velocity({'opacity': '1'});
+	$('#TspSq_1_').velocity({'opacity': '1'});
+	$('#TchSq_1_').velocity({'opacity': '1'});
+	$('#TitSq_1_').velocity({'opacity': '1'});
+	$('#TtuSq_1_').velocity({'opacity': '1'});
+	$('#TgeSq_1_').velocity({'opacity': '1'});
+	$('#TukSq_1_').velocity({'opacity': '1'});
+	$('#TmeSq_1_').velocity({'opacity': '1'});
+	$('#TruSq_1_').velocity({'opacity': '1'});
+	$('#glSq').css({'opacity': '1'});
+
+	$('#radChartRed').velocity({'opacity': '0.9'});
+	MainArray = $.merge( $.merge( [], MainArray ), arraySq);
+	MainArray = $.unique(MainArray);
+}
+
+function clearSq(){
+	$('#TfrSq_1_').velocity({'opacity': '0.5'});
+	$('#TusSq_1_').velocity({'opacity': '0.5'});
+	$('#TspSq_1_').velocity({'opacity': '0.5'});
+	$('#TchSq_1_').velocity({'opacity': '0.5'});
+	$('#TitSq_1_').velocity({'opacity': '0.5'});
+	$('#TtuSq_1_').velocity({'opacity': '0.5'});
+	$('#TgeSq_1_').velocity({'opacity': '0.5'});
+	$('#TukSq_1_').velocity({'opacity': '0.5'});
+	$('#TmeSq_1_').velocity({'opacity': '0.5'});
+	$('#TruSq_1_').velocity({'opacity': '0.5'});
+	$('#glSq').css({'opacity': '0.6'});
+
+	$('#radChartRed').velocity({'opacity': '0.4'});
+	MainArray = MainArray.filter( function ( elem ) {
+		return arraySq.indexOf( elem ) === -1;
+	});			
+	MainArray = $.unique(MainArray);
+}
+
+function showTr(){
+	$('#TfrTr_1_').velocity({'opacity': '1'});
+	$('#TusTr_1_').velocity({'opacity': '1'});
+	$('#TspTr_1_').velocity({'opacity': '1'});
+	$('#TchTr_1_').velocity({'opacity': '1'});
+	$('#TitTr_1_').velocity({'opacity': '1'});
+	$('#TtuTr_1_').velocity({'opacity': '1'});
+	$('#TgeTr_1_').velocity({'opacity': '1'});
+	$('#TukTr_1_').velocity({'opacity': '1'});
+	$('#TmeTr_1_').velocity({'opacity': '1'});
+	$('#TruTr_1_').velocity({'opacity': '1'});
+	$('#glTr').css({'opacity': '1'});
+
+	$('#radChartGreen').velocity({'opacity': '0.9'});
+	MainArray = $.merge( $.merge( [], MainArray ), arrayTr);
+	MainArray = $.unique(MainArray);
+}
+
+function clearTr(){
+	$('#TfrTr_1_').velocity({'opacity': '0.5'});
+	$('#TusTr_1_').velocity({'opacity': '0.5'});
+	$('#TspTr_1_').velocity({'opacity': '0.5'});
+	$('#TchTr_1_').velocity({'opacity': '0.5'});
+	$('#TitTr_1_').velocity({'opacity': '0.5'});
+	$('#TtuTr_1_').velocity({'opacity': '0.5'});
+	$('#TgeTr_1_').velocity({'opacity': '0.5'});
+	$('#TukTr_1_').velocity({'opacity': '0.5'});
+	$('#TmeTr_1_').velocity({'opacity': '0.5'});
+	$('#TruTr_1_').velocity({'opacity': '0.5'});
+	$('#glTr').css({'opacity': '0.6'});
+
+	$('#radChartGreen').velocity({'opacity': '0.4'});
+	MainArray = MainArray.filter( function ( elem ) {
+		return arrayTr.indexOf( elem ) === -1;
+	});			
+	MainArray = $.unique(MainArray);
+}
+
+function showCi(){
+	$('#TfrCi_1_').velocity({'opacity': '1'});
+	$('#TusCi_1_').velocity({'opacity': '1'});
+	$('#TspCi_1_').velocity({'opacity': '1'});
+	$('#TchCi_1_').velocity({'opacity': '1'});
+	$('#TitCi_1_').velocity({'opacity': '1'});
+	$('#TtuCi_1_').velocity({'opacity': '1'});
+	$('#TgeCi_1_').velocity({'opacity': '1'});
+	$('#TukCi_1_').velocity({'opacity': '1'});
+	$('#TmeCi_1_').velocity({'opacity': '1'});
+	$('#TruCi_1_').velocity({'opacity': '1'});
+	$('#glCi').css({'opacity': '1'});
+
+	$('#radChartYellow').velocity({'opacity': '0.9'});
+	MainArray = $.merge( $.merge( [], MainArray ), arrayCi);
+	MainArray = $.unique(MainArray);
+}
+
+function clearCi(){
+	$('#TfrCi_1_').velocity({'opacity': '0.5'});
+	$('#TusCi_1_').velocity({'opacity': '0.5'});
+	$('#TspCi_1_').velocity({'opacity': '0.5'});
+	$('#TchCi_1_').velocity({'opacity': '0.5'});
+	$('#TitCi_1_').velocity({'opacity': '0.5'});
+	$('#TtuCi_1_').velocity({'opacity': '0.5'});
+	$('#TgeCi_1_').velocity({'opacity': '0.5'});
+	$('#TukCi_1_').velocity({'opacity': '0.5'});
+	$('#TmeCi_1_').velocity({'opacity': '0.5'});
+	$('#TruCi_1_').velocity({'opacity': '0.5'});
+	$('#glCi').css({'opacity': '0.6'});
+
+	$('#radChartYellow').velocity({'opacity': '0.4'});
+	MainArray = MainArray.filter( function ( elem ) {
+		return arrayCi.indexOf( elem ) === -1;
+	});			
+	MainArray = $.unique(MainArray);
+}
+
+function showCr(){
+	$('#TfrCr_1_').velocity({'opacity': '1'});
+	$('#TusCr_1_').velocity({'opacity': '1'});
+	$('#TspCr_1_').velocity({'opacity': '1'});
+	$('#TchCr_1_').velocity({'opacity': '1'});
+	$('#TitCr_1_').velocity({'opacity': '1'});
+	$('#TtuCr_1_').velocity({'opacity': '1'});
+	$('#TgeCr_1_').velocity({'opacity': '1'});
+	$('#TukCr_1_').velocity({'opacity': '1'});
+	$('#TmeCr_1_').velocity({'opacity': '1'});
+	$('#TruCr_1_').velocity({'opacity': '1'});
+	$('#glCr').css({'opacity': '1'});
+
+	$('#radChartGrey').velocity({'opacity': '0.9'});
+	MainArray = $.merge( $.merge( [], MainArray ), arrayCr);
+	MainArray = $.unique(MainArray);
+}
+
+function clearCr(){
+	$('#TfrCr_1_').velocity({'opacity': '0.5'});
+	$('#TusCr_1_').velocity({'opacity': '0.5'});
+	$('#TspCr_1_').velocity({'opacity': '0.5'});
+	$('#TchCr_1_').velocity({'opacity': '0.5'});
+	$('#TitCr_1_').velocity({'opacity': '0.5'});
+	$('#TtuCr_1_').velocity({'opacity': '0.5'});
+	$('#TgeCr_1_').velocity({'opacity': '0.5'});
+	$('#TukCr_1_').velocity({'opacity': '0.5'});
+	$('#TmeCr_1_').velocity({'opacity': '0.5'});
+	$('#TruCr_1_').velocity({'opacity': '0.5'});
+	$('#glCr').css({'opacity': '0.6'});
+
+	$('#radChartGrey').velocity({'opacity': '0.4'});
+	MainArray = MainArray.filter( function ( elem ) {
+		return arrayCr.indexOf( elem ) === -1;
+	});			
+	MainArray = $.unique(MainArray);
+}
+
+function clearSwitches(){
+	squareSwitch = 0;
+	triangleSwitch = 0;
+	circleSwitch = 0;
+	crossSwitch = 0;
+
+	$('#glSq').css({'opacity': '0.6'});
+	$('#glTr').css({'opacity': '0.6'});
+	$('#glCi').css({'opacity': '0.6'});
+	$('#glCr').css({'opacity': '0.6'});
+}
+
+///__________ALL CLICK FUNCTIONS________________//////////////
+
+//inner circle clicks: FRANCE
+$('#Tfr').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+
+	//img2.css({'transform-origin': '50% 50%'}); PUT THE TRANSFORM ORIGIN IN CSS OTHERWISE THE ORIGIN TRANFORM ALSO GETS ANIMATED
+	//img2.css({'-webkit-transform-origin': '50% 50%'});
+	//img2.css({'-moz-transform-origin': '50% 50%'});
+
+	//img2.css('-moz-transform', 'rotate(0deg)'); DONT USE BRUTE FORCE IN ALL TRANSITION. CALL FUNCTION
+	//img2.css('-webkit-transform', 'rotate(0deg)');
+	//img2.css('-o-transform', 'rotate(0deg)');
+	//img2.css('-ms-transform', 'rotate(0deg)');
+	
+	//img2.css({'-webkit-transition': 'all 0.5s ease-in-out'}); MOVE ANIMATION TO CSS
+	//img2.css({'-moz-transition': 'all 0.5s ease-in-out'});
+	//img2.css({'-o-transition': 'all 0.5s ease-in-out'});
+	//img2.css({'transition': 'all 0.5s ease-in-out'});
+
+	myRotate(img2,0);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,0);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,0);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,0);
+
+	$('#Tfr').velocity({'opacity': '1'});
+	$('#Tfr2').velocity({'opacity': '1'});
+	$('#Tfr3').velocity({'opacity': '1'});
+	$('#Tfr4').velocity({'opacity': '1'});
+
+	$('#TfrCi_1_').velocity({'opacity': '1'});
+	$('#TfrCr_1_').velocity({'opacity': '1'});
+	$('#TfrSq_1_').velocity({'opacity': '1'});
+	$('#TfrTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayFr);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.france').show();
+
+});
+
+//inner circle clicks: US
+$('#Tus').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,56);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,29);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,24);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,24);
+
+	$('#Tus').velocity({'opacity': '1'});
+	$('#Tus2').velocity({'opacity': '1'});
+	$('#Tus3').velocity({'opacity': '1'});
+	$('#Tus4').velocity({'opacity': '1'});
+
+	$('#TusCi_1_').velocity({'opacity': '1'});
+	$('#TusCr_1_').velocity({'opacity': '1'});
+	$('#TusSq_1_').velocity({'opacity': '1'});
+	$('#TusTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayUs);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.usa').show();
+});
+
+//inner circle clicks: SPAIN
+$('#Tsp').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,24);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,6);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,42);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,42);
+
+	$('#Tsp').velocity({'opacity': '1'});
+	$('#Tsp2').velocity({'opacity': '1'});
+	$('#Tsp3').velocity({'opacity': '1'});
+	$('#Tsp4').velocity({'opacity': '1'});
+
+	$('#TspCi_1_').velocity({'opacity': '1'});
+	$('#TspCr_1_').velocity({'opacity': '1'});
+	$('#TspSq_1_').velocity({'opacity': '1'});
+	$('#TspTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arraySp);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.spain').show();
+});
+
+//inner circle clicks: CHINA
+$('#Tch').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,67);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,45);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,54);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,53);
+
+	$('#Tch').velocity({'opacity': '1'});
+	$('#Tch2').velocity({'opacity': '1'});
+	$('#Tch3').velocity({'opacity': '1'});
+	$('#Tch4').velocity({'opacity': '1'});
+
+	$('#TchCi_1_').velocity({'opacity': '1'});
+	$('#TchCr_1_').velocity({'opacity': '1'});
+	$('#TchSq_1_').velocity({'opacity': '1'});
+	$('#TchTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayCh);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.china').show();
+});
+
+//inner circle clicks: ITALY
+$('#Tit').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,25);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,-3);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,58);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,58);
+
+	$('#Tit').velocity({'opacity': '1'});
+	$('#Tit2').velocity({'opacity': '1'});
+	$('#Tit3').velocity({'opacity': '1'});
+	$('#Tit4').velocity({'opacity': '1'});
+
+	$('#TitCi_1_').velocity({'opacity': '1'});
+	$('#TitCr_1_').velocity({'opacity': '1'});
+	$('#TitSq_1_').velocity({'opacity': '1'});
+	$('#TitTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayIt);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.italy').show();
+});
+
+
+//inner circle clicks: TURKEY
+$('#Ttu').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,57);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,17);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,59);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,59);
+
+	$('#Ttu').velocity({'opacity': '1'});
+	$('#Ttu2').velocity({'opacity': '1'});
+	$('#Ttu3').velocity({'opacity': '1'});
+	$('#Ttu4').velocity({'opacity': '1'});
+
+	$('#TtuCi_1_').velocity({'opacity': '1'});
+	$('#TtuCr_1_').velocity({'opacity': '1'});
+	$('#TtuSq_1_').velocity({'opacity': '1'});
+	$('#TtuTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayTu);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.turkey').show();
+});
+
+//inner circle clicks: GERMANY
+$('#Tge').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,79);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,43);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,50);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,51);
+
+	$('#Tge').velocity({'opacity': '1'});
+	$('#Tge2').velocity({'opacity': '1'});
+	$('#Tge3').velocity({'opacity': '1'});
+	$('#Tge4').velocity({'opacity': '1'});
+
+	$('#TgeCi_1_').velocity({'opacity': '1'});
+	$('#TgeCr_1_').velocity({'opacity': '1'});
+	$('#TgeSq_1_').velocity({'opacity': '1'});
+	$('#TgeTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayGe);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.germany').show();
+});
+
+//inner circle clicks: UK
+$('#Tuk').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,101);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,11);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,39);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,39);
+
+	$('#Tuk').velocity({'opacity': '1'});
+	$('#Tuk2').velocity({'opacity': '1'});
+	$('#Tuk3').velocity({'opacity': '1'});
+	$('#Tuk4').velocity({'opacity': '1'});
+
+	$('#TukCi_1_').velocity({'opacity': '1'});
+	$('#TukCr_1_').velocity({'opacity': '1'});
+	$('#TukSq_1_').velocity({'opacity': '1'});
+	$('#TukTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayUk);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.uk').show();
+});
+
+//inner circle clicks: MEXICO
+$('#Tme').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,122);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,-8);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,26);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,27);
+
+	$('#Tme').velocity({'opacity': '1'});
+	$('#Tme2').velocity({'opacity': '1'});
+	$('#Tme3').velocity({'opacity': '1'});
+	$('#Tme4').velocity({'opacity': '1'});
+
+	$('#TmeCi_1_').velocity({'opacity': '1'});
+	$('#TmeCr_1_').velocity({'opacity': '1'});
+	$('#TmeSq_1_').velocity({'opacity': '1'});
+	$('#TmeTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayMe);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.mexico').show();
+});
+
+//inner circle clicks: RUSSIA
+$('#Tru').click(function (){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,127);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,7);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,11.5);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,13);
+
+	$('#Tru').velocity({'opacity': '1'});
+	$('#Tru2').velocity({'opacity': '1'});
+	$('#Tru3').velocity({'opacity': '1'});
+	$('#Tru4').velocity({'opacity': '1'});
+
+	$('#TruCi_1_').velocity({'opacity': '1'});
+	$('#TruCr_1_').velocity({'opacity': '1'});
+	$('#TruSq_1_').velocity({'opacity': '1'});
+	$('#TruTr_1_').velocity({'opacity': '1'});
+
+	$('#picLegend').css({'opacity': '0'});
+	
+	//Populate MainArray with MainArray previous values and new Core Array Values
+	MainArray = $.merge( $.merge( [], MainArray ), arrayRu);
+	//Remove Duplicate Values from the MainArray
+	MainArray = $.unique(MainArray);
+	$('.russia').show();
+});
+
+
+//function to close all
+$('.closeLink').click(function(){
+	clearAll();
+	clearSwitches();
+
+	var img2 = $('#secondDialSA');
+	myRotate(img2,0);
+
+	var img3 = $('#thirdDialExp');
+	myRotate(img3,0);
+
+	var img4 = $('#fourthDialExp');
+	myRotate(img4,0);
+
+	var img5 = $('#radarChart');
+	myRotate(img5,0);
+
+	$('#picLegend').velocity({'opacity': '1'});
+});
+
+////////////------- CLICK EVENTS OF FILTERS ------------/////////
+$('#glSq').click(function(){
+
+	firstHover = 1;
+	clearAll();
+
+	if(squareSwitch == 0){
+		squareSwitch = 1;
+		showSq();
+		$('#picLegend').css({'opacity': '1'});
+	}
+	else if(squareSwitch == 1){
+		squareSwitch = 0;
+		clearSq();
+		//if (MainWorldArray.length == 0){ //if no other value in the list
+		//	$('#mainClearW').velocity({'opacity': '0.1'});
+		//	MainWorldArray.length = 0; 
+		//}
+	}
+
+	if(circleSwitch == 1){
+		showCi();
+	}
+	if(triangleSwitch == 1){
+		showTr();
+	}
+	if(crossSwitch == 1){
+		showCr();
+	}
+
+});
+
+$('#glTr').click(function(){
+
+	firstHover = 1;
+	clearAll();
+
+	if(triangleSwitch == 0){
+		triangleSwitch = 1;
+		showTr();
+		$('#picLegend').css({'opacity': '1'});
+	}
+	else if(triangleSwitch == 1){
+		triangleSwitch = 0;
+		clearTr();
+		//if (MainWorldArray.length == 0){ //if no other value in the list
+		//	$('#mainClearW').velocity({'opacity': '0.1'});
+		//	MainWorldArray.length = 0; 
+		//}
+	}
+	
+	if(circleSwitch == 1){
+		showCi();
+	}
+	if(squareSwitch == 1){
+		showSq();
+	}
+	if(crossSwitch == 1){
+		showCr();
+	}
+
+});
+
+$('#glCi').click(function(){
+
+	firstHover = 1;
+	clearAll();
+
+	if(circleSwitch == 0){
+		circleSwitch = 1;
+		showCi();
+		$('#picLegend').css({'opacity': '1'});
+	}
+	else if(circleSwitch == 1){
+		circleSwitch = 0;
+		clearCi();
+		//if (MainWorldArray.length == 0){ //if no other value in the list
+		//	$('#mainClearW').velocity({'opacity': '0.1'});
+		//	MainWorldArray.length = 0; 
+		//}
+	}
+	
+	if(triangleSwitch == 1){
+		showTr();
+	}
+	if(squareSwitch == 1){
+		showSq();
+	}
+	if(crossSwitch == 1){
+		showCr();
+	}
+
+});
+
+$('#glCr').click(function(){
+
+	firstHover = 1;
+	clearAll();
+
+	if(crossSwitch == 0){
+		crossSwitch = 1;
+		showCr();
+		$('#picLegend').css({'opacity': '1'});
+	}
+	else if(crossSwitch == 1){
+		crossSwitch = 0;
+		clearCr();
+		//if (MainWorldArray.length == 0){ //if no other value in the list
+		//	$('#mainClearW').velocity({'opacity': '0.1'});
+		//	MainWorldArray.length = 0; 
+		//}
+	}
+	
+	if(triangleSwitch == 1){
+		showTr();
+	}
+	if(squareSwitch == 1){
+		showSq();
+	}
+	if(circleSwitch == 1){
+		showCi();
+	}
+
+});
+
+////////////------!KEY LOGIC OF EVENT HOVER!-----------//////////
+
+$(function() {
+
+	var moveLeft = 10;
+	var moveDown = 10;
+	var hoverElement = '';
+	var divElement = '';
+	var country = '';
+	var indexType = '';
+
+	$('g').hover(
+
+		function mouseover(e) {
+			var thisId = $(this).attr('id');   
+       		var firstChar = thisId.charAt(0);
+
+       		if(firstChar == 'T'){
+
+       			hoverElement = thisId;
+	          	country = thisId.slice(0,3);
+       			indexType = thisId.slice(3,5); //get the index type from the radar graph
+       			//console.log('indexType = ' + indexType + 'country = ' + country);
+       			//console.log(hoverElement);
+
+       			if(!(indexType == 'Sq' || indexType == 'Tr' || indexType == 'Ci' || indexType == 'Cr')) {
+	          		
+	          		//console.log(country);
+	          		//$('#'+ hoverElement).stop(true,false).velocity({'opacity': '1'});
+	          		$('#'+country).stop(true,false).velocity({'opacity': '1'});
+	          		$('#'+country+'2').stop(true,false).velocity({'opacity': '1'});
+	          		$('#'+country+'3').stop(true,false).velocity({'opacity': '1'});
+	          		$('#'+country+'4').stop(true,false).velocity({'opacity': '1'});
+
+	          		$('#'+country+'Sq_1_').stop(true,false).velocity({'opacity': '1'});
+	          		$('#'+country+'Tr_1_').stop(true,false).velocity({'opacity': '1'});
+	          		$('#'+country+'Ci_1_').stop(true,false).velocity({'opacity': '1'});
+	          		$('#'+country+'Cr_1_').stop(true,false).velocity({'opacity': '1'});
+
+	          		divElement = country + 'Div';
+	          		//console.log(divElement);
+
+	          		if(firstHover == 0){
+       					clearAll();
+       				firstHover = 1;
+       				}
+          		}
+          		else{
+
+          			$('#'+country+indexType).stop(true,false).velocity({'opacity': '1'}); //glow the hover element
+          			
+          			switch(indexType){
+          				case 'Sq': divElement = country + 'SqDiv';
+          						   $('#'+country+'Sq_1_').stop(true,false).velocity({'opacity': '1'});
+          						   break;
+          				case 'Tr': divElement = country + 'TrDiv';
+          						   $('#'+country+'Tr_1_').stop(true,false).velocity({'opacity': '1'});
+          						   break;
+          				case 'Ci': divElement = country + 'CiDiv';
+          						   $('#'+country+'Ci_1_').stop(true,false).velocity({'opacity': '1'});
+          						   break;
+          				case 'Cr': divElement = country + 'CrDiv';
+          						   $('#'+country+'Cr_1_').stop(true,false).velocity({'opacity': '1'});
+          						   break;
+          			}
+          		}
+          	}
+
+          	$('#'+ divElement).show();
+          	//console.log(divElement);
+  		},
+
+  		function mouseleave() {
+  			
+  			if(jQuery.inArray(hoverElement, MainArray) == -1){
+
+  				//console.log(hoverElement);
+  				//console.log(MainArray);
+
+  				//$('#'+ hoverElement).stop(true,false).velocity({'opacity': '0.5'});
+  				if(firstHover == 1) { //to avoid unnecessary flicker before the first hover
+	  				$('#'+country).stop(true,false).velocity({'opacity': '0.5'});
+	          		$('#'+country+'2').stop(true,false).velocity({'opacity': '0.5'});
+	          		$('#'+country+'3').stop(true,false).velocity({'opacity': '0.5'});
+	          		$('#'+country+'4').stop(true,false).velocity({'opacity': '0.5'});
+
+	          		//need to introduce filters here as the first if conditions satisfies for one of sq, tr, ci, or cr and then reduces opacity for all of these at once without the filters.
+	          		if(squareSwitch != 1) {
+	          			$('#'+country+'Sq_1_').stop(true,false).velocity({'opacity': '0.5'});
+	          		}
+
+	          		if(triangleSwitch != 1) {
+		          		$('#'+country+'Tr_1_').stop(true,false).velocity({'opacity': '0.5'});
+		          	}
+
+		          	if(circleSwitch !=1) {
+		          		$('#'+country+'Ci_1_').stop(true,false).velocity({'opacity': '0.5'});
+					}
+					if(crossSwitch!=1) {
+		          		$('#'+country+'Cr_1_').stop(true,false).velocity({'opacity': '0.5'});
+		          	}
+	          	}
+  			}
+
+  			$('#'+ divElement).hide();
+  			divElement='';
+  			hoverElement='';
+  			country = '';
+	 	}
+
+	 );
+	$('g').mousemove(function(e) {
+		$('#'+ divElement).css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+	});
+
+});  //end of function() for hover logic
+
+
+//////////=======HOVER STATE FOR FILTERS==========////////////
+
+$('#glCr').hover(
+
+	function mouseover() {
+		$('#glCr').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(crossSwitch != 1) {
+			$('#glCr').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+);
+
+$('#glCi').hover(
+
+	function mouseover() {
+		$('#glCi').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(circleSwitch != 1) {
+			$('#glCi').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+);
+
+$('#glTr').hover(
+
+	function mouseover() {
+		$('#glTr').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(triangleSwitch != 1) {
+			$('#glTr').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+);
+
+$('#glSq').hover(
+
+	function mouseover() {
+		$('#glSq').stop(true,false).velocity({'opacity':'1'});
+
+	},
+
+	function mouseleave() {
+
+		if(squareSwitch != 1) {
+			$('#glSq').stop(true,false).velocity({'opacity':'0.6'});
+		}
+	}
+);
+
+}); //end of get svg function
+
+
+</script>
+
+
+
+
+</head>
+
+
+
+<body style="margin:0; padding:0; background:#fff;">
+<!-- HIDDEN / POP-UP DIV -->
+<div class = "display">
+	<p>
+	International Tourists Arrival 2014:<br>
+	Surface Area (sq. km):<br>
+	International Tourism Expenditure (US$):<br>
+	International Tourism Expenditure (% GDP):
+	</p>
+</div>
+
+<div class = "display france">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>1. France</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 83.8 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>5.5 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>59.377 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.10</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>32</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>22</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>26</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>23</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display usa">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>2. United States of America</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 75.0 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>98.3 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>145.678 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>0.84</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>8</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>16</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>16</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display spain">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>3. Spain</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 65.0 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>5.1 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>17.969 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>1.30</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>37</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>26</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>28</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>36</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display china">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>4. China</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 55.6 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>95.6 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>165 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>1.59</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>83</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>90</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>49</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>83</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display italy">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>5. Italy</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 48.6 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>3.0 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>28.857 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>1.35</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>50</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>27</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>61</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display turkey">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>6. Turkey</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 39.8 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>7.8 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>5.475 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>0.69</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>78</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>72</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>51</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>69</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display germany">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>7. Germany</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 33.0 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>3.6 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>106.63 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.76</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>16</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>5</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>16</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>10</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display uk">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>8. United Kingdom</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 32.6 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>2.4 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>79.935 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.67</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>23</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>14</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>27</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>10</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display mexico">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>9. Mexico</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 29.3 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>19.6 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>12.556 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>0.97</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>74</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>39</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>88</td>
+	</tr>
+	</table>
+</div>
+
+<div class = "display russia">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><span class="closeLink">x close</span></td>
+		<td><u>10. Russia</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 32.4 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Surface Area (sq. km):</td>
+		<td>171.0 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>55.383 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.73</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Happiness Ranking:</td>
+		<td>56</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Human Development Index:</td>
+		<td>50</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Quality of Life Index:</td>
+		<td>72</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>World Corruption Perceptions:</td>
+		<td>117</td>
+	</tr>
+	</table>
+</div>
+
+<!--ON HOVER DISPLAY DIVS
+///////////////////////////
+///////////////////////////
+///////////////////////////!-->
+
+<div id="TfrDiv" class = "smalldisplay france">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>1. France</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 83.8 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>5.5 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>59.377 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.10</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TusDiv" class = "smalldisplay usa">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>2. United States of America</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 75.0 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>98.3 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>145.678 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>0.84</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TspDiv" class = "smalldisplay spain">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>3. Spain</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 65.0 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>5.1 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>17.969 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>1.30</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TchDiv" class = "smalldisplay china">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>4. China</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 55.6 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>95.6 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>165 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>1.59</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TitDiv" class = "smalldisplay italy">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>5. Italy</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 48.6 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>3.0 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>28.857 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>1.35</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TtuDiv" class = "smalldisplay turkey">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>6. Turkey</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 39.8 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>7.8 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>5.475 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>0.69</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TgeDiv" class = "smalldisplay germany">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>7. Germany</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 33.0 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>3.6 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>106.63 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.76</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TukDiv" class = "smalldisplay uk">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>8. United Kingdom</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 32.6 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>2.4 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>79.935 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.67</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TmeDiv" class = "smalldisplay mexico">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>9. Mexico</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 29.3 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>19.6 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>12.556 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>0.97</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TruDiv" class = "smalldisplay russia">
+	<table style="width:100%; white-space: nowrap;">
+	<tr>
+		<td><u>10. Russia</u></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>International Tourists Arrival 2014:</td>
+		<td> 32.4 (x10<sup>6</sup>)</td>
+	</tr>
+	<tr>
+		<td>Surface Area (sq. km):</td>
+		<td>171.0 (x10<sup>5</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (US$):</td>
+		<td>55.383 (x10<sup>9</sup>)</td>
+	</tr>
+	<tr>
+		<td>International Tourism Expenditure (% GDP):</td>
+		<td>2.73</td>
+	</tr>
+	</table>
+</div>
+
+<div id="TfrSqDiv" class = "smalldisplay"><p>FR: World Happiness Ranking: 32</p></div>
+<div id="TusSqDiv" class = "smalldisplay"><p>US: World Happiness Ranking: 13</p></div>
+<div id="TspSqDiv" class = "smalldisplay"><p>ES: World Happiness Ranking: 37</p></div>
+<div id="TchSqDiv" class = "smalldisplay"><p>CN: World Happiness Ranking: 83</p></div>
+<div id="TitSqDiv" class = "smalldisplay"><p>IT: World Happiness Ranking: 50</p></div>
+<div id="TtuSqDiv" class = "smalldisplay"><p>TR: World Happiness Ranking: 78</p></div>
+<div id="TgeSqDiv" class = "smalldisplay"><p>GE: World Happiness Ranking: 16</p></div>
+<div id="TukSqDiv" class = "smalldisplay"><p>GB: World Happiness Ranking: 23</p></div>
+<div id="TmeSqDiv" class = "smalldisplay"><p>MX: World Happiness Ranking: 21</p></div>
+<div id="TruSqDiv" class = "smalldisplay"><p>RU: World Happiness Ranking: 56</p></div>
+
+<div id="TfrTrDiv" class = "smalldisplay"><p>FR: Human Development Index: 22</p></div>
+<div id="TusTrDiv" class = "smalldisplay"><p>US: Human Development Index: 8</p></div>
+<div id="TspTrDiv" class = "smalldisplay"><p>ES: Human Development Index: 26</p></div>
+<div id="TchTrDiv" class = "smalldisplay"><p>CN: Human Development Index: 90</p></div>
+<div id="TitTrDiv" class = "smalldisplay"><p>IT: Human Development Index: 27</p></div>
+<div id="TtuTrDiv" class = "smalldisplay"><p>TR: Human Development Index: 72</p></div>
+<div id="TgeTrDiv" class = "smalldisplay"><p>GE: Human Development Index: 5</p></div>
+<div id="TukTrDiv" class = "smalldisplay"><p>GB: Human Development Index: 14</p></div>
+<div id="TmeTrDiv" class = "smalldisplay"><p>MX: Human Development Index: 74</p></div>
+<div id="TruTrDiv" class = "smalldisplay"><p>RU: Human Development Index: 50</p></div>
+
+<div id="TfrCiDiv" class = "smalldisplay"><p>FR: Quality of Life Index: 26</p></div>
+<div id="TusCiDiv" class = "smalldisplay"><p>US: Quality of Life Index: 16</p></div>
+<div id="TspCiDiv" class = "smalldisplay"><p>ES: Quality of Life Index: 28</p></div>
+<div id="TchCiDiv" class = "smalldisplay"><p>CN: Quality of Life Index: 49</p></div>
+<div id="TitCiDiv" class = "smalldisplay"><p>IT: Quality of Life Index: 21</p></div>
+<div id="TtuCiDiv" class = "smalldisplay"><p>TR: Quality of Life Index: 51</p></div>
+<div id="TgeCiDiv" class = "smalldisplay"><p>GE: Quality of Life Index: 16</p></div>
+<div id="TukCiDiv" class = "smalldisplay"><p>GB: Quality of Life Index: 27</p></div>
+<div id="TmeCiDiv" class = "smalldisplay"><p>MX: Quality of Life Index: 39</p></div>
+<div id="TruCiDiv" class = "smalldisplay"><p>RU: Quality of Life Index: 72</p></div>
+
+<div id="TfrCrDiv" class = "smalldisplay"><p>FR: World Corruption Perceptions: 23</p></div>
+<div id="TusCrDiv" class = "smalldisplay"><p>US: World Corruption Perceptions: 16</p></div>
+<div id="TspCrDiv" class = "smalldisplay"><p>ES: World Corruption Perceptions: 36</p></div>
+<div id="TchCrDiv" class = "smalldisplay"><p>CN: World Corruption Perceptions: 83</p></div>
+<div id="TitCrDiv" class = "smalldisplay"><p>IT: World Corruption Perceptions: 61</p></div>
+<div id="TtuCrDiv" class = "smalldisplay"><p>TR: World Corruption Perceptions: 69</p></div>
+<div id="TgeCrDiv" class = "smalldisplay"><p>GE: World Corruption Perceptions: 10</p></div>
+<div id="TukCrDiv" class = "smalldisplay"><p>GB: World Corruption Perceptions: 10</p></div>
+<div id="TmeCrDiv" class = "smalldisplay"><p>MX: World Corruption Perceptions: 88</p></div>
+<div id="TruCrDiv" class = "smalldisplay"><p>RU: World Corruption Perceptions: 117</p></div>
+
+</body>
+
+</html>

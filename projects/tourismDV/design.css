@@ -1,0 +1,162 @@
+@font-face{
+	font-family: 'Futura-CondensedMedium';
+	src:url(Futura-CondensedMedium.ttf);
+}
+
+@font-face{
+	font-family: 'FrutigerLTStd-Cn';
+	src:url(FrutigerLTStd-Cn.otf);
+}
+
+
+#body{
+	width: 100%;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: 'Futura-CondensedMedium', 'FrutigerLTStd-Cn';
+}
+
+
+#okBtn{
+	cursor: pointer;
+}
+/*
+#Tfr2,	#Tfr3,	#Tfr4,
+#Tus2,	#Tus3,	#Tus4,
+#Tsp2,	#Tsp3,	#Tsp4,
+#Tch2,	#Tch3,	#Tch4,
+#Tit2,	#Tit3,	#Tit4,
+#Ttu2,	#Ttu3,	#Ttu4,
+#Tge2,	#Tge3,	#Tge4,
+#Tuk2,	#Tuk3,	#Tuk4,
+#Tme2,	#Tme3,	#Tme4,
+#Tru2,	#Tru3,	#Tru4 {
+	opacity: 1;
+}
+*/
+#Tfr,	#Tus,	#Tsp,	#Tch,	#Tit,	#Ttu,	#Tge,	#Tuk,	#Tme,	#Tru{
+	cursor: pointer;
+	/*opacity: 1;*/
+}
+/*
+#Tfr:hover,	#Tfr2:hover,	#Tfr3:hover,	#Tfr4:hover,
+#Tus:hover,	#Tus2:hover,	#Tus3:hover,	#Tus4:hover,
+#Tsp:hover,	#Tsp2:hover,	#Tsp3:hover,	#Tsp4:hover,
+#Tch:hover,	#Tch2:hover,	#Tch3:hover,	#Tch4:hover,
+#Tit:hover,	#Tit2:hover,	#Tit3:hover,	#Tit4:hover,
+#Ttu:hover,	#Ttu2:hover,	#Ttu3:hover,	#Ttu4:hover,
+#Tge:hover,	#Tge2:hover,	#Tge3:hover,	#Tge4:hover,
+#Tuk:hover,	#Tuk2:hover,	#Tuk3:hover,	#Tuk4:hover,
+#Tme:hover,	#Tme2:hover,	#Tme3:hover,	#Tme4:hover,
+#Tru:hover,	#Tru2:hover,	#Tru3:hover,	#Tru4:hover{
+	opacity: 1;
+}
+*/
+
+#TfrSq_1_,	#TfrTr_1_,	#TfrCi_1_,	#TfrCr_1_,
+#TusSq_1_,	#TusTr_1_,	#TusCi_1_,	#TusCr_1_,
+#TspSq_1_,	#TspTr_1_,	#TspCi_1_,	#TspCr_1_,
+#TchSq_1_,	#TchTr_1_,	#TchCi_1_,	#TchCr_1_,
+#TitSq_1_,	#TitTr_1_,	#TitCi_1_,	#TitCr_1_,
+#TtuSq_1_,	#TtuTr_1_,	#TtuCi_1_,	#TtuCr_1_,
+#TgeSq_1_,	#TgeTr_1_,	#TgeCi_1_,	#TgeCr_1_,
+#TukSq_1_,	#TukTr_1_,	#TukCi_1_,	#TukCr_1_,
+#TmeSq_1_,	#TmeTr_1_,	#TmeCi_1_,	#TmeCr_1_,
+#TruSq_1_,	#TruTr_1_,	#TruCi_1_,	#TruCr_1_ {
+	/*opacity: 1;*/
+	mix-blend-mode: multiply;
+}
+/*
+#TfrSq_1_:hover,	#TfrTr_1_:hover,	#TfrCi_1_:hover,	#TfrCr_1_:hover,
+#TusSq_1_:hover,	#TusTr_1_:hover,	#TusCi_1_:hover,	#TusCr_1_:hover,
+#TspSq_1_:hover,	#TspTr_1_:hover,	#TspCi_1_:hover,	#TspCr_1_:hover,
+#TchSq_1_:hover,	#TchTr_1_:hover,	#TchCi_1_:hover,	#TchCr_1_:hover,
+#TitSq_1_:hover,	#TitTr_1_:hover,	#TitCi_1_:hover,	#TitCr_1_:hover,
+#TtuSq_1_:hover,	#TtuTr_1_:hover,	#TtuCi_1_:hover,	#TtuCr_1_:hover,
+#TgeSq_1_:hover,	#TgeTr_1_:hover,	#TgeCi_1_:hover,	#TgeCr_1_:hover,
+#TukSq_1_:hover,	#TukTr_1_:hover,	#TukCi_1_:hover,	#TukCr_1_:hover,
+#TmeSq_1_:hover,	#TmeTr_1_:hover,	#TmeCi_1_:hover,	#TmeCr_1_:hover,
+#TruSq_1_:hover,	#TruTr_1_:hover,	#TruCi_1_:hover,	#TruCr_1_:hover {
+	opacity: 1;
+}*/
+
+#secondDialSA, #thirdDialExp, #fourthDialExp, #radarChart{
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transition: 50% 50%;
+	/*transform origin during the page load itself*/
+}
+
+#secondDialSA, #thirdDialExp, #fourthDialExp, #radarChart{
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    /*show animation on any run time transition on these elements*/
+}
+
+.display{
+	display: none;
+	color: #0C405F;
+	font-family: 'Futura-CondensedMedium';
+	position: absolute;
+	font-size: 0.85em;
+	z-index: 100;
+	padding: 2px;
+	float:  left;
+   	clear: left;
+   	margin: auto;
+   	left:73%;
+   	top:9%;
+   	line-height: 1.5;
+}
+
+.closeLink{
+	cursor: pointer;
+	opacity: 0.7;
+	padding-right:0.7em;
+}
+
+.closeLink:hover{
+	opacity: 0.4;
+	text-decoration: underline;
+}
+
+.smalldisplay{
+	display: none;
+	font-family: 'FrutigerLTStd-Cn';
+	font-size: 0.7em;
+	color: #0C405F;
+	text-shadow: 0px 0px 3px rgba(255,255,255,0.7);
+	background: rgba(255,255,255,0.6);
+	-moz-box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+	-webkit-box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+	box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+	position: absolute;
+	z-index: 100;
+	padding: 2px;
+	float:  left;
+   	clear: left;
+}
+
+#radChartYellow, #radChartGreen, #radChartRed, #radChartGrey{
+	opacity: 0.4;
+}
+
+#glSq, #glTr, #glCi, #glCr {
+	opacity: 0.7;
+	cursor: pointer;
+}
+/*
+#clearIndices{
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+#clearIndices:hover {
+	opacity: 0.4;
+}*/
+
+
