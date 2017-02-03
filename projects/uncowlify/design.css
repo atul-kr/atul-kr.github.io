@@ -1,0 +1,86 @@
+@font-face{
+	font-family: 'UniversLTStd-Cn';
+	src:url(UniversLTStd-Cn.ttf);
+}
+
+@font-face{
+	font-family: 'GothamBold';
+	src:url(Gotham-Bold.ttf);
+}
+
+@font-face{
+	font-family: 'GothamMedium';
+	src:url(Gotham-Medium.ttf);
+}
+
+@font-face{
+	font-family: 'GothamBook';
+	src:url(Gotham-Book.ttf);
+}
+
+
+#body{
+	width: 100%;
+	background: #ffffff;
+	margin: 0;
+	padding: 0;
+	font-family: 'UniversLTStd-Cn', 'GothamBook', 'GothamMedium', 'GothamBold';
+}
+
+
+
+
+#cWater:hover, #cFeed:hover, #cProtein:hover, #cNitro:hover, #cPhos:hover, #cCo2:hover, #cCh4:hover, #cN2o:hover, #cMass:hover, #cPopu:hover, 
+#fWater:hover, #fFeed:hover, #fProtein:hover, #fNitro:hover, #fPhos:hover, #fCo2:hover, #fCh4:hover, #fN2o:hover, #fMass:hover, #fPopu:hover, 
+#AWater:hover, #AFeed:hover, #AProtein:hover, #ANitro:hover, #APhos:hover, #ACo2:hover, #ACh4:hover, 
+#AN2o:hover, #AMass:hover, #APopu:hover, 
+#BWater:hover, #BFeed:hover, #BProtein:hover, #BNitro:hover, #BPhos:hover, #BCo2:hover, #BCh4:hover, 
+#BN2o:hover, #BMass:hover, #BPopu:hover, 
+#CWater:hover, #CFeed:hover, #CProtein:hover, #CNitro:hover, #CPhos:hover, #CCo2:hover, #CCh4:hover, 
+#CN2o:hover, #CMass:hover, #CPopu:hover, 
+#DWater:hover, #DFeed:hover, #DProtein:hover, #DNitro:hover, #DPhos:hover, #DCo2:hover, #DCh4:hover, 
+#DN2o:hover, #DMass:hover, #DPopu:hover, 
+#wWater1:hover, #wWater2:hover, #wFeed:hover, #wProtein:hover, #wNitro:hover, #wPhos:hover, #wCo2:hover, #wCh41:hover, #wCh42:hover, 
+#wN2o:hover, #wMass:hover, #wPopu:hover
+{
+	opacity:1;
+}
+
+
+#cWater, #cFeed, #cProtein, #cNitro, #cPhos, #cCo2, #cCh4, #cN2o, #cMass, #cPopu, 
+#fWater, #fFeed, #fProtein, #fNitro, #fPhos, #fCo2, #fCh4, #fN2o, #fMass, #fPopu, 
+#AWater, #AFeed, #AProtein, #ANitro, #APhos, #ACo2, #ACh4, #AN2o, #AMass, #APopu, 
+#BWater, #BFeed, #BProtein, #BNitro, #BPhos, #BCo2, #BCh4, #BN2o, #BMass, #BPopu, 
+#CWater, #CFeed, #CProtein, #CNitro, #CPhos, #CCo2, #CCh4, #CN2o, #CMass, #CPopu, 
+#DWater, #DFeed, #DProtein, #DNitro, #DPhos, #DCo2, #DCh4, #DN2o, #DMass, #DPopu, 
+#wWater1, #wWater2, #wFeed, #wProtein, #wNitro, #wPhos, #wCo2, #wCh41, #wCh42, #wN2o, #wMass, #wPopu
+{
+	cursor: pointer;
+	opacity:1;
+}
+
+
+
+
+
+/* all styles for div description elements in both graphs */
+#upWater, #upFeed, #upProtein, #upNitro, #upPhos, #upCo2, #upCh4, #upN2o, #upMass, #upPopu, 
+#downWater, #downFeed, #downProtein, #downNitro, #downPhos, #downCo2, #downCh4, #downN2o, #downMass, #downPopu {
+	display: none;
+	position: absolute;
+	font-family: 'UniversLTStd-Cn';
+	font-size: 11px;
+
+	color: #333333;
+	text-shadow: 0px 0px 3px rgba(255,255,255,0.6);
+	background: rgba(255,255,255,0.6);
+	-moz-box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+	-webkit-box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+	box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+	position: absolute;
+	z-index: 100;
+	padding: 2px;
+	float:  left;
+   	clear: left;
+ 
+}
