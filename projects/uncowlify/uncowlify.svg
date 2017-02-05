@@ -46,20 +46,20 @@
 	.st40{display:inline;opacity:0.2;fill:#FCC029;}
 	.st41{display:inline;}
 	.st42{opacity:0.75;}
-	.st43{clip-path:url(#XMLID_258_);fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
-	.st44{clip-path:url(#XMLID_258_);fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
-	.st45{clip-path:url(#XMLID_258_);fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
-	.st46{opacity:0.07;clip-path:url(#XMLID_305_);fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
-	.st47{opacity:0.1;clip-path:url(#XMLID_305_);fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
-	.st48{opacity:0.1;clip-path:url(#XMLID_305_);fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
+	.st43{clip-path:url(#XMLID_6_);fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
+	.st44{clip-path:url(#XMLID_6_);fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
+	.st45{clip-path:url(#XMLID_6_);fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
+	.st46{opacity:0.07;clip-path:url(#XMLID_7_);fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
+	.st47{opacity:0.1;clip-path:url(#XMLID_7_);fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
+	.st48{opacity:0.1;clip-path:url(#XMLID_7_);fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
 	.st49{fill:#0FADB3;}
 	.st50{opacity:0.7;fill:#0FADB3;}
 	.st51{opacity:0.4;fill:#0FADB3;}
 	.st52{opacity:0.2;fill:#0FADB3;}
 	.st53{fill:#00717E;}
-	.st54{opacity:0.7;}
-	.st55{opacity:0.4;}
-	.st56{opacity:0.2;}
+	.st54{opacity:0.7;fill:#00717E;}
+	.st55{opacity:0.4;fill:#00717E;}
+	.st56{opacity:0.2;fill:#00717E;}
 	.st57{fill:#B5B5B5;}
 	.st58{opacity:0.7;fill:#B5B5B5;}
 	.st59{opacity:0.4;fill:#B5B5B5;}
@@ -72,105 +72,113 @@
 	.st66{opacity:0.7;fill:#0D3055;}
 	.st67{opacity:0.4;fill:#0D3055;}
 	.st68{opacity:0.2;fill:#0D3055;}
-	.st69{fill:#E8487A;}
-	.st70{opacity:0.7;fill:#E8487A;}
-	.st71{opacity:0.4;fill:#E8487A;}
-	.st72{opacity:0.2;fill:#E8487A;}
-	.st73{opacity:0.3;}
+	.st69{fill:#DEC7DD;}
+	.st70{opacity:0.7;fill:#E8D8E7;}
+	.st71{opacity:0.4;fill:#F2E9F1;}
+	.st72{opacity:0.2;fill:#F8F3F8;}
+	.st73{fill:none;stroke:#92448D;stroke-miterlimit:10;}
 	.st74{fill:#92448D;}
 	.st75{opacity:0.7;fill:#92448D;}
 	.st76{opacity:0.4;fill:#92448D;}
 	.st77{opacity:0.2;fill:#92448D;}
-	.st78{fill:none;stroke:#92448D;stroke-miterlimit:10;}
-	.st79{fill:#E53613;}
-	.st80{opacity:0.7;fill:#E53613;}
-	.st81{opacity:0.4;fill:#E53613;}
-	.st82{opacity:0.2;fill:#E53613;}
-	.st83{fill:none;stroke:#E53613;stroke-miterlimit:10;}
-	.st84{fill:#F4E16B;}
-	.st85{fill:#F7EB92;}
-	.st86{fill:#FBF4C2;}
-	.st87{fill:#FDF9E0;}
-	.st88{fill:#FCC029;}
-	.st89{opacity:0.72;fill:#FCC029;}
-	.st90{opacity:0.45;fill:#FCC029;}
-	.st91{opacity:0.25;fill:#FCC029;}
-	.st92{fill-rule:evenodd;clip-rule:evenodd;fill:#333333;}
-	.st93{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
-	.st94{fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
-	.st95{fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
-	.st96{fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
-	.st97{fill:none;}
-	.st98{fill:#333333;}
-	.st99{font-family:'UniversLTStd-Cn';}
-	.st100{font-size:14px;}
-	.st101{fill:#E53613;fill-opacity:0.2;stroke:#E53613;stroke-miterlimit:10;}
-	.st102{fill:none;stroke:#E53613;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
-	.st103{fill:none;stroke:#E53613;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2.038,2.038;}
-	.st104{font-size:16.126px;}
-	.st105{font-family:'GothamBook';}
-	.st106{font-size:8.9589px;}
-	.st107{fill:none;stroke:#E53613;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,2;}
-	.st108{fill:#92448D;fill-opacity:0.2;stroke:#92448D;stroke-miterlimit:10;}
-	.st109{fill:none;stroke:#92448D;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
-	.st110{fill:none;stroke:#92448D;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2.038,2.038;}
-	.st111{fill:none;stroke:#92448D;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,2;}
-	.st112{font-family:'GothamMedium';}
-	.st113{opacity:0.25;fill-rule:evenodd;clip-rule:evenodd;fill:#94DADD;}
-	.st114{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#94DADD;}
-	.st115{fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
-	.st116{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
-	.st117{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
-	.st118{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
-	.st119{font-size:11px;}
-	.st120{fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
-	.st121{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
-	.st122{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
-	.st123{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
-	.st124{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
-	.st125{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
-	.st126{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
-	.st127{fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
-	.st128{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
-	.st129{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
-	.st130{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
-	.st131{fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
-	.st132{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
-	.st133{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
-	.st134{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
-	.st135{fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
-	.st136{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
-	.st137{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
-	.st138{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
-	.st139{fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
-	.st140{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
-	.st141{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
-	.st142{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
-	.st143{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
-	.st144{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
-	.st145{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
-	.st146{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
-	.st147{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
-	.st148{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
-	.st149{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
-	.st150{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
-	.st151{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
-	.st152{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
-	.st153{font-family:'GothamBold';}
-	.st154{font-size:20px;}
-	.st155{display:none;opacity:0.2;fill:none;stroke:#E8487A;stroke-miterlimit:10;}
-	.st156{fill-rule:evenodd;clip-rule:evenodd;fill:#94DADD;}
-	.st157{fill-rule:evenodd;clip-rule:evenodd;fill:#FF8C4B;}
-	.st158{opacity:0.5;fill:none;stroke:#0FADB3;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,1;}
-	.st159{opacity:0.5;fill:none;stroke:#FF8C4B;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,1;}
-	.st160{font-size:18px;}
-	.st161{fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;fill-opacity:0.2;stroke:#92448D;stroke-miterlimit:10;}
-	.st162{fill:#94DADD;}
-	.st163{fill:#FF8C4B;}
-	.st164{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#E53613;stroke-miterlimit:10;}
-	.st165{opacity:0.9;}
-	.st166{font-size:8.5px;}
-	.st167{font-size:9.25px;}
+	.st78{fill:#E8487A;}
+	.st79{opacity:0.7;fill:#E8487A;}
+	.st80{opacity:0.4;fill:#E8487A;}
+	.st81{opacity:0.2;fill:#E8487A;}
+	.st82{fill:#F7C3B8;}
+	.st83{opacity:0.7;fill:#FAD5CD;}
+	.st84{opacity:0.4;fill:#FCE7E3;}
+	.st85{opacity:0.2;fill:#FCE9E5;}
+	.st86{fill:none;stroke:#E53613;stroke-miterlimit:10;}
+	.st87{fill:#E53613;}
+	.st88{opacity:0.7;fill:#E53613;}
+	.st89{opacity:0.4;fill:#E53613;}
+	.st90{opacity:0.2;fill:#E53613;}
+	.st91{fill:#F4E16B;}
+	.st92{fill:#F7EB92;}
+	.st93{fill:#FBF4C2;}
+	.st94{fill:#FDF9E0;}
+	.st95{fill:#FCC029;}
+	.st96{opacity:0.72;fill:#FCC029;}
+	.st97{opacity:0.45;fill:#FCC029;}
+	.st98{opacity:0.25;fill:#FCC029;}
+	.st99{fill-rule:evenodd;clip-rule:evenodd;fill:#333333;}
+	.st100{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
+	.st101{fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
+	.st102{fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
+	.st103{fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
+	.st104{fill:none;}
+	.st105{fill:#333333;}
+	.st106{font-family:'UniversLTStd-Cn';}
+	.st107{font-size:14px;}
+	.st108{fill:#E53613;fill-opacity:0.2;stroke:#E53613;stroke-miterlimit:10;}
+	.st109{fill:none;stroke:#E53613;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
+	.st110{fill:none;stroke:#E53613;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2.038,2.038;}
+	.st111{font-size:16.126px;}
+	.st112{font-family:'GothamBook';}
+	.st113{font-size:8.9589px;}
+	.st114{fill:none;stroke:#E53613;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,2;}
+	.st115{fill:#92448D;fill-opacity:0.2;stroke:#92448D;stroke-miterlimit:10;}
+	.st116{fill:none;stroke:#92448D;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
+	.st117{fill:none;stroke:#92448D;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2.038,2.038;}
+	.st118{fill:none;stroke:#92448D;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,2;}
+	.st119{font-family:'GothamMedium';}
+	.st120{opacity:0.3;fill-rule:evenodd;clip-rule:evenodd;fill:#94DADD;}
+	.st121{opacity:0.5;fill-rule:evenodd;clip-rule:evenodd;fill:#94DADD;}
+	.st122{fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
+	.st123{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
+	.st124{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
+	.st125{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#00717E;}
+	.st126{font-size:11px;}
+	.st127{fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
+	.st128{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
+	.st129{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
+	.st130{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#F4E16B;}
+	.st131{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
+	.st132{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
+	.st133{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#FCC029;}
+	.st134{fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
+	.st135{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
+	.st136{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
+	.st137{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#E53613;}
+	.st138{fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
+	.st139{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
+	.st140{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
+	.st141{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;}
+	.st142{fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
+	.st143{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
+	.st144{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
+	.st145{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#2E6DAB;}
+	.st146{fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
+	.st147{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
+	.st148{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
+	.st149{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#0D3055;}
+	.st150{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
+	.st151{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
+	.st152{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#E8487A;}
+	.st153{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
+	.st154{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
+	.st155{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#0FADB3;}
+	.st156{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st157{opacity:0.7;fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
+	.st158{opacity:0.4;fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
+	.st159{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#B5B5B5;}
+	.st160{font-family:'GothamBold';}
+	.st161{font-size:20px;}
+	.st162{display:none;opacity:0.2;fill:none;stroke:#E8487A;stroke-miterlimit:10;}
+	.st163{fill-rule:evenodd;clip-rule:evenodd;fill:#94DADD;}
+	.st164{fill-rule:evenodd;clip-rule:evenodd;fill:#FF8C4B;}
+	.st165{opacity:0.5;fill:none;stroke:#0FADB3;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,1;}
+	.st166{opacity:0.5;fill:none;stroke:#FF8C4B;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2,1;}
+	.st167{font-size:18px;}
+	.st168{fill-rule:evenodd;clip-rule:evenodd;fill:#92448D;fill-opacity:0.2;stroke:#92448D;stroke-miterlimit:10;}
+	.st169{fill:#94DADD;}
+	.st170{fill:#FFDDC9;}
+	.st171{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#E53613;stroke-miterlimit:10;}
+	.st172{fill:#FF8C4B;}
+	.st173{opacity:0.9;}
+	.st174{font-size:8.5px;}
+	.st175{font-size:9.25px;}
 </style>
 <g id="palette" class="st0">
 	<circle id="XMLID_2_" class="st1" cx="-200.823" cy="920.313" r="15.177"/>
@@ -221,7 +229,7 @@
 		<defs>
 			<rect id="XMLID_415_" y="1422.677" class="st42" width="290.342" height="117.823"/>
 		</defs>
-		<clipPath id="XMLID_258_">
+		<clipPath id="XMLID_6_">
 			<use xlink:href="#XMLID_415_"  style="overflow:visible;"/>
 		</clipPath>
 		<path id="XMLID_523_" class="st43" d="M246.282,1505.966c-10.227,78.733-67.4,224.5-148.44,244.705
@@ -237,7 +245,7 @@
 		<defs>
 			<rect id="XMLID_398_" x="1019.762" y="1397.763" width="260.238" height="142.737"/>
 		</defs>
-		<clipPath id="XMLID_305_">
+		<clipPath id="XMLID_7_">
 			<use xlink:href="#XMLID_398_"  style="overflow:visible;"/>
 		</clipPath>
 		<path id="XMLID_426_" class="st46" d="M1165.869,1736.765c-36.68-53.173-37.916-204.064,0.084-260.401
@@ -254,311 +262,123 @@
 <g id="_x3C_Group_x3E__2_">
 	<g id="_x3C_Group_x3E_">
 		<g id="fWater">
-			<g id="XMLID_29_">
-				<g id="XMLID_64_">
-					<path id="XMLID_63_" class="st49" d="M573.161,178.642l36.337,46.509c-25.686,20.068-62.778,15.514-82.846-10.172
-						s-15.514-62.778,10.172-82.846c10.763-8.409,22.679-12.512,36.337-12.512V178.642z"/>
-				</g>
-			</g>
-			<g id="XMLID_28_">
-				<g id="XMLID_62_">
-					<path id="XMLID_61_" class="st50" d="M573.161,178.642l58.698-6.169c2.201,20.942-5.767,39.715-22.361,52.679L573.161,178.642z
-						"/>
-				</g>
-			</g>
-			<g id="XMLID_27_">
-				<g id="XMLID_38_">
-					<path id="XMLID_37_" class="st51" d="M573.161,178.642l14.279-57.268c24.575,6.127,41.772,25.91,44.419,51.099L573.161,178.642
-						z"/>
-				</g>
-			</g>
-			<g id="XMLID_26_">
-				<g id="XMLID_36_">
-					<path id="XMLID_35_" class="st52" d="M573.161,178.642V119.62c5.085,0,9.345,0.523,14.279,1.753L573.161,178.642z"/>
-				</g>
-			</g>
+			<path id="XMLID_63_" class="st49" d="M573.161,178.642l36.337,46.509c-25.686,20.068-62.778,15.514-82.846-10.172
+				s-15.514-62.778,10.172-82.846c10.763-8.409,22.679-12.512,36.337-12.512V178.642z"/>
+			<path id="XMLID_61_" class="st50" d="M573.161,178.642l58.698-6.169c2.201,20.942-5.767,39.715-22.361,52.679L573.161,178.642z"
+				/>
+			<path id="XMLID_37_" class="st51" d="M573.161,178.642l14.279-57.268c24.575,6.127,41.772,25.91,44.419,51.099L573.161,178.642z"
+				/>
+			<path id="XMLID_35_" class="st52" d="M573.161,178.642V119.62c5.085,0,9.345,0.523,14.279,1.753L573.161,178.642z"/>
 		</g>
 		<g id="fFeed">
-			<g id="XMLID_98_">
-				<g id="XMLID_111_">
-					<path id="XMLID_110_" class="st53" d="M679.064,168.784l-9.198,36.892c-20.375-5.08-32.774-25.715-27.694-46.09
-						c4.282-17.176,19.19-28.823,36.892-28.823V168.784z"/>
-				</g>
-			</g>
-			<g id="XMLID_97_" class="st54">
-				<g id="XMLID_109_">
-					<path id="XMLID_108_" class="st53" d="M679.064,168.784l37.738,4.634c-2.559,20.842-21.529,35.663-42.371,33.104
-						c-1.438-0.177-3.159-0.495-4.565-0.846L679.064,168.784z"/>
-				</g>
-			</g>
-			<g id="XMLID_96_" class="st55">
-				<g id="XMLID_107_">
-					<path id="XMLID_106_" class="st53" d="M679.064,168.784l22.882-30.365c11.27,8.492,16.576,20.993,14.856,34.999
-						L679.064,168.784z"/>
-				</g>
-			</g>
-			<g id="XMLID_95_" class="st56">
-				<g id="XMLID_105_">
-					<path id="XMLID_104_" class="st49" d="M679.064,168.784v-38.021c8.693,0,15.939,2.424,22.882,7.656L679.064,168.784z"/>
-				</g>
-			</g>
+			<path id="XMLID_110_" class="st53" d="M679.064,168.784l-9.198,36.892c-20.375-5.08-32.774-25.715-27.694-46.09
+				c4.282-17.176,19.19-28.823,36.892-28.823V168.784z"/>
+			<path id="XMLID_108_" class="st54" d="M679.064,168.784l37.738,4.634c-2.559,20.842-21.529,35.663-42.371,33.104
+				c-1.438-0.177-3.159-0.495-4.565-0.846L679.064,168.784z"/>
+			<path id="XMLID_106_" class="st55" d="M679.064,168.784l22.882-30.365c11.27,8.492,16.576,20.993,14.856,34.999L679.064,168.784z
+				"/>
+			<path id="XMLID_104_" class="st56" d="M679.064,168.784v-38.021c8.693,0,15.939,2.424,22.882,7.656L679.064,168.784z"/>
 		</g>
 		<g id="fProtein">
-			<g id="XMLID_116_">
-				<g id="XMLID_129_">
-					<path id="XMLID_128_" class="st57" d="M749.313,197.112l-8.27,27.049c-14.939-4.567-23.346-20.38-18.779-35.319
-						c3.677-12.026,14.117-19.783,26.691-20.003L749.313,197.112z"/>
-				</g>
-			</g>
-			<g id="XMLID_115_">
-				<g id="XMLID_127_">
-					<path id="XMLID_126_" class="st58" d="M749.313,197.112l28.074,3.447c-1.904,15.505-16.016,26.531-31.521,24.627
-						c-1.706-0.209-3.179-0.523-4.823-1.025L749.313,197.112z"/>
-				</g>
-			</g>
-			<g id="XMLID_114_">
-				<g id="XMLID_125_">
-					<path id="XMLID_124_" class="st59" d="M749.313,197.112l14.989-23.987c9.565,5.977,14.46,16.239,13.085,27.434L749.313,197.112
-						z"/>
-				</g>
-			</g>
-			<g id="XMLID_113_">
-				<g id="XMLID_123_">
-					<path id="XMLID_122_" class="st60" d="M749.313,197.112l-0.143-28.286c5.639,0,10.349,1.31,15.131,4.299L749.313,197.112z"/>
-				</g>
-			</g>
+			<path id="XMLID_128_" class="st57" d="M749.313,197.112l-8.27,27.049c-14.939-4.567-23.346-20.38-18.779-35.319
+				c3.677-12.026,14.117-19.783,26.691-20.003L749.313,197.112z"/>
+			<path id="XMLID_126_" class="st58" d="M749.313,197.112l28.074,3.447c-1.904,15.505-16.016,26.531-31.521,24.627
+				c-1.706-0.209-3.179-0.523-4.823-1.025L749.313,197.112z"/>
+			<path id="XMLID_124_" class="st59" d="M749.313,197.112l14.989-23.987c9.565,5.977,14.46,16.239,13.085,27.434L749.313,197.112z"
+				/>
+			<path id="XMLID_122_" class="st60" d="M749.313,197.112l-0.143-28.286c5.639,0,10.349,1.31,15.131,4.299L749.313,197.112z"/>
 		</g>
 		<g id="fNitro">
-			<g id="XMLID_140_">
-				<g id="XMLID_153_">
-					<path id="XMLID_152_" class="st61" d="M795.24,232.068l20.572-5.512c3.044,11.362-3.698,23.04-15.06,26.084
-						c-11.362,3.044-23.04-3.698-26.084-15.06c-3.044-11.362,3.698-23.04,15.06-26.084c1.806-0.484,3.642-0.726,5.512-0.726V232.068
-						z"/>
-				</g>
-			</g>
-			<g id="XMLID_139_">
-				<g id="XMLID_151_">
-					<path id="XMLID_150_" class="st62" d="M795.24,232.068l10.969-18.256c4.91,2.95,8.12,7.21,9.603,12.743L795.24,232.068z"/>
-				</g>
-			</g>
-			<g id="XMLID_138_">
-				<g id="XMLID_149_">
-					<path id="XMLID_148_" class="st63" d="M795.24,232.068l0.372-21.294c4.01,0.07,7.159,0.973,10.597,3.039L795.24,232.068z"/>
-				</g>
-			</g>
-			<g id="XMLID_137_">
-				<g id="XMLID_147_">
-					<path id="XMLID_146_" class="st64" d="M795.24,232.068V210.77c0.141,0,0.231,0.001,0.372,0.003L795.24,232.068z"/>
-				</g>
-			</g>
+			<path id="XMLID_152_" class="st61" d="M795.24,232.068l20.572-5.512c3.044,11.362-3.698,23.04-15.06,26.084
+				c-11.362,3.044-23.04-3.698-26.084-15.06c-3.044-11.362,3.698-23.04,15.06-26.084c1.806-0.484,3.642-0.726,5.512-0.726V232.068z"
+				/>
+			<path id="XMLID_150_" class="st62" d="M795.24,232.068l10.969-18.256c4.91,2.95,8.12,7.21,9.603,12.743L795.24,232.068z"/>
+			<path id="XMLID_148_" class="st63" d="M795.24,232.068l0.372-21.294c4.01,0.07,7.159,0.973,10.597,3.039L795.24,232.068z"/>
+			<path id="XMLID_146_" class="st64" d="M795.24,232.068V210.77c0.141,0,0.231,0.001,0.372,0.003L795.24,232.068z"/>
 		</g>
 		<g id="fPhos">
-			<g id="XMLID_158_">
-				<g id="XMLID_171_">
-					<path id="XMLID_170_" class="st65" d="M822.074,270.332l13.703,1.44c-0.795,7.568-7.576,13.059-15.144,12.263
-						c-7.568-0.795-13.059-7.576-12.263-15.144c0.739-7.031,6.394-12.213,13.463-12.337L822.074,270.332z"/>
-				</g>
-			</g>
-			<g id="XMLID_157_">
-				<g id="XMLID_169_">
-					<path id="XMLID_168_" class="st66" d="M822.074,270.332l9.04-10.399c3.526,3.065,5.152,7.192,4.664,11.839L822.074,270.332z"/>
-				</g>
-			</g>
-			<g id="XMLID_156_">
-				<g id="XMLID_167_">
-					<path id="XMLID_166_" class="st67" d="M822.074,270.332l0.24-13.777c3.333,0.058,6.284,1.191,8.799,3.378L822.074,270.332z"/>
-				</g>
-			</g>
-			<g id="XMLID_155_">
-				<g id="XMLID_165_">
-					<path id="XMLID_164_" class="st68" d="M822.074,270.332v-13.779c0.129,0,0.111,0,0.24,0.002L822.074,270.332z"/>
-				</g>
-			</g>
-		</g>
-		<g id="fCo2">
-			<g id="XMLID_176_">
-				<g id="XMLID_189_">
-					<path id="XMLID_188_" class="st69" d="M665.159,312.206l61.693,63.884c-35.282,34.072-91.505,33.09-125.577-2.192
-						c-34.072-35.282-33.09-91.505,2.192-125.577c17.006-16.423,38.051-24.925,61.693-24.925V312.206z"/>
-				</g>
-			</g>
-			<g id="XMLID_175_">
-				<g id="XMLID_187_">
-					<path id="XMLID_186_" class="st70" d="M665.159,312.206l86.172-21.485c7.938,31.839-0.875,62.576-24.479,85.37L665.159,312.206
-						z"/>
-				</g>
-			</g>
-			<g id="XMLID_174_">
-				<g id="XMLID_185_">
-					<path id="XMLID_184_" class="st71" d="M665.159,312.206l10.823-88.148c37.388,4.591,66.236,30.113,75.349,66.663
-						L665.159,312.206z"/>
-				</g>
-			</g>
-			<g id="XMLID_173_">
-				<g id="XMLID_183_">
-					<path id="XMLID_182_" class="st72" d="M665.159,312.206v-88.81c3.875,0,6.977,0.19,10.823,0.662L665.159,312.206z"/>
-				</g>
-			</g>
+			<path id="XMLID_170_" class="st65" d="M822.074,270.332l13.703,1.44c-0.795,7.568-7.576,13.059-15.144,12.263
+				c-7.568-0.795-13.059-7.576-12.263-15.144c0.739-7.031,6.394-12.213,13.463-12.337L822.074,270.332z"/>
+			<path id="XMLID_168_" class="st66" d="M822.074,270.332l9.04-10.399c3.526,3.065,5.152,7.192,4.664,11.839L822.074,270.332z"/>
+			<path id="XMLID_166_" class="st67" d="M822.074,270.332l0.24-13.777c3.333,0.058,6.284,1.191,8.799,3.378L822.074,270.332z"/>
+			<path id="XMLID_164_" class="st68" d="M822.074,270.332v-13.779c0.129,0,0.111,0,0.24,0.002L822.074,270.332z"/>
 		</g>
 		<g id="fN2o">
-			<g id="XMLID_190_" class="st73">
-				<g id="XMLID_194_">
-					<g id="XMLID_207_">
-						<path id="XMLID_206_" class="st74" d="M768.987,334.947l32.166,42.686c-23.575,17.765-57.087,13.055-74.852-10.52
-							c-17.765-23.575-13.055-57.087,10.52-74.852c9.43-7.106,20.359-10.763,32.166-10.763V334.947z"/>
-					</g>
-				</g>
-				<g id="XMLID_193_">
-					<g id="XMLID_205_">
-						<path id="XMLID_204_" class="st75" d="M768.987,334.947l52.078-12.023c4.881,21.14-2.585,41.652-19.912,54.709
-							L768.987,334.947z"/>
-					</g>
-				</g>
-				<g id="XMLID_192_">
-					<g id="XMLID_203_">
-						<path id="XMLID_202_" class="st76" d="M768.987,334.947l30.657-43.782c11.486,8.042,18.268,18.097,21.422,31.759
-							L768.987,334.947z"/>
-					</g>
-				</g>
-				<g id="XMLID_191_">
-					<g id="XMLID_201_">
-						<path id="XMLID_200_" class="st77" d="M768.987,334.947v-53.448c11.483,0,21.251,3.08,30.657,9.666L768.987,334.947z"/>
-					</g>
-				</g>
-			</g>
-			<circle id="XMLID_5_" class="st78" cx="769.034" cy="334.949" r="53.412"/>
-			<g id="XMLID_6_">
-				<g id="XMLID_132_">
-					<g id="XMLID_133_">
-						<path id="XMLID_134_" class="st74" d="M769.031,334.949l2.367,3.14c-1.734,1.307-4.2,0.96-5.507-0.774s-0.961-4.2,0.774-5.507
-							c0.694-0.523,1.498-0.792,2.367-0.792V334.949z"/>
-					</g>
-				</g>
-				<g id="XMLID_90_">
-					<g id="XMLID_92_">
-						<path id="XMLID_130_" class="st75" d="M769.031,334.949l3.832-0.885c0.359,1.555-0.19,3.064-1.465,4.025L769.031,334.949z"/>
-					</g>
-				</g>
-				<g id="XMLID_81_">
-					<g id="XMLID_86_">
-						<path id="XMLID_88_" class="st76" d="M769.031,334.949l2.255-3.221c0.845,0.592,1.344,1.331,1.576,2.337L769.031,334.949z"/>
-					</g>
-				</g>
-				<g id="XMLID_18_">
-					<g id="XMLID_19_">
-						<path id="XMLID_20_" class="st77" d="M769.031,334.949v-3.932c0.845,0,1.563,0.227,2.255,0.711L769.031,334.949z"/>
-					</g>
-				</g>
-			</g>
+			<path id="XMLID_206_" class="st69" d="M768.987,334.947l32.166,42.686c-23.575,17.765-57.087,13.055-74.852-10.52
+				c-17.765-23.575-13.055-57.087,10.52-74.852c9.43-7.106,20.359-10.763,32.166-10.763V334.947z"/>
+			<path id="XMLID_204_" class="st70" d="M768.987,334.947l52.078-12.023c4.881,21.14-2.585,41.652-19.912,54.709L768.987,334.947z"
+				/>
+			<path id="XMLID_202_" class="st71" d="M768.987,334.947l30.657-43.782c11.486,8.042,18.268,18.097,21.422,31.759L768.987,334.947
+				z"/>
+			<path id="XMLID_200_" class="st72" d="M768.987,334.947v-53.448c11.483,0,21.251,3.08,30.657,9.666L768.987,334.947z"/>
+			<circle id="XMLID_5_" class="st73" cx="769.034" cy="334.949" r="53.412"/>
+			<path id="XMLID_134_" class="st74" d="M769.031,334.949l2.367,3.14c-1.734,1.307-4.2,0.96-5.507-0.774s-0.961-4.2,0.774-5.507
+				c0.694-0.523,1.498-0.792,2.367-0.792V334.949z"/>
+			<path id="XMLID_130_" class="st75" d="M769.031,334.949l3.832-0.885c0.359,1.555-0.19,3.064-1.465,4.025L769.031,334.949z"/>
+			<path id="XMLID_88_" class="st76" d="M769.031,334.949l2.255-3.221c0.845,0.592,1.344,1.331,1.576,2.337L769.031,334.949z"/>
+			<path id="XMLID_20_" class="st77" d="M769.031,334.949v-3.932c0.845,0,1.563,0.227,2.255,0.711L769.031,334.949z"/>
+		</g>
+		<g id="fCo2">
+			<path id="XMLID_188_" class="st78" d="M665.159,312.206l61.693,63.884c-35.282,34.072-91.505,33.09-125.577-2.192
+				c-34.072-35.282-33.09-91.505,2.192-125.577c17.006-16.423,38.051-24.925,61.693-24.925V312.206z"/>
+			<path id="XMLID_186_" class="st79" d="M665.159,312.206l86.172-21.485c7.938,31.839-0.875,62.576-24.479,85.37L665.159,312.206z"
+				/>
+			<path id="XMLID_184_" class="st80" d="M665.159,312.206l10.823-88.148c37.388,4.591,66.236,30.113,75.349,66.663L665.159,312.206
+				z"/>
+			<path id="XMLID_182_" class="st81" d="M665.159,312.206v-88.81c3.875,0,6.977,0.19,10.823,0.662L665.159,312.206z"/>
 		</g>
 		<g id="fCh4">
-			<g id="XMLID_219_" class="st73">
-				<g id="XMLID_223_">
-					<g id="XMLID_236_">
-						<path id="XMLID_235_" class="st79" d="M724.661,433.991l74.28-27.036c14.931,41.024-6.221,86.384-47.244,101.315
-							c-41.024,14.931-86.384-6.221-101.315-47.244c-14.931-41.024,6.221-86.384,47.244-101.315
-							c8.779-3.195,17.693-4.767,27.036-4.767V433.991z"/>
-					</g>
-				</g>
-				<g id="XMLID_222_">
-					<g id="XMLID_234_">
-						<path id="XMLID_233_" class="st80" d="M724.661,433.991l46.463-63.95c13.386,9.725,22.158,21.367,27.817,36.915
-							L724.661,433.991z"/>
-					</g>
-				</g>
-				<g id="XMLID_221_">
-					<g id="XMLID_232_">
-						<path id="XMLID_231_" class="st81" d="M724.661,433.991l4.137-78.939c16,0.839,29.364,5.571,42.326,14.988L724.661,433.991z"
-							/>
-					</g>
-				</g>
-				<g id="XMLID_220_">
-					<g id="XMLID_230_">
-						<path id="XMLID_229_" class="st82" d="M724.661,433.991v-79.047c1.615,0,2.524,0.024,4.137,0.108L724.661,433.991z"/>
-					</g>
-				</g>
-			</g>
-			<circle id="XMLID_8_" class="st83" cx="723.769" cy="433.909" r="78.722"/>
-			<g id="XMLID_7_">
-				<g id="XMLID_215_">
-					<g id="XMLID_216_">
-						<path id="XMLID_217_" class="st79" d="M724.661,433.999l15.642-5.693c3.144,8.639-1.31,18.192-9.949,21.336
-							s-18.192-1.31-21.336-9.949c-3.144-8.639,1.31-18.192,9.949-21.336c1.849-0.673,3.726-1.004,5.693-1.004V433.999z"/>
-					</g>
-				</g>
-				<g id="XMLID_212_">
-					<g id="XMLID_213_">
-						<path id="XMLID_214_" class="st80" d="M724.661,433.999l9.784-13.467c2.819,2.048,4.666,4.5,5.858,7.774L724.661,433.999z"/>
-					</g>
-				</g>
-				<g id="XMLID_84_">
-					<g id="XMLID_135_">
-						<path id="XMLID_208_" class="st81" d="M724.661,433.999l0.871-16.624c3.369,0.177,6.184,1.173,8.913,3.156L724.661,433.999z"
-							/>
-					</g>
-				</g>
-				<g id="XMLID_15_">
-					<g id="XMLID_82_">
-						<path id="XMLID_83_" class="st82" d="M724.661,433.999v-16.646c0.34,0,0.531,0.005,0.871,0.023L724.661,433.999z"/>
-					</g>
-				</g>
-			</g>
+			<path id="XMLID_235_" class="st82" d="M724.661,433.991l74.28-27.036c14.931,41.024-6.221,86.384-47.244,101.315
+				c-41.024,14.931-86.384-6.221-101.315-47.244c-14.931-41.024,6.221-86.384,47.244-101.315c8.779-3.195,17.693-4.767,27.036-4.767
+				V433.991z"/>
+			<path id="XMLID_233_" class="st83" d="M724.661,433.991l46.463-63.95c13.386,9.725,22.158,21.367,27.817,36.915L724.661,433.991z
+				"/>
+			<path id="XMLID_231_" class="st84" d="M724.661,433.991l4.137-78.939c16,0.839,29.364,5.571,42.326,14.988L724.661,433.991z"/>
+			<path id="XMLID_229_" class="st85" d="M724.661,433.991v-79.047c1.615,0,2.524,0.024,4.137,0.108L724.661,433.991z"/>
+			<circle id="XMLID_8_" class="st86" cx="723.769" cy="433.909" r="78.722"/>
+			<path id="XMLID_217_" class="st87" d="M724.661,433.999l15.642-5.693c3.144,8.639-1.31,18.192-9.949,21.336
+				s-18.192-1.31-21.336-9.949c-3.144-8.639,1.31-18.192,9.949-21.336c1.849-0.673,3.726-1.004,5.693-1.004V433.999z"/>
+			<path id="XMLID_214_" class="st88" d="M724.661,433.999l9.784-13.467c2.819,2.048,4.666,4.5,5.858,7.774L724.661,433.999z"/>
+			<path id="XMLID_208_" class="st89" d="M724.661,433.999l0.871-16.624c3.369,0.177,6.184,1.173,8.913,3.156L724.661,433.999z"/>
+			<path id="XMLID_83_" class="st90" d="M724.661,433.999v-16.646c0.34,0,0.531,0.005,0.871,0.023L724.661,433.999z"/>
 		</g>
 		<g id="fMass">
-			<g id="XMLID_262_">
-				<path id="XMLID_261_" class="st84" d="M734.525,533.739l41.776,1.459c-0.806,23.072-20.163,41.123-43.235,40.317
-					s-41.123-20.163-40.317-43.235c0.783-22.426,19.336-40.343,41.776-40.343V533.739z"/>
-			</g>
-			<path id="XMLID_259_" class="st85" d="M734.525,533.739l38.479-16.333c2.526,5.95,3.523,11.332,3.298,17.792L734.525,533.739z"/>
-			<path id="XMLID_257_" class="st86" d="M734.525,533.739l12.222-39.975c12.143,3.712,21.296,11.954,26.257,23.642L734.525,533.739
+			<path id="XMLID_261_" class="st91" d="M734.525,533.739l41.776,1.459c-0.806,23.072-20.163,41.123-43.235,40.317
+				s-41.123-20.163-40.317-43.235c0.783-22.426,19.336-40.343,41.776-40.343V533.739z"/>
+			<path id="XMLID_259_" class="st92" d="M734.525,533.739l38.479-16.333c2.526,5.95,3.523,11.332,3.298,17.792L734.525,533.739z"/>
+			<path id="XMLID_257_" class="st93" d="M734.525,533.739l12.222-39.975c12.143,3.712,21.296,11.954,26.257,23.642L734.525,533.739
 				z"/>
-			<path id="XMLID_255_" class="st87" d="M734.525,533.739v-41.802c4.502,0,7.916,0.51,12.222,1.827L734.525,533.739z"/>
+			<path id="XMLID_255_" class="st94" d="M734.525,533.739v-41.802c4.502,0,7.916,0.51,12.222,1.827L734.525,533.739z"/>
 		</g>
 		<g id="fPopu">
-			<g id="XMLID_267_">
-				<g id="XMLID_280_">
-					<path id="XMLID_279_" class="st88" d="M667.542,582.283l-61.417,43.005c-6.555-9.362-10.436-18.73-12.42-29.985
-						L667.542,582.283z"/>
-				</g>
-			</g>
-			<g id="XMLID_266_">
-				<g id="XMLID_278_">
-					<path id="XMLID_277_" class="st89" d="M667.542,582.283l-31.686,67.952c-12.347-5.757-21.917-13.787-29.731-24.947
-						L667.542,582.283z"/>
-				</g>
-			</g>
-			<g id="XMLID_265_">
-				<g id="XMLID_276_">
-					<path id="XMLID_275_" class="st90" d="M667.542,582.283l-11.729,74.053c-7.035-1.114-13.503-3.092-19.958-6.102
-						L667.542,582.283z"/>
-				</g>
-			</g>
-			<g id="XMLID_264_">
-				<g id="XMLID_274_">
-					<path id="XMLID_273_" class="st91" d="M667.542,582.283l-73.837,13.02c-7.19-40.779,20.039-79.666,60.818-86.857
-						c40.779-7.19,79.666,20.039,86.857,60.818c7.19,40.779-20.039,79.666-60.818,86.857c-9.012,1.589-15.71,1.648-24.748,0.216
-						L667.542,582.283z"/>
-				</g>
-			</g>
+			<path id="XMLID_279_" class="st95" d="M667.542,582.283l-61.417,43.005c-6.555-9.362-10.436-18.73-12.42-29.985L667.542,582.283z
+				"/>
+			<path id="XMLID_277_" class="st96" d="M667.542,582.283l-31.686,67.952c-12.347-5.757-21.917-13.787-29.731-24.947
+				L667.542,582.283z"/>
+			<path id="XMLID_275_" class="st97" d="M667.542,582.283l-11.729,74.053c-7.035-1.114-13.503-3.092-19.958-6.102L667.542,582.283z
+				"/>
+			<path id="XMLID_273_" class="st98" d="M667.542,582.283l-73.837,13.02c-7.19-40.779,20.039-79.666,60.818-86.857
+				c40.779-7.19,79.666,20.039,86.857,60.818c7.19,40.779-20.039,79.666-60.818,86.857c-9.012,1.589-15.71,1.648-24.748,0.216
+				L667.542,582.283z"/>
 		</g>
 	</g>
 	<g id="XMLID_313_">
 		<g id="XMLID_4_">
-			<path id="XMLID_228_" class="st92" d="M62.04,76.011c-2.475,0-4.702-0.315-6.682-0.944c-1.98-0.629-3.663-1.598-5.049-2.906
+			<path id="XMLID_228_" class="st99" d="M62.04,76.011c-2.475,0-4.702-0.315-6.682-0.944c-1.98-0.629-3.663-1.598-5.049-2.906
 				c-1.386-1.308-2.45-2.963-3.193-4.968c-0.742-2.003-1.114-4.363-1.114-7.079V40.588h9.801v19.326
 				c0,2.518,0.573,4.381,1.719,5.589c1.146,1.21,2.685,1.813,4.617,1.813c1.932,0,3.47-0.579,4.617-1.738
 				c1.146-1.159,1.719-2.964,1.719-5.415V40.588h9.801v19.276c0,2.816-0.388,5.242-1.163,7.279c-0.776,2.036-1.865,3.71-3.267,5.017
 				c-1.403,1.309-3.102,2.278-5.098,2.906C66.75,75.696,64.514,76.011,62.04,76.011z"/>
-			<polygon id="XMLID_218_" class="st92" points="90.312,40.588 99.291,40.588 113.576,58.97 113.576,40.588 123.031,40.588 
+			<polygon id="XMLID_218_" class="st99" points="90.312,40.588 99.291,40.588 113.576,58.97 113.576,40.588 123.031,40.588 
 				123.031,75.365 114.598,75.365 99.766,56.288 99.766,75.365 90.312,75.365 			"/>
-			<polygon id="XMLID_195_" class="st92" points="286.78,40.588 296.383,40.588 296.383,66.919 313.163,66.919 313.163,75.365 
+			<polygon id="XMLID_195_" class="st99" points="286.78,40.588 296.383,40.588 296.383,66.919 313.163,66.919 313.163,75.365 
 				286.78,75.365 			"/>
-			<rect id="XMLID_177_" x="323.3" y="40.588" class="st92" width="9.652" height="34.777"/>
-			<polygon id="XMLID_160_" class="st92" points="345.176,40.588 372.896,40.588 372.896,49.034 354.779,49.034 354.779,54.896 
+			<rect id="XMLID_177_" x="323.3" y="40.588" class="st99" width="9.652" height="34.777"/>
+			<polygon id="XMLID_160_" class="st99" points="345.176,40.588 372.896,40.588 372.896,49.034 354.779,49.034 354.779,54.896 
 				371.163,54.896 371.163,62.945 354.779,62.945 354.779,75.365 345.176,75.365 			"/>
-			<polygon id="XMLID_143_" class="st92" points="393.186,62.349 380.02,40.588 390.959,40.588 398.087,53.257 405.264,40.588 
+			<polygon id="XMLID_143_" class="st99" points="393.186,62.349 380.02,40.588 390.959,40.588 398.087,53.257 405.264,40.588 
 				416.005,40.588 402.839,62.2 402.839,75.365 393.186,75.365 			"/>
-			<path id="XMLID_118_" class="st93" d="M195.135,76.061c-2.672,0-5.148-0.472-7.425-1.416c-2.276-0.944-4.24-2.227-5.89-3.85
+			<path id="XMLID_118_" class="st100" d="M195.135,76.061c-2.672,0-5.148-0.472-7.425-1.416c-2.276-0.944-4.24-2.227-5.89-3.85
 				c-1.651-1.622-2.945-3.527-3.886-5.713c-0.94-2.186-1.411-4.521-1.411-7.005v-0.099c0-2.484,0.47-4.827,1.411-7.03
 				c0.941-2.202,2.253-4.124,3.936-5.763c1.683-1.639,3.662-2.931,5.939-3.875c2.277-0.944,4.752-1.416,7.425-1.416
 				c2.672,0,5.147,0.472,7.425,1.416c2.277,0.944,4.24,2.228,5.89,3.85c1.649,1.623,2.945,3.527,3.885,5.713
@@ -570,9 +390,9 @@
 				c-1.076,0.497-2.002,1.168-2.78,2.012c-0.778,0.845-1.374,1.83-1.787,2.956c-0.414,1.127-0.62,2.319-0.62,3.577v0.099
 				c0,1.259,0.214,2.452,0.645,3.577c0.43,1.127,1.034,2.12,1.812,2.981c0.778,0.862,1.713,1.549,2.804,2.062
 				C192.678,67.11,193.886,67.366,195.21,67.366"/>
-			<path id="XMLID_101_" class="st94" d="M214.608,58.025c0,10.25-8.698,18.558-19.428,18.558c-10.73,0-19.428-8.309-19.428-18.558
+			<path id="XMLID_101_" class="st101" d="M214.608,58.025c0,10.25-8.698,18.558-19.428,18.558c-10.73,0-19.428-8.309-19.428-18.558
 				H214.608z"/>
-			<path id="XMLID_72_" class="st93" d="M152.517,76.06c-2.475,0-4.801-0.447-6.979-1.341c-2.178-0.894-4.067-2.143-5.668-3.75
+			<path id="XMLID_72_" class="st100" d="M152.517,76.06c-2.475,0-4.801-0.447-6.979-1.341c-2.178-0.894-4.067-2.143-5.668-3.75
 				c-1.601-1.606-2.871-3.51-3.811-5.713c-0.94-2.203-1.411-4.596-1.411-7.179v-0.099c0-2.517,0.462-4.877,1.386-7.08
 				c0.923-2.203,2.194-4.124,3.811-5.763c1.616-1.639,3.539-2.923,5.767-3.851c2.227-0.926,4.661-1.391,7.301-1.391
 				c1.782,0,3.398,0.174,4.851,0.522c1.451,0.348,2.78,0.845,3.985,1.49c1.204,0.646,2.293,1.416,3.267,2.311
@@ -583,548 +403,434 @@
 				c0.742-0.199,1.418-0.489,2.029-0.869c0.61-0.38,1.188-0.827,1.732-1.341c0.544-0.513,1.08-1.085,1.609-1.714l7.227,5.167
 				c-0.826,1.126-1.725,2.169-2.698,3.13c-0.973,0.961-2.079,1.788-3.316,2.484c-1.237,0.696-2.623,1.242-4.158,1.639
 				C156.155,75.862,154.43,76.06,152.517,76.06"/>
-			<path id="XMLID_58_" class="st95" d="M169.555,64.96c-2.694,6.896-9.333,11.559-17.1,11.559
+			<path id="XMLID_58_" class="st102" d="M169.555,64.96c-2.694,6.896-9.333,11.559-17.1,11.559
 				c-10.146,0-18.378-7.891-18.378-18.441h11.214c0,3.332,3.209,5.865,7.164,5.865c3.214,0,5.936-1.701,6.849-4.117L169.555,64.96z"
 				/>
-			<polygon id="XMLID_31_" class="st93" points="222.922,40.588 233.069,40.588 239.108,60.709 245.79,40.489 254.056,40.489 
+			<polygon id="XMLID_31_" class="st100" points="222.922,40.588 233.069,40.588 239.108,60.709 245.79,40.489 254.056,40.489 
 				260.739,60.709 266.778,40.588 276.727,40.588 265.144,75.614 256.779,75.614 249.8,55.592 242.87,75.614 234.504,75.614 			"/>
-			<polygon id="XMLID_16_" class="st96" points="255.575,58.078 243.923,58.078 227.871,58.078 233.919,75.787 245.405,75.776 
+			<polygon id="XMLID_16_" class="st103" points="255.575,58.078 243.923,58.078 227.871,58.078 233.919,75.787 245.405,75.776 
 				249.749,68.194 254.092,75.766 265.579,75.789 271.626,58.078 			"/>
 		</g>
 		<g id="XMLID_210_">
-			<rect id="XMLID_575_" x="45.719" y="140.943" class="st97" width="360.076" height="263.25"/>
-			<text id="XMLID_574_" transform="matrix(1 0 0 1 45.7192 151.0503)"><tspan x="0" y="0" class="st98 st99 st100">Meat consumption is more widely practised than ever. Once a </tspan><tspan x="0" y="16.8" class="st98 st99 st100">need has now become a habit and a matter of choice. Less do </tspan><tspan x="0" y="33.6" class="st98 st99 st100">we realise how it impacts the environment. It’s even worse than </tspan><tspan x="0" y="50.4" class="st98 st99 st100">the whole of the transport of the world by the UN-FAO estimates.</tspan><tspan x="0" y="84" class="st98 st99 st100">While it can be an uphill task to altogether go vegan, there is still </tspan><tspan x="0" y="100.8" class="st98 st99 st100">scope for sustainability by denying the most inefficient form of </tspan><tspan x="0" y="117.6" class="st98 st99 st100">food, that is beef.</tspan><tspan x="0" y="151.2" class="st98 st99 st100">The adjacent visualisation shows an aggregate of carbon foot</tspan><tspan x="343.586" y="151.2" class="st98 st99 st100">-</tspan><tspan x="0" y="168" class="st98 st99 st100">print based on our animal based food choices. It combines the </tspan><tspan x="0" y="184.8" class="st98 st99 st100">four basic types of meat - from cattle, sheep &amp; goat (small rumi</tspan><tspan x="349.676" y="184.8" class="st98 st99 st100">-</tspan><tspan x="0" y="201.6" class="st98 st99 st100">nants), pig, and poultry - and the impact it has on the environ</tspan><tspan x="336.488" y="201.6" class="st98 st99 st100">-</tspan><tspan x="0" y="218.4" class="st98 st99 st100">ment. Hover over the footprint model, and click on the index to </tspan><tspan x="0" y="235.2" class="st98 st99 st100">focus on key attributes.</tspan></text>
+			<rect id="XMLID_165_" x="45.719" y="140.943" class="st104" width="360.076" height="263.25"/>
+			<text id="XMLID_158_" transform="matrix(1 0 0 1 45.7192 151.0503)"><tspan x="0" y="0" class="st105 st106 st107">Meat consumption is more widely practised than ever. Once a </tspan><tspan x="0" y="16.8" class="st105 st106 st107">need has now become a habit and a matter of choice. Less do </tspan><tspan x="0" y="33.6" class="st105 st106 st107">we realise how it impacts the environment. It’s even worse than </tspan><tspan x="0" y="50.4" class="st105 st106 st107">the whole of the transport of the world by the UN-FAO estimates.</tspan><tspan x="0" y="84" class="st105 st106 st107">While it can be an uphill task to altogether go vegan, there is still </tspan><tspan x="0" y="100.8" class="st105 st106 st107">scope for sustainability by denying the most inefficient form of </tspan><tspan x="0" y="117.6" class="st105 st106 st107">food, that is beef.</tspan><tspan x="0" y="151.2" class="st105 st106 st107">The adjacent visualisation shows an aggregate of carbon foot</tspan><tspan x="343.586" y="151.2" class="st105 st106 st107">-</tspan><tspan x="0" y="168" class="st105 st106 st107">print based on our animal based food choices. It combines the </tspan><tspan x="0" y="184.8" class="st105 st106 st107">four basic types of meat - from cattle, sheep &amp; goat (small rumi</tspan><tspan x="349.676" y="184.8" class="st105 st106 st107">-</tspan><tspan x="0" y="201.6" class="st105 st106 st107">nants), pig, and poultry - and the impact it has on the environ</tspan><tspan x="336.488" y="201.6" class="st105 st106 st107">-</tspan><tspan x="0" y="218.4" class="st105 st106 st107">ment. Hover over the footprint model, and click on the index to </tspan><tspan x="0" y="235.2" class="st105 st106 st107">focus on key attributes.</tspan></text>
 		</g>
 		<g id="XMLID_336_">
 			<g id="XMLID_312_">
 				<g id="XMLID_308_">
 					<g id="XMLID_286_">
-						<circle id="XMLID_292_" class="st101" cx="111.489" cy="517.65" r="15.392"/>
-						<circle id="XMLID_239_" class="st79" cx="111.489" cy="517.65" r="3.192"/>
+						<circle id="XMLID_292_" class="st108" cx="111.489" cy="517.65" r="15.392"/>
+						<circle id="XMLID_239_" class="st87" cx="111.489" cy="517.65" r="3.192"/>
 					</g>
 					<g id="XMLID_288_">
 						<g id="XMLID_368_">
-							<line id="XMLID_391_" class="st102" x1="111.489" y1="517.89" x2="112.489" y2="517.89"/>
-							<line id="XMLID_373_" class="st103" x1="114.527" y1="517.89" x2="190.952" y2="517.89"/>
-							<line id="XMLID_369_" class="st102" x1="191.971" y1="517.89" x2="192.971" y2="517.89"/>
+							<line id="XMLID_391_" class="st109" x1="111.489" y1="517.89" x2="112.489" y2="517.89"/>
+							<line id="XMLID_373_" class="st110" x1="114.527" y1="517.89" x2="190.952" y2="517.89"/>
+							<line id="XMLID_369_" class="st109" x1="191.971" y1="517.89" x2="192.971" y2="517.89"/>
 						</g>
 					</g>
 					<g id="XMLID_296_">
-						<text id="XMLID_287_" transform="matrix(1 0 0 1 199.3628 524.0269)" class="st79 st99 st104">1 CH4 = 23x CO2</text>
-						<text id="XMLID_290_" transform="matrix(1 0 0 1 201.208 534.3657)" class="st79 st105 st106">Methane</text>
-						<text id="XMLID_299_" transform="matrix(1 0 0 1 251.3604 534.3657)" class="st79 st105 st106">Carbon Dioxide</text>
+						<text id="XMLID_287_" transform="matrix(1 0 0 1 199.3628 524.0269)" class="st87 st106 st111">1 CH4 = 23x CO2</text>
+						<text id="XMLID_290_" transform="matrix(1 0 0 1 201.208 534.3657)" class="st87 st112 st113">Methane</text>
+						<text id="XMLID_299_" transform="matrix(1 0 0 1 251.3604 534.3657)" class="st87 st112 st113">Carbon Dioxide</text>
 					</g>
-					<polyline id="XMLID_310_" class="st107" points="115.091,502.373 259.51,502.373 259.51,508.432 					"/>
+					<polyline id="XMLID_310_" class="st114" points="115.091,502.373 259.51,502.373 259.51,508.432 					"/>
 				</g>
 				<g id="XMLID_311_">
 					<g id="XMLID_240_">
-						<circle id="XMLID_293_" class="st108" cx="111.489" cy="603.871" r="55.296"/>
+						<circle id="XMLID_293_" class="st115" cx="111.489" cy="603.871" r="55.296"/>
 						<circle id="XMLID_282_" class="st74" cx="111.489" cy="603.871" r="3.192"/>
 					</g>
 					<g id="XMLID_289_">
 						<g id="XMLID_348_">
-							<line id="XMLID_351_" class="st109" x1="111.489" y1="603.97" x2="112.489" y2="603.97"/>
-							<line id="XMLID_350_" class="st110" x1="114.527" y1="603.97" x2="190.952" y2="603.97"/>
-							<line id="XMLID_349_" class="st109" x1="191.971" y1="603.97" x2="192.971" y2="603.97"/>
+							<line id="XMLID_351_" class="st116" x1="111.489" y1="603.97" x2="112.489" y2="603.97"/>
+							<line id="XMLID_350_" class="st117" x1="114.527" y1="603.97" x2="190.952" y2="603.97"/>
+							<line id="XMLID_349_" class="st116" x1="191.971" y1="603.97" x2="192.971" y2="603.97"/>
 						</g>
 					</g>
 					<g id="XMLID_309_">
-						<text id="XMLID_291_" transform="matrix(1 0 0 1 199.3628 607.6362)" class="st74 st99 st104">1 N2O = 296x CO2</text>
-						<text id="XMLID_307_" transform="matrix(1 0 0 1 201.208 617.8052)"><tspan x="0" y="0" class="st74 st105 st106">Nitrous</tspan><tspan x="0" y="10.75" class="st74 st105 st106">Oxide</tspan></text>
-						<text id="XMLID_306_" transform="matrix(1 0 0 1 252.7046 617.8052)" class="st74 st105 st106">Carbon Dioxide</text>
+						<text id="XMLID_291_" transform="matrix(1 0 0 1 199.3628 607.6362)" class="st74 st106 st111">1 N2O = 296x CO2</text>
+						<text id="XMLID_307_" transform="matrix(1 0 0 1 201.208 617.8052)"><tspan x="0" y="0" class="st74 st112 st113">Nitrous</tspan><tspan x="0" y="10.75" class="st74 st112 st113">Oxide</tspan></text>
+						<text id="XMLID_306_" transform="matrix(1 0 0 1 252.7046 617.8052)" class="st74 st112 st113">Carbon Dioxide</text>
 					</g>
-					<polyline id="XMLID_314_" class="st111" points="154.749,569.012 259.301,569.012 259.749,589.405 					"/>
+					<polyline id="XMLID_314_" class="st118" points="154.749,569.012 259.301,569.012 259.749,589.405 					"/>
 				</g>
 			</g>
 			<g id="XMLID_295_">
-				<rect id="XMLID_564_" x="46.425" y="438.421" class="st97" width="366.825" height="38.051"/>
-				<text id="XMLID_560_" transform="matrix(1 0 0 1 46.4248 448.6406)"><tspan x="0" y="0" class="st98 st112 st100">Representation of Prominent Greenhouse Gases </tspan><tspan x="0" y="16.8" class="st98 st112 st100">(GHGs) and their CO2 Equivalent:</tspan></text>
+				<rect id="XMLID_156_" x="46.425" y="438.421" class="st104" width="366.825" height="38.051"/>
+				<text id="XMLID_155_" transform="matrix(1 0 0 1 46.4248 448.6406)"><tspan x="0" y="0" class="st105 st119 st107">Representation of Prominent Greenhouse Gases </tspan><tspan x="0" y="16.8" class="st105 st119 st107">(GHGs) and their CO2 Equivalent:</tspan></text>
 			</g>
 		</g>
 	</g>
 	<g id="XMLID_211_">
 		<g id="XMLID_571_">
 			<g id="XMLID_481_">
-				<path id="XMLID_480_" class="st113" d="M985.368,574.358c4.042-8.576,19.007-24.977,44.533-2.49
+				<path id="XMLID_480_" class="st120" d="M985.368,574.358c4.042-8.576,19.007-24.977,44.533-2.49
 					c9.83,8.66,13.107,17.554,5.617,46.108c-7.117,27.134-13.341,41.895-28.086,43.767c-14.745,1.872-25.277-11.234-18.958-25.043
 					c6.319-13.809,16.149-14.043,13.341-24.107c-2.655-9.514-7.021-6.319-12.873-14.745S982.836,579.731,985.368,574.358z"/>
-				<circle id="XMLID_409_" class="st114" cx="983.268" cy="552.609" r="13.541"/>
-				<circle id="XMLID_416_" class="st114" cx="1007.516" cy="550.265" r="8.747"/>
-				<circle id="XMLID_418_" class="st114" cx="1023.699" cy="556.68" r="6.415"/>
-				<circle id="XMLID_428_" class="st114" cx="1034.392" cy="564.839" r="4.817"/>
-				<circle id="XMLID_433_" class="st114" cx="1040.465" cy="573.661" r="3.129"/>
-				<circle id="XMLID_434_" class="st114" cx="1004.344" cy="583.218" r="20.292"/>
-				<circle id="XMLID_437_" class="st114" cx="1028.169" cy="588.401" r="12.301"/>
-				<circle id="XMLID_439_" class="st114" cx="1017.9" cy="611.085" r="18.282"/>
-				<circle id="XMLID_440_" class="st114" cx="1020.319" cy="633.713" r="9.509"/>
-				<circle id="XMLID_448_" class="st114" cx="1004.745" cy="644.769" r="17.46"/>
+				<circle id="XMLID_409_" class="st121" cx="983.268" cy="552.609" r="13.541"/>
+				<circle id="XMLID_416_" class="st121" cx="1007.516" cy="550.265" r="8.747"/>
+				<circle id="XMLID_418_" class="st121" cx="1023.699" cy="556.68" r="6.415"/>
+				<circle id="XMLID_428_" class="st121" cx="1034.392" cy="564.839" r="4.817"/>
+				<circle id="XMLID_433_" class="st121" cx="1040.465" cy="573.661" r="3.129"/>
+				<circle id="XMLID_434_" class="st121" cx="1004.344" cy="583.218" r="20.292"/>
+				<circle id="XMLID_437_" class="st121" cx="1028.169" cy="588.401" r="12.301"/>
+				<circle id="XMLID_439_" class="st121" cx="1017.9" cy="611.085" r="18.282"/>
+				<circle id="XMLID_440_" class="st121" cx="1020.319" cy="633.713" r="9.509"/>
+				<circle id="XMLID_448_" class="st121" cx="1004.745" cy="644.769" r="17.46"/>
 			</g>
 			<g id="XMLID_566_">
-				<rect id="XMLID_520_" x="1068.986" y="540.601" class="st97" width="141.59" height="16.311"/>
-				<text id="XMLID_517_" transform="matrix(1 0 0 1 1068.9851 550.8204)" class="st98 st112 st100">Reading this graph:</text>
+				<rect id="XMLID_151_" x="1068.986" y="540.601" class="st104" width="141.59" height="16.311"/>
+				<text id="XMLID_149_" transform="matrix(1 0 0 1 1068.9851 550.8204)" class="st105 st119 st107">Reading this graph:</text>
 			</g>
 			<g id="XMLID_570_">
-				<rect id="XMLID_508_" x="1070.33" y="564.499" class="st97" width="166.378" height="101.773"/>
-				<text id="XMLID_505_" transform="matrix(1 0 0 1 1070.3301 574.6069)"><tspan x="0" y="0" class="st98 st99 st100">An aggregated carbon foot</tspan><tspan x="150.175" y="0" class="st98 st99 st100">-</tspan><tspan x="0" y="16.8" class="st98 st99 st100">print model of ten attributes </tspan><tspan x="0" y="33.6" class="st98 st99 st100">related with all the 4 meat </tspan><tspan x="0" y="50.4" class="st98 st99 st100">types. Visualisation shows </tspan><tspan x="0" y="67.2" class="st98 st99 st100">contribution towards carbon </tspan><tspan x="0" y="84" class="st98 st99 st100">footprint in relative ratios.</tspan></text>
+				<rect id="XMLID_140_" x="1070.33" y="564.499" class="st104" width="166.378" height="101.773"/>
+				<text id="XMLID_139_" transform="matrix(1 0 0 1 1070.3301 574.6069)"><tspan x="0" y="0" class="st105 st106 st107">An aggregated carbon foot</tspan><tspan x="150.175" y="0" class="st105 st106 st107">-</tspan><tspan x="0" y="16.8" class="st105 st106 st107">print model of ten attributes </tspan><tspan x="0" y="33.6" class="st105 st106 st107">related with all the 4 meat </tspan><tspan x="0" y="50.4" class="st105 st106 st107">types. Visualisation shows </tspan><tspan x="0" y="67.2" class="st105 st106 st107">contribution towards carbon </tspan><tspan x="0" y="84" class="st105 st106 st107">footprint in relative ratios.</tspan></text>
 			</g>
 		</g>
 		<g id="XMLID_17_">
 			<g id="cFeed">
 				<g id="XMLID_30_">
-					<rect id="XMLID_237_" x="977" y="214" class="st115" width="19" height="19"/>
-					<rect id="XMLID_227_" x="996" y="214" class="st116" width="18" height="19"/>
-					<rect id="XMLID_226_" x="1014" y="214" class="st117" width="19" height="19"/>
-					<rect id="XMLID_225_" x="1033" y="214" class="st118" width="19" height="19"/>
+					<rect id="XMLID_237_" x="977" y="214" class="st122" width="19" height="19"/>
+					<rect id="XMLID_227_" x="996" y="214" class="st123" width="18" height="19"/>
+					<rect id="XMLID_226_" x="1014" y="214" class="st124" width="19" height="19"/>
+					<rect id="XMLID_225_" x="1033" y="214" class="st125" width="19" height="19"/>
 				</g>
-				<text id="XMLID_245_" transform="matrix(1 0 0 1 1069.3527 228.6287)" class="st98 st99 st119">Feed Consumption Ratio</text>
+				<text id="XMLID_245_" transform="matrix(1 0 0 1 1069.3527 228.6287)" class="st105 st106 st126">Feed Consumption Ratio</text>
 			</g>
 			<g id="cMass">
 				<g id="XMLID_94_">
-					<rect id="XMLID_33_" x="977" y="273" class="st120" width="19" height="17"/>
-					<rect id="XMLID_34_" x="996" y="273" class="st121" width="18" height="17"/>
-					<rect id="XMLID_46_" x="1014" y="273" class="st122" width="19" height="17"/>
-					<rect id="XMLID_65_" x="1033" y="273" class="st123" width="19" height="17"/>
+					<rect id="XMLID_33_" x="977" y="273" class="st127" width="19" height="17"/>
+					<rect id="XMLID_34_" x="996" y="273" class="st128" width="18" height="17"/>
+					<rect id="XMLID_46_" x="1014" y="273" class="st129" width="19" height="17"/>
+					<rect id="XMLID_65_" x="1033" y="273" class="st130" width="19" height="17"/>
 				</g>
-				<text id="XMLID_253_" transform="matrix(1 0 0 1 1069.3527 285.2096)" class="st98 st99 st119">Biomass Ratio</text>
+				<text id="XMLID_253_" transform="matrix(1 0 0 1 1069.3527 285.2096)" class="st105 st106 st126">Biomass Ratio</text>
 			</g>
 			<g id="cPopu">
 				<g id="XMLID_141_">
-					<rect id="XMLID_68_" x="977" y="300" class="st96" width="19" height="19"/>
-					<rect id="XMLID_70_" x="996" y="300" class="st124" width="18" height="19"/>
-					<rect id="XMLID_71_" x="1014" y="300" class="st125" width="19" height="19"/>
-					<rect id="XMLID_73_" x="1033" y="300" class="st126" width="19" height="19"/>
+					<rect id="XMLID_68_" x="977" y="300" class="st103" width="19" height="19"/>
+					<rect id="XMLID_70_" x="996" y="300" class="st131" width="18" height="19"/>
+					<rect id="XMLID_71_" x="1014" y="300" class="st132" width="19" height="19"/>
+					<rect id="XMLID_73_" x="1033" y="300" class="st133" width="19" height="19"/>
 				</g>
-				<text id="XMLID_254_" transform="matrix(1 0 0 1 1069.3527 313.5007)" class="st98 st99 st119">Population Ratio</text>
+				<text id="XMLID_254_" transform="matrix(1 0 0 1 1069.3527 313.5007)" class="st105 st106 st126">Population Ratio</text>
 			</g>
 			<g id="cCh4">
 				<g id="XMLID_172_">
-					<rect id="XMLID_103_" x="977" y="329" class="st127" width="19" height="17"/>
-					<rect id="XMLID_102_" x="996" y="329" class="st128" width="18" height="17"/>
-					<rect id="XMLID_100_" x="1014" y="329" class="st129" width="19" height="17"/>
-					<rect id="XMLID_99_" x="1033" y="329" class="st130" width="19" height="17"/>
+					<rect id="XMLID_103_" x="977" y="329" class="st134" width="19" height="17"/>
+					<rect id="XMLID_102_" x="996" y="329" class="st135" width="18" height="17"/>
+					<rect id="XMLID_100_" x="1014" y="329" class="st136" width="19" height="17"/>
+					<rect id="XMLID_99_" x="1033" y="329" class="st137" width="19" height="17"/>
 				</g>
-				<text id="XMLID_263_" transform="matrix(1 0 0 1 1069.3527 340.7919)" class="st98 st99 st119">CH4 Emissions Ratio</text>
+				<text id="XMLID_263_" transform="matrix(1 0 0 1 1069.3527 340.7919)" class="st105 st106 st126">CH4 Emissions Ratio</text>
 			</g>
 			<g id="cN2o">
 				<g id="XMLID_241_">
-					<rect id="XMLID_181_" x="977" y="386" class="st131" width="19" height="17"/>
-					<rect id="XMLID_180_" x="996" y="386" class="st132" width="18" height="17"/>
-					<rect id="XMLID_179_" x="1014" y="386" class="st133" width="19" height="17"/>
-					<rect id="XMLID_178_" x="1033" y="386" class="st134" width="19" height="17"/>
+					<rect id="XMLID_181_" x="977" y="386" class="st138" width="19" height="17"/>
+					<rect id="XMLID_180_" x="996" y="386" class="st139" width="18" height="17"/>
+					<rect id="XMLID_179_" x="1014" y="386" class="st140" width="19" height="17"/>
+					<rect id="XMLID_178_" x="1033" y="386" class="st141" width="19" height="17"/>
 				</g>
-				<text id="XMLID_269_" transform="matrix(1 0 0 1 1069.3527 397.8734)" class="st98 st99 st119">N2O Emissions Ratio</text>
+				<text id="XMLID_269_" transform="matrix(1 0 0 1 1069.3527 397.8734)" class="st105 st106 st126">N2O Emissions Ratio</text>
 			</g>
 			<g id="cNitro">
 				<g id="XMLID_242_">
-					<rect id="XMLID_163_" x="977" y="414" class="st135" width="19" height="19"/>
-					<rect id="XMLID_162_" x="996" y="414" class="st136" width="18" height="19"/>
-					<rect id="XMLID_161_" x="1014" y="414" class="st137" width="19" height="19"/>
-					<rect id="XMLID_159_" x="1033" y="414" class="st138" width="19" height="19"/>
+					<rect id="XMLID_163_" x="977" y="414" class="st142" width="19" height="19"/>
+					<rect id="XMLID_162_" x="996" y="414" class="st143" width="18" height="19"/>
+					<rect id="XMLID_161_" x="1014" y="414" class="st144" width="19" height="19"/>
+					<rect id="XMLID_159_" x="1033" y="414" class="st145" width="19" height="19"/>
 				</g>
-				<text id="XMLID_270_" transform="matrix(1 0 0 1 1069.3527 426.6645)" class="st98 st99 st119">Nitrogen Manure Ratio</text>
+				<text id="XMLID_270_" transform="matrix(1 0 0 1 1069.3527 426.6645)" class="st105 st106 st126">Nitrogen Manure Ratio</text>
 			</g>
 			<g id="cPhos">
 				<g id="XMLID_243_">
-					<rect id="XMLID_154_" x="977" y="443" class="st139" width="19" height="18"/>
-					<rect id="XMLID_145_" x="996" y="443" class="st140" width="18" height="18"/>
-					<rect id="XMLID_144_" x="1014" y="443" class="st141" width="19" height="18"/>
-					<rect id="XMLID_142_" x="1033" y="443" class="st142" width="19" height="18"/>
+					<rect id="XMLID_154_" x="977" y="443" class="st146" width="19" height="18"/>
+					<rect id="XMLID_145_" x="996" y="443" class="st147" width="18" height="18"/>
+					<rect id="XMLID_144_" x="1014" y="443" class="st148" width="19" height="18"/>
+					<rect id="XMLID_142_" x="1033" y="443" class="st149" width="19" height="18"/>
 				</g>
-				<text id="XMLID_271_" transform="matrix(1 0 0 1 1069.3527 455.4547)" class="st98 st99 st119">Phosphorus Manure Ratio</text>
+				<text id="XMLID_271_" transform="matrix(1 0 0 1 1069.3527 455.4547)" class="st105 st106 st126">Phosphorus Manure Ratio</text>
 			</g>
 			<g id="cCo2">
 				<g id="XMLID_224_">
-					<rect id="XMLID_87_" x="977" y="357" class="st94" width="19" height="19"/>
-					<rect id="XMLID_89_" x="996" y="357" class="st143" width="18" height="19"/>
-					<rect id="XMLID_91_" x="1014" y="357" class="st144" width="19" height="19"/>
-					<rect id="XMLID_93_" x="1033" y="357" class="st145" width="19" height="19"/>
+					<rect id="XMLID_87_" x="977" y="357" class="st101" width="19" height="19"/>
+					<rect id="XMLID_89_" x="996" y="357" class="st150" width="18" height="19"/>
+					<rect id="XMLID_91_" x="1014" y="357" class="st151" width="19" height="19"/>
+					<rect id="XMLID_93_" x="1033" y="357" class="st152" width="19" height="19"/>
 				</g>
-				<text id="XMLID_268_" transform="matrix(1 0 0 1 1069.3527 369.5821)" class="st98 st99 st119">CO2 Emissions Ratio</text>
+				<text id="XMLID_268_" transform="matrix(1 0 0 1 1069.3527 369.5821)" class="st105 st106 st126">CO2 Emissions Ratio</text>
 			</g>
 			<g id="cWater">
 				<g id="XMLID_32_">
-					<rect id="XMLID_199_" x="977" y="242" class="st95" width="19" height="20"/>
-					<rect id="XMLID_198_" x="996" y="242" class="st146" width="18" height="20"/>
-					<rect id="XMLID_197_" x="1014" y="242" class="st147" width="19" height="20"/>
-					<rect id="XMLID_196_" x="1033" y="242" class="st148" width="19" height="20"/>
+					<rect id="XMLID_199_" x="977" y="242" class="st102" width="19" height="20"/>
+					<rect id="XMLID_198_" x="996" y="242" class="st153" width="18" height="20"/>
+					<rect id="XMLID_197_" x="1014" y="242" class="st154" width="19" height="20"/>
+					<rect id="XMLID_196_" x="1033" y="242" class="st155" width="19" height="20"/>
 				</g>
-				<rect id="XMLID_250_" x="1069.353" y="245.666" class="st149" width="127.954" height="13.446"/>
-				<text id="XMLID_251_" transform="matrix(1 0 0 1 1069.3525 254.7959)" class="st98 st99 st119">Water Consumption Ratio</text>
+				<rect id="XMLID_250_" x="1069.353" y="245.666" class="st156" width="127.954" height="13.446"/>
+				<text id="XMLID_251_" transform="matrix(1 0 0 1 1069.3525 254.7959)" class="st105 st106 st126">Water Consumption Ratio</text>
 			</g>
 			<g id="cProtein">
 				<g id="XMLID_244_">
-					<rect id="XMLID_136_" x="977" y="471" class="st93" width="19" height="19"/>
-					<rect id="XMLID_121_" x="996" y="471" class="st150" width="18" height="19"/>
-					<rect id="XMLID_117_" x="1014" y="471" class="st151" width="19" height="19"/>
-					<rect id="XMLID_112_" x="1033" y="471" class="st152" width="19" height="19"/>
+					<rect id="XMLID_136_" x="977" y="471" class="st100" width="19" height="19"/>
+					<rect id="XMLID_121_" x="996" y="471" class="st157" width="18" height="19"/>
+					<rect id="XMLID_117_" x="1014" y="471" class="st158" width="19" height="19"/>
+					<rect id="XMLID_112_" x="1033" y="471" class="st159" width="19" height="19"/>
 				</g>
-				<rect id="XMLID_281_" x="1069.353" y="468.993" class="st149" width="171.541" height="25.028"/>
-				<text id="XMLID_272_" transform="matrix(1 0 0 1 1069.3525 478.1224)"><tspan x="0" y="0" class="st98 st99 st119">Plant to Animal Protein Conversion </tspan><tspan x="0" y="13.2" class="st98 st99 st119">Inefficiency Ratio</tspan></text>
+				<rect id="XMLID_281_" x="1069.353" y="468.993" class="st156" width="171.541" height="25.028"/>
+				<text id="XMLID_272_" transform="matrix(1 0 0 1 1069.3525 478.1224)"><tspan x="0" y="0" class="st105 st106 st126">Plant to Animal Protein Conversion </tspan><tspan x="0" y="13.2" class="st105 st106 st126">Inefficiency Ratio</tspan></text>
 			</g>
 			<g id="XMLID_238_">
-				<text id="XMLID_252_" transform="matrix(0 -1 1 0 989.6991 204.4541)" class="st98 st153 st119">CATTLE</text>
-				<text id="XMLID_283_" transform="matrix(0 -1 1 0 1007.3903 204.4541)" class="st98 st153 st119">SHEEP &amp; GOAT</text>
-				<text id="XMLID_285_" transform="matrix(0 -1 1 0 1026.5815 204.4541)" class="st98 st153 st119">PIG</text>
-				<text id="XMLID_284_" transform="matrix(0 -1 1 0 1046.7727 204.4541)" class="st98 st153 st119">POULTRY</text>
+				<text id="XMLID_252_" transform="matrix(0 -1 1 0 989.6991 204.4541)" class="st105 st160 st126">CATTLE</text>
+				<text id="XMLID_283_" transform="matrix(0 -1 1 0 1007.3903 204.4541)" class="st105 st160 st126">SHEEP &amp; GOAT</text>
+				<text id="XMLID_285_" transform="matrix(0 -1 1 0 1026.5815 204.4541)" class="st105 st160 st126">PIG</text>
+				<text id="XMLID_284_" transform="matrix(0 -1 1 0 1046.7727 204.4541)" class="st105 st160 st126">POULTRY</text>
 			</g>
 		</g>
-		<rect id="XMLID_298_" x="975.54" y="36.877" class="st97" width="263.312" height="47.656"/>
-		<text id="XMLID_297_" transform="matrix(1 0 0 1 975.5403 53.8771)"><tspan x="0" y="0" class="st69 st153 st154">HOW BIG IS YOUR FOOD </tspan><tspan x="0" y="24" class="st69 st153 st154">CARBON FOOTPRINT?</tspan></text>
+		<rect id="XMLID_298_" x="975.54" y="36.877" class="st104" width="263.312" height="47.656"/>
+		<text id="XMLID_297_" transform="matrix(1 0 0 1 975.5403 53.8771)"><tspan x="0" y="0" class="st78 st160 st161">HOW BIG IS YOUR FOOD </tspan><tspan x="0" y="24" class="st78 st160 st161">CARBON FOOTPRINT?</tspan></text>
 	</g>
 </g>
-<rect id="XMLID_315_" class="st155" width="1281.846" height="800"/>
+<rect id="XMLID_315_" class="st162" width="1281.846" height="800"/>
 <g id="_x3C_Group_x3E__1_">
 	<g id="XMLID_247_">
 		<g id="wFeed">
-			<rect id="XMLID_463_" x="802" y="767" class="st115" width="13" height="13"/>
-			<text id="XMLID_406_" transform="matrix(1 0 0 1 822.8527 778.144)" class="st98 st99 st119">Feed Consumption - per lb. meat</text>
+			<rect id="XMLID_463_" x="802" y="767" class="st122" width="13" height="13"/>
+			<text id="XMLID_406_" transform="matrix(1 0 0 1 822.8527 778.144)" class="st105 st106 st126">Feed Consumption - per lb. meat</text>
 		</g>
 		<g id="wWater2">
-			<rect id="XMLID_478_" x="802" y="820" class="st156" width="13" height="12"/>
-			<text id="XMLID_405_" transform="matrix(1 0 0 1 822.8527 829.725)" class="st98 st99 st119">Water Consumption: Service - km3</text>
+			<rect id="XMLID_478_" x="802" y="820" class="st163" width="13" height="12"/>
+			<text id="XMLID_405_" transform="matrix(1 0 0 1 822.8527 829.725)" class="st105 st106 st126">Water Consumption: Service - km3</text>
 		</g>
 		<g id="wMass">
-			<rect id="XMLID_470_" x="802" y="897" class="st120" width="13" height="13"/>
-			<text id="XMLID_404_" transform="matrix(1 0 0 1 822.8527 908.5161)" class="st98 st99 st119">Biomass - Million Tonnes</text>
+			<rect id="XMLID_470_" x="802" y="897" class="st127" width="13" height="13"/>
+			<text id="XMLID_404_" transform="matrix(1 0 0 1 822.8527 908.5161)" class="st105 st106 st126">Biomass - Million Tonnes</text>
 		</g>
 		<g id="wPopu">
-			<rect id="XMLID_450_" x="1034" y="767" class="st96" width="13" height="13"/>
-			<text id="XMLID_402_" transform="matrix(1 0 0 1 1054.8527 777.8073)" class="st98 st99 st119">Population - Million Heads</text>
+			<rect id="XMLID_450_" x="1034" y="767" class="st103" width="13" height="13"/>
+			<text id="XMLID_402_" transform="matrix(1 0 0 1 1054.8527 777.8073)" class="st105 st106 st126">Population - Million Heads</text>
 		</g>
 		<g id="wWater1">
-			<rect id="XMLID_456_" x="802" y="794" class="st95" width="13" height="12"/>
-			<rect id="XMLID_383_" x="822.853" y="794.03" class="st149" width="171.541" height="13.093"/>
-			<text id="XMLID_382_" transform="matrix(1 0 0 1 822.8525 803.1606)" class="st98 st99 st119">Water Consumption: Drinking - km3</text>
+			<rect id="XMLID_456_" x="802" y="794" class="st102" width="13" height="12"/>
+			<rect id="XMLID_383_" x="822.853" y="794.03" class="st156" width="171.541" height="13.093"/>
+			<text id="XMLID_382_" transform="matrix(1 0 0 1 822.8525 803.1606)" class="st105 st106 st126">Water Consumption: Drinking - km3</text>
 		</g>
 		<g id="wCo2">
-			<rect id="XMLID_435_" x="1034" y="794" class="st94" width="13" height="13"/>
+			<rect id="XMLID_435_" x="1034" y="794" class="st101" width="13" height="13"/>
 			<g id="XMLID_401_">
-				<text id="XMLID_444_" transform="matrix(1 0 0 1 1054.8527 804.3734)" class="st98 st99 st119">CO2 Emissions - Million Tonnes</text>
+				<text id="XMLID_97_" transform="matrix(1 0 0 1 1054.8527 804.3734)" class="st105 st106 st126">CO2 Emissions - Million Tonnes</text>
 			</g>
 		</g>
 		<g id="wN2o">
-			<rect id="XMLID_427_" x="1034" y="819" class="st131" width="13" height="13"/>
-			<text id="XMLID_393_" transform="matrix(1 0 0 1 1054.8527 829.725)" class="st98 st99 st119">N2O Emissions - Million Tonnes</text>
+			<rect id="XMLID_427_" x="1034" y="819" class="st138" width="13" height="13"/>
+			<text id="XMLID_393_" transform="matrix(1 0 0 1 1054.8527 829.725)" class="st105 st106 st126">N2O Emissions - Million Tonnes</text>
 		</g>
 		<g id="wNitro">
-			<rect id="XMLID_421_" x="1034" y="845" class="st135" width="13" height="13"/>
-			<text id="XMLID_392_" transform="matrix(1 0 0 1 1054.8527 854.9548)" class="st98 st99 st119">Nitrogen Manure - kg</text>
+			<rect id="XMLID_421_" x="1034" y="845" class="st142" width="13" height="13"/>
+			<text id="XMLID_392_" transform="matrix(1 0 0 1 1054.8527 854.9548)" class="st105 st106 st126">Nitrogen Manure - kg</text>
 		</g>
 		<g id="wCh42">
-			<rect id="XMLID_442_" x="802" y="845" class="st157" width="13" height="13"/>
-			<text id="XMLID_384_" transform="matrix(1 0 0 1 822.8527 856.0822)" class="st98 st99 st119">CH4 Emissions: Manure - Million Tonnes</text>
+			<rect id="XMLID_442_" x="802" y="845" class="st164" width="13" height="13"/>
+			<text id="XMLID_384_" transform="matrix(1 0 0 1 822.8527 856.0822)" class="st105 st106 st126">CH4 Emissions: Manure - Million Tonnes</text>
 		</g>
 		<g id="wPhos">
-			<rect id="XMLID_413_" x="1034" y="871" class="st139" width="13" height="13"/>
-			<rect id="XMLID_342_" x="1054.853" y="871.493" class="st149" width="117.111" height="13.561"/>
-			<text id="XMLID_341_" transform="matrix(1 0 0 1 1054.8525 880.6219)" class="st98 st99 st119">Phosphorus Manure - kg</text>
+			<rect id="XMLID_413_" x="1034" y="871" class="st146" width="13" height="13"/>
+			<rect id="XMLID_342_" x="1054.853" y="871.493" class="st156" width="117.111" height="13.561"/>
+			<text id="XMLID_341_" transform="matrix(1 0 0 1 1054.8525 880.6219)" class="st105 st106 st126">Phosphorus Manure - kg</text>
 		</g>
 		<g id="wCh41">
-			<rect id="XMLID_410_" x="802" y="871" class="st127" width="13" height="13"/>
-			<text id="XMLID_407_" transform="matrix(1 0 0 1 822.8527 876.1221)"><tspan x="0" y="0" class="st98 st99 st119">CH4 Emissions: Enteric Fermentation</tspan><tspan x="0" y="13.2" class="st98 st99 st119">- Million Tonnes</tspan></text>
+			<rect id="XMLID_410_" x="802" y="871" class="st134" width="13" height="13"/>
+			<text id="XMLID_407_" transform="matrix(1 0 0 1 822.8527 876.1221)"><tspan x="0" y="0" class="st105 st106 st126">CH4 Emissions: Enteric Fermentation</tspan><tspan x="0" y="13.2" class="st105 st106 st126">- Million Tonnes</tspan></text>
 		</g>
 		<g id="wProtein">
-			<rect id="XMLID_339_" x="1034" y="897" class="st93" width="13" height="13"/>
-			<rect id="XMLID_334_" x="1054.853" y="892.993" class="st149" width="162.034" height="26.193"/>
-			<text id="XMLID_333_" transform="matrix(1 0 0 1 1054.8525 902.1219)"><tspan x="0" y="0" class="st98 st99 st119">Plant to Animal Protein Conversion </tspan><tspan x="0" y="13.2" class="st98 st99 st119">Inefficiency</tspan></text>
+			<rect id="XMLID_339_" x="1034" y="897" class="st100" width="13" height="13"/>
+			<rect id="XMLID_334_" x="1054.853" y="892.993" class="st156" width="162.034" height="26.193"/>
+			<text id="XMLID_333_" transform="matrix(1 0 0 1 1054.8525 902.1219)"><tspan x="0" y="0" class="st105 st106 st126">Plant to Animal Protein Conversion </tspan><tspan x="0" y="13.2" class="st105 st106 st126">Inefficiency</tspan></text>
 		</g>
-		<polyline id="XMLID_256_" class="st158" points="800.527,799.422 796.126,799.422 796.126,826.627 800.661,826.627 		"/>
-		<polyline id="XMLID_396_" class="st159" points="800.527,851.205 796.126,851.205 796.126,878.41 800.661,878.41 		"/>
+		<polyline id="XMLID_256_" class="st165" points="800.527,799.422 796.126,799.422 796.126,826.627 800.661,826.627 		"/>
+		<polyline id="XMLID_396_" class="st166" points="800.527,851.205 796.126,851.205 796.126,878.41 800.661,878.41 		"/>
 	</g>
 	<g id="XMLID_249_">
 		<g id="XMLID_25_">
 			<g id="XMLID_304_">
-				<text id="XMLID_443_" transform="matrix(1 0 0 1 479.3716 1204.1384)" class="st57 st153 st160">CATTLE</text>
+				<text id="XMLID_96_" transform="matrix(1 0 0 1 479.3716 1204.1384)" class="st57 st160 st167">CATTLE</text>
 			</g>
 			<g id="XMLID_324_">
-				<text id="XMLID_432_" transform="matrix(1 0 0 1 676.3707 1204.1382)" class="st57 st153 st160">SHEEP &amp; GOAT</text>
+				<text id="XMLID_95_" transform="matrix(1 0 0 1 676.3707 1204.1382)" class="st57 st160 st167">SHEEP &amp; GOAT</text>
 			</g>
 			<g id="XMLID_331_">
-				<text id="XMLID_445_" transform="matrix(1 0 0 1 934.2675 1204.1384)" class="st57 st153 st160">PIG</text>
+				<text id="XMLID_90_" transform="matrix(1 0 0 1 934.2675 1204.1384)" class="st57 st160 st167">PIG</text>
 			</g>
 			<g id="XMLID_332_">
-				<text id="XMLID_446_" transform="matrix(1 0 0 1 1094.5386 1204.1384)" class="st57 st153 st160">POULTRY</text>
+				<text id="XMLID_92_" transform="matrix(1 0 0 1 1094.5386 1204.1384)" class="st57 st160 st167">POULTRY</text>
 			</g>
 		</g>
 		<g id="XMLID_85_">
 			<g id="APopu">
-				<ellipse id="e_27_" class="st96" cx="514.409" cy="1329.837" rx="27.89" ry="27.875"/>
+				<ellipse id="e_27_" class="st103" cx="514.409" cy="1329.837" rx="27.89" ry="27.875"/>
 			</g>
 			<g id="AMass">
-				<ellipse id="e_26_" class="st120" cx="514.426" cy="1264.138" rx="32.239" ry="32.223"/>
+				<ellipse id="e_26_" class="st127" cx="514.426" cy="1264.138" rx="32.239" ry="32.223"/>
 			</g>
 			<g id="AFeed">
-				<ellipse id="e_25_" class="st115" cx="494.593" cy="824.394" rx="29.016" ry="29"/>
+				<ellipse id="e_25_" class="st122" cx="494.593" cy="824.394" rx="29.016" ry="29"/>
 			</g>
 			<g id="AProtein">
-				<ellipse id="e_24_" class="st93" cx="552.573" cy="836.881" rx="27.059" ry="27.044"/>
+				<ellipse id="e_24_" class="st100" cx="552.573" cy="836.881" rx="27.059" ry="27.044"/>
 			</g>
 			<g id="ACo2">
-				<ellipse id="e_23_" class="st94" cx="507.579" cy="921.131" rx="62.944" ry="62.911"/>
+				<ellipse id="e_23_" class="st101" cx="507.579" cy="921.131" rx="62.944" ry="62.911"/>
 			</g>
 			<g id="AN2o">
-				<ellipse id="XMLID_494_" class="st161" cx="561.172" cy="1007.955" rx="37.101" ry="37.081"/>
-				<circle id="XMLID_489_" class="st131" cx="561.036" cy="1007.838" r="2.302"/>
+				<ellipse id="XMLID_494_" class="st168" cx="561.172" cy="1007.955" rx="37.101" ry="37.081"/>
+				<circle id="XMLID_489_" class="st138" cx="561.036" cy="1007.838" r="2.302"/>
 			</g>
 			<g id="ANitro">
-				<ellipse id="e_22_" class="st135" cx="586.665" cy="868.09" rx="16.378" ry="16.369"/>
+				<ellipse id="e_22_" class="st142" cx="586.665" cy="868.09" rx="16.378" ry="16.369"/>
 			</g>
 			<g id="APhos">
-				<circle id="e_21_" class="st139" cx="600.003" cy="889.377" r="5.882"/>
+				<circle id="e_21_" class="st146" cx="600.003" cy="889.377" r="5.882"/>
 			</g>
 			<g id="AWater">
-				<g id="XMLID_487_">
-					<g id="XMLID_499_">
-						<path id="XMLID_498_" class="st162" d="M413.493,846.102l-41.976-28.313c9.664-14.327,24.695-22.319,41.976-22.319V846.102z"
-							/>
-					</g>
-				</g>
-				<g id="XMLID_484_">
-					<g id="XMLID_496_">
-						<path id="XMLID_495_" class="st49" d="M413.493,846.102V795.47c27.964,0,50.633,22.669,50.633,50.633
-							s-22.669,50.633-50.633,50.633c-27.964,0-50.633-22.669-50.633-50.633c0-10.654,2.699-19.481,8.656-28.313L413.493,846.102z"
-							/>
-					</g>
-				</g>
+				<path id="XMLID_498_" class="st169" d="M413.493,846.102l-41.976-28.313c9.664-14.327,24.695-22.319,41.976-22.319V846.102z"/>
+				<path id="XMLID_495_" class="st49" d="M413.493,846.102V795.47c27.964,0,50.633,22.669,50.633,50.633
+					s-22.669,50.633-50.633,50.633c-27.964,0-50.633-22.669-50.633-50.633c0-10.654,2.699-19.481,8.656-28.313L413.493,846.102z"/>
 			</g>
 			<g id="ACh4">
-				<g id="XMLID_521_" class="st73">
-					<g id="XMLID_524_">
-						<g id="XMLID_535_">
-							<path id="XMLID_534_" class="st163" d="M514.995,1099.637l-35.143-52.101c10.848-7.317,22.058-10.744,35.143-10.744V1099.637
-								z"/>
-						</g>
-					</g>
-					<g id="XMLID_522_">
-						<g id="XMLID_533_">
-							<path id="XMLID_532_" class="st79" d="M514.995,1099.637v-62.845c34.708,0,62.845,28.137,62.845,62.845
-								s-28.137,62.845-62.845,62.845s-62.845-28.137-62.845-62.845c0-21.589,9.805-40.029,27.703-52.101L514.995,1099.637z"/>
-						</g>
-					</g>
-				</g>
-				<ellipse id="XMLID_502_" class="st164" cx="514.903" cy="1099.601" rx="63.046" ry="63.013"/>
-				<g id="XMLID_300_">
-					<g id="XMLID_316_">
-						<g id="XMLID_317_">
-							<path id="XMLID_318_" class="st163" d="M514.995,1099.637l-7.417-10.996c2.29-1.544,4.655-2.268,7.417-2.268V1099.637z"/>
-						</g>
-					</g>
-					<g id="XMLID_301_">
-						<g id="XMLID_302_">
-							<path id="XMLID_303_" class="st79" d="M514.995,1099.637v-13.264c7.326,0,13.264,5.938,13.264,13.264
-								c0,7.325-5.938,13.264-13.264,13.264s-13.264-5.938-13.264-13.264c0-4.557,2.069-8.448,5.847-10.996L514.995,1099.637z"/>
-						</g>
-					</g>
-				</g>
+				<path id="XMLID_534_" class="st170" d="M514.995,1099.637l-35.143-52.101c10.848-7.317,22.058-10.744,35.143-10.744V1099.637z"
+					/>
+				<path id="XMLID_532_" class="st82" d="M514.995,1099.637v-62.845c34.708,0,62.845,28.137,62.845,62.845
+					s-28.137,62.845-62.845,62.845s-62.845-28.137-62.845-62.845c0-21.589,9.805-40.029,27.703-52.101L514.995,1099.637z"/>
+				<ellipse id="XMLID_502_" class="st171" cx="514.903" cy="1099.601" rx="63.046" ry="63.013"/>
+				<path id="XMLID_318_" class="st172" d="M514.995,1099.637l-7.417-10.996c2.29-1.544,4.655-2.268,7.417-2.268V1099.637z"/>
+				<path id="XMLID_303_" class="st87" d="M514.995,1099.637v-13.264c7.326,0,13.264,5.938,13.264,13.264
+					c0,7.325-5.938,13.264-13.264,13.264s-13.264-5.938-13.264-13.264c0-4.557,2.069-8.448,5.847-10.996L514.995,1099.637z"/>
 			</g>
 		</g>
 		<g id="XMLID_131_">
 			<g id="BPopu">
-				<ellipse id="e_20_" class="st96" cx="742.22" cy="1287.622" rx="30.448" ry="30.432"/>
+				<ellipse id="e_20_" class="st103" cx="742.22" cy="1287.622" rx="30.448" ry="30.432"/>
 			</g>
 			<g id="BMass">
-				<ellipse id="e_19_" class="st120" cx="742.692" cy="1241.889" rx="9.979" ry="9.974"/>
+				<ellipse id="e_19_" class="st127" cx="742.692" cy="1241.889" rx="9.979" ry="9.974"/>
 			</g>
 			<g id="BFeed">
-				<ellipse id="e_18_" class="st115" cx="740.379" cy="993.864" rx="22.108" ry="22.097"/>
+				<ellipse id="e_18_" class="st122" cx="740.379" cy="993.864" rx="22.108" ry="22.097"/>
 			</g>
 			<g id="BProtein">
-				<ellipse id="e_17_" class="st93" cx="779.692" cy="1013.9" rx="21.202" ry="21.191"/>
+				<ellipse id="e_17_" class="st100" cx="779.692" cy="1013.9" rx="21.202" ry="21.191"/>
 			</g>
 			<g id="BCo2">
-				<ellipse id="e_16_" class="st94" cx="738.023" cy="1051.991" rx="32.751" ry="32.734"/>
+				<ellipse id="e_16_" class="st101" cx="738.023" cy="1051.991" rx="32.751" ry="32.734"/>
 			</g>
 			<g id="BN2o">
-				<ellipse id="XMLID_457_" class="st161" cx="760.404" cy="1101.484" rx="20.47" ry="20.459"/>
-				<circle id="XMLID_452_" class="st131" cx="760.712" cy="1101.079" r="1.279"/>
+				<ellipse id="XMLID_457_" class="st168" cx="760.404" cy="1101.484" rx="20.47" ry="20.459"/>
+				<circle id="XMLID_452_" class="st138" cx="760.712" cy="1101.079" r="1.279"/>
 			</g>
 			<g id="BNitro">
-				<circle id="e_15_" class="st135" cx="793.994" cy="1038.65" r="6.395"/>
+				<circle id="e_15_" class="st142" cx="793.994" cy="1038.65" r="6.395"/>
 			</g>
 			<g id="BPhos">
-				<circle id="e_14_" class="st139" cx="796.911" cy="1048.791" r="2.815"/>
+				<circle id="e_14_" class="st146" cx="796.911" cy="1048.791" r="2.815"/>
 			</g>
 			<g id="BWater">
-				<g id="XMLID_503_">
-					<g id="XMLID_513_">
-						<path id="XMLID_512_" class="st162" d="M692.998,1009.758l5.849,25.334c-13.991,3.23-27.952-5.494-31.182-19.485
-							c-3.23-13.991,5.494-27.952,19.485-31.182c1.861-0.43,3.939-0.666,5.849-0.666V1009.758z"/>
-					</g>
-				</g>
-				<g id="XMLID_501_">
-					<g id="XMLID_510_">
-						<path id="XMLID_509_" class="st49" d="M692.998,1009.758v-26c14.359,0,26,11.641,26,26c0,12.435-8.035,22.536-20.151,25.334
-							L692.998,1009.758z"/>
-					</g>
-				</g>
+				<path id="XMLID_512_" class="st169" d="M692.998,1009.758l5.849,25.334c-13.991,3.23-27.952-5.494-31.182-19.485
+					c-3.23-13.991,5.494-27.952,19.485-31.182c1.861-0.43,3.939-0.666,5.849-0.666V1009.758z"/>
+				<path id="XMLID_509_" class="st49" d="M692.998,1009.758v-26c14.359,0,26,11.641,26,26c0,12.435-8.035,22.536-20.151,25.334
+					L692.998,1009.758z"/>
 			</g>
 			<g id="BCh4">
-				<g id="XMLID_529_" class="st73">
-					<g id="XMLID_531_">
-						<g id="XMLID_542_">
-							<path id="XMLID_541_" class="st163" d="M742.841,1141.107l-4.8-20.792c1.596-0.369,3.162-0.547,4.8-0.547V1141.107z"/>
-						</g>
-					</g>
-					<g id="XMLID_530_">
-						<g id="XMLID_540_">
-							<path id="XMLID_539_" class="st79" d="M742.841,1141.107v-21.339c11.785,0,21.339,9.554,21.339,21.339
-								s-9.554,21.339-21.339,21.339s-21.339-9.554-21.339-21.339c0-10.135,6.663-18.512,16.539-20.792L742.841,1141.107z"/>
-						</g>
-					</g>
-				</g>
-				<ellipse id="XMLID_465_" class="st164" cx="742.806" cy="1141.269" rx="21.646" ry="21.635"/>
-				<g id="XMLID_476_">
-					<g id="XMLID_552_">
-						<g id="XMLID_557_">
-							<path id="XMLID_558_" class="st163" d="M742.841,1141.107l-1.024-4.435c0.341-0.079,0.675-0.117,1.024-0.117V1141.107z"/>
-						</g>
-					</g>
-					<g id="XMLID_511_">
-						<g id="XMLID_550_">
-							<path id="XMLID_551_" class="st79" d="M742.841,1141.107v-4.552c2.514,0,4.552,2.038,4.552,4.552s-2.038,4.552-4.552,4.552
-								s-4.552-2.038-4.552-4.552c0-2.162,1.421-3.949,3.528-4.435L742.841,1141.107z"/>
-						</g>
-					</g>
-				</g>
+				<path id="XMLID_541_" class="st170" d="M742.841,1141.107l-4.8-20.792c1.596-0.369,3.162-0.547,4.8-0.547V1141.107z"/>
+				<path id="XMLID_539_" class="st82" d="M742.841,1141.107v-21.339c11.785,0,21.339,9.554,21.339,21.339
+					s-9.554,21.339-21.339,21.339s-21.339-9.554-21.339-21.339c0-10.135,6.663-18.512,16.539-20.792L742.841,1141.107z"/>
+				<ellipse id="XMLID_465_" class="st171" cx="742.806" cy="1141.269" rx="21.646" ry="21.635"/>
+				<path id="XMLID_558_" class="st172" d="M742.841,1141.107l-1.024-4.435c0.341-0.079,0.675-0.117,1.024-0.117V1141.107z"/>
+				<path id="XMLID_551_" class="st87" d="M742.841,1141.107v-4.552c2.514,0,4.552,2.038,4.552,4.552s-2.038,4.552-4.552,4.552
+					s-4.552-2.038-4.552-4.552c0-2.162,1.421-3.949,3.528-4.435L742.841,1141.107z"/>
 			</g>
 		</g>
 		<g id="XMLID_246_">
 			<g id="CPopu">
-				<ellipse id="e_13_" class="st96" cx="950.197" cy="1287.127" rx="22.005" ry="21.993"/>
+				<ellipse id="e_13_" class="st103" cx="950.197" cy="1287.127" rx="22.005" ry="21.993"/>
 			</g>
 			<g id="CMass">
-				<ellipse id="e_12_" class="st120" cx="949.953" cy="1245.725" rx="13.817" ry="13.81"/>
+				<ellipse id="e_12_" class="st127" cx="949.953" cy="1245.725" rx="13.817" ry="13.81"/>
 			</g>
 			<g id="CFeed">
-				<ellipse id="e_11_" class="st115" cx="946.511" cy="1003.76" rx="17.501" ry="17.492"/>
+				<ellipse id="e_11_" class="st122" cx="946.511" cy="1003.76" rx="17.501" ry="17.492"/>
 			</g>
 			<g id="CProtein">
-				<ellipse id="e_10_" class="st93" cx="980.656" cy="1016.276" rx="17.079" ry="17.07"/>
+				<ellipse id="e_10_" class="st100" cx="980.656" cy="1016.276" rx="17.079" ry="17.07"/>
 			</g>
 			<g id="CCo2">
-				<ellipse id="e_9_" class="st94" cx="945.915" cy="1057.903" rx="35.054" ry="35.036"/>
+				<ellipse id="e_9_" class="st101" cx="945.915" cy="1057.903" rx="35.054" ry="35.036"/>
 			</g>
 			<g id="CN2o">
-				<ellipse id="XMLID_425_" class="st161" cx="967.779" cy="1105.746" rx="16.478" ry="16.469"/>
-				<circle id="XMLID_420_" class="st131" cx="967.425" cy="1105.401" r="0.959"/>
+				<ellipse id="XMLID_425_" class="st168" cx="967.779" cy="1105.746" rx="16.478" ry="16.469"/>
+				<circle id="XMLID_420_" class="st138" cx="967.425" cy="1105.401" r="0.959"/>
 			</g>
 			<g id="CNitro">
-				<circle id="e_8_" class="st135" cx="992.058" cy="1037.625" r="5.37"/>
+				<circle id="e_8_" class="st142" cx="992.058" cy="1037.625" r="5.37"/>
 			</g>
 			<g id="CPhos">
-				<circle id="e_7_" class="st139" cx="994.766" cy="1046.112" r="2.302"/>
+				<circle id="e_7_" class="st146" cx="994.766" cy="1046.112" r="2.302"/>
 			</g>
 			<g id="CWater">
-				<g id="XMLID_493_">
-					<g id="XMLID_519_">
-						<path id="XMLID_518_" class="st162" d="M899.046,1010.839l21.986-17.804c9.833,12.143,7.961,29.957-4.182,39.79
-							c-12.143,9.833-29.957,7.96-39.79-4.182c-9.833-12.143-7.96-29.957,4.182-39.79c5.233-4.238,11.07-6.305,17.804-6.305
-							V1010.839z"/>
-					</g>
-				</g>
-				<g id="XMLID_492_">
-					<g id="XMLID_516_">
-						<path id="XMLID_515_" class="st49" d="M899.046,1010.839v-28.291c8.875,0,16.401,3.59,21.986,10.487L899.046,1010.839z"/>
-					</g>
-				</g>
+				<path id="XMLID_518_" class="st169" d="M899.046,1010.839l21.986-17.804c9.833,12.143,7.961,29.957-4.182,39.79
+					c-12.143,9.833-29.957,7.96-39.79-4.182c-9.833-12.143-7.96-29.957,4.182-39.79c5.233-4.238,11.07-6.305,17.804-6.305V1010.839z
+					"/>
+				<path id="XMLID_515_" class="st49" d="M899.046,1010.839v-28.291c8.875,0,16.401,3.59,21.986,10.487L899.046,1010.839z"/>
 			</g>
 			<g id="CCh4">
-				<g id="XMLID_536_" class="st73">
-					<g id="XMLID_538_">
-						<g id="XMLID_549_">
-							<path id="XMLID_548_" class="st163" d="M949.431,1140.997l14.225-15.798c8.725,7.856,9.429,21.297,1.573,30.022
-								s-21.297,9.429-30.022,1.573c-8.725-7.856-9.429-21.297-1.573-30.022c4.179-4.642,9.552-7.034,15.798-7.034V1140.997z"/>
-						</g>
-					</g>
-					<g id="XMLID_537_">
-						<g id="XMLID_547_">
-							<path id="XMLID_546_" class="st79" d="M949.431,1140.997v-21.258c5.483,0,10.15,1.792,14.225,5.46L949.431,1140.997z"/>
-						</g>
-					</g>
-				</g>
-				<ellipse id="XMLID_408_" class="st164" cx="949.532" cy="1140.962" rx="21.339" ry="21.328"/>
-				<g id="XMLID_424_">
-					<g id="XMLID_467_">
-						<g id="XMLID_472_">
-							<path id="XMLID_473_" class="st163" d="M949.431,1140.997l2.932-3.257c1.799,1.62,1.944,4.39,0.324,6.189
-								c-1.619,1.798-4.39,1.944-6.189,0.324c-1.799-1.62-1.944-4.39-0.324-6.189c0.862-0.957,1.969-1.45,3.257-1.45V1140.997z"/>
-						</g>
-					</g>
-					<g id="XMLID_430_">
-						<g id="XMLID_449_">
-							<path id="XMLID_466_" class="st79" d="M949.431,1140.997v-4.382c1.13,0,2.092,0.369,2.932,1.126L949.431,1140.997z"/>
-						</g>
-					</g>
-				</g>
+				<path id="XMLID_548_" class="st170" d="M949.431,1140.997l14.225-15.798c8.725,7.856,9.429,21.297,1.573,30.022
+					s-21.297,9.429-30.022,1.573c-8.725-7.856-9.429-21.297-1.573-30.022c4.179-4.642,9.552-7.034,15.798-7.034V1140.997z"/>
+				<path id="XMLID_546_" class="st82" d="M949.431,1140.997v-21.258c5.483,0,10.15,1.792,14.225,5.46L949.431,1140.997z"/>
+				<ellipse id="XMLID_408_" class="st171" cx="949.532" cy="1140.962" rx="21.339" ry="21.328"/>
+				<path id="XMLID_473_" class="st172" d="M949.431,1140.997l2.932-3.257c1.799,1.62,1.944,4.39,0.324,6.189
+					c-1.619,1.798-4.39,1.944-6.189,0.324c-1.799-1.62-1.944-4.39-0.324-6.189c0.862-0.957,1.969-1.45,3.257-1.45V1140.997z"/>
+				<path id="XMLID_466_" class="st87" d="M949.431,1140.997v-4.382c1.13,0,2.092,0.369,2.932,1.126L949.431,1140.997z"/>
 			</g>
 		</g>
 		<g id="XMLID_248_">
 			<g id="DPopu">
-				<ellipse id="e_6_" class="st96" cx="1135.656" cy="1348.84" rx="95.311" ry="95.261"/>
+				<ellipse id="e_6_" class="st103" cx="1135.656" cy="1348.84" rx="95.311" ry="95.261"/>
 			</g>
 			<g id="DMass">
-				<circle id="e_5_" class="st120" cx="1136.013" cy="1240.201" r="8.286"/>
+				<circle id="e_5_" class="st127" cx="1136.013" cy="1240.201" r="8.286"/>
 			</g>
 			<g id="DFeed">
-				<ellipse id="e_4_" class="st115" cx="1135.042" cy="1086.506" rx="13.818" ry="13.811"/>
+				<ellipse id="e_4_" class="st122" cx="1135.042" cy="1086.506" rx="13.818" ry="13.811"/>
 			</g>
 			<g id="DProtein">
-				<ellipse id="e_3_" class="st93" cx="1156.421" cy="1102.109" rx="12.089" ry="12.082"/>
+				<ellipse id="e_3_" class="st100" cx="1156.421" cy="1102.109" rx="12.089" ry="12.082"/>
 			</g>
 			<g id="DCo2">
-				<ellipse id="e_2_" class="st94" cx="1128.149" cy="1111.992" rx="11.258" ry="11.252"/>
+				<ellipse id="e_2_" class="st101" cx="1128.149" cy="1111.992" rx="11.258" ry="11.252"/>
 			</g>
 			<g id="DNitro">
-				<circle id="e" class="st135" cx="1164.646" cy="1113.589" r="1.537"/>
+				<circle id="e" class="st142" cx="1164.646" cy="1113.589" r="1.537"/>
 			</g>
 			<g id="DPhos">
-				<circle id="e_1_" class="st139" cx="1165.83" cy="1116.579" r="1.277"/>
+				<circle id="e_1_" class="st146" cx="1165.83" cy="1116.579" r="1.277"/>
 			</g>
 			<g id="DN2o">
-				<ellipse id="XMLID_321_" class="st161" cx="1139.725" cy="1136.349" rx="14.892" ry="14.884"/>
-				<circle id="XMLID_322_" class="st131" cx="1139.45" cy="1136.081" r="0.895"/>
+				<ellipse id="XMLID_321_" class="st168" cx="1139.725" cy="1136.349" rx="14.892" ry="14.884"/>
+				<circle id="XMLID_322_" class="st138" cx="1139.45" cy="1136.081" r="0.895"/>
 			</g>
 			<g id="DWater">
-				<g id="XMLID_507_">
-					<g id="XMLID_528_">
-						<path id="XMLID_527_" class="st162" d="M1108.693,1094.012l-3.677-12.029c1.249-0.382,2.372-0.55,3.677-0.55V1094.012z"/>
-					</g>
-				</g>
-				<g id="XMLID_506_">
-					<g id="XMLID_526_">
-						<path id="XMLID_525_" class="st49" d="M1108.693,1094.012v-12.578c6.947,0,12.578,5.631,12.578,12.578
-							s-5.631,12.578-12.578,12.578c-6.947,0-12.578-5.631-12.578-12.578c0-5.634,3.513-10.381,8.901-12.029L1108.693,1094.012z"/>
-					</g>
-				</g>
+				<path id="XMLID_527_" class="st169" d="M1108.693,1094.012l-3.677-12.029c1.249-0.382,2.372-0.55,3.677-0.55V1094.012z"/>
+				<path id="XMLID_525_" class="st49" d="M1108.693,1094.012v-12.578c6.947,0,12.578,5.631,12.578,12.578
+					s-5.631,12.578-12.578,12.578c-6.947,0-12.578-5.631-12.578-12.578c0-5.634,3.513-10.381,8.901-12.029L1108.693,1094.012z"/>
 			</g>
 			<g id="DCh4">
-				<g id="XMLID_543_" class="st73">
-					<g id="XMLID_545_">
-						<g id="XMLID_556_">
-							<path id="XMLID_555_" class="st163" d="M1127.38,1155.745l0.367-7.001c3.867,0.203,6.837,3.501,6.634,7.368
-								s-3.501,6.837-7.368,6.634s-6.837-3.501-6.634-7.368c0.194-3.708,3.288-6.644,7.001-6.644V1155.745z"/>
-						</g>
-					</g>
-					<g id="XMLID_544_">
-						<g id="XMLID_554_">
-							<path id="XMLID_553_" class="st79" d="M1127.38,1155.745v-7.01c0.155,0,0.212,0.001,0.367,0.01L1127.38,1155.745z"/>
-						</g>
-					</g>
-				</g>
-				<circle id="XMLID_370_" class="st164" cx="1127.333" cy="1155.734" r="6.828"/>
-				<g id="XMLID_323_">
-					<g id="XMLID_338_">
-						<g id="XMLID_385_">
-							<path id="XMLID_417_" class="st163" d="M1127.38,1155.745l0.055-1.049c0.58,0.03,1.025,0.525,0.995,1.104
-								c-0.03,0.58-0.525,1.025-1.104,0.995s-1.025-0.525-0.994-1.104c0.029-0.556,0.493-0.996,1.049-0.996V1155.745z"/>
-						</g>
-					</g>
-					<g id="XMLID_354_">
-						<g id="XMLID_386_">
-							<path id="XMLID_387_" class="st79" d="M1127.38,1155.745v-1.051c0.023,0,0.032,0,0.055,0.001L1127.38,1155.745z"/>
-						</g>
-					</g>
-				</g>
+				<path id="XMLID_555_" class="st170" d="M1127.38,1155.745l0.367-7.001c3.867,0.203,6.837,3.501,6.634,7.368
+					s-3.501,6.837-7.368,6.634s-6.837-3.501-6.634-7.368c0.194-3.708,3.288-6.644,7.001-6.644V1155.745z"/>
+				<path id="XMLID_553_" class="st82" d="M1127.38,1155.745v-7.01c0.155,0,0.212,0.001,0.367,0.01L1127.38,1155.745z"/>
+				<circle id="XMLID_370_" class="st171" cx="1127.333" cy="1155.734" r="6.828"/>
+				<path id="XMLID_417_" class="st172" d="M1127.38,1155.745l0.055-1.049c0.58,0.03,1.025,0.525,0.995,1.104
+					c-0.03,0.58-0.525,1.025-1.104,0.995s-1.025-0.525-0.994-1.104c0.029-0.556,0.493-0.996,1.049-0.996V1155.745z"/>
+				<path id="XMLID_387_" class="st87" d="M1127.38,1155.745v-1.051c0.023,0,0.032,0,0.055,0.001L1127.38,1155.745z"/>
 			</g>
 		</g>
 	</g>
@@ -1133,69 +839,69 @@
 			<g id="XMLID_454_">
 				<g id="XMLID_584_">
 					<g id="XMLID_596_">
-						<circle id="XMLID_598_" class="st101" cx="111.489" cy="1290.332" r="15.392"/>
-						<circle id="XMLID_597_" class="st79" cx="111.489" cy="1290.332" r="3.192"/>
+						<circle id="XMLID_598_" class="st108" cx="111.489" cy="1290.332" r="15.392"/>
+						<circle id="XMLID_597_" class="st87" cx="111.489" cy="1290.332" r="3.192"/>
 					</g>
 					<g id="XMLID_590_">
 						<g id="XMLID_592_">
-							<line id="XMLID_595_" class="st102" x1="111.489" y1="1290.572" x2="112.489" y2="1290.572"/>
-							<line id="XMLID_594_" class="st103" x1="114.527" y1="1290.572" x2="190.952" y2="1290.572"/>
-							<line id="XMLID_593_" class="st102" x1="191.971" y1="1290.572" x2="192.971" y2="1290.572"/>
+							<line id="XMLID_595_" class="st109" x1="111.489" y1="1290.572" x2="112.489" y2="1290.572"/>
+							<line id="XMLID_594_" class="st110" x1="114.527" y1="1290.572" x2="190.952" y2="1290.572"/>
+							<line id="XMLID_593_" class="st109" x1="191.971" y1="1290.572" x2="192.971" y2="1290.572"/>
 						</g>
 					</g>
 					<g id="XMLID_586_">
-						<text id="XMLID_589_" transform="matrix(1 0 0 1 199.3628 1296.7087)" class="st79 st99 st104">1 CH4 = 23x CO2</text>
-						<text id="XMLID_588_" transform="matrix(1 0 0 1 201.208 1307.0476)" class="st79 st105 st106">Methane</text>
-						<text id="XMLID_587_" transform="matrix(1 0 0 1 251.3604 1307.0476)" class="st79 st105 st106">Carbon Dioxide</text>
+						<text id="XMLID_589_" transform="matrix(1 0 0 1 199.3628 1296.7087)" class="st87 st106 st111">1 CH4 = 23x CO2</text>
+						<text id="XMLID_588_" transform="matrix(1 0 0 1 201.208 1307.0476)" class="st87 st112 st113">Methane</text>
+						<text id="XMLID_587_" transform="matrix(1 0 0 1 251.3604 1307.0476)" class="st87 st112 st113">Carbon Dioxide</text>
 					</g>
-					<polyline id="XMLID_585_" class="st107" points="115.091,1275.055 259.51,1275.055 259.51,1281.114 					"/>
+					<polyline id="XMLID_585_" class="st114" points="115.091,1275.055 259.51,1275.055 259.51,1281.114 					"/>
 				</g>
 				<g id="XMLID_455_">
 					<g id="XMLID_573_">
-						<circle id="XMLID_580_" class="st108" cx="111.489" cy="1376.552" r="55.296"/>
+						<circle id="XMLID_580_" class="st115" cx="111.489" cy="1376.552" r="55.296"/>
 						<circle id="XMLID_579_" class="st74" cx="111.489" cy="1376.552" r="3.192"/>
 					</g>
 					<g id="XMLID_490_">
 						<g id="XMLID_562_">
-							<line id="XMLID_572_" class="st109" x1="111.489" y1="1376.652" x2="112.489" y2="1376.652"/>
-							<line id="XMLID_569_" class="st110" x1="114.527" y1="1376.652" x2="190.952" y2="1376.652"/>
-							<line id="XMLID_563_" class="st109" x1="191.971" y1="1376.652" x2="192.971" y2="1376.652"/>
+							<line id="XMLID_572_" class="st116" x1="111.489" y1="1376.652" x2="112.489" y2="1376.652"/>
+							<line id="XMLID_569_" class="st117" x1="114.527" y1="1376.652" x2="190.952" y2="1376.652"/>
+							<line id="XMLID_563_" class="st116" x1="191.971" y1="1376.652" x2="192.971" y2="1376.652"/>
 						</g>
 					</g>
 					<g id="XMLID_469_">
-						<text id="XMLID_488_" transform="matrix(1 0 0 1 199.3628 1380.3181)" class="st74 st99 st104">1 N2O = 296x CO2</text>
-						<text id="XMLID_479_" transform="matrix(1 0 0 1 201.208 1390.4871)"><tspan x="0" y="0" class="st74 st105 st106">Nitrous</tspan><tspan x="0" y="10.75" class="st74 st105 st106">Oxide</tspan></text>
-						<text id="XMLID_475_" transform="matrix(1 0 0 1 252.7046 1390.4871)" class="st74 st105 st106">Carbon Dioxide</text>
+						<text id="XMLID_488_" transform="matrix(1 0 0 1 199.3628 1380.3181)" class="st74 st106 st111">1 N2O = 296x CO2</text>
+						<text id="XMLID_479_" transform="matrix(1 0 0 1 201.208 1390.4871)"><tspan x="0" y="0" class="st74 st112 st113">Nitrous</tspan><tspan x="0" y="10.75" class="st74 st112 st113">Oxide</tspan></text>
+						<text id="XMLID_475_" transform="matrix(1 0 0 1 252.7046 1390.4871)" class="st74 st112 st113">Carbon Dioxide</text>
 					</g>
-					<polyline id="XMLID_458_" class="st111" points="154.749,1341.693 259.301,1341.693 259.749,1362.087 					"/>
+					<polyline id="XMLID_458_" class="st118" points="154.749,1341.693 259.301,1341.693 259.749,1362.087 					"/>
 				</g>
 			</g>
 			<g id="XMLID_343_">
-				<rect id="XMLID_500_" x="46.425" y="1211.103" class="st97" width="292.672" height="38.051"/>
-				<text id="XMLID_491_" transform="matrix(1 0 0 1 46.4248 1221.3225)"><tspan x="0" y="0" class="st98 st112 st100">Representation of Prominent Greenhouse </tspan><tspan x="0" y="16.8" class="st98 st112 st100">Gases (GHGs) and their CO2 Equivalent:</tspan></text>
+				<rect id="XMLID_137_" x="46.425" y="1211.103" class="st104" width="292.672" height="38.051"/>
+				<text id="XMLID_135_" transform="matrix(1 0 0 1 46.4248 1221.3225)"><tspan x="0" y="0" class="st105 st119 st107">Representation of Prominent Greenhouse </tspan><tspan x="0" y="16.8" class="st105 st119 st107">Gases (GHGs) and their CO2 Equivalent:</tspan></text>
 			</g>
 		</g>
 		<g id="XMLID_340_">
 			<g id="XMLID_390_">
-				<rect id="XMLID_514_" x="44.181" y="765.214" class="st97" width="309.785" height="67.993"/>
-				<text id="XMLID_504_" transform="matrix(1 0 0 1 44.1815 782.214)"><tspan x="0" y="0" class="st69 st153 st154">FOOD TYPE AND ITS </tspan><tspan x="0" y="24" class="st69 st153 st154">CARBON FOOTPRINT</tspan></text>
+				<rect id="XMLID_147_" x="44.181" y="765.214" class="st104" width="309.785" height="67.993"/>
+				<text id="XMLID_138_" transform="matrix(1 0 0 1 44.1815 782.214)"><tspan x="0" y="0" class="st78 st160 st161">FOOD TYPE AND ITS </tspan><tspan x="0" y="24" class="st78 st160 st161">CARBON FOOTPRINT</tspan></text>
 			</g>
 			<g id="XMLID_568_">
-				<rect id="XMLID_578_" x="45.836" y="852.607" class="st97" width="263.394" height="319.601"/>
-				<text id="XMLID_576_" transform="matrix(1 0 0 1 45.8362 862.7153)"><tspan x="0" y="0" class="st98 st99 st100">Analysis of carbon footprints of four different </tspan><tspan x="0" y="16.8" class="st98 st99 st100">common meat types from cattle, sheep &amp; goat, </tspan><tspan x="0" y="33.6" class="st98 st99 st100">pig and poultry. This comparative study shows </tspan><tspan x="0" y="50.4" class="st98 st99 st100">the impact created on the environment by </tspan><tspan x="0" y="67.2" class="st98 st99 st100">respective animal food in just one year in </tspan><tspan x="0" y="84" class="st98 st99 st100">contrast to each other.</tspan><tspan x="0" y="117.6" class="st98 st99 st100">Hover over the bubble plot to compare the </tspan><tspan x="0" y="134.4" class="st98 st99 st100">different attributes across meat types. Click on </tspan><tspan x="0" y="151.2" class="st98 st99 st100">the index to highlight points of interest.</tspan><tspan x="0" y="184.8" class="st98 st99 st100">Clearly, beef has the most negative impact and </tspan><tspan x="0" y="201.6" class="st98 st99 st100">hence goes on to show why it’s the most ineff</tspan><tspan x="256.898" y="201.6" class="st98 st99 st100">-</tspan><tspan x="0" y="218.4" class="st98 st99 st100">cient food. </tspan><tspan x="61.88" y="218.4" class="st98 st99 st100">For sustainable results it’s only </tspan><tspan x="0" y="235.2" class="st98 st99 st100">wise to look for beef alternatives and create a </tspan><tspan x="0" y="252" class="st98 st99 st100">positive impact.</tspan><tspan x="0" y="285.6" class="st98 st99 st100">Beef is unqualified for consumption.</tspan><tspan x="0" y="302.399" class="st98 st99 st100">‘Uncowlify’ your food.</tspan></text>
+				<rect id="XMLID_157_" x="45.836" y="852.607" class="st104" width="263.394" height="319.601"/>
+				<text id="XMLID_153_" transform="matrix(1 0 0 1 45.8362 862.7153)"><tspan x="0" y="0" class="st105 st106 st107">Analysis of carbon footprints of four different </tspan><tspan x="0" y="16.8" class="st105 st106 st107">common meat types from cattle, sheep &amp; goat, </tspan><tspan x="0" y="33.6" class="st105 st106 st107">pig and poultry. This comparative study shows </tspan><tspan x="0" y="50.4" class="st105 st106 st107">the impact created on the environment by </tspan><tspan x="0" y="67.2" class="st105 st106 st107">respective animal food in just one year in </tspan><tspan x="0" y="84" class="st105 st106 st107">contrast to each other.</tspan><tspan x="0" y="117.6" class="st105 st106 st107">Hover over the bubble plot to compare the </tspan><tspan x="0" y="134.4" class="st105 st106 st107">different attributes across meat types. Click on </tspan><tspan x="0" y="151.2" class="st105 st106 st107">the index to highlight points of interest.</tspan><tspan x="0" y="184.8" class="st105 st106 st107">Clearly, beef has the most negative impact and </tspan><tspan x="0" y="201.6" class="st105 st106 st107">hence goes on to show why it’s the most ineff</tspan><tspan x="256.898" y="201.6" class="st105 st106 st107">-</tspan><tspan x="0" y="218.4" class="st105 st106 st107">cient food. </tspan><tspan x="61.88" y="218.4" class="st105 st106 st107">For sustainable results it’s only </tspan><tspan x="0" y="235.2" class="st105 st106 st107">wise to look for beef alternatives and create a </tspan><tspan x="0" y="252" class="st105 st106 st107">positive impact.</tspan><tspan x="0" y="285.6" class="st105 st106 st107">Beef is unqualified for consumption.</tspan><tspan x="0" y="302.399" class="st105 st106 st107">‘Uncowlify’ your food.</tspan></text>
 			</g>
 		</g>
 	</g>
 </g>
-<g id="_x3C_Group_x3E__3_" class="st165">
+<g id="_x3C_Group_x3E__3_" class="st173">
 	<g id="XMLID_3_">
 		<defs>
 			<rect id="XMLID_260_" x="46.343" y="1488.127" width="118.831" height="20.086"/>
 		</defs>
-		<clipPath id="XMLID_319_">
+		<clipPath id="XMLID_15_">
 			<use xlink:href="#XMLID_260_"  style="overflow:visible;"/>
 		</clipPath>
-		<g style="clip-path:url(#XMLID_319_);">
+		<g style="clip-path:url(#XMLID_15_);">
 			
 				<image style="overflow:visible;" width="2325" height="393" id="XMLID_353_" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACRUAAAGJCAYAAAAeiUafAAAAAXNSR0IArs4c6QAAQABJREFUeAHs
 vQlwZdl533fOXd6KvbEv3eienhlyhiOOSYoSLVEakpZN2ZIXyZJSLjmyElfkSlIpr3GqUuW47Czl
@@ -4884,25 +4590,25 @@ kVXzqUw4355qLz1w96lFUbpaB5f8EAQEAUFAEBAErioC/x9yDBN82sbo/gAAAABJRU5ErkJggg==" tr
 		</g>
 	</g>
 	<g id="XMLID_365_">
-		<text id="XMLID_366_" transform="matrix(1 0 0 1 1108.0391 1496.9343)" class="st57 st112 st166">Project on Data Visualisation</text>
-		<text id="XMLID_389_" transform="matrix(1 0 0 1 1108.0391 1508.4003)" class="st57 st99 st167">Atul Kumar · be.net/_atul_kumarv</text>
+		<text id="XMLID_366_" transform="matrix(1 0 0 1 1108.0391 1496.9343)" class="st57 st119 st174">Project on Data Visualisation</text>
+		<text id="XMLID_389_" transform="matrix(1 0 0 1 1108.0391 1508.4003)" class="st57 st106 st175">Atul Kumar · be.net/_atul_kumar</text>
 	</g>
 	<g id="XMLID_621_">
-		<path id="XMLID_654_" class="st92" d="M1114.152,1484.518c-0.816,0-1.551-0.104-2.203-0.311c-0.653-0.207-1.208-0.527-1.665-0.958
+		<path id="XMLID_654_" class="st99" d="M1114.152,1484.518c-0.816,0-1.551-0.104-2.203-0.311c-0.653-0.207-1.208-0.527-1.665-0.958
 			c-0.457-0.431-0.808-0.977-1.053-1.638c-0.245-0.661-0.367-1.439-0.367-2.334v-6.438h3.232v6.372c0,0.83,0.189,1.444,0.567,1.843
 			c0.378,0.399,0.885,0.598,1.522,0.598s1.144-0.191,1.522-0.573s0.567-0.977,0.567-1.786v-6.454h3.232v6.356
 			c0,0.928-0.128,1.728-0.384,2.4c-0.256,0.671-0.615,1.223-1.077,1.654c-0.463,0.432-1.023,0.751-1.681,0.958
 			C1115.705,1484.414,1114.968,1484.518,1114.152,1484.518z"/>
-		<polygon id="XMLID_653_" class="st92" points="1123.474,1472.838 1126.434,1472.838 1131.145,1478.899 1131.145,1472.838 
+		<polygon id="XMLID_653_" class="st99" points="1123.474,1472.838 1126.434,1472.838 1131.145,1478.899 1131.145,1472.838 
 			1134.262,1472.838 1134.262,1484.305 1131.482,1484.305 1126.591,1478.014 1126.591,1484.305 1123.474,1484.305 		"/>
-		<polygon id="XMLID_652_" class="st92" points="1188.255,1472.838 1191.421,1472.838 1191.421,1481.52 1196.954,1481.52 
+		<polygon id="XMLID_652_" class="st99" points="1188.255,1472.838 1191.421,1472.838 1191.421,1481.52 1196.954,1481.52 
 			1196.954,1484.305 1188.255,1484.305 		"/>
-		<rect id="XMLID_651_" x="1200.296" y="1472.838" class="st92" width="3.183" height="11.467"/>
-		<polygon id="XMLID_650_" class="st92" points="1207.51,1472.838 1216.649,1472.838 1216.649,1475.623 1210.676,1475.623 
+		<rect id="XMLID_651_" x="1200.296" y="1472.838" class="st99" width="3.183" height="11.467"/>
+		<polygon id="XMLID_650_" class="st99" points="1207.51,1472.838 1216.649,1472.838 1216.649,1475.623 1210.676,1475.623 
 			1210.676,1477.556 1216.078,1477.556 1216.078,1480.209 1210.676,1480.209 1210.676,1484.305 1207.51,1484.305 		"/>
-		<polygon id="XMLID_649_" class="st92" points="1223.34,1480.013 1218.998,1472.838 1222.605,1472.838 1224.955,1477.015 
+		<polygon id="XMLID_649_" class="st99" points="1223.34,1480.013 1218.998,1472.838 1222.605,1472.838 1224.955,1477.015 
 			1227.322,1472.838 1230.864,1472.838 1226.522,1479.964 1226.522,1484.305 1223.34,1484.305 		"/>
-		<path id="XMLID_643_" class="st93" d="M1158.037,1484.534c-0.881,0-1.697-0.156-2.448-0.467c-0.751-0.311-1.398-0.734-1.942-1.27
+		<path id="XMLID_643_" class="st100" d="M1158.037,1484.534c-0.881,0-1.697-0.156-2.448-0.467c-0.751-0.311-1.398-0.734-1.942-1.27
 			c-0.544-0.535-0.971-1.163-1.281-1.884c-0.31-0.721-0.465-1.491-0.465-2.31v-0.033c0-0.819,0.155-1.592,0.465-2.318
 			c0.31-0.726,0.743-1.36,1.298-1.9c0.555-0.541,1.208-0.966,1.958-1.278c0.751-0.311,1.567-0.467,2.448-0.467
 			c0.881,0,1.697,0.156,2.448,0.467c0.751,0.311,1.398,0.735,1.942,1.27c0.544,0.535,0.971,1.163,1.281,1.884
@@ -4914,25 +4620,25 @@ kVXzqUw4355qLz1w96lFUbpaB5f8EAQEAUFAEBAErioC/x9yDBN82sbo/gAAAABJRU5ErkJggg==" tr
 			c-0.355,0.164-0.66,0.385-0.917,0.663c-0.257,0.279-0.453,0.604-0.589,0.975c-0.136,0.371-0.204,0.765-0.204,1.179v0.033
 			c0,0.415,0.071,0.808,0.213,1.179c0.142,0.371,0.341,0.699,0.598,0.983c0.256,0.284,0.565,0.511,0.925,0.68
 			C1157.227,1481.583,1157.625,1481.667,1158.061,1481.667"/>
-		<path id="XMLID_642_" class="st94" d="M1164.458,1478.587c0,3.38-2.868,6.119-6.406,6.119c-3.538,0-6.406-2.74-6.406-6.119
+		<path id="XMLID_642_" class="st101" d="M1164.458,1478.587c0,3.38-2.868,6.119-6.406,6.119c-3.538,0-6.406-2.74-6.406-6.119
 			H1164.458z"/>
-		<path id="XMLID_630_" class="st93" d="M1143.984,1484.534c-0.816,0-1.583-0.147-2.301-0.442c-0.718-0.295-1.341-0.707-1.869-1.237
-			c-0.528-0.53-0.947-1.157-1.257-1.884c-0.31-0.726-0.465-1.515-0.465-2.367v-0.033c0-0.83,0.152-1.608,0.457-2.334
-			c0.305-0.726,0.724-1.36,1.257-1.9c0.533-0.541,1.167-0.964,1.901-1.27c0.734-0.305,1.537-0.458,2.407-0.458
-			c0.588,0,1.12,0.057,1.599,0.172c0.479,0.115,0.917,0.278,1.314,0.491c0.397,0.213,0.756,0.467,1.077,0.762
-			c0.321,0.295,0.606,0.617,0.857,0.967l-2.383,1.851c-0.326-0.415-0.685-0.743-1.077-0.983c-0.392-0.24-0.865-0.36-1.42-0.36
-			c-0.403,0-0.77,0.079-1.102,0.238c-0.332,0.158-0.618,0.374-0.857,0.647c-0.24,0.273-0.427,0.595-0.563,0.967
-			c-0.136,0.371-0.204,0.764-0.204,1.179v0.033c0,0.426,0.068,0.827,0.204,1.204c0.136,0.377,0.323,0.702,0.563,0.975
-			c0.239,0.273,0.525,0.489,0.857,0.647c0.332,0.158,0.699,0.238,1.102,0.238c0.294,0,0.563-0.033,0.808-0.098
-			c0.245-0.066,0.468-0.161,0.669-0.287c0.201-0.125,0.392-0.273,0.571-0.442c0.18-0.169,0.356-0.358,0.53-0.565l2.383,1.704
-			c-0.272,0.371-0.569,0.715-0.89,1.032c-0.321,0.317-0.685,0.59-1.094,0.819c-0.408,0.229-0.865,0.41-1.371,0.541
-			C1145.184,1484.469,1144.615,1484.534,1143.984,1484.534"/>
-		<path id="XMLID_629_" class="st95" d="M1149.603,1480.874c-0.888,2.274-3.077,3.812-5.638,3.812c-3.345,0-6.06-2.602-6.06-6.081
+		<path id="XMLID_630_" class="st100" d="M1143.984,1484.534c-0.816,0-1.583-0.147-2.301-0.442
+			c-0.718-0.295-1.341-0.707-1.869-1.237c-0.528-0.53-0.947-1.157-1.257-1.884c-0.31-0.726-0.465-1.515-0.465-2.367v-0.033
+			c0-0.83,0.152-1.608,0.457-2.334c0.305-0.726,0.724-1.36,1.257-1.9c0.533-0.541,1.167-0.964,1.901-1.27
+			c0.734-0.305,1.537-0.458,2.407-0.458c0.588,0,1.12,0.057,1.599,0.172c0.479,0.115,0.917,0.278,1.314,0.491
+			c0.397,0.213,0.756,0.467,1.077,0.762c0.321,0.295,0.606,0.617,0.857,0.967l-2.383,1.851c-0.326-0.415-0.685-0.743-1.077-0.983
+			c-0.392-0.24-0.865-0.36-1.42-0.36c-0.403,0-0.77,0.079-1.102,0.238c-0.332,0.158-0.618,0.374-0.857,0.647
+			c-0.24,0.273-0.427,0.595-0.563,0.967c-0.136,0.371-0.204,0.764-0.204,1.179v0.033c0,0.426,0.068,0.827,0.204,1.204
+			c0.136,0.377,0.323,0.702,0.563,0.975c0.239,0.273,0.525,0.489,0.857,0.647c0.332,0.158,0.699,0.238,1.102,0.238
+			c0.294,0,0.563-0.033,0.808-0.098c0.245-0.066,0.468-0.161,0.669-0.287c0.201-0.125,0.392-0.273,0.571-0.442
+			c0.18-0.169,0.356-0.358,0.53-0.565l2.383,1.704c-0.272,0.371-0.569,0.715-0.89,1.032c-0.321,0.317-0.685,0.59-1.094,0.819
+			c-0.408,0.229-0.865,0.41-1.371,0.541C1145.184,1484.469,1144.615,1484.534,1143.984,1484.534"/>
+		<path id="XMLID_629_" class="st102" d="M1149.603,1480.874c-0.888,2.274-3.077,3.812-5.638,3.812c-3.345,0-6.06-2.602-6.06-6.081
 			h3.697c0,1.099,1.058,1.934,2.362,1.934c1.06,0,1.957-0.561,2.258-1.357L1149.603,1480.874z"/>
-		<polygon id="XMLID_628_" class="st93" points="1167.199,1472.838 1170.545,1472.838 1172.536,1479.472 1174.739,1472.805 
+		<polygon id="XMLID_628_" class="st100" points="1167.199,1472.838 1170.545,1472.838 1172.536,1479.472 1174.739,1472.805 
 			1177.465,1472.805 1179.668,1479.472 1181.659,1472.838 1184.94,1472.838 1181.121,1484.387 1178.363,1484.387 1176.061,1477.785 
 			1173.776,1484.387 1171.018,1484.387 		"/>
-		<polygon id="XMLID_622_" class="st96" points="1177.965,1478.605 1174.123,1478.605 1168.831,1478.605 1170.825,1484.444 
+		<polygon id="XMLID_622_" class="st103" points="1177.965,1478.605 1174.123,1478.605 1168.831,1478.605 1170.825,1484.444 
 			1174.612,1484.44 1176.044,1481.94 1177.477,1484.437 1181.264,1484.444 1183.258,1478.605 		"/>
 	</g>
 </g>
