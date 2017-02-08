@@ -64,8 +64,7 @@
 
 
 /* all styles for div description elements in both graphs */
-#upWater, #upFeed, #upProtein, #upNitro, #upPhos, #upCo2, #upCh4, #upN2o, #upMass, #upPopu, 
-#downWater, #downFeed, #downProtein, #downNitro, #downPhos, #downCo2, #downCh4, #downN2o, #downMass, #downPopu {
+#upWater, #upFeed, #upProtein, #upNitro, #upPhos, #upCo2, #upCh4, #upN2o, #upMass, #upPopu {
 	display: none;
 	position: absolute;
 	font-family: 'UniversLTStd-Cn';
@@ -73,14 +72,14 @@
 
 	color: #333333;
 	text-shadow: 0px 0px 3px rgba(255,255,255,0.6);
-	background: rgba(255,255,255,0.6);
-	-moz-box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
-	-webkit-box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
-	box-shadow: 0px 0px 5px rgba(255,255,255,0.6);
-	position: absolute;
+	background: rgba(252,252,252,0.6);
+	-moz-box-shadow: 0.5px 0.5px 3px rgba(200,200,200,0.4);
+	-webkit-box-shadow: 0.5px 0.5px 3px rgba(200,200,200,0.4);
+	box-shadow: 0.5px 0.5px 3px rgba(200,200,200,0.4);
+
 	z-index: 100;
-	padding: 2px;
+	padding: 12px;
 	float:  left;
    	clear: left;
- 
+   	border-radius: 18px;
 }
