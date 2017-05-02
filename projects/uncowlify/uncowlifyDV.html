@@ -381,6 +381,11 @@ $(function() {
 
 	      	isCategory = 1;
 
+	      	if(firstHoverUp == 0){
+      			clearUp();
+				firstHoverUp = 1;
+      		}
+
 	      	hoverElement = thisId;
 	      	switch (hoverElement){
 	      		case 'tCattle_1_': categoryGroupPalette = 'mycattlePalette';
