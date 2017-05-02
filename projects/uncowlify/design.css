@@ -41,7 +41,8 @@
 #DWater:hover, #DFeed:hover, #DProtein:hover, #DNitro:hover, #DPhos:hover, #DCo2:hover, #DCh4:hover, 
 #DN2o:hover, #DMass:hover, #DPopu:hover, 
 #wWater1:hover, #wWater2:hover, #wFeed:hover, #wProtein:hover, #wNitro:hover, #wPhos:hover, #wCo2:hover, #wCh41:hover, #wCh42:hover, 
-#wN2o:hover, #wMass:hover, #wPopu:hover
+#wN2o:hover, #wMass:hover, #wPopu:hover,
+#tCattle_1_:hover, #tSheep_1_:hover, #tPig_1_:hover, #tPoultry_1_:hover
 {
 	opacity:1;
 }
@@ -53,24 +54,31 @@
 #BWater, #BFeed, #BProtein, #BNitro, #BPhos, #BCo2, #BCh4, #BN2o, #BMass, #BPopu, 
 #CWater, #CFeed, #CProtein, #CNitro, #CPhos, #CCo2, #CCh4, #CN2o, #CMass, #CPopu, 
 #DWater, #DFeed, #DProtein, #DNitro, #DPhos, #DCo2, #DCh4, #DN2o, #DMass, #DPopu, 
-#wWater1, #wWater2, #wFeed, #wProtein, #wNitro, #wPhos, #wCo2, #wCh41, #wCh42, #wN2o, #wMass, #wPopu
+#wWater1, #wWater2, #wFeed, #wProtein, #wNitro, #wPhos, #wCo2, #wCh41, #wCh42, #wN2o, #wMass, #wPopu,
+#tCattle_1_, #tSheep_1_, #tPig_1_, #tPoultry_1_
 {
 	cursor: pointer;
 	opacity:1;
 }
 
 
+#mycattlePalette, #mypigPalette, #mypoultryPalette, #mysheepPalette
+{
+	opacity: 0;
+}
 
 
 
 /* all styles for div description elements in both graphs */
-#upWater, #upFeed, #upProtein, #upNitro, #upPhos, #upCo2, #upCh4, #upN2o, #upMass, #upPopu {
+#upWater_x5F_1, #upFeed_x5F_1, #upProtein_x5F_1, #upNitro_x5F_1, #upPhos_x5F_1, #upCo2_x5F_1, #upCh4_x5F_1, #upN2o_x5F_1, #upMass_x5F_1, #upPopu_x5F_1,
+#upWater_x5F_2, #upFeed_x5F_2, #upProtein_x5F_2, #upNitro_x5F_2, #upPhos_x5F_2, #upCo2_x5F_2, #upCh4_x5F_2, #upN2o_x5F_2, #upMass_x5F_2, #upPopu_x5F_2,
+#upWater_x5F_3, #upFeed_x5F_3, #upProtein_x5F_3, #upNitro_x5F_3, #upPhos_x5F_3, #upCo2_x5F_3, #upCh4_x5F_3, #upN2o_x5F_3, #upMass_x5F_3, #upPopu_x5F_3,
+#upWater_x5F_4, #upFeed_x5F_4, #upProtein_x5F_4, #upNitro_x5F_4, #upPhos_x5F_4, #upCo2_x5F_4, #upCh4_x5F_4, #upN2o_x5F_4, #upMass_x5F_4, #upPopu_x5F_4 {
 	display: none;
 	position: absolute;
 	font-family: 'UniversLTStd-Cn';
 	font-size: 11px;
 
-	color: #333333;
 	text-shadow: 0px 0px 3px rgba(255,255,255,0.6);
 	background: rgba(252,252,252,0.6);
 	-moz-box-shadow: 0.5px 0.5px 3px rgba(200,200,200,0.4);
@@ -83,3 +91,23 @@
    	clear: left;
    	border-radius: 18px;
 }
+
+#upWater_x5F_1,#upWater_x5F_2,#upWater_x5F_3,#upWater_x5F_4{color: #0FADB3;}
+
+#upFeed_x5F_1,#upFeed_x5F_2,#upFeed_x5F_3,#upFeed_x5F_4{color: #00717E;}
+
+#upProtein_x5F_1,#upProtein_x5F_2,#upProtein_x5F_3,#upProtein_x5F_4{color: #606060;}
+
+#upNitro_x5F_1,#upNitro_x5F_2,#upNitro_x5F_3,#upNitro_x5F_4{color: #2E6DAB;}
+
+#upPhos_x5F_1,#upPhos_x5F_2,#upPhos_x5F_3,#upPhos_x5F_4{color: #0D3055;}
+
+#upCo2_x5F_1,#upCo2_x5F_2,#upCo2_x5F_3,#upCo2_x5F_4{color: #E8487A;}
+
+#upCh4_x5F_1,#upCh4_x5F_2,#upCh4_x5F_3,#upCh4_x5F_4{color: #E53613;}
+
+#upN2o_x5F_1,#upN2o_x5F_2,#upN2o_x5F_3,#upN2o_x5F_4{color: #92448D;}
+
+#upMass_x5F_1,#upMass_x5F_2,#upMass_x5F_3,#upMass_x5F_4{color: #F9D53D;}
+
+#upPopu_x5F_1,#upPopu_x5F_2,#upPopu_x5F_3,#upPopu_x5F_4{color: #FCC029;}

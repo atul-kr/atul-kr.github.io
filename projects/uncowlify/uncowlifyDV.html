@@ -8,7 +8,6 @@
 	
 	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 	<script src="velocity.js"></script>
-
 	<script type="text/javascript">
 
 		$.get('uncowlify.svg', function(data) {
@@ -29,6 +28,11 @@ var upSwCh4 = 0;
 var upSwN2o = 0;
 var upSwMass = 0;
 var upSwPopu = 0;
+
+//var categorySwCattle = 0; (commented out because click functionality over categories is removed)
+//var categorySwPoultry = 0;
+//var categorySwSheep = 0;
+//var categorySwPig = 0;
 
 var downSwWater = 0;
 var downSwFeed = 0;
@@ -75,16 +79,58 @@ function clearUp(){
 	$('#cN2o').velocity({'opacity': '0.5'});
 	$('#cMass').velocity({'opacity': '0.5'});
 	$('#cPopu').velocity({'opacity': '0.5'});
-	$('#fWater').velocity({'opacity': '0.5'});
-	$('#fFeed').velocity({'opacity': '0.5'});
-	$('#fProtein').velocity({'opacity': '0.5'});
-	$('#fNitro').velocity({'opacity': '0.5'});
-	$('#fPhos').velocity({'opacity': '0.5'});
-	$('#fCo2').velocity({'opacity': '0.5'});
-	$('#fCh4').velocity({'opacity': '0.5'});
-	$('#fN2o').velocity({'opacity': '0.5'});
-	$('#fMass').velocity({'opacity': '0.5'});
-	$('#fPopu').velocity({'opacity': '0.5'});
+
+	$('#tCattle_1_').velocity({'opacity': '0.5'});
+	$('#tSheep_1_').velocity({'opacity': '0.5'});
+	$('#tPig_1_').velocity({'opacity': '0.5'});
+	$('#tPoultry_1_').velocity({'opacity': '0.5'});
+
+	$('#fWater_x5F_1').velocity({'opacity': '0.5'});
+	$('#fFeed_x5F_1').velocity({'opacity': '0.5'});
+	$('#fProtein_x5F_1').velocity({'opacity': '0.5'});
+	$('#fNitro_x5F_1').velocity({'opacity': '0.5'});
+	$('#fPhos_x5F_1').velocity({'opacity': '0.5'});
+	$('#fCo2_x5F_1').velocity({'opacity': '0.5'});
+	$('#fCh4_x5F_1').velocity({'opacity': '0.5'});
+	$('#fN2o_x5F_1').velocity({'opacity': '0.5'});
+	$('#fMass_x5F_1').velocity({'opacity': '0.5'});
+	$('#fPopu_x5F_1').velocity({'opacity': '0.5'});
+
+	$('#fWater_x5F_2').velocity({'opacity': '0.5'});
+	$('#fFeed_x5F_2').velocity({'opacity': '0.5'});
+	$('#fProtein_x5F_2').velocity({'opacity': '0.5'});
+	$('#fNitro_x5F_2').velocity({'opacity': '0.5'});
+	$('#fPhos_x5F_2').velocity({'opacity': '0.5'});
+	$('#fCo2_x5F_2').velocity({'opacity': '0.5'});
+	$('#fCh4_x5F_2').velocity({'opacity': '0.5'});
+	$('#fN2o_x5F_2').velocity({'opacity': '0.5'});
+	$('#fMass_x5F_2').velocity({'opacity': '0.5'});
+	$('#fPopu_x5F_2').velocity({'opacity': '0.5'});
+
+	$('#fWater_x5F_3').velocity({'opacity': '0.5'});
+	$('#fFeed_x5F_3').velocity({'opacity': '0.5'});
+	$('#fProtein_x5F_3').velocity({'opacity': '0.5'});
+	$('#fNitro_x5F_3').velocity({'opacity': '0.5'});
+	$('#fPhos_x5F_3').velocity({'opacity': '0.5'});
+	$('#fCo2_x5F_3').velocity({'opacity': '0.5'});
+	$('#fCh4_x5F_3').velocity({'opacity': '0.5'});
+	$('#fN2o_x5F_3').velocity({'opacity': '0.5'});
+	$('#fMass_x5F_3').velocity({'opacity': '0.5'});
+	$('#fPopu_x5F_3').velocity({'opacity': '0.5'});
+
+	$('#fWater_x5F_4').velocity({'opacity': '0.5'});
+	$('#fFeed_x5F_4').velocity({'opacity': '0.5'});
+	$('#fProtein_x5F_4').velocity({'opacity': '0.5'});
+	$('#fNitro_x5F_4').velocity({'opacity': '0.5'});
+	$('#fPhos_x5F_4').velocity({'opacity': '0.5'});
+	$('#fCo2_x5F_4').velocity({'opacity': '0.5'});
+	$('#fCh4_x5F_4').velocity({'opacity': '0.5'});
+	$('#fN2o_x5F_4').velocity({'opacity': '0.5'});
+	$('#fMass_x5F_4').velocity({'opacity': '0.5'});
+	$('#fPopu_x5F_4').velocity({'opacity': '0.5'});
+
+	$('#XMLID_8_').velocity({'opacity': '0.4'}); //decrease the opacity of the CH4 outer ring after first hover to bring consistency in appearance
+	$('#XMLID_5_').velocity({'opacity': '0.4'}); //decrease the opacity of the N2O outer ring after first hover to bring consistency in appearance
 }
 
 function clearDown(){
@@ -183,8 +229,16 @@ $(function() {
 	var moveDown = 10;
 	var hoverElement = '';
 	var divElement = '';
-	var pairElement = ''; //pair for first graph - footprint and index
+	var pairElementCattle = ''; //pair for first graph - slice of footprint wrt index in upper graph
+	var pairElementSheep = ''; //pair for first graph - slice of footprint wrt index in upper graph
+	var pairElementPig = ''; //pair for first graph - slice of footprint wrt index in upper graph
+	var pairElementPoultry = ''; //pair for first graph - slice of footprint wrt index in upper graph
+	var pairElementIndex = ''; //pair for first graph - index wrt slice of footprint in upper graph
 	var isGraphUp = 0;	//to check whether the hover is on upper graph or lower graph
+	var isCategory = 0; //to check whether the hover is on the cattle, pig, sheep, poultry categories.
+	var categoryGroupPalette = ''; //category is the redundant color palette group created for cattle, pig, sheep, poultry categories.
+	var categoryElement = 0; ////as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry to be passed in the functions glowOnCategoryMouseOver(elem) 
+								//& fadeOnCategoryMouseLeave(elem)
 	var pairA = '';	//for all attributes pairs across ABCD
 	var pairB = ''; //for all attributes pairs across ABCD
 	var pairC = ''; //for all attributes pairs across ABCD
@@ -193,6 +247,75 @@ $(function() {
 	var attribute = ''; //co2, n2o, water, feed, mass etc
 	var waterBit = 0; //whether the water bubble was hovered in lower graph. one hover has two indexes on
 	var methaneBit = 0; //whether the methane bubble was hovered in lower graph. one hover has two indexes on
+
+	//functions defined for hovers over the categories Cattle, Sheep, Pig, & Poultry.
+	function glowOnCategoryMouseOver(elem){
+		$('#fWater_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fFeed_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fProtein_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fNitro_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fPhos_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fCo2_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fN2o_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fCh4_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fMass_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+		$('#fPopu_x5F_' + elem).stop(true,false).velocity({'opacity': '1'});
+	}
+
+	function fadeOnCategoryMouseLeave(elem){
+		var k;
+		k = MainArray.indexOf("fWater_x5F_" + elem);
+		if(k == -1){
+			$('#fWater_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fFeed_x5F_" + elem);
+		if(k == -1){
+			$('#fFeed_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fProtein_x5F_" + elem);
+		if(k == -1){
+			$('#fProtein_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fNitro_x5F_" + elem);
+		if(k == -1){
+			$('#fNitro_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fPhos_x5F_" + elem);
+		if(k == -1){
+			$('#fPhos_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fCo2_x5F_" + elem);
+		if(k == -1){
+			$('#fCo2_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fN2o_x5F_" + elem);
+		if(k == -1){
+			$('#fN2o_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fCh4_x5F_" + elem);
+		if(k == -1){
+			$('#fCh4_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fMass_x5F_" + elem);
+		if(k == -1){
+			$('#fMass_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+
+		k = MainArray.indexOf("fPopu_x5F_" + elem);
+		if(k == -1){
+			$('#fPopu_x5F_' + elem).stop(true,false).velocity({'opacity': '0.5'});
+		}
+	}
+
+	//main hover function
 
 	$('g').hover(
 
@@ -217,7 +340,10 @@ $(function() {
 			firstHoverUp = 1;
           }
 
-          pairElement = 'f' + attribute;
+          pairElementCattle = 'f' + attribute + '_x5F_1';
+          pairElementSheep = 'f' + attribute + '_x5F_2';
+          pairElementPig = 'f' + attribute + '_x5F_3';
+          pairElementPoultry = 'f' + attribute + '_x5F_4';
 
           isGraphUp = 1;
       }
@@ -234,10 +360,51 @@ $(function() {
 			firstHoverUp = 1;
       	}
 
-      	pairElement = 'c' + attribute;
+
+
+      	//if(attribute.indexOf('x') > -1){
+      		attribute = attribute.substr(0,attribute.indexOf('x')-1)
+      		//console.log(attribute);
+      	//}
+
+      	pairElementIndex = 'c' + attribute;
+
+      	//$('#'+ hoverElement).css({'grayscale':'0.8'});
+
 
       	isGraphUp = 1;
       	}
+
+      	////////////////////////////////////////
+
+      	if(firstChar == 't'){
+
+	      	isCategory = 1;
+
+	      	hoverElement = thisId;
+	      	switch (hoverElement){
+	      		case 'tCattle_1_': categoryGroupPalette = 'mycattlePalette';
+	      						   categoryElement = 1;
+	      							//console.log(hoverElement);
+	      							//console.log(categoryGroupPalette);
+								   break;
+
+				case 'tSheep_1_': categoryGroupPalette = 'mysheepPalette';
+	      						  categoryElement = 2;
+	      					   	  break;
+
+	      		case 'tPig_1_': categoryGroupPalette = 'mypigPalette';
+	      						categoryElement = 3;
+	      					 	break;
+
+	      		case 'tPoultry_1_': categoryGroupPalette = 'mypoultryPalette';
+	      							categoryElement = 4;
+	      						 	break;
+
+	      		default: break;
+	      		}
+      	}
+
       	////////////////////////////////////////
       	if(firstChar == 'A'){
 
@@ -413,7 +580,16 @@ $(function() {
       $('#'+ hoverElement).stop(true,false).velocity({'opacity': '1'});  //increase opacity to 100% for all hovered elements
 
       if(isGraphUp == 1){
-      	$('#'+ pairElement).stop(true,false).velocity({'opacity': '1'});
+      	$('#'+ pairElementIndex).stop(true,false).velocity({'opacity': '1'});
+      	$('#'+ pairElementCattle).stop(true,false).velocity({'opacity': '1'});
+      	$('#'+ pairElementSheep).stop(true,false).velocity({'opacity': '1'});
+      	$('#'+ pairElementPig).stop(true,false).velocity({'opacity': '1'});
+      	$('#'+ pairElementPoultry).stop(true,false).velocity({'opacity': '1'});
+      }
+
+      if(isCategory == 1){
+      	$('#'+ categoryGroupPalette).stop(true,false).velocity({'opacity': '1'});
+      	glowOnCategoryMouseOver(categoryElement);
       }
 
       if(isGraphUp == 0){
@@ -446,8 +622,23 @@ $(function() {
 		$('#'+ hoverElement).stop(true,false).velocity({'opacity': '0.5'});
 
 		if(isGraphUp == 1){
-			$('#'+ pairElement).stop(true,false).velocity({'opacity': '0.5'});
+			$('#'+ pairElementIndex).stop(true,false).velocity({'opacity': '0.5'});
+      		$('#'+ pairElementCattle).stop(true,false).velocity({'opacity': '0.5'});
+      		$('#'+ pairElementSheep).stop(true,false).velocity({'opacity': '0.5'});
+      		$('#'+ pairElementPig).stop(true,false).velocity({'opacity': '0.5'});
+      		$('#'+ pairElementPoultry).stop(true,false).velocity({'opacity': '0.5'});
 		}
+
+		if(isCategory == 1){
+			//console.log(hoverElement); sometimes it is blank and yet comes till this step. because mouse leave is very dynmamic/unstable.
+			//Hence additional IF statement with specific ORs are provided below to make sure opacity becomes 0.5 only when hovered over these 4
+			//specific categories. (commented out because click functionality over categories is removed)
+			isCategory = 0;
+			if(hoverElement=="tCattle_1_" || hoverElement=="tSheep_1_" || hoverElement=="tPig_1_" || hoverElement=="tPoultry_1_"){
+      			$('#'+ categoryGroupPalette).stop(true,false).velocity({'opacity': '0'});
+      			fadeOnCategoryMouseLeave(categoryElement);
+      		}
+      	}
 
 		if(isGraphUp == 0){
 	      	$('#'+ pairA).stop(true,false).velocity({'opacity': '0.5'});
@@ -484,7 +675,11 @@ $(function() {
 
 		hoverElement = '';
 		divElement = '';
-		pairElement = '';
+		pairElementIndex = '';
+		pairElementCattle = '';
+		pairElementSheep = '';
+		pairElementPig = '';
+		pairElementPoultry = '';
 		pairA = '';
 		pairB = '';
 		pairC = '';
@@ -504,32 +699,153 @@ $(function() {
 
 /////////////////////////////////////////
 
+//function defined for click events on the index of first graph. to turn on/off all the 4 slices of one pie and pushing/popping out of the main array.
+function pushOnClick(elem){
+	for(i=1;i<5;i++){
+		$( '#' + elem + i).velocity({'opacity': '1'});
+		MainArray.push(elem + i);
+	}
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+}
+
+function popOnClick(elem){
+	var p;
+	for(i=1;i<5;i++){
+		$('#' + elem + i).velocity({'opacity': '0.5'});
+		p = MainArray.indexOf(elem + i);
+		if(p!= -1){
+			MainArray.splice(p,1);
+		}
+	}
+	MainArray = $.unique(MainArray);
+	//console.log(MainArray);
+}
+
+//------------(commented out because click functionality over categories is removed)-------------
+/*function pushOnCategoryClick(elem){
+	MainArray.push("fWater_x5F_" + elem);
+	MainArray.push("fFeed_x5F_" + elem);
+	MainArray.push("fProtein_x5F_" + elem);
+	MainArray.push("fNitro_x5F_" + elem);
+	MainArray.push("fPhos_x5F_" + elem);
+	MainArray.push("fCo2_x5F_" + elem);
+	MainArray.push("fN2o_x5F_" + elem);
+	MainArray.push("fCh4_x5F_" + elem);
+	MainArray.push("fMass_x5F_" + elem);
+	MainArray.push("fPopu_x5F_" + elem);
+	MainArray = $.unique(MainArray);
+	
+	$('#fWater_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fFeed_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fProtein_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fNitro_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fPhos_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fCo2_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fN2o_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fCh4_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fMass_x5F_' + elem).velocity({'opacity': '1'});
+	$('#fPopu_x5F_' + elem).velocity({'opacity': '1'});
+}
+
+function popOnCategoryClick(elem){
+	var k;
+	k = MainArray.indexOf("fWater_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fFeed_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fProtein_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fNitro_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fPhos_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fCo2_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fN2o_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fCh4_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fMass_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	k = MainArray.indexOf("fPopu_x5F_" + elem);
+	if(k != -1){
+		MainArray.splice(k,1);
+	}
+
+	$('#fWater_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fFeed_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fProtein_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fNitro_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fPhos_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fCo2_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fN2o_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fCh4_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fMass_x5F_' + elem).velocity({'opacity': '0.5'});
+	$('#fPopu_x5F_' + elem).velocity({'opacity': '0.5'});
+
+}*/
+//------------(commented out because click functionality over categories is removed)-------------
+
+
+
 ///////////////----------ALL CLICK EVENTS------------/////////////
 $('#cWater').click(function (){
 	if(upSwWater == 0){
 		upSwWater = 1;
 		$('#cWater').velocity({'opacity': '1'});
-		$('#fWater').velocity({'opacity': '1'});
-
+		//$('#fWater').velocity({'opacity': '1'});
 		MainArray.push("cWater");
-		MainArray.push("fWater");
+		//MainArray.push("fWater");
+
+		pushOnClick("fWater_x5F_"); //turn on all the 4 slices of the pie and push them to the mainarray using the function pushOnClick defined above
+		//console.log(MainArray);
 	}
 	else{
 		upSwWater = 0;
 		$('#cWater').velocity({'opacity': '0.5'});
-		$('#fWater').velocity({'opacity': '0.5'});
+		//$('#fWater').velocity({'opacity': '0.5'});
 		
 		var k;
 
-		k = MainArray.indexOf("fWater");
-		if(k != -1) {
-			MainArray.splice(k, 1);
-		}
-
 		k = MainArray.indexOf("cWater");
-		if(k != 1){
+		if(k != -1){
 			MainArray.splice(k,1);
 		}
+
+		//k = MainArray.indexOf("fWater");
+		//if(k != -1) {
+		//	MainArray.splice(k, 1);
+		//}
+		popOnClick("fWater_x5F_");
+		//console.log(MainArray);
 	}
 });
 
@@ -537,27 +853,22 @@ $('#cFeed').click(function (){
 	if(upSwFeed == 0){
 		upSwFeed = 1;
 		$('#cFeed').velocity({'opacity': '1'});
-		$('#fFeed').velocity({'opacity': '1'});
-
 		MainArray.push("cFeed");
-		MainArray.push("fFeed");
+
+		pushOnClick("fFeed_x5F_");
+
 	}
 	else{
 		upSwFeed = 0;
 		$('#cFeed').velocity({'opacity': '0.5'});
-		$('#fFeed').velocity({'opacity': '0.5'});
-		
 		var k;
 
-		k = MainArray.indexOf("fFeed");
-		if(k != -1) {
-			MainArray.splice(k, 1);
-		}
-
 		k = MainArray.indexOf("cFeed");
-		if(k != 1){
+		if(k != -1){
 			MainArray.splice(k,1);
 		}
+
+		popOnClick("fFeed_x5F_");
 	}
 });
 
@@ -565,27 +876,22 @@ $('#cPopu').click(function (){
 	if(upSwPopu == 0){
 		upSwPopu = 1;
 		$('#cPopu').velocity({'opacity': '1'});
-		$('#fPopu').velocity({'opacity': '1'});
-
 		MainArray.push("cPopu");
-		MainArray.push("fPopu");
+
+		pushOnClick("fPopu_x5F_");
+
 	}
 	else{
 		upSwPopu = 0;
 		$('#cPopu').velocity({'opacity': '0.5'});
-		$('#fPopu').velocity({'opacity': '0.5'});
-		
 		var k;
 
 		k = MainArray.indexOf("cPopu");
-		if(k != -1) {
-			MainArray.splice(k, 1);
-		}
-
-		k = MainArray.indexOf("fPopu");
-		if(k != 1){
+		if(k != -1){
 			MainArray.splice(k,1);
 		}
+
+		popOnClick("fPopu_x5F_");
 	}
 });
 
@@ -593,27 +899,20 @@ $('#cMass').click(function (){
 	if(upSwMass == 0){
 		upSwMass = 1;
 		$('#cMass').velocity({'opacity': '1'});
-		$('#fMass').velocity({'opacity': '1'});
-
 		MainArray.push("cMass");
-		MainArray.push("fMass");
+
+		pushOnClick("fMass_x5F_");
 	}
+
 	else{
 		upSwMass = 0;
-		$('#cMass').velocity({'opacity': '0.5'});
-		$('#fMass').velocity({'opacity': '0.5'});
-		
+		$('#cMass').velocity({'opacity': '0.5'});		
 		var k;
-
 		k = MainArray.indexOf("cMass");
 		if(k != -1) {
 			MainArray.splice(k, 1);
 		}
-
-		k = MainArray.indexOf("fMass");
-		if(k != 1){
-			MainArray.splice(k,1);
-		}
+		popOnClick("fMass_x5F_");
 	}
 });
 
@@ -621,27 +920,21 @@ $('#cN2o').click(function (){
 	if(upSwN2o == 0){
 		upSwN2o = 1;
 		$('#cN2o').velocity({'opacity': '1'});
-		$('#fN2o').velocity({'opacity': '1'});
-
 		MainArray.push("cN2o");
-		MainArray.push("fN2o");
+
+		pushOnClick("fN2o_x5F_");
+
 	}
 	else{
 		upSwN2o = 0;
-		$('#cN2o').velocity({'opacity': '0.5'});
-		$('#fN2o').velocity({'opacity': '0.5'});
-		
+		$('#cN2o').velocity({'opacity': '0.5'});		
 		var k;
 
 		k = MainArray.indexOf("cN2o");
 		if(k != -1) {
 			MainArray.splice(k, 1);
 		}
-
-		k = MainArray.indexOf("fN2o");
-		if(k != 1){
-			MainArray.splice(k,1);
-		}
+		popOnClick("fN2o_x5F_");
 	}
 });
 
@@ -649,27 +942,19 @@ $('#cCh4').click(function (){
 	if(upSwCh4 == 0){
 		upSwCh4 = 1;
 		$('#cCh4').velocity({'opacity': '1'});
-		$('#fCh4').velocity({'opacity': '1'});
-
 		MainArray.push("cCh4");
-		MainArray.push("fCh4");
+		pushOnClick("fCh4_x5F_");
 	}
 	else{
 		upSwCh4 = 0;
 		$('#cCh4').velocity({'opacity': '0.5'});
-		$('#fCh4').velocity({'opacity': '0.5'});
 		
 		var k;
-
 		k = MainArray.indexOf("cCh4");
 		if(k != -1) {
 			MainArray.splice(k, 1);
 		}
-
-		k = MainArray.indexOf("fCh4");
-		if(k != 1){
-			MainArray.splice(k,1);
-		}
+		popOnClick("fCh4_x5F_");
 	}
 });
 
@@ -677,10 +962,8 @@ $('#cCo2').click(function (){
 	if(upSwCo2 == 0){
 		upSwCo2 = 1;
 		$('#cCo2').velocity({'opacity': '1'});
-		$('#fCo2').velocity({'opacity': '1'});
-
 		MainArray.push("cCo2");
-		MainArray.push("fCo2");
+		pushOnClick("fCo2_x5F_");
 	}
 	else{
 		upSwCo2 = 0;
@@ -688,16 +971,13 @@ $('#cCo2').click(function (){
 		$('#fCo2').velocity({'opacity': '0.5'});
 		
 		var k;
-
 		k = MainArray.indexOf("cCo2");
 		if(k != -1) {
 			MainArray.splice(k, 1);
 		}
 
-		k = MainArray.indexOf("fCo2");
-		if(k != 1){
-			MainArray.splice(k,1);
-		}
+		popOnClick("fCo2_x5F_");
+
 	}
 });
 
@@ -705,27 +985,20 @@ $('#cNitro').click(function (){
 	if(upSwNitro == 0){
 		upSwNitro = 1;
 		$('#cNitro').velocity({'opacity': '1'});
-		$('#fNitro').velocity({'opacity': '1'});
-
 		MainArray.push("cNitro");
-		MainArray.push("fNitro");
+		pushOnClick("fNitro_x5F_");
 	}
 	else{
 		upSwNitro = 0;
 		$('#cNitro').velocity({'opacity': '0.5'});
-		$('#fNitro').velocity({'opacity': '0.5'});
 		
 		var k;
-
 		k = MainArray.indexOf("cNitro");
 		if(k != -1) {
 			MainArray.splice(k, 1);
 		}
 
-		k = MainArray.indexOf("fNitro");
-		if(k != 1){
-			MainArray.splice(k,1);
-		}
+		popOnClick("fNitro_x5F_");
 	}
 });
 
@@ -733,27 +1006,21 @@ $('#cPhos').click(function (){
 	if(upSwPhos == 0){
 		upSwPhos = 1;
 		$('#cPhos').velocity({'opacity': '1'});
-		$('#fPhos').velocity({'opacity': '1'});
-
 		MainArray.push("cPhos");
-		MainArray.push("fPhos");
+
+		pushOnClick("fPhos_x5F_");
 	}
 	else{
 		upSwPhos = 0;
 		$('#cPhos').velocity({'opacity': '0.5'});
-		$('#fPhos').velocity({'opacity': '0.5'});
+
 		
 		var k;
-
 		k = MainArray.indexOf("cPhos");
 		if(k != -1) {
 			MainArray.splice(k, 1);
 		}
-
-		k = MainArray.indexOf("fPhos");
-		if(k != 1){
-			MainArray.splice(k,1);
-		}
+		popOnClick("fPhos_x5F_");
 	}
 });
 
@@ -761,29 +1028,109 @@ $('#cProtein').click(function (){
 	if(upSwProtein == 0){
 		upSwProtein = 1;
 		$('#cProtein').velocity({'opacity': '1'});
-		$('#fProtein').velocity({'opacity': '1'});
-
 		MainArray.push("cProtein");
-		MainArray.push("fProtein");
+		pushOnClick("fProtein_x5F_");
+
 	}
 	else{
 		upSwProtein = 0;
 		$('#cProtein').velocity({'opacity': '0.5'});
-		$('#fProtein').velocity({'opacity': '0.5'});
 		
 		var k;
-
 		k = MainArray.indexOf("cProtein");
 		if(k != -1) {
 			MainArray.splice(k, 1);
 		}
 
-		k = MainArray.indexOf("fProtein");
-		if(k != 1){
-			MainArray.splice(k,1);
-		}
+		popOnClick("fProtein_x5F_");
 	}
 });
+
+///--------------------CLICK FUNCTIONS FOR THE CATEGORIES-------------------
+//----//------------(commented out because click functionality over categories is removed)-------------
+/*
+$('#tCattle_1_').click(function (){
+	if(categorySwCattle == 0){
+		categorySwCattle = 1;
+		$('#mycattlePalette').velocity({'opacity': '1'});
+		MainArray.push("tCattle_1_");
+		//MainArray.push("mycattlePalette");
+		//console.log(MainArray);
+		pushOnCategoryClick(1); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+	else{
+		categorySwCattle = 0;
+		$('#mycattlePalette').velocity({'opacity': '0'});
+		var k;
+		k = MainArray.indexOf("tCattle_1_");
+		if(k != -1) {
+			MainArray.splice(k, 1);
+		}
+		//k = MainArray.indexOf("mycattlePalette");
+		//if(k != -1) {
+		//	MainArray.splice(k, 1);
+		//}
+		popOnCategoryClick(1); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+});
+
+$('#tSheep_1_').click(function (){
+	if(categorySwSheep == 0){
+		categorySwSheep = 1;
+		$('#mysheepPalette').velocity({'opacity': '1'});
+		MainArray.push("tSheep_1_");
+		pushOnCategoryClick(2); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+	else{
+		categorySwSheep = 0;
+		$('#mysheepPalette').velocity({'opacity': '0'});
+		var k;
+		k = MainArray.indexOf("tSheep_1_");
+		if(k != -1) {
+			MainArray.splice(k, 1);
+		}
+		popOnCategoryClick(2); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+});
+
+$('#tPig_1_').click(function (){
+	if(categorySwPig == 0){
+		categorySwPig = 1;
+		$('#mypigPalette').velocity({'opacity': '1'});
+		MainArray.push("tPig_1_");
+		pushOnCategoryClick(3); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+	else{
+		categorySwPig = 0;
+		$('#mypigPalette').velocity({'opacity': '0'});
+		var k;
+		k = MainArray.indexOf("tPig_1_");
+		if(k != -1) {
+			MainArray.splice(k, 1);
+		}
+		popOnCategoryClick(3); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+});
+
+$('#tPoultry_1_').click(function (){
+	if(categorySwPoultry == 0){
+		categorySwPoultry = 1;
+		$('#mypoultryPalette').velocity({'opacity': '1'});
+		MainArray.push("tPoultry_1_");
+		pushOnCategoryClick(4); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+	else{
+		categorySwPoultry = 0;
+		$('#mypoultryPalette').velocity({'opacity': '0'});
+		var k;
+		k = MainArray.indexOf("tPoultry_1_");
+		if(k != -1) {
+			MainArray.splice(k, 1);
+		}
+		popOnCategoryClick(4); //as per nomenclature 1=Cattle, 2=Sheep, 3=Pig, 4=Poultry
+	}
+});
+*/
 
 ///--------------------CLICK FUNCTIONS FOR LOWER GRAPH----------------------
 
@@ -1218,293 +1565,375 @@ $('#wProtein').click(function (){
 
 <!--descriptions for upper graph-->
 
-<div id="upWater">
+<div id="upWater_x5F_1">
 	<u>Water Requirement:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 60.5%</td>
-			<td>· Sheep &amp; Goat: 16.2%</td>
-		</tr>
-		<tr>
-			<td>Pig: 19.4%</td>
-			<td>· Chicken: 3.9%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upFeed">
+<div id="upWater_x5F_2">
+	<u>Water Requirement:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 16.2%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upWater_x5F_3">
+	<u>Water Requirement:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 19.4%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upWater_x5F_4">
+	<u>Water Requirement:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 3.9%</td>
+		</tr>
+	</table>
+</div>
+<!--/////////////////////////////////////////-->
+
+<div id="upFeed_x5F_1">
 	<u>Feed Requirement:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 46.1%</td>
-			<td>· Sheep &amp; Goat: 26.7%</td>
-		</tr>
-		<tr>
-			<td>Pig: 16.8%</td>
-			<td>· Chicken: 10.4%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upProtein">
+<div id="upFeed_x5F_2">
+	<u>Feed Requirement:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 26.7%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upFeed_x5F_3">
+	<u>Feed Requirement:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 16.8%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upFeed_x5F_4">
+	<u>Feed Requirement:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 10.4%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upProtein_x5F_1">
 	<u>Protein Conversion Inefficiency:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 45.1%</td>
-			<td>· Sheep &amp; Goat: 27.8%</td>
-		</tr>
-		<tr>
-			<td>Pig: 18.1%</td>
-			<td>· Chicken: 9%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upNitro">
+<div id="upProtein_x5F_2">
+	<u>Protein Conversion Inefficiency:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 27.8%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upProtein_x5F_3">
+	<u>Protein Conversion Inefficiency:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 18.1%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upProtein_x5F_4">
+	<u>Protein Conversion Inefficiency:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 9%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upNitro_x5F_1">
 	<u>Nitrogen Output:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 79%</td>
-			<td>· Sheep &amp; Goat: 12.2%</td>
-		</tr>
-		<tr>
-			<td>Pig: 8.5%</td>
-			<td>· Chicken: 0.3%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upPhos">
+<div id="upNitro_x5F_2">
+	<u>Nitrogen Output:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 12.2%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upNitro_x5F_3">
+	<u>Nitrogen Output:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 8.5%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upNitro_x5F_4">
+	<u>Nitrogen Output:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 0.3%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upPhos_x5F_1">
 	<u>Phosphorus Output:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 73.2%</td>
-			<td>· Sheep &amp; Goat: 15.4%</td>
-		</tr>
-		<tr>
-			<td>Pig: 11%</td>
-			<td>· Chicken: 0.4%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upCo2">
+<div id="upPhos_x5F_2">
+	<u>Phosphorus Output:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 15.4%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upPhos_x5F_3">
+	<u>Phosphorus Output:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 11%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upPhos_x5F_4">
+	<u>Phosphorus Output:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 0.4%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upCo2_x5F_1">
 	<u>CO2 Released:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 62.1%</td>
-			<td>· Sheep &amp; Goat: 16.7%</td>
-		</tr>
-		<tr>
-			<td>Pig: 19.2%</td>
-			<td>· Chicken: 2%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upCh4">
+<div id="upCo2_x5F_2">
+	<u>CO2 Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 16.7%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upCo2_x5F_3">
+	<u>CO2 Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 19.2%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upCo2_x5F_4">
+	<u>CO2 Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 2%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upCh4_x5F_1">
 	<u>CH4 Released:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 80.4%</td>
-			<td>· Sheep &amp; Goat: 9.5%</td>
-		</tr>
-		<tr>
-			<td>Pig: 9.2%</td>
-			<td>· Chicken: 0.9%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upN2o">
+<div id="upCh4_x5F_2">
+	<u>CH4 Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 9.5%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upCh4_x5F_3">
+	<u>CH4 Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 9.2%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upCh4_x5F_4">
+	<u>CH4 Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 0.9%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upN2o_x5F_1">
 	<u>N2O Released:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 60%</td>
-			<td>· Sheep &amp; Goat: 18.4%</td>
-		</tr>
-		<tr>
-			<td>Pig: 11.9%</td>
-			<td>· Chicken: 9.7%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upMass">
+<div id="upN2o_x5F_2">
+	<u>N2O Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 18.4%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upN2o_x5F_3">
+	<u>N2O Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 11.9%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upN2o_x5F_4">
+	<u>N2O Released:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 9.7%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upMass_x5F_1">
 	<u>Biomass Ratio:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 74.3%</td>
-			<td>· Sheep &amp; Goat: 7%</td>
-		</tr>
-		<tr>
-			<td>Pig: 13.8%</td>
-			<td>· Chicken: 4.9%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="upPopu">
+<div id="upMass_x5F_2">
+	<u>Biomass Ratio:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 7%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upMass_x5F_3">
+	<u>Biomass Ratio:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Pig: 13.8%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upMass_x5F_4">
+	<u>Biomass Ratio:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Poultry: 4.9%</td>
+		</tr>
+	</table>
+</div>
+
+<!--/////////////////////////////////////////-->
+<div id="upPopu_x5F_1">
 	<u>Population Ratio:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Cattle: 6.9%</td>
-			<td>· Sheep &amp; Goat: 8.2%</td>
 		</tr>
+	</table>
+</div>
+
+<div id="upPopu_x5F_2">
+	<u>Population Ratio:</u>
+	<table style="width:100%; white-space: nowrap;">
+		<tr>
+			<td>Sheep &amp; Goat: 8.2%</td>
+		</tr>
+	</table>
+</div>
+
+<div id="upPopu_x5F_3">
+	<u>Population Ratio:</u>
+	<table style="width:100%; white-space: nowrap;">
 		<tr>
 			<td>Pig: 4.3%</td>
-			<td>· Chicken: 80.5%</td>
 		</tr>
 	</table>
 </div>
 
-
-<!--////////////////////////////////////////
-
-descriptions for lower graph
-
-////////////////////////////////////////-->
-
-<!--
-<div id="downWater">
-	<u>Water Consumption in km3:</u>
+<div id="upPopu_x5F_4">
+	<u>Population Ratio:</u>
 	<table style="width:100%; white-space: nowrap;">
 		<tr>
-			<td>Cattle: 15.1</td>
-			<td>· Sheep &amp; Goat: 4.03</td>
-		</tr>
-		<tr>
-			<td>Pig: 4.85</td>
-			<td>· Chicken: 0.98</td>
+			<td>Poultry: 80.5%</td>
 		</tr>
 	</table>
 </div>
 
-<div id="downFeed">
-	<u>Feed Consumption Ratio:</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 20</td>
-			<td>· Sheep &amp; Goat: 11.6</td>
-		</tr>
-		<tr>
-			<td>Pig: 7.3</td>
-			<td>· Chicken: 4.5</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downProtein">
-	<u>Protein Conversion Inefficiency:</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 25</td>
-			<td>· Sheep &amp; Goat: 15.38</td>
-		</tr>
-		<tr>
-			<td>Pig: 10</td>
-			<td>· Chicken: 5</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downNitro">
-	<u>Nitrogen Output (Kg):</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 129.6</td>
-			<td>· Sheep &amp; Goat: 20</td>
-		</tr>
-		<tr>
-			<td>Pig: 14</td>
-			<td>· Chicken: 0.5</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downPhos">
-	<u>Phosphorus Output (Kg):</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 16.7</td>
-			<td>· Sheep &amp; Goat: 3.5</td>
-		</tr>
-		<tr>
-			<td>Pig: 2.5</td>
-			<td>· Chicken: 0.1</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downCo2">
-	<u>CO2 Released (Million Tonnes):</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 1906</td>
-			<td>· Sheep &amp; Goat: 514</td>
-		</tr>
-		<tr>
-			<td>Pig: 590</td>
-			<td>· Chicken: 61</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downCh4">
-	<u>CH4 Released (Million Tonnes):</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 82.91</td>
-			<td>· Sheep &amp; Goat: 9.78</td>
-		</tr>
-		<tr>
-			<td>Pig: 9.49</td>
-			<td>· Chicken: 0.98</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downN2o">
-	<u>N2O Released (Million Tonnes):</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 2.22</td>
-			<td>· Sheep &amp; Goat: 0.68</td>
-		</tr>
-		<tr>
-			<td>Pig: 0.44</td>
-			<td>· Chicken: 0.36</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downMass">
-	<u>Total Biomass (Million Tonnes):</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 501</td>
-			<td>· Sheep &amp; Goat: 47.3</td>
-		</tr>
-		<tr>
-			<td>Pig: 92.8</td>
-			<td>· Chicken: 33</td>
-		</tr>
-	</table>
-</div>
-
-<div id="downPopu">
-	<u>Total Population (Million):</u>
-	<table style="width:100%; white-space: nowrap;">
-		<tr>
-			<td>Cattle: 1496</td>
-			<td>· Sheep &amp; Goat: 1784</td>
-		</tr>
-		<tr>
-			<td>Pig: 933</td>
-			<td>· Chicken: 17437</td>
-		</tr>
-	</table>
-</div>  -->
 
 </body>
 
