@@ -16,104 +16,412 @@
 
 			$(document.body).append(data.documentElement);
 
-			$('#latBtn').click(function (){
 
-				window.open("http://www.atulkr.com/projects/datavis/indianuclear");
-				
-				$('#lpRect').stop(true,false).velocity({'stroke': '#2979FF'});
-				$('#lpText').stop(true,false).velocity({'fill': '#2979FF'});
+			$('#poBtn_1_').click(function (){
 
-				$('#lpRect').stop(true,false).velocity({'stroke': '#000'});
-				$('#lpText').stop(true,false).velocity({'fill': '#000'});
+				window.open("https://www.behance.net/_atul_kumar");
+
+				$('#prRect_1_').css({'fill': '#08BFA5'});
+				$('#prRect_1_').css({'fill': '#F97469'});
 
 			});
 
-			$('#poBtn').click(function (){
-
-				window.open("http://www.behance.net/_atul_kumar");
-
-				$('#prRect').stop(true,false).velocity({'stroke': '#2979FF'});
-				$('#prText').stop(true,false).velocity({'fill': '#2979FF'});
-
-				$('#prRect').stop(true,false).velocity({'stroke': '#000'});
-				$('#prText').stop(true,false).velocity({'fill': '#000'});	
-			});
-
-			$('#reBtn').click(function (){
+			$('#reBtn_1_').click(function (){
 
 				window.open("http://www.atulkr.com/res/resume_atul_kumar.pdf");
+				$('#reRect_1_').css({'fill': '#08BFA5'});
+				$('#reRect_1_').css({'fill': '#F97469'});
 
-				$('#reRect').stop(true,false).velocity({'stroke': '#2979FF'});
-				$('#reText').stop(true,false).velocity({'fill': '#2979FF'});
-
-				$('#reRect').stop(true,false).velocity({'stroke': '#000'});
-				$('#reText').stop(true,false).velocity({'fill': '#000'});
 			});
 
-			$('#nidEmail').click(function (){
+			$('#nidEmail_1_').click(function (){
 
 				window.open("mailto:atul_ku@nid.edu");
 
-				$('#nidEmail').stop(true,false).velocity({'fill': '#2979FF'});
-				$('#nidEmail').stop(true,false).velocity({'fill': '#000'});	
+				$('#nidEmail_1_').css({'fill': '#08BFA5'});
+				$('#nidEmail_1_').css({'fill': '#F97469'});
+
 			});
 
 			$('#perEmail').click(function (){
 
 				window.open("mailto:myspace.atul@gmail.com");
 
-				$('#perEmail').stop(true,false).velocity({'fill': '#2979FF'});
-				$('#perEmail').stop(true,false).velocity({'fill': '#000'});	
+				$('#perEmail').css({'fill': '#08BFA5'});
+				$('#perEmail').css({'fill': '#F97469'});
+
 			});
 
-			$('#behance').click(function (){
+			$('#behance_2_').click(function (){
 
-				window.open("http://www.behance.net/_atul_kumar");
+				window.open("https://www.behance.net/_atul_kumar");
 
-				$('#behance').stop(true,false).velocity({'fill': '#2979FF'});
-				$('#behance').stop(true,false).velocity({'fill': '#000'});	
+				$('#behance_2_').css({'fill': '#08BFA5'});
+				$('#behance_2_').css({'fill': '#F97469'});
+
+			});
+
+			$('#linkedin').click(function (){
+
+				window.open("https://www.linkedin.com/in/atul-kr");
+
+				$('#linkedin').css({'fill': '#08BFA5'});
+				$('#linkedin').css({'fill': '#F97469'});
+
 			});
 
 
-			$('#latBtn').hover(
+
+
+			$('#poBtn_1_').hover(
 
 				function mouseover() {
-					$('#lpRect').stop(true,false).velocity({'stroke': '#2979FF'});
-					$('#lpText').stop(true,false).velocity({'fill': '#2979FF'});
+					$('#prRect_1_').stop(true,false).velocity({'fill': '#08BFA5'});
 				},
 
 				function mouseleave() {
-
-					$('#lpRect').stop(true,false).velocity({'stroke': '#000'});
-					$('#lpText').stop(true,false).velocity({'fill': '#000'});
+					$('#prRect_1_').stop(true,false).velocity({'fill': '#F97469'});
 				}			
 			);
 
-			$('#poBtn').hover(
+			$('#reBtn_1_').hover(
 
 				function mouseover() {
-					$('#prRect').stop(true,false).velocity({'stroke': '#2979FF'});
-					$('#prText').stop(true,false).velocity({'fill': '#2979FF'});
+					$('#reRect_1_').stop(true,false).velocity({'fill': '#08BFA5'});
 				},
 
 				function mouseleave() {
-
-					$('#prRect').stop(true,false).velocity({'stroke': '#000'});
-					$('#prText').stop(true,false).velocity({'fill': '#000'});
+					$('#reRect_1_').stop(true,false).velocity({'fill': '#F97469'});
 				}			
 			);
 
-			$('#reBtn').hover(
+			$('#nidEmail_1_').hover(
 
 				function mouseover() {
-					$('#reRect').stop(true,false).velocity({'stroke': '#2979FF'});
-					$('#reText').stop(true,false).velocity({'fill': '#2979FF'});
+					$('#nidEmail_1_').css({'fill': '#08BFA5'});
 				},
 
 				function mouseleave() {
+					$('#nidEmail_1_').css({'fill': '#F97469'});
+				}			
+			);
 
-					$('#reRect').stop(true,false).velocity({'stroke': '#000'});
-					$('#reText').stop(true,false).velocity({'fill': '#000'});
+			$('#perEmail').hover(
+
+				function mouseover() {
+					$('#perEmail').css({'fill': '#08BFA5'});
+				},
+
+				function mouseleave() {
+					$('#perEmail').css({'fill': '#F97469'});
+				}			
+			);
+
+			$('#behance_2_').hover(
+
+				function mouseover() {
+					$('#behance_2_').css({'fill': '#08BFA5'});
+				},
+
+				function mouseleave() {
+					$('#behance_2_').css({'fill': '#F97469'});
+				}			
+			);
+
+			$('#linkedin').hover(
+
+				function mouseover() {
+					$('#linkedin').css({'fill': '#08BFA5'});
+				},
+
+				function mouseleave() {
+					$('#linkedin').css({'fill': '#F97469'});
+				}			
+			);
+
+
+			
+
+////////////////////Mouse Click for the black text///////////////////////////
+
+			$('#MSIDC1').click(function (){
+
+				window.open("https://www.microsoft.com/en-in/msidc/");
+
+			});
+
+			$('#MSIDC2').click(function (){
+
+				window.open("https://www.microsoft.com/en-in/msidc/");
+
+			});
+
+
+			$('#Gold').click(function (){
+
+				window.open("https://www.linkedin.com/feed/update/urn:li:activity:6336620226788069376");
+
+			});
+
+			$('#UXINDIA').click(function (){
+
+				window.open("http://www.2017.ux-india.org/");
+
+			});
+
+			$('#Saarathi').click(function (){
+
+				window.open("https://www.behance.net/gallery/53657411/Saarathi-Travel-Buddy-Program");
+
+			});
+
+			$('#UXPres').click(function (){
+
+				window.open("https://www.linkedin.com/feed/update/urn:li:activity:6323198402859491328");
+
+			});
+
+			$('#Interact').click(function (){
+
+				window.open("http://ifip-tc13.org/wp-content/uploads/2017/10/INTERACT_2017_Adjunct_v3.pdf");
+
+			});
+
+			$('#InPaper').click(function (){
+
+				window.open("https://dl.acm.org/citation.cfm?id=3014378");
+
+			});
+
+			$('#IICH').click(function (){
+
+				window.open("https://www.behance.net/gallery/46382551/Intangible-Cultural-Heritage-Part1-Interactive-Display");
+
+			});
+
+			$('#IICHa').click(function (){
+
+				window.open("https://www.behance.net/gallery/46382551/Intangible-Cultural-Heritage-Part1-Interactive-Display");
+
+			});
+
+			$('#BG1').click(function (){
+
+				window.open("https://www.behance.net/gallery/52136727/ICH-Part-2-Educational-Board-Game");
+
+			});
+
+			$('#BG2').click(function (){
+
+				window.open("https://www.behance.net/gallery/52136727/ICH-Part-2-Educational-Board-Game");
+
+			});
+
+			$('#IndiaHCI').click(function (){
+
+				window.open("http://indiahci2016.org/");
+
+			});
+
+			$('#Twyno').click(function (){
+
+				window.open("https://www.behance.net/gallery/52136727/ICH-Part-2-Educational-Board-Game");
+
+			});
+
+			$('#Nuclear').click(function (){
+
+				window.open("http://atulkr.com/projects/datavis/indianuclear");
+
+			});
+
+			$('#TapTrac').click(function (){
+
+				window.open("https://www.behance.net/gallery/51240947/Taptrac-Wearable-Design");
+
+			});
+
+			$('#SlowFun').click(function (){
+
+				window.open("https://www.behance.net/gallery/45309283/Slow-Fun-Design");
+
+			});
+
+			$('#SlowFunb').click(function (){
+
+				window.open("https://www.behance.net/gallery/45309283/Slow-Fun-Design");
+
+			});
+
+			$('#Semifinalists').click(function (){
+
+				window.open("https://www.adobeawards.com/us/live");
+
+			});
+
+			$('#ADAA').click(function (){
+
+				window.open("https://www.adobeawards.com/us");
+
+			});
+
+			$('#Kantar').click(function (){
+
+				window.open("https://www.informationisbeautifulawards.com/");
+
+			});
+
+			$('#Kantara').click(function (){
+
+				window.open("https://www.informationisbeautifulawards.com/");
+
+			});
+
+			$('#Uncowlify').click(function (){
+
+				window.open("https://www.informationisbeautifulawards.com/showcase/2206-uncowlify-beef-the-environment");
+
+			});
+
+			$('#NulcearKantar').click(function (){
+
+				window.open("https://www.informationisbeautifulawards.com/showcase/2207-india-s-nuclear-journey");
+
+			});
+
+
+
+
+
+////////////////////all complex hovers in the text////////////
+
+			$('#MSIDC1').hover(
+
+				function mouseover() {
+					$('#MSIDC1').css({'fill': '#848484'});
+					$('#MSIDC2').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#MSIDC1').css({'fill': '#404040'});
+					$('#MSIDC2').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#MSIDC2').hover(
+
+				function mouseover() {
+					$('#MSIDC1').css({'fill': '#848484'});
+					$('#MSIDC2').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#MSIDC1').css({'fill': '#404040'});
+					$('#MSIDC2').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#IICH').hover(
+
+				function mouseover() {
+					$('#IICH').css({'fill': '#848484'});
+					$('#IICHa').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#IICH').css({'fill': '#404040'});
+					$('#IICHa').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#IICHa').hover(
+
+				function mouseover() {
+					$('#IICH').css({'fill': '#848484'});
+					$('#IICHa').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#IICH').css({'fill': '#404040'});
+					$('#IICHa').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#BG1').hover(
+
+				function mouseover() {
+					$('#BG1').css({'fill': '#848484'});
+					$('#BG2').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#BG1').css({'fill': '#404040'});
+					$('#BG2').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#BG2').hover(
+
+				function mouseover() {
+					$('#BG1').css({'fill': '#848484'});
+					$('#BG2').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#BG1').css({'fill': '#404040'});
+					$('#BG2').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#SlowFun').hover(
+
+				function mouseover() {
+					$('#SlowFun').css({'fill': '#848484'});
+					$('#SlowFunb').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#SlowFun').css({'fill': '#404040'});
+					$('#SlowFunb').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#SlowFunb').hover(
+
+				function mouseover() {
+					$('#SlowFun').css({'fill': '#848484'});
+					$('#SlowFunb').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#SlowFun').css({'fill': '#404040'});
+					$('#SlowFunb').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#Kantar').hover(
+
+				function mouseover() {
+					$('#Kantar').css({'fill': '#848484'});
+					$('#Kantara').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#Kantar').css({'fill': '#404040'});
+					$('#Kantara').css({'fill': '#404040'});
+				}			
+			);
+
+			$('#Kantara').hover(
+
+				function mouseover() {
+					$('#Kantar').css({'fill': '#848484'});
+					$('#Kantara').css({'fill': '#848484'});
+				},
+
+				function mouseleave() {
+					$('#Kantar').css({'fill': '#404040'});
+					$('#Kantara').css({'fill': '#404040'});
 				}			
 			);
 
@@ -128,20 +436,9 @@
 			else
 			{
 
-			var flag = 0; //check for area when mouse in between two eyes in belowEye_1_ element and mouth element
+			var flag = 0; //check for area when mouse in between two eyes in belowEye_2_ element and mouth element
 
-			$('#beEye_1_').hover(
-
-				function mouseover() {
-					flag = 1;
-				},
-
-				function mouseleave() {
-					flag = 0;
-				}
-			);
-
-			$('#mouth').hover(
+			$('#beEye_2_').hover(
 
 				function mouseover() {
 					flag = 1;
@@ -152,8 +449,19 @@
 				}
 			);
 
+			$('#mouth_1_').hover(
 
-			var img = $('#rightEye_1_');
+				function mouseover() {
+					flag = 1;
+				},
+
+				function mouseleave() {
+					flag = 0;
+				}
+			);
+
+
+			var img = $('#rightEye_2_');
 			if(img.length > 0){
 			    var offset = img.offset();
 			    function mouse(evt){
@@ -179,7 +487,7 @@
 			    $(document).mousemove(mouse);
 			}
 
-			var img2 = $('#leftEye_1_');
+			var img2 = $('#leftEye_2_');
 			if (img2.length > 0) {
 			    var offset = img2.offset();
 
@@ -213,7 +521,7 @@
 
 
 
-<body style="margin:0; padding:0; background:#FFEA00;">
+<body style="margin:0; padding:0; background:#F6F6F6;">
 
 </body>
 </html>
