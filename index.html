@@ -76,6 +76,13 @@
 
 			});
 
+			$('#nuclearPlayBtn').click(function (){
+
+				window.open("http://atulkr.com/projects/datavis/indianuclear");
+
+			});
+
+
 			$('#projectTapTrac').click(function (){
 
 				window.open("https://www.behance.net/gallery/51240947/Taptrac-Wearable-Design");
@@ -97,6 +104,12 @@
 			$('#projectUncowlify').click(function (){
 
 				window.open("https://www.behance.net/gallery/52214761/Uncowlify-Branding-Campaign-Infographic-DataVis");
+
+			});
+
+			$('#uncowlifyPlayBtn').click(function (){
+
+				window.open("http://atulkr.com/projects/uncowlify/uncowlifyDV.html");
 
 			});
 
@@ -266,6 +279,40 @@
 					$('#reRect_1_').stop(true,false).velocity({'stroke': '#FF931E', 'stroke-width':'0px'});
 					$('#reRect_1_').stop(true,false).velocity({'fill': '#FF931E'});
 					$('#reText_1_').stop(true,false).velocity({'fill': '#FFFFFF'});
+				}			
+			);
+
+			$('#nuclearPlayBtn').hover(
+
+				function mouseover() {
+					$('#nuclearPlay_x5F_rect').stop(true,false).velocity({'fill': '#FF931E'});
+					$('#nuclearPlay_x5F_text').stop(true,false).velocity({'fill': '#FFFFFF'});
+					$('#nuclearPlay_x5F_icoCircle').stop(true,false).velocity({'fill': '#FFFFFF'});
+					$('#nuclearPlay_x5F_icoTriangle').stop(true,false).velocity({'fill': '#FFFFFF'});
+				},
+
+				function mouseleave() {
+					$('#nuclearPlay_x5F_rect').stop(true,false).velocity({'fill': '#FFFFFF'});
+					$('#nuclearPlay_x5F_text').stop(true,false).velocity({'fill': '#FF931E'});
+					$('#nuclearPlay_x5F_icoCircle').stop(true,false).velocity({'fill': '#FF931E'});
+					$('#nuclearPlay_x5F_icoTriangle').stop(true,false).velocity({'fill': '#FF931E'});
+				}			
+			);
+
+			$('#uncowlifyPlayBtn').hover(
+
+				function mouseover() {
+					$('#uncowlifyPlay_x5F_rect').stop(true,false).velocity({'fill': '#FF931E'});
+					$('#uncowlifyPlay_x5F_text').stop(true,false).velocity({'fill': '#FFFFFF'});
+					$('#uncowlifyPlay_x5F_icoCircle').stop(true,false).velocity({'fill': '#FFFFFF'});
+					$('#uncowlifyPlay_x5F_icoTriangle').stop(true,false).velocity({'fill': '#FFFFFF'});
+				},
+
+				function mouseleave() {
+					$('#uncowlifyPlay_x5F_rect').stop(true,false).velocity({'fill': '#FFFFFF'});
+					$('#uncowlifyPlay_x5F_text').stop(true,false).velocity({'fill': '#FF931E'});
+					$('#uncowlifyPlay_x5F_icoCircle').stop(true,false).velocity({'fill': '#FF931E'});
+					$('#uncowlifyPlay_x5F_icoTriangle').stop(true,false).velocity({'fill': '#FF931E'});
 				}			
 			);
 
