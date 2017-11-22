@@ -1,53 +1,35 @@
 @font-face{
-	font-family: 'ProximaNovaA-Bold';
-	src:url(ProximaNA-Bold.otf);
+	font-family: 'ProductSans-Regular';
+	src:url(Prod-Sans-Regular.ttf);
 }
 
 
 @font-face{
-	font-family: 'ProximaNovaA-Extrabld';
-	src:url(ProximaNA-Extrabold.otf);
+	font-family: 'ProductSans-Bold';
+	src:url(Prod-Sans-Bold.ttf);
 }
 
-@font-face{
-	font-family: 'ProximaNovaA-Light';
-	src:url(ProximaNA-Light.otf);
-}
-
-@font-face{
-	font-family: 'ProximaNovaA-Regular';
-	src:url(ProximaNA-Regular.otf);
-}
 
 #body{
 	width: 100%;
-	background: #F6F6F6;
+	background: #F7F8F9;
 	margin: 0;
 	padding: 0;
-	font-family: 'ProximaNovaA-Bold', 'ProximaNovaA-Extrabld', 'ProximaNA-Light', 'ProximaNA-Regular';
+	font-family: 'ProductSans-Regular', 'ProductSans-Bold';
 	overflow: hidden;
 }
 
-#poBtn_1_, #reBtn_1_, #nidEmail_1_, #perEmail, #behance_2_, #linkedin{
-
+#projectSaarathi, #saarathiGoldLink, #saarathiInteractLink, #saarathiPaperLink, #projectTwyno, #twynoPaperLink, #adaaLiveLink, #projectNuclear,
+#projectTapTrac, #uncowlifyKantarLink, #nuclearKantarLink, #projectUncowlify, #projectSlowFun, #projectMicrosoft, #projectWeCycle, #projectWT20, 
+#projectIRCTC, #btnBehance, #btnResume, #ibmLink, #geLink, #deloitteLink, #microsoftLink, #smhsLink, #manipalLink, 
+#nidLink, #htwLink, #nidEmailLink, #perEmailLink, #behanceLink, #linkedinLink, #instaLink, #twitterLink {
 	cursor:pointer;
 }
 
-#nidEmail_1_:hover, #perEmail:hover, #behance_2_:hover, #linkedin:hover{
-	fill: #08BFA5;
+#nidEmailLink:hover, #perEmailLink:hover, #behanceLink:hover, #linkedinLink:hover, #instaLink:hover, #twitterLink:hover {
+	fill: #FF931E;
 }
 
-#Gold, #UXINDIA, #Saarathi, #UXPres, #Interact, #InPaper, #IICH, #IICHa, #BG1, #BG2, #IndiaHCI, #Twyno, #Nuclear, #MSIDC1, #MSIDC2,
-#TapTrac, #SlowFun, #SlowFunb, #Semifinalists, #ADAA, #Kantar, #Kantara, #Uncowlify, #NulcearKantar{
-	cursor:pointer;
-	/*fill: #F97469;*/
-}
-
-#Gold:hover, #UXINDIA:hover, #Saarathi:hover, #UXPres:hover, #Interact:hover, #InPaper:hover, #IICH:hover, #IICHa:hover, 
-#BG1:hover, #BG2:hover, #MSIDC1:hover, #MSIDC2:hover, #IndiaHCI:hover, #Twyno:hover, #Nuclear:hover, #TapTrac:hover, #SlowFun:hover, #SlowFunb:hover,
-#Semifinalists:hover, #ADAA:hover, #Kantar:hover, #Kantara:hover, #Uncowlify:hover, #NulcearKantar:hover{
-	fill: #848484;
-}
 
 
 
